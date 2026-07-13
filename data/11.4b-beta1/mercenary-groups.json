@@ -1,0 +1,889 @@
+[
+  {
+    "name": "Ballista",
+    "variants": [
+      {
+        "rawcode": "h055",
+        "lumberCost": 340,
+        "income": 17,
+        "bounty": 17,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 350
+      },
+      {
+        "rawcode": "h0B4",
+        "lumberCost": 340,
+        "income": 17,
+        "bounty": 17,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 350
+      },
+      {
+        "rawcode": "h155",
+        "lumberCost": 600,
+        "income": 30,
+        "bounty": 30,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 600
+      },
+      {
+        "rawcode": "h255",
+        "lumberCost": 600,
+        "income": 30,
+        "bounty": 30,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 600
+      }
+    ]
+  },
+  {
+    "name": "Behemoth",
+    "variants": [
+      {
+        "rawcode": "h059",
+        "lumberCost": 500,
+        "income": 25,
+        "bounty": 25,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1420
+      },
+      {
+        "rawcode": "h0B8",
+        "lumberCost": 500,
+        "income": 25,
+        "bounty": 25,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1420
+      },
+      {
+        "rawcode": "h159",
+        "lumberCost": 850,
+        "income": 43,
+        "bounty": 43,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 2000
+      },
+      {
+        "rawcode": "h259",
+        "lumberCost": 850,
+        "income": 43,
+        "bounty": 43,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 2000
+      }
+    ]
+  },
+  {
+    "name": "Blood Orc",
+    "variants": [
+      {
+        "rawcode": "h04Z",
+        "lumberCost": 180,
+        "income": 9,
+        "bounty": 9,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 750
+      },
+      {
+        "rawcode": "h14Z",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": 15,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 800
+      }
+    ]
+  },
+  {
+    "name": "Bowman",
+    "variants": [
+      {
+        "rawcode": "h04P",
+        "lumberCost": 40,
+        "income": 2,
+        "bounty": 2,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 70
+      },
+      {
+        "rawcode": "h14P",
+        "lumberCost": 60,
+        "income": 3,
+        "bounty": 3,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 125
+      }
+    ]
+  },
+  {
+    "name": "Chariot",
+    "variants": [
+      {
+        "rawcode": "h04Y",
+        "lumberCost": 200,
+        "income": 10,
+        "bounty": 10,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 260
+      },
+      {
+        "rawcode": "h14Y",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": 15,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 350
+      }
+    ]
+  },
+  {
+    "name": "Commander",
+    "variants": [
+      {
+        "rawcode": "h04V",
+        "lumberCost": 120,
+        "income": 6,
+        "bounty": 6,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 290
+      },
+      {
+        "rawcode": "h14V",
+        "lumberCost": 180,
+        "income": 7,
+        "bounty": 9,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 330
+      }
+    ]
+  },
+  {
+    "name": "Dark Draenei",
+    "variants": [
+      {
+        "rawcode": "h054",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": null,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 740
+      },
+      {
+        "rawcode": "h0B3",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": null,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 740
+      },
+      {
+        "rawcode": "h154",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": null,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 740
+      },
+      {
+        "rawcode": "h254",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": null,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 740
+      }
+    ]
+  },
+  {
+    "name": "Demon",
+    "variants": [
+      {
+        "rawcode": "h0BQ",
+        "lumberCost": 1500,
+        "income": 60,
+        "bounty": 75,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 3000
+      },
+      {
+        "rawcode": "h0BR",
+        "lumberCost": 1500,
+        "income": 60,
+        "bounty": 75,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 3000
+      },
+      {
+        "rawcode": "h1BR",
+        "lumberCost": 2500,
+        "income": 100,
+        "bounty": 125,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 3250
+      },
+      {
+        "rawcode": "h2BR",
+        "lumberCost": 2500,
+        "income": 100,
+        "bounty": 125,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 3250
+      }
+    ]
+  },
+  {
+    "name": "Dino",
+    "variants": [
+      {
+        "rawcode": "h04U",
+        "lumberCost": 120,
+        "income": 6,
+        "bounty": 6,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 275
+      },
+      {
+        "rawcode": "h14U",
+        "lumberCost": 180,
+        "income": 6,
+        "bounty": 6,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 300
+      }
+    ]
+  },
+  {
+    "name": "Frost Wolf",
+    "variants": [
+      {
+        "rawcode": "h250",
+        "lumberCost": null,
+        "income": 20,
+        "bounty": 20,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 950
+      },
+      {
+        "rawcode": "h050",
+        "lumberCost": 240,
+        "income": 12,
+        "bounty": 12,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 800
+      },
+      {
+        "rawcode": "h0BB",
+        "lumberCost": 240,
+        "income": 12,
+        "bounty": 12,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 800
+      },
+      {
+        "rawcode": "h150",
+        "lumberCost": 400,
+        "income": 20,
+        "bounty": 20,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 950
+      }
+    ]
+  },
+  {
+    "name": "Furbolg",
+    "variants": [
+      {
+        "rawcode": "h04W",
+        "lumberCost": 140,
+        "income": 7,
+        "bounty": 7,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 425
+      },
+      {
+        "rawcode": "h14W",
+        "lumberCost": 200,
+        "income": 10,
+        "bounty": 10,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 425
+      }
+    ]
+  },
+  {
+    "name": "Gargoyle",
+    "variants": [
+      {
+        "rawcode": "h05M",
+        "lumberCost": 440,
+        "income": 22,
+        "bounty": 22,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1200
+      },
+      {
+        "rawcode": "h0B7",
+        "lumberCost": 440,
+        "income": 22,
+        "bounty": 22,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1200
+      },
+      {
+        "rawcode": "h15M",
+        "lumberCost": 750,
+        "income": 37,
+        "bounty": 38,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1350
+      },
+      {
+        "rawcode": "h25M",
+        "lumberCost": 1100,
+        "income": 37,
+        "bounty": 38,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1350
+      }
+    ]
+  },
+  {
+    "name": "Ghoul",
+    "variants": [
+      {
+        "rawcode": "h04R",
+        "lumberCost": 40,
+        "income": 2,
+        "bounty": 2,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 240
+      },
+      {
+        "rawcode": "h14R",
+        "lumberCost": 60,
+        "income": 3,
+        "bounty": 3,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 340
+      }
+    ]
+  },
+  {
+    "name": "Hermit",
+    "variants": [
+      {
+        "rawcode": "h04T",
+        "lumberCost": 100,
+        "income": 5,
+        "bounty": 5,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 250
+      },
+      {
+        "rawcode": "h14T",
+        "lumberCost": 160,
+        "income": 6,
+        "bounty": 8,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 280
+      }
+    ]
+  },
+  {
+    "name": "Ice Troll",
+    "variants": [
+      {
+        "rawcode": "h051",
+        "lumberCost": 240,
+        "income": 12,
+        "bounty": 12,
+        "requirements": [
+          "u00D",
+          "u00B"
+        ],
+        "hp": 450
+      },
+      {
+        "rawcode": "h09E",
+        "lumberCost": 240,
+        "income": 12,
+        "bounty": 12,
+        "requirements": [
+          "u00B"
+        ],
+        "hp": 450
+      },
+      {
+        "rawcode": "h151",
+        "lumberCost": 400,
+        "income": 20,
+        "bounty": 20,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 600
+      },
+      {
+        "rawcode": "h251",
+        "lumberCost": 400,
+        "income": 20,
+        "bounty": 20,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 600
+      }
+    ]
+  },
+  {
+    "name": "Infernal",
+    "variants": [
+      {
+        "rawcode": "h05A",
+        "lumberCost": 1000,
+        "income": 50,
+        "bounty": 50,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1500
+      },
+      {
+        "rawcode": "h0B9",
+        "lumberCost": 1000,
+        "income": 50,
+        "bounty": 50,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1500
+      },
+      {
+        "rawcode": "h15A",
+        "lumberCost": 1750,
+        "income": 85,
+        "bounty": 85,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 2100
+      },
+      {
+        "rawcode": "h25A",
+        "lumberCost": 1750,
+        "income": 85,
+        "bounty": 85,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 2100
+      }
+    ]
+  },
+  {
+    "name": "Kraken",
+    "variants": [
+      {
+        "rawcode": "h05B",
+        "lumberCost": 600,
+        "income": 30,
+        "bounty": 30,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1285
+      },
+      {
+        "rawcode": "h0BA",
+        "lumberCost": 600,
+        "income": 30,
+        "bounty": 30,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1285
+      },
+      {
+        "rawcode": "h15B",
+        "lumberCost": 1000,
+        "income": 50,
+        "bounty": 50,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1400
+      },
+      {
+        "rawcode": "h25B",
+        "lumberCost": 1000,
+        "income": 50,
+        "bounty": 50,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1400
+      }
+    ]
+  },
+  {
+    "name": "Militia",
+    "variants": [
+      {
+        "rawcode": "h04O",
+        "lumberCost": 20,
+        "income": 1,
+        "bounty": 1,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 115
+      },
+      {
+        "rawcode": "h14O",
+        "lumberCost": 30,
+        "income": 1,
+        "bounty": 1,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 175
+      }
+    ]
+  },
+  {
+    "name": "Pandaren",
+    "variants": [
+      {
+        "rawcode": "h053",
+        "lumberCost": 320,
+        "income": 16,
+        "bounty": 16,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 775
+      },
+      {
+        "rawcode": "h0B2",
+        "lumberCost": 320,
+        "income": 16,
+        "bounty": 16,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 775
+      },
+      {
+        "rawcode": "h153",
+        "lumberCost": 550,
+        "income": 28,
+        "bounty": 28,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1100
+      },
+      {
+        "rawcode": "h253",
+        "lumberCost": 550,
+        "income": 28,
+        "bounty": 28,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1100
+      }
+    ]
+  },
+  {
+    "name": "Pudge",
+    "variants": [
+      {
+        "rawcode": "h057",
+        "lumberCost": 400,
+        "income": 20,
+        "bounty": 20,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1050
+      },
+      {
+        "rawcode": "h0B6",
+        "lumberCost": 400,
+        "income": 17,
+        "bounty": 20,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1050
+      },
+      {
+        "rawcode": "h157",
+        "lumberCost": 700,
+        "income": 35,
+        "bounty": 35,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1600
+      },
+      {
+        "rawcode": "h257",
+        "lumberCost": 700,
+        "income": 35,
+        "bounty": 35,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1600
+      }
+    ]
+  },
+  {
+    "name": "Shaman",
+    "variants": [
+      {
+        "rawcode": "h056",
+        "lumberCost": 340,
+        "income": 17,
+        "bounty": 17,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 770
+      },
+      {
+        "rawcode": "h0B5",
+        "lumberCost": 400,
+        "income": 17,
+        "bounty": 18,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 770
+      },
+      {
+        "rawcode": "h156",
+        "lumberCost": 700,
+        "income": 35,
+        "bounty": 35,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1200
+      },
+      {
+        "rawcode": "h256",
+        "lumberCost": 700,
+        "income": 35,
+        "bounty": 35,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 1200
+      }
+    ]
+  },
+  {
+    "name": "Warlock",
+    "variants": [
+      {
+        "rawcode": "h052",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": 15,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 525
+      },
+      {
+        "rawcode": "h0B1",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": 15,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 585
+      },
+      {
+        "rawcode": "h152",
+        "lumberCost": 500,
+        "income": 25,
+        "bounty": 25,
+        "requirements": [
+          "u00D",
+          "Rsen"
+        ],
+        "hp": 750
+      },
+      {
+        "rawcode": "h252",
+        "lumberCost": 500,
+        "income": 25,
+        "bounty": 25,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 750
+      }
+    ]
+  },
+  {
+    "name": "Warrior",
+    "variants": [
+      {
+        "rawcode": "h04S",
+        "lumberCost": 60,
+        "income": 3,
+        "bounty": 3,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 350
+      },
+      {
+        "rawcode": "h14S",
+        "lumberCost": 100,
+        "income": 5,
+        "bounty": 5,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 330
+      }
+    ]
+  },
+  {
+    "name": "Whelp",
+    "variants": [
+      {
+        "rawcode": "h04Q",
+        "lumberCost": 100,
+        "income": 5,
+        "bounty": 5,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 250
+      },
+      {
+        "rawcode": "h14Q",
+        "lumberCost": 150,
+        "income": 7,
+        "bounty": 8,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 290
+      }
+    ]
+  },
+  {
+    "name": "Wyvern",
+    "variants": [
+      {
+        "rawcode": "h04X",
+        "lumberCost": 180,
+        "income": 9,
+        "bounty": 9,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 390
+      },
+      {
+        "rawcode": "h14X",
+        "lumberCost": 300,
+        "income": 15,
+        "bounty": 15,
+        "requirements": [
+          "u00D"
+        ],
+        "hp": 425
+      }
+    ]
+  }
+]

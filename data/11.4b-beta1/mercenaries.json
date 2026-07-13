@@ -1,0 +1,6794 @@
+[
+  {
+    "rawcode": "h055",
+    "baseRawcode": "hrif",
+    "name": "Ballista",
+    "basicTooltip": "Summon Ballista (A)",
+    "extendedTooltip": "Long ranged siege unit. Dangerous if protected.\n\n+17 income / +17 bounty\n\nDamage: 90-99\nSpeed: 1.6\nRange: 700 (Ranged)\nHit Points: 350\nAttack Type: Siege\nDefense Type: Medium\nAbility:\nRegicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage.",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlaiveThrower.blp",
+    "model": "units\\nightelf\\Ballista\\Ballista.mdl",
+    "soundSet": "Ballista",
+    "cost": {
+      "gold": 0,
+      "lumber": 340,
+      "totalGoldValue": 17
+    },
+    "stats": {
+      "hp": 350,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 1070.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 89,
+          "dice": 1,
+          "sidesPerDie": 10,
+          "damageMin": 90,
+          "damageMax": 99,
+          "cooldown": 1.6,
+          "range": 700,
+          "engineRange": 700,
+          "attackType": "siege",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A037",
+        "name": "Regicide",
+        "tooltip": "Regicide",
+        "description": "Deals 3x damage to King.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A959",
+        "name": "Magic Damage Reduction",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A037",
+      "A959"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 90,
+      "damageMax": 99,
+      "cooldown": 1.6,
+      "range": 700,
+      "rangeType": "ranged",
+      "hp": 350,
+      "attackType": "siege",
+      "defenseType": "medium",
+      "income": 17,
+      "bounty": 17,
+      "abilityText": "Regicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 17,
+    "bounty": 17
+  },
+  {
+    "rawcode": "h0B4",
+    "baseRawcode": "hrif",
+    "name": "Ballista",
+    "basicTooltip": "Summon Ballista",
+    "extendedTooltip": "Requires level 10\n\nLong ranged siege unit. Dangerous if protected.\n\n+17 income / +17 bounty\n\nDamage: 75-85\nSpeed: 1.6\nRange: 700 (Ranged)\nHit Points: 350\nAttack Type: Siege\nDefense Type: Medium\nAbility:\nRegicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage.",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlaiveThrower.blp",
+    "model": "units\\nightelf\\Ballista\\Ballista.mdl",
+    "soundSet": "Ballista",
+    "cost": {
+      "gold": 0,
+      "lumber": 340,
+      "totalGoldValue": 17
+    },
+    "stats": {
+      "hp": 350,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 1070.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 89,
+          "dice": 1,
+          "sidesPerDie": 10,
+          "damageMin": 90,
+          "damageMax": 99,
+          "cooldown": 1.6,
+          "range": 700,
+          "engineRange": 700,
+          "attackType": "siege",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03P",
+        "name": "Regicide",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNGlaiveThrower.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A037",
+        "name": "Regicide",
+        "tooltip": "Regicide",
+        "description": "Deals 3x damage to King.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A959",
+        "name": "Magic Damage Reduction",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03P",
+      "A037",
+      "A959"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 75,
+      "damageMax": 85,
+      "cooldown": 1.6,
+      "range": 700,
+      "rangeType": "ranged",
+      "hp": 350,
+      "attackType": "siege",
+      "defenseType": "medium",
+      "income": 17,
+      "bounty": 17,
+      "abilityText": "Regicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 17,
+    "bounty": 17
+  },
+  {
+    "rawcode": "h155",
+    "baseRawcode": "hrif",
+    "name": "Ballista",
+    "basicTooltip": "Summon Ballista",
+    "extendedTooltip": "Long ranged siege unit. Dangerous if protected.\n\n+30 income / +30 bounty\n\nDamage: 115-120\nSpeed: 1.6\nRange: 700 (Ranged)\nHit Points: 600\nAttack Type: Siege\nDefense Type: Medium\nAbility:\nRegicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage.",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlaiveThrower.blp",
+    "model": "units\\nightelf\\Ballista\\Ballista.mdl",
+    "soundSet": "Ballista",
+    "cost": {
+      "gold": 0,
+      "lumber": 600,
+      "totalGoldValue": 30
+    },
+    "stats": {
+      "hp": 600,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 1070.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 114,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 115,
+          "damageMax": 120,
+          "cooldown": 1.6,
+          "range": 700,
+          "engineRange": 700,
+          "attackType": "siege",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A037",
+        "name": "Regicide",
+        "tooltip": "Regicide",
+        "description": "Deals 3x damage to King.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A959",
+        "name": "Magic Damage Reduction",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A037",
+      "A959"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 115,
+      "damageMax": 120,
+      "cooldown": 1.6,
+      "range": 700,
+      "rangeType": "ranged",
+      "hp": 600,
+      "attackType": "siege",
+      "defenseType": "medium",
+      "income": 30,
+      "bounty": 30,
+      "abilityText": "Regicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 30,
+    "bounty": 30
+  },
+  {
+    "rawcode": "h255",
+    "baseRawcode": "hrif",
+    "name": "Ballista",
+    "basicTooltip": "Summon Ballista",
+    "extendedTooltip": "Long ranged siege unit. Dangerous if protected.\n\n+30 income / +30 bounty\n\nDamage: 115-120\nSpeed: 1.6\nRange: 700 (Ranged)\nHit Points: 600\nAttack Type: Siege\nDefense Type: Medium\nAbility:\nRegicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage.",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlaiveThrower.blp",
+    "model": "units\\nightelf\\Ballista\\Ballista.mdl",
+    "soundSet": "Ballista",
+    "cost": {
+      "gold": 0,
+      "lumber": 600,
+      "totalGoldValue": 42
+    },
+    "stats": {
+      "hp": 600,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 1070.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 189,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 190,
+          "damageMax": 195,
+          "cooldown": 1.6,
+          "range": 700,
+          "engineRange": 700,
+          "attackType": "siege",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A037",
+        "name": "Regicide",
+        "tooltip": "Regicide",
+        "description": "Deals 3x damage to King.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A959",
+        "name": "Magic Damage Reduction",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A037",
+      "A959"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 115,
+      "damageMax": 120,
+      "cooldown": 1.6,
+      "range": 700,
+      "rangeType": "ranged",
+      "hp": 600,
+      "attackType": "siege",
+      "defenseType": "medium",
+      "income": 30,
+      "bounty": 30,
+      "abilityText": "Regicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 30,
+    "bounty": 30
+  },
+  {
+    "rawcode": "h059",
+    "baseRawcode": "hfoo",
+    "name": "Behemoth",
+    "basicTooltip": "Summon Behemoth (Z)",
+    "extendedTooltip": "Extremely tough attacker. Can endure quite a lot of damage and still fight.\n\n+25 income / +25 bounty\n\nDamage: 145-155\nSpeed: 1.3\nRange: 90 (Melee)\nHit Points: 1420\nAttack Type: Siege\nDefense Type: Fortified\nAbility:\nResilience Aura: +5 bonus armor to nearby allies (Range: 600)",
+    "hotkey": "Z",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSeaGiant.blp",
+    "model": "Units\\Creeps\\SeaGiant\\SeaGiant.mdl",
+    "soundSet": "SeaGiant",
+    "cost": {
+      "gold": 0,
+      "lumber": 500,
+      "totalGoldValue": 25
+    },
+    "stats": {
+      "hp": 1420,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 144,
+          "dice": null,
+          "sidesPerDie": 11,
+          "damageMin": 145,
+          "damageMax": 155,
+          "cooldown": 1.3,
+          "range": 90,
+          "engineRange": null,
+          "attackType": "siege",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A0HT",
+        "name": "Resilience Aura",
+        "tooltip": "Resilience Aura",
+        "description": "Gives 5 additional armor to nearby friendly units.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A963",
+      "A0HT"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 145,
+      "damageMax": 155,
+      "cooldown": 1.3,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 1420,
+      "attackType": "siege",
+      "defenseType": "fortified",
+      "income": 25,
+      "bounty": 25,
+      "abilityText": "Resilience Aura: +5 bonus armor to nearby allies (Range: 600)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 25,
+    "bounty": 25
+  },
+  {
+    "rawcode": "h0B8",
+    "baseRawcode": "hfoo",
+    "name": "Behemoth",
+    "basicTooltip": "Summon Behemoth",
+    "extendedTooltip": "Requires level 10\n\nExtremely tough attacker. Can endure quite a lot of damage and still fight.\n\n+25 income / +25 bounty\n\nDamage: 145-155\nSpeed: 1.3\nRange: 90 (Melee)\nHit Points: 1420\nAttack Type: Siege\nDefense Type: Fortified\nAbility:\nResilience Aura: +5 bonus armor to nearby allies (Range: 600)",
+    "hotkey": "Z",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSeaGiant.blp",
+    "model": "Units\\Creeps\\SeaGiant\\SeaGiant.mdl",
+    "soundSet": "SeaGiant",
+    "cost": {
+      "gold": 0,
+      "lumber": 500,
+      "totalGoldValue": 25
+    },
+    "stats": {
+      "hp": 1420,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 144,
+          "dice": null,
+          "sidesPerDie": 11,
+          "damageMin": 145,
+          "damageMax": 155,
+          "cooldown": 1.3,
+          "range": 90,
+          "engineRange": null,
+          "attackType": "siege",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A963"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 145,
+      "damageMax": 155,
+      "cooldown": 1.3,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 1420,
+      "attackType": "siege",
+      "defenseType": "fortified",
+      "income": 25,
+      "bounty": 25,
+      "abilityText": "Resilience Aura: +5 bonus armor to nearby allies (Range: 600)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 25,
+    "bounty": 25
+  },
+  {
+    "rawcode": "h159",
+    "baseRawcode": "hfoo",
+    "name": "Behemoth",
+    "basicTooltip": "Summon Behemoth",
+    "extendedTooltip": "Extremely tough attacker. Can endure quite a lot of damage and still fight.\n\n+43 income / +43 bounty\n\nDamage: 216-224\nSpeed: 1.3\nRange: 90 (Melee)\nHit Points: 2000\nAttack Type: Siege\nDefense Type: Fortified\nAbility:\nResilience Aura: +5 bonus armor to nearby allies (Range: 600)",
+    "hotkey": "Z",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSeaGiant.blp",
+    "model": "Units\\Creeps\\SeaGiant\\SeaGiant.mdl",
+    "soundSet": "SeaGiant",
+    "cost": {
+      "gold": 0,
+      "lumber": 850,
+      "totalGoldValue": 43
+    },
+    "stats": {
+      "hp": 2000,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 215,
+          "dice": null,
+          "sidesPerDie": 9,
+          "damageMin": 216,
+          "damageMax": 224,
+          "cooldown": 1.3,
+          "range": 90,
+          "engineRange": null,
+          "attackType": "siege",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A0HT",
+        "name": "Resilience Aura",
+        "tooltip": "Resilience Aura",
+        "description": "Gives 5 additional armor to nearby friendly units.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A963",
+      "A0HT"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 216,
+      "damageMax": 224,
+      "cooldown": 1.3,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 2000,
+      "attackType": "siege",
+      "defenseType": "fortified",
+      "income": 43,
+      "bounty": 43,
+      "abilityText": "Resilience Aura: +5 bonus armor to nearby allies (Range: 600)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 43,
+    "bounty": 43
+  },
+  {
+    "rawcode": "h259",
+    "baseRawcode": "hfoo",
+    "name": "Behemoth",
+    "basicTooltip": "Summon Behemoth",
+    "extendedTooltip": "Extremely tough attacker. Can endure quite a lot of damage and still fight.\n\n+43 income / +43 bounty\n\nDamage: 215-220\nSpeed: 1.3\nRange: 90 (Melee)\nHit Points: 2000\nAttack Type: Siege\nDefense Type: Fortified\nAbility:\nResilience Aura: +5 bonus armor to nearby allies (Range: 600)",
+    "hotkey": "Z",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSeaGiant.blp",
+    "model": "Units\\Creeps\\SeaGiant\\SeaGiant.mdl",
+    "soundSet": "SeaGiant",
+    "cost": {
+      "gold": 0,
+      "lumber": 850,
+      "totalGoldValue": 43
+    },
+    "stats": {
+      "hp": 2000,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 209,
+          "dice": null,
+          "sidesPerDie": 9,
+          "damageMin": 215,
+          "damageMax": 220,
+          "cooldown": 1.3,
+          "range": 90,
+          "engineRange": null,
+          "attackType": "siege",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A0HT",
+        "name": "Resilience Aura",
+        "tooltip": "Resilience Aura",
+        "description": "Gives 5 additional armor to nearby friendly units.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A963",
+      "A0HT"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 215,
+      "damageMax": 220,
+      "cooldown": 1.3,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 2000,
+      "attackType": "siege",
+      "defenseType": "fortified",
+      "income": 43,
+      "bounty": 43,
+      "abilityText": "Resilience Aura: +5 bonus armor to nearby allies (Range: 600)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 43,
+    "bounty": 43
+  },
+  {
+    "rawcode": "h04Z",
+    "baseRawcode": "hfoo",
+    "name": "Blood Orc",
+    "basicTooltip": "(V) Summon Blood Orc",
+    "extendedTooltip": "Strong fighter.\n\n+9 income / +9 bounty\n\nDamage: 72-78\nSpeed: 1.3\nRange: 160 (Melee)\nHit Points: 750\nAttack Type: Normal\nDefense Type: Heavy\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosGrunt2.blp",
+    "model": "units\\demon\\ChaosGrunt\\ChaosGrunt.mdl",
+    "soundSet": "ChaosGrunt",
+    "cost": {
+      "gold": 0,
+      "lumber": 180,
+      "totalGoldValue": 9
+    },
+    "stats": {
+      "hp": 750,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 71,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": 72,
+          "damageMax": 78,
+          "cooldown": 1.3,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 72,
+      "damageMax": 78,
+      "cooldown": 1.3,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 750,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 9,
+      "bounty": 9,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 9,
+    "bounty": 9
+  },
+  {
+    "rawcode": "h14Z",
+    "baseRawcode": "hfoo",
+    "name": "Blood Orc",
+    "basicTooltip": "(V) Summon Blood Orc",
+    "extendedTooltip": "Strong fighter.\n\n+15 income / +15 bounty\n\nDamage: 73-79\nSpeed: 1.2\nRange: 120 (Melee)\nHit Points: 800\nAttack Type: Normal\nDefense Type: Heavy\nAbility: None",
+    "hotkey": "V",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp",
+    "model": "units\\demon\\ChaosGrunt\\ChaosGrunt.mdl",
+    "soundSet": "ChaosGrunt",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 800,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 72,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": 73,
+          "damageMax": 79,
+          "cooldown": 1.2,
+          "range": 120,
+          "engineRange": 120,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 73,
+      "damageMax": 79,
+      "cooldown": 1.2,
+      "range": 120,
+      "rangeType": "melee",
+      "hp": 800,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 15,
+      "bounty": 15,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": 15
+  },
+  {
+    "rawcode": "h04P",
+    "baseRawcode": "hrif",
+    "name": "Bowman",
+    "basicTooltip": "(W) Summon Bowman",
+    "extendedTooltip": "Basic archer with a long ranged attack, and a separate, more powerful attack against air units.\n\n+2 income / +2 bounty\n\nDamage: 13-15 | 16-21 against air\nSpeed: 0.9\nRange: 550 (Ranged)\nHit Points: 70\nAttack Type: Piercing\nDefense Type: Light\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp",
+    "model": "units\\creeps\\HighElfArcher\\HighElfArcher.mdl",
+    "soundSet": "Archer",
+    "cost": {
+      "gold": 0,
+      "lumber": 40,
+      "totalGoldValue": 2
+    },
+    "stats": {
+      "hp": 70,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 550.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 12,
+          "dice": 1,
+          "sidesPerDie": 3,
+          "damageMin": 13,
+          "damageMax": 15,
+          "cooldown": 0.9,
+          "range": 550,
+          "engineRange": 550,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        },
+        {
+          "number": 2,
+          "damageBase": 15,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 16,
+          "damageMax": 21,
+          "cooldown": 0.8999999761581421,
+          "range": 550,
+          "engineRange": 550,
+          "attackType": "magic",
+          "weaponType": null,
+          "targets": [
+            "air"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 13,
+      "damageMax": 15,
+      "cooldown": 0.9,
+      "range": 550,
+      "rangeType": "ranged",
+      "hp": 70,
+      "attackType": "piercing",
+      "defenseType": "light",
+      "income": 2,
+      "bounty": 2,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 2,
+    "bounty": 2
+  },
+  {
+    "rawcode": "h14P",
+    "baseRawcode": "hrif",
+    "name": "Bowman",
+    "basicTooltip": "(W) Summon Bowman",
+    "extendedTooltip": "Basic archer with a ranged attack.\n\n+3 income / +3 bounty\n\nDamage: 13-15 (Pierce) | 19-20 (Magic) vs air\nSpeed: 0.9\nRange: 550 (Ranged)\nHit Points: 125\nAttack Type: Piercing\nDefense Type: Light\nAbility: None",
+    "hotkey": "W",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHighElvenArcher.blp",
+    "model": "units\\creeps\\HighElfArcher\\HighElfArcher.mdl",
+    "soundSet": "Archer",
+    "cost": {
+      "gold": 0,
+      "lumber": 60,
+      "totalGoldValue": 3
+    },
+    "stats": {
+      "hp": 125,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 550.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 12,
+          "dice": 1,
+          "sidesPerDie": 3,
+          "damageMin": 13,
+          "damageMax": 15,
+          "cooldown": 0.9,
+          "range": 550,
+          "engineRange": 550,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        },
+        {
+          "number": 2,
+          "damageBase": 18,
+          "dice": 1,
+          "sidesPerDie": 1,
+          "damageMin": 19,
+          "damageMax": 19,
+          "cooldown": 0.8999999761581421,
+          "range": 550,
+          "engineRange": 550,
+          "attackType": "magic",
+          "weaponType": null,
+          "targets": [
+            "air"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 13,
+      "damageMax": 15,
+      "cooldown": 0.9,
+      "range": 550,
+      "rangeType": "ranged",
+      "hp": 125,
+      "attackType": "piercing",
+      "defenseType": "light",
+      "income": 3,
+      "bounty": 3,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 3,
+    "bounty": 3
+  },
+  {
+    "rawcode": "h04Y",
+    "baseRawcode": "hrif",
+    "name": "Chariot",
+    "basicTooltip": "(C) Summon Chariot",
+    "extendedTooltip": "Long ranged catapult. Outranges almost all other units.\n\n+10 income / +10 bounty\n\nDamage: 52-60\nSpeed: 1.8\nRange: 700 (Ranged)\nHit Points: 260\nAttack Type: Siege\nDefense Type: Fortified\nAbility:\nRegicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage.",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMeatWagon.blp",
+    "model": "units\\undead\\MeatWagon\\MeatWagon.mdl",
+    "soundSet": "Catapult",
+    "cost": {
+      "gold": 0,
+      "lumber": 200,
+      "totalGoldValue": 10
+    },
+    "stats": {
+      "hp": 260,
+      "armor": null,
+      "defenseType": "fortified",
+      "acquisitionRange": 1070.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 51,
+          "dice": 1,
+          "sidesPerDie": 9,
+          "damageMin": 52,
+          "damageMax": 60,
+          "cooldown": 1.8,
+          "range": 700,
+          "engineRange": 700,
+          "attackType": "siege",
+          "weaponType": "msplash",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        },
+        {
+          "number": 2,
+          "damageBase": null,
+          "dice": null,
+          "sidesPerDie": null,
+          "damageMin": null,
+          "damageMax": null,
+          "cooldown": null,
+          "range": null,
+          "engineRange": null,
+          "attackType": null,
+          "weaponType": null,
+          "targets": [],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A037",
+        "name": "Regicide",
+        "tooltip": "Regicide",
+        "description": "Deals 3x damage to King.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A959",
+        "name": "Magic Damage Reduction",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A037",
+      "A963",
+      "A959"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 52,
+      "damageMax": 60,
+      "cooldown": 1.8,
+      "range": 700,
+      "rangeType": "ranged",
+      "hp": 260,
+      "attackType": "siege",
+      "defenseType": "fortified",
+      "income": 10,
+      "bounty": 10,
+      "abilityText": "Regicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 10,
+    "bounty": 10
+  },
+  {
+    "rawcode": "h14Y",
+    "baseRawcode": "hrif",
+    "name": "Chariot",
+    "basicTooltip": "(C) Summon Chariot",
+    "extendedTooltip": "Long ranged catapult. Outranges almost all other units.\n\n+15 income / +15 bounty\n\nDamage: 48-55\nSpeed: 1.8\nRange: 700 (Ranged)\nHit Points: 350\nAttack Type: Siege\nDefense Type: Fortified\nAbility:\nRegicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage.",
+    "hotkey": "C",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMeatWagon.blp",
+    "model": "units\\undead\\MeatWagon\\MeatWagon.mdl",
+    "soundSet": "Catapult",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 350,
+      "armor": null,
+      "defenseType": "fortified",
+      "acquisitionRange": 1070.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 47,
+          "dice": 1,
+          "sidesPerDie": 8,
+          "damageMin": 48,
+          "damageMax": 55,
+          "cooldown": 1.8,
+          "range": 700,
+          "engineRange": 700,
+          "attackType": "siege",
+          "weaponType": "msplash",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        },
+        {
+          "number": 2,
+          "damageBase": null,
+          "dice": null,
+          "sidesPerDie": null,
+          "damageMin": null,
+          "damageMax": null,
+          "cooldown": null,
+          "range": null,
+          "engineRange": null,
+          "attackType": null,
+          "weaponType": null,
+          "targets": [],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A037",
+        "name": "Regicide",
+        "tooltip": "Regicide",
+        "description": "Deals 3x damage to King.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A959",
+        "name": "Magic Damage Reduction",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A037",
+      "A963",
+      "A959"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 48,
+      "damageMax": 55,
+      "cooldown": 1.8,
+      "range": 700,
+      "rangeType": "ranged",
+      "hp": 350,
+      "attackType": "siege",
+      "defenseType": "fortified",
+      "income": 15,
+      "bounty": 15,
+      "abilityText": "Regicide: Triple damage vs. King \nMagic Damage Reduction: Takes 33% reduced Magic Damage."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": 15
+  },
+  {
+    "rawcode": "h04V",
+    "baseRawcode": "hrif",
+    "name": "Commander",
+    "basicTooltip": "(F) Summon Commander",
+    "extendedTooltip": "Mounted rider that slightly boosts the attack of allied units.\n\n+6 income / +6 bounty\n\nDamage: 33-35\nSpeed: 1.2\nRange: 300 (Ranged)\nHit Points: 290\nAttack Type: Piercing\nDefense Type: Fortified\nAbility:\nBattle Drums: +8% bonus damage to nearby allies (Range: 400)",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNKotoBeast.blp",
+    "model": "units\\orc\\KotoBeast\\KotoBeast.mdl",
+    "soundSet": "KotoBeast",
+    "cost": {
+      "gold": 0,
+      "lumber": 120,
+      "totalGoldValue": 6
+    },
+    "stats": {
+      "hp": 290,
+      "armor": null,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 32,
+          "dice": 1,
+          "sidesPerDie": 3,
+          "damageMin": 33,
+          "damageMax": 35,
+          "cooldown": 1.2,
+          "range": 300,
+          "engineRange": 300,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A01K",
+        "name": "Battle Drums",
+        "tooltip": "Battle Drums",
+        "description": "Increases the damage of nearby friendly units by 8%.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A01K",
+      "A963"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 33,
+      "damageMax": 35,
+      "cooldown": 1.2,
+      "range": 300,
+      "rangeType": "ranged",
+      "hp": 290,
+      "attackType": "piercing",
+      "defenseType": "fortified",
+      "income": 6,
+      "bounty": 6,
+      "abilityText": "Battle Drums: +8% bonus damage to nearby allies (Range: 400)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 6,
+    "bounty": 6
+  },
+  {
+    "rawcode": "h14V",
+    "baseRawcode": "hrif",
+    "name": "Commander",
+    "basicTooltip": "(F) Summon Commander",
+    "extendedTooltip": "Mounted rider that slightly boosts the attack of allied units.\n\n+7 income / +9 bounty\n\nDamage: 40-40\nSpeed: 1.2\nRange: 300 (Ranged)\nHit Points: 330\nAttack Type: Piercing\nDefense Type: Fortified\nAbility:\nBattle Drums: +8% bonus damage to nearby allies (Range: 300)",
+    "hotkey": "F",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNKotoBeast.blp",
+    "model": "units\\orc\\KotoBeast\\KotoBeast.mdl",
+    "soundSet": "KotoBeast",
+    "cost": {
+      "gold": 0,
+      "lumber": 180,
+      "totalGoldValue": 9
+    },
+    "stats": {
+      "hp": 330,
+      "armor": null,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 39,
+          "dice": 1,
+          "sidesPerDie": 1,
+          "damageMin": 40,
+          "damageMax": 40,
+          "cooldown": 1.2,
+          "range": 300,
+          "engineRange": 300,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A01K",
+        "name": "Battle Drums",
+        "tooltip": "Battle Drums",
+        "description": "Increases the damage of nearby friendly units by 8%.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A01K",
+      "A963"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 40,
+      "damageMax": 40,
+      "cooldown": 1.2,
+      "range": 300,
+      "rangeType": "ranged",
+      "hp": 330,
+      "attackType": "piercing",
+      "defenseType": "fortified",
+      "income": 7,
+      "bounty": 9,
+      "abilityText": "Battle Drums: +8% bonus damage to nearby allies (Range: 300)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 7,
+    "bounty": 9
+  },
+  {
+    "rawcode": "h054",
+    "baseRawcode": "hfoo",
+    "name": "Dark Draenei",
+    "basicTooltip": "Summon Dark Draenei",
+    "extendedTooltip": "Elusive alien warrior.\n\n+15 income\nNormal damage, Medium armor.\nSwiftness Aura",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDranai.blp",
+    "model": "units\\other\\DranaiWhite\\DranaiWhite.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 740,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 64,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": null,
+          "damageMax": null,
+          "cooldown": 0.800000011920929,
+          "range": null,
+          "engineRange": null,
+          "attackType": null,
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A043"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {},
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": null
+  },
+  {
+    "rawcode": "h0B3",
+    "baseRawcode": "hfoo",
+    "name": "Dark Draenei",
+    "basicTooltip": "Summon Dark Draenei",
+    "extendedTooltip": "Requires level 10\n\nElusive alien warrior.\n\n+15 income\nNormal damage, Medium armor.\nSwiftness Aura",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDranai.blp",
+    "model": "units\\other\\DranaiWhite\\DranaiWhite.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 740,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 64,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": null,
+          "damageMax": null,
+          "cooldown": 0.800000011920929,
+          "range": null,
+          "engineRange": null,
+          "attackType": null,
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A043"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {},
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": null
+  },
+  {
+    "rawcode": "h154",
+    "baseRawcode": "hfoo",
+    "name": "Dark Draenei",
+    "basicTooltip": "Summon Dark Draenei",
+    "extendedTooltip": "Elusive alien warrior.\n\n+15 income\nNormal damage, Medium armor.\nSwiftness Aura",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDranai.blp",
+    "model": "units\\other\\DranaiWhite\\DranaiWhite.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 740,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 64,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": null,
+          "damageMax": null,
+          "cooldown": 0.800000011920929,
+          "range": null,
+          "engineRange": null,
+          "attackType": null,
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A043"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {},
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": null
+  },
+  {
+    "rawcode": "h254",
+    "baseRawcode": "hfoo",
+    "name": "Dark Draenei",
+    "basicTooltip": "Summon Dark Draenei",
+    "extendedTooltip": "Elusive alien warrior.\n\n+15 income\nNormal damage, Medium armor.\nSwiftness Aura",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDranai.blp",
+    "model": "units\\other\\DranaiWhite\\DranaiWhite.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 740,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 64,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": null,
+          "damageMax": null,
+          "cooldown": 0.800000011920929,
+          "range": null,
+          "engineRange": null,
+          "attackType": null,
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A043"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {},
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": null
+  },
+  {
+    "rawcode": "h0BQ",
+    "baseRawcode": "hfoo",
+    "name": "Demon",
+    "basicTooltip": "Summon Demon",
+    "extendedTooltip": "Requires level 10\n\nCommander of the Burning Legion, that has a powerful ranged attack.\n\n+60 income / +75 bounty\n\nDamage: 221-257\nSpeed: 0.7\nRange: 400 (Ranged)\nHit Points: 3000\nAttack Type: Chaos\nDefense Type: Unarmored\nAbility:\nSwiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity",
+    "hotkey": "V",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+    "model": "units\\nightelf\\HeroDemonHunter\\HeroDemonHunter.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 1500,
+      "totalGoldValue": 60
+    },
+    "stats": {
+      "hp": 3000,
+      "armor": 0,
+      "defenseType": "unarmored",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 217,
+          "dice": 4,
+          "sidesPerDie": 10,
+          "damageMin": 221,
+          "damageMax": 257,
+          "cooldown": 0.7,
+          "range": 400,
+          "engineRange": 350,
+          "attackType": "chaos",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A0BL",
+        "name": "",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A043",
+      "A0BL"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 221,
+      "damageMax": 257,
+      "cooldown": 0.7,
+      "range": 400,
+      "rangeType": "ranged",
+      "hp": 3000,
+      "attackType": "chaos",
+      "defenseType": "unarmored",
+      "income": 60,
+      "bounty": 75,
+      "abilityText": "Swiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 60,
+    "bounty": 75
+  },
+  {
+    "rawcode": "h0BR",
+    "baseRawcode": "hfoo",
+    "name": "Demon",
+    "basicTooltip": "Summon Demon (V)",
+    "extendedTooltip": "Commander of the Burning Legion, that has a powerful ranged attack.\n\n+60 income / +75 bounty\n\nDamage: 221-257\nSpeed: 0.7\nRange: 400 (Ranged)\nHit Points: 3000\nAttack Type: Chaos\nDefense Type: Unarmored\nAbility:\nSwiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity",
+    "hotkey": "V",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+    "model": "units\\nightelf\\HeroDemonHunter\\HeroDemonHunter.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 1500,
+      "totalGoldValue": 60
+    },
+    "stats": {
+      "hp": 3000,
+      "armor": 0,
+      "defenseType": "unarmored",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 217,
+          "dice": 4,
+          "sidesPerDie": 10,
+          "damageMin": 221,
+          "damageMax": 257,
+          "cooldown": 0.7,
+          "range": 400,
+          "engineRange": 400,
+          "attackType": "chaos",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A0BL",
+        "name": "",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A043",
+      "A0BL"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 221,
+      "damageMax": 257,
+      "cooldown": 0.7,
+      "range": 400,
+      "rangeType": "ranged",
+      "hp": 3000,
+      "attackType": "chaos",
+      "defenseType": "unarmored",
+      "income": 60,
+      "bounty": 75,
+      "abilityText": "Swiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 60,
+    "bounty": 75
+  },
+  {
+    "rawcode": "h1BR",
+    "baseRawcode": "hfoo",
+    "name": "Demon",
+    "basicTooltip": "Summon Demon",
+    "extendedTooltip": "Commander of the Burning Legion, that has a powerful ranged attack.\n\n+100 income / +125 bounty\n\nDamage: 300-320\nSpeed: 0.7\nRange: 350 (Ranged)\nHit Points: 3250\nAttack Type: Chaos\nDefense Type: Unarmored\nAbility:\nSwiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity",
+    "hotkey": "V",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+    "model": "units\\nightelf\\HeroDemonHunter\\HeroDemonHunter.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 2500,
+      "totalGoldValue": null
+    },
+    "stats": {
+      "hp": 3250,
+      "armor": 0,
+      "defenseType": "unarmored",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 299,
+          "dice": null,
+          "sidesPerDie": 21,
+          "damageMin": 300,
+          "damageMax": 320,
+          "cooldown": 0.7,
+          "range": 350,
+          "engineRange": 350,
+          "attackType": "chaos",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A0BL",
+        "name": "",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A043",
+      "A0BL"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 300,
+      "damageMax": 320,
+      "cooldown": 0.7,
+      "range": 350,
+      "rangeType": "ranged",
+      "hp": 3250,
+      "attackType": "chaos",
+      "defenseType": "unarmored",
+      "income": 100,
+      "bounty": 125,
+      "abilityText": "Swiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 100,
+    "bounty": 125
+  },
+  {
+    "rawcode": "h2BR",
+    "baseRawcode": "hfoo",
+    "name": "Demon",
+    "basicTooltip": "Summon Demon",
+    "extendedTooltip": "Commander of the Burning Legion, that has a powerful ranged attack.\n\n+100 income / +125 bounty\n\nDamage: 300-320\nSpeed: 0.7\nRange: 400 (Ranged)\nHit Points: 3250\nAttack Type: Chaos\nDefense Type: Unarmored\nAbility:\nSwiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity",
+    "hotkey": "V",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp",
+    "model": "units\\nightelf\\HeroDemonHunter\\HeroDemonHunter.mdl",
+    "soundSet": "Draenei",
+    "cost": {
+      "gold": 0,
+      "lumber": 2500,
+      "totalGoldValue": null
+    },
+    "stats": {
+      "hp": 3250,
+      "armor": 0,
+      "defenseType": "unarmored",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 449,
+          "dice": null,
+          "sidesPerDie": 21,
+          "damageMin": 300,
+          "damageMax": 320,
+          "cooldown": 0.7,
+          "range": 400,
+          "engineRange": 350,
+          "attackType": "chaos",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A043",
+        "name": "Swiftness Aura",
+        "tooltip": "Swiftness Aura",
+        "description": "Increases nearby ally movement by 15%.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A0BL",
+        "name": "",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A043",
+      "A0BL"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 300,
+      "damageMax": 320,
+      "cooldown": 0.7,
+      "range": 400,
+      "rangeType": "ranged",
+      "hp": 3250,
+      "attackType": "chaos",
+      "defenseType": "unarmored",
+      "income": 100,
+      "bounty": 125,
+      "abilityText": "Swiftness Aura : Increases nearby ally movement speed by 15% (Range: 300)\nCommand Aura: Increases nearby ally damage by 10% (Range: 900)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 100,
+    "bounty": 125
+  },
+  {
+    "rawcode": "h04U",
+    "baseRawcode": "hrif",
+    "name": "Dino",
+    "basicTooltip": "(D) Summon Dino",
+    "extendedTooltip": "Slow moving unit with good magic damage.\n\n+6 income / +6 bounty\n\nDamage: 31-35\nSpeed: 1.0\nRange: 325 (Ranged)\nHit Points: 275\nAttack Type: Magic\nDefense Type: Medium\nAbility:\nPoison Spikes: Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNThunderLizard.blp",
+    "model": "units\\creeps\\ThunderLizard\\ThunderLizard.mdl",
+    "soundSet": "KotoBeastNoRider",
+    "cost": {
+      "gold": 0,
+      "lumber": 120,
+      "totalGoldValue": 6
+    },
+    "stats": {
+      "hp": 275,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 30,
+          "dice": 1,
+          "sidesPerDie": 5,
+          "damageMin": 31,
+          "damageMax": 35,
+          "cooldown": 1.0,
+          "range": 325,
+          "engineRange": 325,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A0BM",
+        "name": "Thunder attack",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A005",
+        "name": "Poisoned Spikes",
+        "tooltip": "Poisoned Spike",
+        "description": "Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds.",
+        "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNEnvenomedSpear.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A0BM",
+      "A005"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 31,
+      "damageMax": 35,
+      "cooldown": 1.0,
+      "range": 325,
+      "rangeType": "ranged",
+      "hp": 275,
+      "attackType": "magic",
+      "defenseType": "medium",
+      "income": 6,
+      "bounty": 6,
+      "abilityText": "Poison Spikes: Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 6,
+    "bounty": 6
+  },
+  {
+    "rawcode": "h14U",
+    "baseRawcode": "hrif",
+    "name": "Dino",
+    "basicTooltip": "(D) Summon Dino",
+    "extendedTooltip": "Slow moving unit with good magic damage.\n\n+6 income / +6 bounty\n\nDamage: 43-48\nSpeed: 1.1\nRange: 300 (Ranged)\nHit Points: 300\nAttack Type: Magic\nDefense Type: Medium\nAbility:\nPoison Spikes: Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds",
+    "hotkey": "D",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNThunderLizard.blp",
+    "model": "units\\creeps\\ThunderLizard\\ThunderLizard.mdl",
+    "soundSet": "KotoBeastNoRider",
+    "cost": {
+      "gold": 0,
+      "lumber": 180,
+      "totalGoldValue": 9
+    },
+    "stats": {
+      "hp": 300,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 42,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 43,
+          "damageMax": 48,
+          "cooldown": 1.1,
+          "range": 300,
+          "engineRange": 300,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A0BM",
+        "name": "Thunder attack",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A005",
+        "name": "Poisoned Spikes",
+        "tooltip": "Poisoned Spike",
+        "description": "Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds.",
+        "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNEnvenomedSpear.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A0BM",
+      "A005"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 43,
+      "damageMax": 48,
+      "cooldown": 1.1,
+      "range": 300,
+      "rangeType": "ranged",
+      "hp": 300,
+      "attackType": "magic",
+      "defenseType": "medium",
+      "income": 6,
+      "bounty": 6,
+      "abilityText": "Poison Spikes: Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 6,
+    "bounty": 6
+  },
+  {
+    "rawcode": "h050",
+    "baseRawcode": "hfoo",
+    "name": "Frost Wolf",
+    "basicTooltip": "Summon Frost Wolf",
+    "extendedTooltip": "Ferocious melee unit with normal damage.\n\n+12 income / +12 bounty\n\nDamage: 46-54\nSpeed: 0.7\nRange: 90 (Melee)\nHit Points: 800\nAttack Type: Normal\nDefense Type: Medium\nAbility:\nFrost Aura: Slows nearby enemies ms and as by 15% (Range: 300)",
+    "hotkey": "Q",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "model": "units\\creeps\\WhiteWolf\\WhiteWolf.mdl",
+    "soundSet": "SpiritWolf",
+    "cost": {
+      "gold": 0,
+      "lumber": 240,
+      "totalGoldValue": 12
+    },
+    "stats": {
+      "hp": 800,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 45,
+          "dice": null,
+          "sidesPerDie": 9,
+          "damageMin": 46,
+          "damageMax": 54,
+          "cooldown": 0.7,
+          "range": 90,
+          "engineRange": null,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03J",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A039",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03J",
+      "A039"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 46,
+      "damageMax": 54,
+      "cooldown": 0.7,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 800,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 12,
+      "bounty": 12,
+      "abilityText": "Frost Aura: Slows nearby enemies ms and as by 15% (Range: 300)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 12,
+    "bounty": 12
+  },
+  {
+    "rawcode": "h0BB",
+    "baseRawcode": "hfoo",
+    "name": "Frost Wolf",
+    "basicTooltip": "Summon Frost Wolf",
+    "extendedTooltip": "Requires level 10\n|Ferocious melee unit with normal damage.\n\n+12 income / +12 bounty\n\nDamage: 46-54\nSpeed: 0.7\nRange: 160 (Melee)\nHit Points: 800\nAttack Type: Normal\nDefense Type: Medium\nAbility:\nFrost Aura: Slows nearby enemies ms and as by 15% (Range: 300)",
+    "hotkey": "Q",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "model": "units\\creeps\\WhiteWolf\\WhiteWolf.mdl",
+    "soundSet": "SpiritWolf",
+    "cost": {
+      "gold": 0,
+      "lumber": 240,
+      "totalGoldValue": 12
+    },
+    "stats": {
+      "hp": 800,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 45,
+          "dice": null,
+          "sidesPerDie": 9,
+          "damageMin": 46,
+          "damageMax": 54,
+          "cooldown": 0.7,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03J",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A039",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03J",
+      "A039"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 46,
+      "damageMax": 54,
+      "cooldown": 0.7,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 800,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 12,
+      "bounty": 12,
+      "abilityText": "Frost Aura: Slows nearby enemies ms and as by 15% (Range: 300)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 12,
+    "bounty": 12
+  },
+  {
+    "rawcode": "h150",
+    "baseRawcode": "hfoo",
+    "name": "Frost Wolf",
+    "basicTooltip": "Summon Frost Wolf",
+    "extendedTooltip": "Ferocious melee unit with normal damage.\n\n+20 income / +20 bounty\n\nDamage: 58-63\nSpeed: 0.7\nRange: 160 (Melee)\nHit Points: 950\nAttack Type: Normal\nDefense Type: Medium\nAbility:\nFrost Aura: Slows nearby enemies ms and as by 15% (Range: 300)",
+    "hotkey": "Q",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "model": "units\\creeps\\WhiteWolf\\WhiteWolf.mdl",
+    "soundSet": "SpiritWolf",
+    "cost": {
+      "gold": 0,
+      "lumber": 400,
+      "totalGoldValue": 20
+    },
+    "stats": {
+      "hp": 950,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 57,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 58,
+          "damageMax": 63,
+          "cooldown": 0.7,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03J",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A039",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03J",
+      "A039"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 58,
+      "damageMax": 63,
+      "cooldown": 0.7,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 950,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 20,
+      "bounty": 20,
+      "abilityText": "Frost Aura: Slows nearby enemies ms and as by 15% (Range: 300)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 20,
+    "bounty": 20
+  },
+  {
+    "rawcode": "h250",
+    "baseRawcode": "hfoo",
+    "name": "Frost Wolf",
+    "basicTooltip": "Summon Frost Wolf",
+    "extendedTooltip": "Ferocious melee unit with normal damage.\n\n+20 income / +20 bounty\n\nDamage: 58-63\nSpeed: 0.7\nRange: 90 (Melee)\nHit Points: 950\nAttack Type: Normal\nDefense Type: Medium\nAbility:\nFrost Aura: Slows nearby enemies ms and as by 15% (Range: 300)",
+    "hotkey": "Q",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "model": "units\\creeps\\WhiteWolf\\WhiteWolf.mdl",
+    "soundSet": "SpiritWolf",
+    "cost": {
+      "gold": 0,
+      "lumber": null,
+      "totalGoldValue": 20
+    },
+    "stats": {
+      "hp": 950,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 89,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 58,
+          "damageMax": 63,
+          "cooldown": 0.7,
+          "range": 90,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03J",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A039",
+        "name": "Frost Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03J",
+      "A039"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [],
+    "tooltipStats": {
+      "damageMin": 58,
+      "damageMax": 63,
+      "cooldown": 0.7,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 950,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 20,
+      "bounty": 20,
+      "abilityText": "Frost Aura: Slows nearby enemies ms and as by 15% (Range: 300)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 20,
+    "bounty": 20
+  },
+  {
+    "rawcode": "h04W",
+    "baseRawcode": "hfoo",
+    "name": "Furbolg",
+    "basicTooltip": "(Z) Summon Furbolg",
+    "extendedTooltip": "Wild beast, inflicts good damage.\n\n+7 income / +7 bounty\n\nDamage: 40-54\nSpeed: 1.0\nRange: 160 (Melee)\nHit Points: 425\nAttack Type: Normal\nDefense Type: Medium\nAbility:\nResilience Aura: +3 bonus armor to nearby allies (Range: 300)",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+    "model": "units\\creeps\\Furbolg\\Furbolg.mdl",
+    "soundSet": "Furbolg",
+    "cost": {
+      "gold": 0,
+      "lumber": 140,
+      "totalGoldValue": 7
+    },
+    "stats": {
+      "hp": 425,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 39,
+          "dice": null,
+          "sidesPerDie": 15,
+          "damageMin": 40,
+          "damageMax": 54,
+          "cooldown": 1.0,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A07E",
+        "name": "Resilience Aura",
+        "tooltip": "Resilience Aura",
+        "description": "Gives 3 additional armor to nearby friendly units.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A07E"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 40,
+      "damageMax": 54,
+      "cooldown": 1.0,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 425,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 7,
+      "bounty": 7,
+      "abilityText": "Resilience Aura: +3 bonus armor to nearby allies (Range: 300)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 7,
+    "bounty": 7
+  },
+  {
+    "rawcode": "h14W",
+    "baseRawcode": "hfoo",
+    "name": "Furbolg",
+    "basicTooltip": "(Z) Summon Furbolg",
+    "extendedTooltip": "Wild beast, inflicts good damage.\n\n+10 income / +10 bounty\n\nDamage: 53-58\nSpeed: 1.0\nRange: 160 (Melee)\nHit Points: 425\nAttack Type: Normal\nDefense Type: Medium\nAbility:\nResilience Aura: +3 bonus armor to nearby allies (Range: 300)",
+    "hotkey": "Z",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+    "model": "units\\creeps\\Furbolg\\Furbolg.mdl",
+    "soundSet": "Furbolg",
+    "cost": {
+      "gold": 0,
+      "lumber": 200,
+      "totalGoldValue": 10
+    },
+    "stats": {
+      "hp": 425,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 52,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 53,
+          "damageMax": 58,
+          "cooldown": 1.0,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A07E",
+        "name": "Resilience Aura",
+        "tooltip": "Resilience Aura",
+        "description": "Gives 3 additional armor to nearby friendly units.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A07E"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 53,
+      "damageMax": 58,
+      "cooldown": 1.0,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 425,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 10,
+      "bounty": 10,
+      "abilityText": "Resilience Aura: +3 bonus armor to nearby allies (Range: 300)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 10,
+    "bounty": 10
+  },
+  {
+    "rawcode": "h05M",
+    "baseRawcode": "hfoo",
+    "name": "Gargoyle",
+    "basicTooltip": "Summon Gargoyle (F)",
+    "extendedTooltip": "Ominous flyer often seen among the dead.\n\n+22 income / +22 bounty\n\nDamage: 135-140\nSpeed: 1.0\nRange: 520 (Ranged)\nHit Points: 1200\nAttack Type: Normal\nDefense Type: Medium\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGargoyle.blp",
+    "model": "units\\undead\\Gargoyle\\Gargoyle.mdl",
+    "soundSet": "Gargoyle",
+    "cost": {
+      "gold": 0,
+      "lumber": 440,
+      "totalGoldValue": 22
+    },
+    "stats": {
+      "hp": 1200,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 134,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 135,
+          "damageMax": 140,
+          "cooldown": 1.0,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "normal",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 135,
+      "damageMax": 140,
+      "cooldown": 1.0,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 1200,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 22,
+      "bounty": 22,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 22,
+    "bounty": 22
+  },
+  {
+    "rawcode": "h0B7",
+    "baseRawcode": "hfoo",
+    "name": "Gargoyle",
+    "basicTooltip": "Summon Gargoyle",
+    "extendedTooltip": "Requires level 10\n\nOminous flyer often seen among the dead.\n\n+22 income / +22 bounty\n\nDamage: 135-140\nSpeed: 1.0\nRange: 520 (Ranged)\nHit Points: 1200\nAttack Type: Normal\nDefense Type: Medium\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGargoyle.blp",
+    "model": "units\\undead\\Gargoyle\\Gargoyle.mdl",
+    "soundSet": "Gargoyle",
+    "cost": {
+      "gold": 0,
+      "lumber": 440,
+      "totalGoldValue": 22
+    },
+    "stats": {
+      "hp": 1200,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 105,
+          "dice": null,
+          "sidesPerDie": 11,
+          "damageMin": 135,
+          "damageMax": 140,
+          "cooldown": 1.0,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "normal",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 135,
+      "damageMax": 140,
+      "cooldown": 1.0,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 1200,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 22,
+      "bounty": 22,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 22,
+    "bounty": 22
+  },
+  {
+    "rawcode": "h15M",
+    "baseRawcode": "hfoo",
+    "name": "Gargoyle",
+    "basicTooltip": "Summon Gargoyle",
+    "extendedTooltip": "Ominous flyer often seen among the dead.\n\n+37 income / +38 bounty\n\nDamage: 215-220\nSpeed: 1.0\nRange: 520 (Ranged)\nHit Points: 1350\nAttack Type: Normal\nDefense Type: Medium\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGargoyle.blp",
+    "model": "units\\undead\\Gargoyle\\Gargoyle.mdl",
+    "soundSet": "Gargoyle",
+    "cost": {
+      "gold": 0,
+      "lumber": 750,
+      "totalGoldValue": 55
+    },
+    "stats": {
+      "hp": 1350,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 214,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 215,
+          "damageMax": 220,
+          "cooldown": 1.0,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "normal",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 215,
+      "damageMax": 220,
+      "cooldown": 1.0,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 1350,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 37,
+      "bounty": 38,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 37,
+    "bounty": 38
+  },
+  {
+    "rawcode": "h25M",
+    "baseRawcode": "hfoo",
+    "name": "Gargoyle",
+    "basicTooltip": "Summon Gargoyle",
+    "extendedTooltip": "Ominous flyer often seen among the dead.\n\n+37 income / +38 bounty\n\nDamage: 215-220\nSpeed: 1.0\nRange: 520 (Ranged)\nHit Points: 1350\nAttack Type: Normal\nDefense Type: Medium\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGargoyle.blp",
+    "model": "units\\undead\\Gargoyle\\Gargoyle.mdl",
+    "soundSet": "Gargoyle",
+    "cost": {
+      "gold": 0,
+      "lumber": 1100,
+      "totalGoldValue": 55
+    },
+    "stats": {
+      "hp": 1350,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 214,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 215,
+          "damageMax": 220,
+          "cooldown": 1.0,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "normal",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 215,
+      "damageMax": 220,
+      "cooldown": 1.0,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 1350,
+      "attackType": "normal",
+      "defenseType": "medium",
+      "income": 37,
+      "bounty": 38,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 37,
+    "bounty": 38
+  },
+  {
+    "rawcode": "h04R",
+    "baseRawcode": "hfoo",
+    "name": "Ghoul",
+    "basicTooltip": "(E) Summon Ghoul",
+    "extendedTooltip": "Melee unit.\n\n+2 income / +2 bounty\n\nDamage: 19-21\nSpeed: 0.80\nRange: 120 (Melee)\nHit Points: 240\nAttack Type: Chaos\nDefense Type: Medium",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGhoul.blp",
+    "model": "units\\undead\\Ghoul\\Ghoul.mdl",
+    "soundSet": "Ghoul",
+    "cost": {
+      "gold": 0,
+      "lumber": 40,
+      "totalGoldValue": 2
+    },
+    "stats": {
+      "hp": 240,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 18,
+          "dice": null,
+          "sidesPerDie": 3,
+          "damageMin": 19,
+          "damageMax": 21,
+          "cooldown": 0.8,
+          "range": 120,
+          "engineRange": 120,
+          "attackType": "chaos",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 19,
+      "damageMax": 21,
+      "cooldown": 0.8,
+      "range": 120,
+      "rangeType": "melee",
+      "hp": 240,
+      "attackType": "chaos",
+      "defenseType": "medium",
+      "income": 2,
+      "bounty": 2
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 2,
+    "bounty": 2
+  },
+  {
+    "rawcode": "h14R",
+    "baseRawcode": "hfoo",
+    "name": "Ghoul",
+    "basicTooltip": "(E) Summon Ghoul",
+    "extendedTooltip": "Melee unit.\n\n+3 income / +3 bounty\n\nDamage: 25-27\nSpeed: 0.90\nRange: 120 (Melee)\nHit Points: 340\nAttack Type: Chaos\nDefense Type: Medium",
+    "hotkey": "E",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGhoul.blp",
+    "model": "units\\undead\\Ghoul\\Ghoul.mdl",
+    "soundSet": "Ghoul",
+    "cost": {
+      "gold": 0,
+      "lumber": 60,
+      "totalGoldValue": 3
+    },
+    "stats": {
+      "hp": 340,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 24,
+          "dice": null,
+          "sidesPerDie": 3,
+          "damageMin": 25,
+          "damageMax": 27,
+          "cooldown": 0.9,
+          "range": 120,
+          "engineRange": 120,
+          "attackType": "chaos",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 25,
+      "damageMax": 27,
+      "cooldown": 0.9,
+      "range": 120,
+      "rangeType": "melee",
+      "hp": 340,
+      "attackType": "chaos",
+      "defenseType": "medium",
+      "income": 3,
+      "bounty": 3
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 3,
+    "bounty": 3
+  },
+  {
+    "rawcode": "h04T",
+    "baseRawcode": "hrif",
+    "name": "Hermit",
+    "basicTooltip": "(S) Summon Hermit",
+    "extendedTooltip": "Dweller of nature, deals good magic damage.\n\n+5 income / +5 bounty\n\nDamage: 28-30\nSpeed: 1.1\nRange: 250 (Ranged)\nHit Points: 250\nAttack Type: Magic\nDefense Type: Light\nAbility:\nHealing Aura: +4hp/s bonus regeneration to nearby allies (Range: 650)",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNWitchDoctor.blp",
+    "model": "units\\orc\\WitchDoctor\\WitchDoctor.mdl",
+    "soundSet": "WitchDoctor",
+    "cost": {
+      "gold": 0,
+      "lumber": 100,
+      "totalGoldValue": 5
+    },
+    "stats": {
+      "hp": 250,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 27,
+          "dice": 1,
+          "sidesPerDie": 3,
+          "damageMin": 28,
+          "damageMax": 30,
+          "cooldown": 1.1,
+          "range": 250,
+          "engineRange": 250,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A035",
+        "name": "Healing Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03F",
+        "name": "Healing Aura Icon",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A035",
+      "A03F"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 28,
+      "damageMax": 30,
+      "cooldown": 1.1,
+      "range": 250,
+      "rangeType": "ranged",
+      "hp": 250,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 5,
+      "bounty": 5,
+      "abilityText": "Healing Aura: +4hp/s bonus regeneration to nearby allies (Range: 650)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 5,
+    "bounty": 5
+  },
+  {
+    "rawcode": "h14T",
+    "baseRawcode": "hrif",
+    "name": "Hermit",
+    "basicTooltip": "(S) Summon Hermit",
+    "extendedTooltip": "Dweller of nature, deals good magic damage.\n\n+6 income / +8 bounty\n\nDamage: 30-35\nSpeed: 1.1\nRange: 250 (Ranged)\nHit Points: 280\nAttack Type: Magic\nDefense Type: Light\nAbility:\nHealing Aura: +4hp/s bonus regeneration to nearby allies (Range: 650)",
+    "hotkey": "S",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNWitchDoctor.blp",
+    "model": "units\\orc\\WitchDoctor\\WitchDoctor.mdl",
+    "soundSet": "WitchDoctor",
+    "cost": {
+      "gold": 0,
+      "lumber": 160,
+      "totalGoldValue": 6
+    },
+    "stats": {
+      "hp": 280,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 29,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 30,
+          "damageMax": 35,
+          "cooldown": 1.1,
+          "range": 250,
+          "engineRange": 250,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A035",
+        "name": "Healing Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03F",
+        "name": "Healing Aura Icon",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A035",
+      "A03F"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 30,
+      "damageMax": 35,
+      "cooldown": 1.1,
+      "range": 250,
+      "rangeType": "ranged",
+      "hp": 280,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 6,
+      "bounty": 8,
+      "abilityText": "Healing Aura: +4hp/s bonus regeneration to nearby allies (Range: 650)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 6,
+    "bounty": 8
+  },
+  {
+    "rawcode": "h051",
+    "baseRawcode": "hrif",
+    "name": "Ice Troll",
+    "basicTooltip": "Summon Ice Troll (W)",
+    "extendedTooltip": "Native of northrend with a slowing, ranged attack.\n\n+12 income / +12 bounty\n\nDamage: 60-65\nSpeed: 1.2\nRange: 500 (Ranged)\nHit Points: 450\nAttack Type: Piercing\nDefense Type: Medium\nAbility:\nCold Attack: Slows down a unit's Movement and Attack Speed",
+    "hotkey": "W",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNIceTroll.blp",
+    "model": "units\\creeps\\IceTroll\\IceTroll.mdl",
+    "soundSet": "IceTroll",
+    "cost": {
+      "gold": 0,
+      "lumber": 240,
+      "totalGoldValue": 12
+    },
+    "stats": {
+      "hp": 450,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 500.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 59,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 60,
+          "damageMax": 65,
+          "cooldown": 1.2,
+          "range": 500,
+          "engineRange": 500,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A01M",
+        "name": "Cold Attack",
+        "tooltip": "Cold Attack",
+        "description": "Adds a cold effect to this unit's attacks that slows enemy units' movement and attack speed for 4 seconds. Duration vs King 1.4 sec",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A01M"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D",
+      "u00B"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 60,
+      "damageMax": 65,
+      "cooldown": 1.2,
+      "range": 500,
+      "rangeType": "ranged",
+      "hp": 450,
+      "attackType": "piercing",
+      "defenseType": "medium",
+      "income": 12,
+      "bounty": 12,
+      "abilityText": "Cold Attack: Slows down a unit's Movement and Attack Speed"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 12,
+    "bounty": 12
+  },
+  {
+    "rawcode": "h09E",
+    "baseRawcode": "hrif",
+    "name": "Ice Troll",
+    "basicTooltip": "Summon Ice Troll",
+    "extendedTooltip": "Requires level 4\n\nNative of northrend with a slowing, ranged attack.\n\n+12 income / +12 bounty\n\nDamage: 60-65\nSpeed: 1.2\nRange: 500 (Ranged)\nHit Points: 450\nAttack Type: Piercing\nDefense Type: Medium\nAbility:\nCold Attack: Slows down a unit's Movement and Attack Speed",
+    "hotkey": "W",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNIceTroll.blp",
+    "model": "units\\creeps\\IceTroll\\IceTroll.mdl",
+    "soundSet": "IceTroll",
+    "cost": {
+      "gold": 0,
+      "lumber": 240,
+      "totalGoldValue": 12
+    },
+    "stats": {
+      "hp": 450,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 500.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 59,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 60,
+          "damageMax": 65,
+          "cooldown": 1.2,
+          "range": 500,
+          "engineRange": 500,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03H",
+        "name": "Cold Attack",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNFrost.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A01M",
+        "name": "Cold Attack",
+        "tooltip": "Cold Attack",
+        "description": "Adds a cold effect to this unit's attacks that slows enemy units' movement and attack speed for 4 seconds. Duration vs King 1.4 sec",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03H",
+      "A01M"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00B"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 60,
+      "damageMax": 65,
+      "cooldown": 1.2,
+      "range": 500,
+      "rangeType": "ranged",
+      "hp": 450,
+      "attackType": "piercing",
+      "defenseType": "medium",
+      "income": 12,
+      "bounty": 12,
+      "abilityText": "Cold Attack: Slows down a unit's Movement and Attack Speed"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 12,
+    "bounty": 12
+  },
+  {
+    "rawcode": "h151",
+    "baseRawcode": "hrif",
+    "name": "Ice Troll",
+    "basicTooltip": "Summon Ice Troll",
+    "extendedTooltip": "Native of northrend with a slowing, ranged attack.\n\n+20 income / +20 bounty\n\nDamage: 93-98\nSpeed: 1.2\nRange: 500 (Ranged)\nHit Points: 600\nAttack Type: Piercing\nDefense Type: Medium\nAbility:\nCold Attack: Slows down a unit",
+    "hotkey": "W",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNIceTroll.blp",
+    "model": "units\\creeps\\IceTroll\\IceTroll.mdl",
+    "soundSet": "IceTroll",
+    "cost": {
+      "gold": 0,
+      "lumber": 400,
+      "totalGoldValue": 20
+    },
+    "stats": {
+      "hp": 600,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 500.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 92,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 93,
+          "damageMax": 98,
+          "cooldown": 1.2,
+          "range": 500,
+          "engineRange": 500,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A01M",
+        "name": "Cold Attack",
+        "tooltip": "Cold Attack",
+        "description": "Adds a cold effect to this unit's attacks that slows enemy units' movement and attack speed for 4 seconds. Duration vs King 1.4 sec",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A01M"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 93,
+      "damageMax": 98,
+      "cooldown": 1.2,
+      "range": 500,
+      "rangeType": "ranged",
+      "hp": 600,
+      "attackType": "piercing",
+      "defenseType": "medium",
+      "income": 20,
+      "bounty": 20,
+      "abilityText": "Cold Attack: Slows down a unit"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 20,
+    "bounty": 20
+  },
+  {
+    "rawcode": "h251",
+    "baseRawcode": "hrif",
+    "name": "Ice Troll",
+    "basicTooltip": "Summon Ice Troll",
+    "extendedTooltip": "Native of northrend with a slowing, ranged attack.\n\n+20 income / +20 bounty\n\nDamage: 93-99\nSpeed: 1.2\nRange: 500 (Ranged)\nHit Points: 600\nAttack Type: Piercing\nDefense Type: Medium\nAbility:\nCold Attack: Slows down a unit",
+    "hotkey": "W",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNIceTroll.blp",
+    "model": "units\\creeps\\IceTroll\\IceTroll.mdl",
+    "soundSet": "IceTroll",
+    "cost": {
+      "gold": 0,
+      "lumber": 400,
+      "totalGoldValue": 20
+    },
+    "stats": {
+      "hp": 600,
+      "armor": null,
+      "defenseType": "medium",
+      "acquisitionRange": 500.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 109,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 110,
+          "damageMax": 115,
+          "cooldown": 1.2,
+          "range": 500,
+          "engineRange": 500,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A01M",
+        "name": "Cold Attack",
+        "tooltip": "Cold Attack",
+        "description": "Adds a cold effect to this unit's attacks that slows enemy units' movement and attack speed for 4 seconds. Duration vs King 1.4 sec",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A01M"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 93,
+      "damageMax": 99,
+      "cooldown": 1.2,
+      "range": 500,
+      "rangeType": "ranged",
+      "hp": 600,
+      "attackType": "piercing",
+      "defenseType": "medium",
+      "income": 20,
+      "bounty": 20,
+      "abilityText": "Cold Attack: Slows down a unit"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 20,
+    "bounty": 20
+  },
+  {
+    "rawcode": "h05A",
+    "baseRawcode": "hfoo",
+    "name": "Infernal",
+    "basicTooltip": "Summon Infernal (C)",
+    "extendedTooltip": "Fighter from the Burning Legion with immolation flame that can burn nearby enemies.\n\n+50 income / +50 bounty\n\nDamage: 155-173\nSpeed: 0.8\nRange: 180 (Melee)\nHit Points: 1500\nAttack Type: Chaos\nDefense Type: Fortified\nAbility:\nImmolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity",
+    "hotkey": "C",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp",
+    "model": "units\\demon\\Infernal\\Infernal.mdl",
+    "soundSet": "Infernal",
+    "cost": {
+      "gold": 0,
+      "lumber": 1000,
+      "totalGoldValue": 50
+    },
+    "stats": {
+      "hp": 1500,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 154,
+          "dice": null,
+          "sidesPerDie": 19,
+          "damageMin": 155,
+          "damageMax": 173,
+          "cooldown": 0.8,
+          "range": 180,
+          "engineRange": 180,
+          "attackType": "chaos",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03D",
+        "name": "Swipe",
+        "tooltip": "Swipe",
+        "description": "Each attack has a 17% chance to deal 180 bonus damage and stun for 1 (0.5) seconds.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A01T",
+        "name": "King's Permanent Immolation",
+        "tooltip": "King's Permanent Immolation",
+        "description": "Burns nearby enemy units for 30 points of damage per second.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A03D",
+      "A01T",
+      "A963"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 155,
+      "damageMax": 173,
+      "cooldown": 0.8,
+      "range": 180,
+      "rangeType": "melee",
+      "hp": 1500,
+      "attackType": "chaos",
+      "defenseType": "fortified",
+      "income": 50,
+      "bounty": 50,
+      "abilityText": "Immolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 50,
+    "bounty": 50
+  },
+  {
+    "rawcode": "h0B9",
+    "baseRawcode": "hfoo",
+    "name": "Infernal",
+    "basicTooltip": "Summon Infernal",
+    "extendedTooltip": "Requires level 10\n\nFighter from the Burning Legion with immolation flame that can burn nearby enemies.\n\n+50 income / +50 bounty\n\nDamage: 155-173\nSpeed: 0.8\nRange: 140 (Melee)\nHit Points: 1500\nAttack Type: Chaos\nDefense Type: Fortified\nAbility:\nImmolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity",
+    "hotkey": "C",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp",
+    "model": "units\\demon\\Infernal\\Infernal.mdl",
+    "soundSet": "Infernal",
+    "cost": {
+      "gold": 0,
+      "lumber": 1000,
+      "totalGoldValue": 50
+    },
+    "stats": {
+      "hp": 1500,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 164,
+          "dice": null,
+          "sidesPerDie": 19,
+          "damageMin": 155,
+          "damageMax": 173,
+          "cooldown": 0.8,
+          "range": 140,
+          "engineRange": 180,
+          "attackType": "chaos",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03D",
+        "name": "Swipe",
+        "tooltip": "Swipe",
+        "description": "Each attack has a 17% chance to deal 180 bonus damage and stun for 1 (0.5) seconds.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03K",
+        "name": "Healing Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03D",
+      "A03K",
+      "A963"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 155,
+      "damageMax": 173,
+      "cooldown": 0.8,
+      "range": 140,
+      "rangeType": "melee",
+      "hp": 1500,
+      "attackType": "chaos",
+      "defenseType": "fortified",
+      "income": 50,
+      "bounty": 50,
+      "abilityText": "Immolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 50,
+    "bounty": 50
+  },
+  {
+    "rawcode": "h15A",
+    "baseRawcode": "hfoo",
+    "name": "Infernal",
+    "basicTooltip": "Summon Infernal",
+    "extendedTooltip": "Fighter from the Burning Legion with immolation flame that can burn nearby enemies.\n\n+85 income / +85 bounty\n\nDamage: 235-253\nSpeed: 1.0\nRange: 180 (Melee)\nHit Points: 2100\nAttack Type: Chaos\nDefense Type: Fortified\nAbility:\nImmolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity",
+    "hotkey": "C",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp",
+    "model": "units\\demon\\Infernal\\Infernal.mdl",
+    "soundSet": "Infernal",
+    "cost": {
+      "gold": 0,
+      "lumber": 1750,
+      "totalGoldValue": 85
+    },
+    "stats": {
+      "hp": 2100,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 234,
+          "dice": null,
+          "sidesPerDie": 19,
+          "damageMin": 235,
+          "damageMax": 253,
+          "cooldown": 1.0,
+          "range": 180,
+          "engineRange": 180,
+          "attackType": "chaos",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03D",
+        "name": "Swipe",
+        "tooltip": "Swipe",
+        "description": "Each attack has a 17% chance to deal 180 bonus damage and stun for 1 (0.5) seconds.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A01T",
+        "name": "King's Permanent Immolation",
+        "tooltip": "King's Permanent Immolation",
+        "description": "Burns nearby enemy units for 30 points of damage per second.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A03D",
+      "A01T",
+      "A963"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 235,
+      "damageMax": 253,
+      "cooldown": 1.0,
+      "range": 180,
+      "rangeType": "melee",
+      "hp": 2100,
+      "attackType": "chaos",
+      "defenseType": "fortified",
+      "income": 85,
+      "bounty": 85,
+      "abilityText": "Immolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 85,
+    "bounty": 85
+  },
+  {
+    "rawcode": "h25A",
+    "baseRawcode": "hfoo",
+    "name": "Infernal",
+    "basicTooltip": "Summon Infernal",
+    "extendedTooltip": "Fighter from the Burning Legion with immolation flame that can burn nearby enemies.\n\n+85 income / +85 bounty\n\nDamage: 235-253\nSpeed: 1.0\nRange: 140 (Melee)\nHit Points: 2100\nAttack Type: Chaos\nDefense Type: Fortified\nAbility:\nImmolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity",
+    "hotkey": "C",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp",
+    "model": "units\\demon\\Infernal\\Infernal.mdl",
+    "soundSet": "Infernal",
+    "cost": {
+      "gold": 0,
+      "lumber": 1750,
+      "totalGoldValue": 85
+    },
+    "stats": {
+      "hp": 2100,
+      "armor": 0,
+      "defenseType": "fortified",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 329,
+          "dice": null,
+          "sidesPerDie": 19,
+          "damageMin": 235,
+          "damageMax": 253,
+          "cooldown": 1.0,
+          "range": 140,
+          "engineRange": 180,
+          "attackType": "chaos",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03D",
+        "name": "Swipe",
+        "tooltip": "Swipe",
+        "description": "Each attack has a 17% chance to deal 180 bonus damage and stun for 1 (0.5) seconds.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A01T",
+        "name": "King's Permanent Immolation",
+        "tooltip": "King's Permanent Immolation",
+        "description": "Burns nearby enemy units for 30 points of damage per second.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A963",
+        "name": "Fortified Unit",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A03D",
+      "A01T",
+      "A963"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 235,
+      "damageMax": 253,
+      "cooldown": 1.0,
+      "range": 140,
+      "rangeType": "melee",
+      "hp": 2100,
+      "attackType": "chaos",
+      "defenseType": "fortified",
+      "income": 85,
+      "bounty": 85,
+      "abilityText": "Immolation: Burn nearby enemy units for 30 damage per second (Range: 500)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 85,
+    "bounty": 85
+  },
+  {
+    "rawcode": "h05B",
+    "baseRawcode": "hrif",
+    "name": "Kraken",
+    "basicTooltip": "Summon Kraken (X)",
+    "extendedTooltip": "A widely feared monster with no real weaknesses.\n\n+30 income / +30 bounty\n\nDamage: 131-145\nSpeed: 1.2\nRange: 350 (Ranged)\nHit Points: 1285\nAttack Type: Pierce\nDefense Type: Heavy\nAbility:\nKraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s bonus regeneration to nearby allies (Range: 650)\nSpell Immunity",
+    "hotkey": "X",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNForgottenOne.blp",
+    "model": "Units\\Creeps\\ForgottenOne\\ForgottenOne.mdl",
+    "soundSet": null,
+    "cost": {
+      "gold": 0,
+      "lumber": 600,
+      "totalGoldValue": 30
+    },
+    "stats": {
+      "hp": 1285,
+      "armor": null,
+      "defenseType": "heavy",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 130,
+          "dice": 1,
+          "sidesPerDie": 15,
+          "damageMin": 131,
+          "damageMax": 145,
+          "cooldown": 1.2,
+          "range": 350,
+          "engineRange": 350,
+          "attackType": "pierce",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03E",
+        "name": "Kraken Poison",
+        "tooltip": "Kraken Poison",
+        "description": "20% slow mspd/aspd and 20 dps for 6 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTentacle.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03K",
+        "name": "Healing Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03F",
+        "name": "Healing Aura Icon",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A03E",
+      "A03K",
+      "A03F"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 131,
+      "damageMax": 145,
+      "cooldown": 1.2,
+      "range": 350,
+      "rangeType": "ranged",
+      "hp": 1285,
+      "attackType": "pierce",
+      "defenseType": "heavy",
+      "income": 30,
+      "bounty": 30,
+      "abilityText": "Kraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s bonus regeneration to nearby allies (Range: 650)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 30,
+    "bounty": 30
+  },
+  {
+    "rawcode": "h0BA",
+    "baseRawcode": "hrif",
+    "name": "Kraken",
+    "basicTooltip": "Summon Kraken",
+    "extendedTooltip": "Requires level 10\n\nA widely feared monster with no real weaknesses.\n\n+30 income / +30 bounty\n\nDamage: 131-145\nSpeed: 1.2\nRange: 350 (Ranged)\nHit Points: 1285\nAttack Type: Piercing\nDefense Type: Heavy\nAbility:\nKraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s  bonus regeneration to nearby allies (Range: 650)\nSpell Immunity",
+    "hotkey": "X",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNForgottenOne.blp",
+    "model": "Units\\Creeps\\ForgottenOne\\ForgottenOne.mdl",
+    "soundSet": null,
+    "cost": {
+      "gold": 0,
+      "lumber": 600,
+      "totalGoldValue": 30
+    },
+    "stats": {
+      "hp": 1285,
+      "armor": null,
+      "defenseType": "heavy",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 130,
+          "dice": 1,
+          "sidesPerDie": 15,
+          "damageMin": 131,
+          "damageMax": 145,
+          "cooldown": 1.2,
+          "range": 350,
+          "engineRange": 350,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03E",
+        "name": "Kraken Poison",
+        "tooltip": "Kraken Poison",
+        "description": "20% slow mspd/aspd and 20 dps for 6 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTentacle.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03M",
+        "name": "Kraken Poison",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNForgottenOne.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A035",
+        "name": "Healing Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03F",
+        "name": "Healing Aura Icon",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A03E",
+      "A03M",
+      "A035",
+      "A03F"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 131,
+      "damageMax": 145,
+      "cooldown": 1.2,
+      "range": 350,
+      "rangeType": "ranged",
+      "hp": 1285,
+      "attackType": "piercing",
+      "defenseType": "heavy",
+      "income": 30,
+      "bounty": 30,
+      "abilityText": "Kraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s  bonus regeneration to nearby allies (Range: 650)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 30,
+    "bounty": 30
+  },
+  {
+    "rawcode": "h15B",
+    "baseRawcode": "hrif",
+    "name": "Kraken",
+    "basicTooltip": "Summon Kraken",
+    "extendedTooltip": "A widely feared monster with no real weaknesses.\n\n+50 income / +50 bounty\n\nDamage: 195-210\nSpeed: 1.2\nRange: 350 (Ranged)\nHit Points: 1400\nAttack Type: Piercing\nDefense Type: Heavy\nAbility:\nKraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s bonus regeneration to nearby allies (Range: 650)\nSpell Immunity",
+    "hotkey": "X",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNForgottenOne.blp",
+    "model": "Units\\Creeps\\ForgottenOne\\ForgottenOne.mdl",
+    "soundSet": null,
+    "cost": {
+      "gold": 0,
+      "lumber": 1000,
+      "totalGoldValue": 50
+    },
+    "stats": {
+      "hp": 1400,
+      "armor": null,
+      "defenseType": "heavy",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 194,
+          "dice": 1,
+          "sidesPerDie": 16,
+          "damageMin": 195,
+          "damageMax": 210,
+          "cooldown": 1.2,
+          "range": 350,
+          "engineRange": 350,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03E",
+        "name": "Kraken Poison",
+        "tooltip": "Kraken Poison",
+        "description": "20% slow mspd/aspd and 20 dps for 6 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTentacle.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03K",
+        "name": "Healing Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03F",
+        "name": "Healing Aura Icon",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A03E",
+      "A03K",
+      "A03F"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 195,
+      "damageMax": 210,
+      "cooldown": 1.2,
+      "range": 350,
+      "rangeType": "ranged",
+      "hp": 1400,
+      "attackType": "piercing",
+      "defenseType": "heavy",
+      "income": 50,
+      "bounty": 50,
+      "abilityText": "Kraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s bonus regeneration to nearby allies (Range: 650)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 50,
+    "bounty": 50
+  },
+  {
+    "rawcode": "h25B",
+    "baseRawcode": "hrif",
+    "name": "Kraken",
+    "basicTooltip": "Summon Kraken",
+    "extendedTooltip": "A widely feared monster with no real weaknesses.\n\n+50 income / +50 bounty\n\nDamage: 195-210\nSpeed: 1.2\nRange: 350 (Ranged)\nHit Points: 1400\nAttack Type: Piercing\nDefense Type: Heavy\nAbility:\nKraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s bonus regeneration to nearby allies (Range: 650)\nSpell Immunity",
+    "hotkey": "X",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNForgottenOne.blp",
+    "model": "Units\\Creeps\\ForgottenOne\\ForgottenOne.mdl",
+    "soundSet": null,
+    "cost": {
+      "gold": 0,
+      "lumber": 1000,
+      "totalGoldValue": 50
+    },
+    "stats": {
+      "hp": 1400,
+      "armor": null,
+      "defenseType": "heavy",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 259,
+          "dice": 1,
+          "sidesPerDie": 16,
+          "damageMin": 260,
+          "damageMax": 275,
+          "cooldown": 1.2,
+          "range": 350,
+          "engineRange": 350,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A038",
+        "name": "Immune to magic",
+        "tooltip": "Immune to magic",
+        "description": "This warrior becomes immune to magic.",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03E",
+        "name": "Kraken Poison",
+        "tooltip": "Kraken Poison",
+        "description": "20% slow mspd/aspd and 20 dps for 6 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNTentacle.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03K",
+        "name": "Healing Aura",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03F",
+        "name": "Healing Aura Icon",
+        "tooltip": "",
+        "description": "",
+        "icon": null,
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A038",
+      "A03E",
+      "A03K",
+      "A03F"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 195,
+      "damageMax": 210,
+      "cooldown": 1.2,
+      "range": 350,
+      "rangeType": "ranged",
+      "hp": 1400,
+      "attackType": "piercing",
+      "defenseType": "heavy",
+      "income": 50,
+      "bounty": 50,
+      "abilityText": "Kraken Poison: Slows attack speed by 20% and deals 20 damage per second to an enemy.\nHealing Aura: +10hp/s bonus regeneration to nearby allies (Range: 650)\nSpell Immunity"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 50,
+    "bounty": 50
+  },
+  {
+    "rawcode": "h04O",
+    "baseRawcode": "hfoo",
+    "name": "Militia",
+    "basicTooltip": "(Q) Summon Militia",
+    "extendedTooltip": "You get what you pay for.\n\n+1 income / +1 bounty\n\nDamage: 8-9\nSpeed: 0.65\nRange: 120 (Melee)\nHit Points: 115\nAttack Type: Normal\nDefense Type: Light\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMilitia.blp",
+    "model": "units\\human\\Militia\\Militia.mdl",
+    "soundSet": "Peasant",
+    "cost": {
+      "gold": 0,
+      "lumber": 20,
+      "totalGoldValue": 1
+    },
+    "stats": {
+      "hp": 115,
+      "armor": 0,
+      "defenseType": "light",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 7,
+          "dice": null,
+          "sidesPerDie": null,
+          "damageMin": 8,
+          "damageMax": 9,
+          "cooldown": 0.65,
+          "range": 120,
+          "engineRange": 120,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 8,
+      "damageMax": 9,
+      "cooldown": 0.65,
+      "range": 120,
+      "rangeType": "melee",
+      "hp": 115,
+      "attackType": "normal",
+      "defenseType": "light",
+      "income": 1,
+      "bounty": 1,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 1,
+    "bounty": 1
+  },
+  {
+    "rawcode": "h14O",
+    "baseRawcode": "hfoo",
+    "name": "Militia",
+    "basicTooltip": "(Q) Summon Militia",
+    "extendedTooltip": "You get what you pay for.\n\n+1 income / +1 bounty\n\nDamage: 10-16\nSpeed: 0.65\nRange: 120 (Melee)\nHit Points: 175\nAttack Type: Normal\nDefense Type: Light\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMilitia.blp",
+    "model": "units\\human\\Militia\\Militia.mdl",
+    "soundSet": "Peasant",
+    "cost": {
+      "gold": 0,
+      "lumber": 30,
+      "totalGoldValue": 1
+    },
+    "stats": {
+      "hp": 175,
+      "armor": 0,
+      "defenseType": "light",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 9,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": 10,
+          "damageMax": 16,
+          "cooldown": 0.65,
+          "range": 120,
+          "engineRange": 120,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 10,
+      "damageMax": 16,
+      "cooldown": 0.65,
+      "range": 120,
+      "rangeType": "melee",
+      "hp": 175,
+      "attackType": "normal",
+      "defenseType": "light",
+      "income": 1,
+      "bounty": 1,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 1,
+    "bounty": 1
+  },
+  {
+    "rawcode": "h053",
+    "baseRawcode": "hfoo",
+    "name": "Pandaren",
+    "basicTooltip": "Summon Pandaren (R)",
+    "extendedTooltip": "Clawed, white-furred savage, with fast regeneration (14 hp/s).\n\n+16 income / +16 bounty\n\nDamage: 82-90\nSpeed: 1.0\nRange: 160 (Melee)\nHit Points: 775\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nRush: Provides 15% increased ms to allies (Range: 1000)",
+    "hotkey": "R",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolgPanda.blp",
+    "model": "units\\creeps\\FurbolgPanda\\FurbolgPanda.mdl",
+    "soundSet": "Furbolg",
+    "cost": {
+      "gold": 0,
+      "lumber": 320,
+      "totalGoldValue": 16
+    },
+    "stats": {
+      "hp": 775,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 81,
+          "dice": null,
+          "sidesPerDie": 9,
+          "damageMin": 82,
+          "damageMax": 90,
+          "cooldown": 1.0,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A0CD",
+        "name": "Rush",
+        "tooltip": "Rush",
+        "description": "Increases nearby friendly units' movement speed by 12% and life regeneration rate by 4hp/s.",
+        "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A0CD"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 82,
+      "damageMax": 90,
+      "cooldown": 1.0,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 775,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 16,
+      "bounty": 16,
+      "abilityText": "Rush: Provides 15% increased ms to allies (Range: 1000)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 16,
+    "bounty": 16
+  },
+  {
+    "rawcode": "h0B2",
+    "baseRawcode": "hfoo",
+    "name": "Pandaren",
+    "basicTooltip": "Summon Pandaren",
+    "extendedTooltip": "Requires level 10\n\nClawed, white-furred savage, with fast regeneration (14 hp/s).\n\n+16 income / +16 bounty\n\nDamage: 82-90\nSpeed: 1.0\nRange: 160 (Melee)\nHit Points: 775\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nRush: Provides 15% increased ms to allies (Range: 1000)",
+    "hotkey": "R",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolgPanda.blp",
+    "model": "units\\creeps\\FurbolgPanda\\FurbolgPanda.mdl",
+    "soundSet": "Furbolg",
+    "cost": {
+      "gold": 0,
+      "lumber": 320,
+      "totalGoldValue": 16
+    },
+    "stats": {
+      "hp": 775,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 81,
+          "dice": null,
+          "sidesPerDie": 9,
+          "damageMin": 82,
+          "damageMax": 90,
+          "cooldown": 1.0,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03O",
+        "name": "Hotblood",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolgPanda.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03O"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 82,
+      "damageMax": 90,
+      "cooldown": 1.0,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 775,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 16,
+      "bounty": 16,
+      "abilityText": "Rush: Provides 15% increased ms to allies (Range: 1000)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 16,
+    "bounty": 16
+  },
+  {
+    "rawcode": "h153",
+    "baseRawcode": "hfoo",
+    "name": "Pandaren",
+    "basicTooltip": "Summon Pandaren",
+    "extendedTooltip": "Clawed, white-furred savage, with fast regeneration (14 hp/s).\n\n+28 income / +28 bounty\n\nDamage: 100-105\nSpeed: 1.0\nRange: 160 (Melee)\nHit Points: 1100\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nRush: Provides 15% increased ms to allies (Range: 1000)",
+    "hotkey": "R",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolgPanda.blp",
+    "model": "units\\creeps\\FurbolgPanda\\FurbolgPanda.mdl",
+    "soundSet": "Furbolg",
+    "cost": {
+      "gold": 0,
+      "lumber": 550,
+      "totalGoldValue": 28
+    },
+    "stats": {
+      "hp": 1100,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 99,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 100,
+          "damageMax": 105,
+          "cooldown": 1.0,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A0CD",
+        "name": "Rush",
+        "tooltip": "Rush",
+        "description": "Increases nearby friendly units' movement speed by 12% and life regeneration rate by 4hp/s.",
+        "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A0CD"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 100,
+      "damageMax": 105,
+      "cooldown": 1.0,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 1100,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 28,
+      "bounty": 28,
+      "abilityText": "Rush: Provides 15% increased ms to allies (Range: 1000)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 28,
+    "bounty": 28
+  },
+  {
+    "rawcode": "h253",
+    "baseRawcode": "hfoo",
+    "name": "Pandaren",
+    "basicTooltip": "Summon Pandaren",
+    "extendedTooltip": "Clawed, white-furred savage, with fast regeneration (14 hp/s).\n\n+28 income / +28 bounty\n\nDamage: 100-105\nSpeed: 1.0\nRange: 160 (Melee)\nHit Points: 1100\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nRush: Provides 15% increased ms to allies (Range: 1000)",
+    "hotkey": "R",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolgPanda.blp",
+    "model": "units\\creeps\\FurbolgPanda\\FurbolgPanda.mdl",
+    "soundSet": "Furbolg",
+    "cost": {
+      "gold": 0,
+      "lumber": 550,
+      "totalGoldValue": 28
+    },
+    "stats": {
+      "hp": 1100,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 99,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 100,
+          "damageMax": 105,
+          "cooldown": 1.0,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A0CD",
+        "name": "Rush",
+        "tooltip": "Rush",
+        "description": "Increases nearby friendly units' movement speed by 12% and life regeneration rate by 4hp/s.",
+        "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A0CD"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 100,
+      "damageMax": 105,
+      "cooldown": 1.0,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 1100,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 28,
+      "bounty": 28,
+      "abilityText": "Rush: Provides 15% increased ms to allies (Range: 1000)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 28,
+    "bounty": 28
+  },
+  {
+    "rawcode": "h057",
+    "baseRawcode": "hfoo",
+    "name": "Pudge",
+    "basicTooltip": "Summon Pudge (D)",
+    "extendedTooltip": "Brutal abomination of flesh and bone.\n\n+20 income / +20 bounty\n\nDamage: 141-159\nSpeed: 1.3\nRange: 160 (Melee)\nHit Points: 1050\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nFresh Meat: Grants nearby melee allies an 20% life-stealing attack (Range: 700)",
+    "hotkey": "D",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+    "model": "units\\undead\\Abomination\\Abomination.mdl",
+    "soundSet": "Abomination",
+    "cost": {
+      "gold": 0,
+      "lumber": 400,
+      "totalGoldValue": 20
+    },
+    "stats": {
+      "hp": 1050,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 140,
+          "dice": null,
+          "sidesPerDie": 19,
+          "damageMin": 141,
+          "damageMax": 159,
+          "cooldown": 1.3,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03C",
+        "name": "Fresh Meat",
+        "tooltip": "Fresh Meat",
+        "description": "Nearby friendly melee units gain 20% life steal.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03C"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 141,
+      "damageMax": 159,
+      "cooldown": 1.3,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 1050,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 20,
+      "bounty": 20,
+      "abilityText": "Fresh Meat: Grants nearby melee allies an 20% life-stealing attack (Range: 700)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 20,
+    "bounty": 20
+  },
+  {
+    "rawcode": "h0B6",
+    "baseRawcode": "hfoo",
+    "name": "Pudge",
+    "basicTooltip": "Summon Pudge",
+    "extendedTooltip": "Requires level 10\n\nBrutal abomination of flesh and bone.\n\n+17 income / +20 bounty\n\nDamage: 141-159\nSpeed: 1.3\nRange: 90 (Melee)\nHit Points: 1050\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nFresh Meat: Grants nearby melee allies a 20% life-stealing attack (Range: 700)",
+    "hotkey": "D",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+    "model": "units\\undead\\Abomination\\Abomination.mdl",
+    "soundSet": "Abomination",
+    "cost": {
+      "gold": 0,
+      "lumber": 400,
+      "totalGoldValue": 17
+    },
+    "stats": {
+      "hp": 1050,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 140,
+          "dice": null,
+          "sidesPerDie": 19,
+          "damageMin": 141,
+          "damageMax": 159,
+          "cooldown": 1.3,
+          "range": 90,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03C",
+        "name": "Fresh Meat",
+        "tooltip": "Fresh Meat",
+        "description": "Nearby friendly melee units gain 20% life steal.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03C"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 141,
+      "damageMax": 159,
+      "cooldown": 1.3,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 1050,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 17,
+      "bounty": 20,
+      "abilityText": "Fresh Meat: Grants nearby melee allies a 20% life-stealing attack (Range: 700)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 17,
+    "bounty": 20
+  },
+  {
+    "rawcode": "h157",
+    "baseRawcode": "hfoo",
+    "name": "Pudge",
+    "basicTooltip": "Summon Pudge",
+    "extendedTooltip": "Brutal abomination of flesh and bone.\n\n+35 income / +35 bounty\n\nDamage: 205-212\nSpeed: 1.3\nRange: 160 (Melee)\nHit Points: 1600\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nFresh Meat: Grants nearby melee allies an 10% life-stealing attack (Range: 600)",
+    "hotkey": "D",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+    "model": "units\\undead\\Abomination\\Abomination.mdl",
+    "soundSet": "Abomination",
+    "cost": {
+      "gold": 0,
+      "lumber": 700,
+      "totalGoldValue": 35
+    },
+    "stats": {
+      "hp": 1600,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 204,
+          "dice": null,
+          "sidesPerDie": 8,
+          "damageMin": 205,
+          "damageMax": 212,
+          "cooldown": 1.3,
+          "range": 160,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03C",
+        "name": "Fresh Meat",
+        "tooltip": "Fresh Meat",
+        "description": "Nearby friendly melee units gain 20% life steal.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03C"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 205,
+      "damageMax": 212,
+      "cooldown": 1.3,
+      "range": 160,
+      "rangeType": "melee",
+      "hp": 1600,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 35,
+      "bounty": 35,
+      "abilityText": "Fresh Meat: Grants nearby melee allies an 10% life-stealing attack (Range: 600)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 35,
+    "bounty": 35
+  },
+  {
+    "rawcode": "h257",
+    "baseRawcode": "hfoo",
+    "name": "Pudge",
+    "basicTooltip": "Summon Pudge",
+    "extendedTooltip": "Brutal abomination of flesh and bone.\n\n+35 income / +35 bounty\n\nDamage: 205-212\nSpeed: 1.3\nRange: 90 (Melee)\nHit Points: 1600\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nFresh Meat: Grants nearby melee allies an 10% life-stealing attack (Range: 600)",
+    "hotkey": "D",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+    "model": "units\\undead\\Abomination\\Abomination.mdl",
+    "soundSet": "Abomination",
+    "cost": {
+      "gold": 0,
+      "lumber": 700,
+      "totalGoldValue": 50
+    },
+    "stats": {
+      "hp": 1600,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 259,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 205,
+          "damageMax": 212,
+          "cooldown": 1.3,
+          "range": 90,
+          "engineRange": 160,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03C",
+        "name": "Fresh Meat",
+        "tooltip": "Fresh Meat",
+        "description": "Nearby friendly melee units gain 20% life steal.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03C"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 205,
+      "damageMax": 212,
+      "cooldown": 1.3,
+      "range": 90,
+      "rangeType": "melee",
+      "hp": 1600,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 35,
+      "bounty": 35,
+      "abilityText": "Fresh Meat: Grants nearby melee allies an 10% life-stealing attack (Range: 600)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 35,
+    "bounty": 35
+  },
+  {
+    "rawcode": "h056",
+    "baseRawcode": "hrif",
+    "name": "Shaman",
+    "basicTooltip": "Summon Shaman (S)",
+    "extendedTooltip": "Orc spellweaver with great magic damage.\n\n+17 income / +17 bounty\n\nDamage: 65-73\nSpeed: 0.9\nRange: 400 (Ranged)\nHit Points: 770\nAttack Type: Magic\nDefense Type: Light\nAbility:\nBlood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%",
+    "hotkey": "S",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNShaman.blp",
+    "model": "units\\orc\\Shaman\\Shaman.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 340,
+      "totalGoldValue": 17
+    },
+    "stats": {
+      "hp": 770,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 64,
+          "dice": 1,
+          "sidesPerDie": 9,
+          "damageMin": 65,
+          "damageMax": 73,
+          "cooldown": 0.9,
+          "range": 400,
+          "engineRange": null,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03B",
+        "name": "Blood Rush",
+        "tooltip": "Blood Rush",
+        "description": "The combat speed of the indicated warrior is increased by40%, and the speed of its movement- on the25%. Time of action- 40 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNBloodLust.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03B"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 65,
+      "damageMax": 73,
+      "cooldown": 0.9,
+      "range": 400,
+      "rangeType": "ranged",
+      "hp": 770,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 17,
+      "bounty": 17,
+      "abilityText": "Blood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 17,
+    "bounty": 17
+  },
+  {
+    "rawcode": "h0B5",
+    "baseRawcode": "hrif",
+    "name": "Shaman",
+    "basicTooltip": "Summon Shaman",
+    "extendedTooltip": "Requires level 10\n\nOrc spellweaver with great magic damage.\n\n+17 income / +18 bounty\n\nDamage: 65-73\nSpeed: 0.9\nRange: 400 (Ranged)\nHit Points: 770\nAttack Type: Magic\nDefense Type: Light\nAbility:\nBlood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%",
+    "hotkey": "S",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNShaman.blp",
+    "model": "units\\orc\\Shaman\\Shaman.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 400,
+      "totalGoldValue": 17
+    },
+    "stats": {
+      "hp": 770,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 64,
+          "dice": 1,
+          "sidesPerDie": 9,
+          "damageMin": 65,
+          "damageMax": 73,
+          "cooldown": 0.9,
+          "range": 400,
+          "engineRange": null,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03R",
+        "name": "Blood Rush",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNShaman.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03B",
+        "name": "Blood Rush",
+        "tooltip": "Blood Rush",
+        "description": "The combat speed of the indicated warrior is increased by40%, and the speed of its movement- on the25%. Time of action- 40 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNBloodLust.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03R",
+      "A03B"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 65,
+      "damageMax": 73,
+      "cooldown": 0.9,
+      "range": 400,
+      "rangeType": "ranged",
+      "hp": 770,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 17,
+      "bounty": 18,
+      "abilityText": "Blood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 17,
+    "bounty": 18
+  },
+  {
+    "rawcode": "h156",
+    "baseRawcode": "hrif",
+    "name": "Shaman",
+    "basicTooltip": "Summon Shaman",
+    "extendedTooltip": "Orc spellweaver with great magic damage.\n\n+35 income / +35 bounty\n\nDamage: 100-105\nSpeed: 0.9\nRange: 400 (Ranged)\nHit Points: 1200\nAttack Type: Magic\nDefense Type: Light\nAbility:\nBlood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%",
+    "hotkey": "S",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNShaman.blp",
+    "model": "units\\orc\\Shaman\\Shaman.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 700,
+      "totalGoldValue": 35
+    },
+    "stats": {
+      "hp": 1200,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 99,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 100,
+          "damageMax": 105,
+          "cooldown": 0.9,
+          "range": 400,
+          "engineRange": null,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03B",
+        "name": "Blood Rush",
+        "tooltip": "Blood Rush",
+        "description": "The combat speed of the indicated warrior is increased by40%, and the speed of its movement- on the25%. Time of action- 40 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNBloodLust.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03B"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 100,
+      "damageMax": 105,
+      "cooldown": 0.9,
+      "range": 400,
+      "rangeType": "ranged",
+      "hp": 1200,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 35,
+      "bounty": 35,
+      "abilityText": "Blood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 35,
+    "bounty": 35
+  },
+  {
+    "rawcode": "h256",
+    "baseRawcode": "hrif",
+    "name": "Shaman",
+    "basicTooltip": "Summon Shaman",
+    "extendedTooltip": "Orc spellweaver with great magic damage.\n\n+35 income / +35 bounty\n\nDamage: 100-105\nSpeed: 0.9\nRange: 400 (Ranged)\nHit Points: 1200\nAttack Type: Magic\nDefense Type: Light\nAbility:\nBlood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%",
+    "hotkey": "S",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNShaman.blp",
+    "model": "units\\orc\\Shaman\\Shaman.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 700,
+      "totalGoldValue": 45
+    },
+    "stats": {
+      "hp": 1200,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 134,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 135,
+          "damageMax": 140,
+          "cooldown": 0.9,
+          "range": 400,
+          "engineRange": null,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03B",
+        "name": "Blood Rush",
+        "tooltip": "Blood Rush",
+        "description": "The combat speed of the indicated warrior is increased by40%, and the speed of its movement- on the25%. Time of action- 40 sec.",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNBloodLust.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03B"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 100,
+      "damageMax": 105,
+      "cooldown": 0.9,
+      "range": 400,
+      "rangeType": "ranged",
+      "hp": 1200,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 35,
+      "bounty": 35,
+      "abilityText": "Blood Rush: Buffs a friendly unit, increasing it's attack speed by 40% & movement speed by 25%"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 35,
+    "bounty": 35
+  },
+  {
+    "rawcode": "h052",
+    "baseRawcode": "hrif",
+    "name": "Warlock",
+    "basicTooltip": "Summon Warlock (E)",
+    "extendedTooltip": "A magician with the fortitude of a warrior.\n\n+15 income / +15 bounty\n\nDamage: 59-67\nSpeed: 1.25\nRange: 520 (Ranged)\nHit Points: 525\nAttack Type: Magic\nDefense Type: Light\nAbility:\nCorruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king).",
+    "hotkey": "E",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+    "model": "units\\creeps\\ChaosWarlockGreen\\ChaosWarlockGreen.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 525,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 58,
+          "dice": 1,
+          "sidesPerDie": 9,
+          "damageMin": 59,
+          "damageMax": 67,
+          "cooldown": 1.25,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03A",
+        "name": "Corruption",
+        "tooltip": "Corruption",
+        "description": "Reduce enemy's armor by 4. ( Last 4 seconds on creep, 2 seconds on hero)",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03A"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 59,
+      "damageMax": 67,
+      "cooldown": 1.25,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 525,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 15,
+      "bounty": 15,
+      "abilityText": "Corruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king)."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": 15
+  },
+  {
+    "rawcode": "h0B1",
+    "baseRawcode": "hrif",
+    "name": "Warlock",
+    "basicTooltip": "Summon Warlock",
+    "extendedTooltip": "Requires level 10\n\nA magician with the fortitude of a warrior.\n\n+15 income / +15 bounty\n\nDamage: 59-67\nSpeed: 1.25\nRange: 520 (Ranged)\nHit Points: 585\nAttack Type: Magic\nDefense Type: Light\nAbility:\nCorruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king).",
+    "hotkey": "E",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+    "model": "units\\creeps\\ChaosWarlockGreen\\ChaosWarlockGreen.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 585,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 58,
+          "dice": 1,
+          "sidesPerDie": 9,
+          "damageMin": 59,
+          "damageMax": 67,
+          "cooldown": 1.25,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03A",
+        "name": "Corruption",
+        "tooltip": "Corruption",
+        "description": "Reduce enemy's armor by 4. ( Last 4 seconds on creep, 2 seconds on hero)",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A03N",
+        "name": "Corruption",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfCorruption.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03A",
+      "A03N"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "mechanical",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 59,
+      "damageMax": 67,
+      "cooldown": 1.25,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 585,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 15,
+      "bounty": 15,
+      "abilityText": "Corruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king)."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": 15
+  },
+  {
+    "rawcode": "h152",
+    "baseRawcode": "hrif",
+    "name": "Warlock",
+    "basicTooltip": "Summon Warlock",
+    "extendedTooltip": "A magician with the fortitude of a warrior.\n\n+25 income / +25 bounty\n\nDamage: 108-113\nSpeed: 1.25\nRange: 520 (Ranged)\nHit Points: 750\nAttack Type: Magic\nDefense Type: Light\nAbility:\nCorruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king).",
+    "hotkey": "E",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+    "model": "units\\creeps\\ChaosWarlockGreen\\ChaosWarlockGreen.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 500,
+      "totalGoldValue": 25
+    },
+    "stats": {
+      "hp": 750,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 107,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 108,
+          "damageMax": 113,
+          "cooldown": 1.25,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03A",
+        "name": "Corruption",
+        "tooltip": "Corruption",
+        "description": "Reduce enemy's armor by 4. ( Last 4 seconds on creep, 2 seconds on hero)",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03A"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D",
+      "Rsen"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 108,
+      "damageMax": 113,
+      "cooldown": 1.25,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 750,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 25,
+      "bounty": 25,
+      "abilityText": "Corruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king)."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 25,
+    "bounty": 25
+  },
+  {
+    "rawcode": "h252",
+    "baseRawcode": "hrif",
+    "name": "Warlock",
+    "basicTooltip": "Summon Warlock",
+    "extendedTooltip": "A magician with the fortitude of a warrior.\n\n+25 income / +25 bounty\n\nDamage: 108-113\nSpeed: 1.25\nRange: 520 (Ranged)\nHit Points: 750\nAttack Type: Magic\nDefense Type: Light\nAbility:\nCorruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king).",
+    "hotkey": "E",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+    "model": "units\\creeps\\ChaosWarlockGreen\\ChaosWarlockGreen.mdl",
+    "soundSet": "Shaman",
+    "cost": {
+      "gold": 0,
+      "lumber": 500,
+      "totalGoldValue": 25
+    },
+    "stats": {
+      "hp": 750,
+      "armor": null,
+      "defenseType": "light",
+      "acquisitionRange": 520.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 124,
+          "dice": 1,
+          "sidesPerDie": 6,
+          "damageMin": 125,
+          "damageMax": 130,
+          "cooldown": 1.25,
+          "range": 520,
+          "engineRange": 520,
+          "attackType": "magic",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A03A",
+        "name": "Corruption",
+        "tooltip": "Corruption",
+        "description": "Reduce enemy's armor by 4. ( Last 4 seconds on creep, 2 seconds on hero)",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A03A"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 108,
+      "damageMax": 113,
+      "cooldown": 1.25,
+      "range": 520,
+      "rangeType": "ranged",
+      "hp": 750,
+      "attackType": "magic",
+      "defenseType": "light",
+      "income": 25,
+      "bounty": 25,
+      "abilityText": "Corruption: Reduces armor of target by 4 for 4 seconds (2 seconds on king)."
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 25,
+    "bounty": 25
+  },
+  {
+    "rawcode": "h04S",
+    "baseRawcode": "hfoo",
+    "name": "Warrior",
+    "basicTooltip": "(R) Summon Warrior",
+    "extendedTooltip": "Muscular, green-skinned fighter.\n\n+3 income / +3 bounty\n\nDamage: 26-28\nSpeed: 1.3\nRange: 120 (Melee)\nHit Points: 350\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nMaul: 5% Chance to stun target for 0.7 seconds\nSlam: 35% Chance to deal 25 bonus damage in a 110 AoE\nMagic Damage Vulnerability: Takes 100% increased damage from spells",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGrunt.blp",
+    "model": "units\\orc\\Grunt\\Grunt.mdl",
+    "soundSet": "Grunt",
+    "cost": {
+      "gold": 0,
+      "lumber": 60,
+      "totalGoldValue": 3
+    },
+    "stats": {
+      "hp": 350,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 25,
+          "dice": null,
+          "sidesPerDie": 3,
+          "damageMin": 26,
+          "damageMax": 28,
+          "cooldown": 1.3,
+          "range": 120,
+          "engineRange": 120,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A04G",
+        "name": "Swipe",
+        "tooltip": "Swipe",
+        "description": "Each attack has a 5% chance to stun for 1 second",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A923",
+        "name": "Slam",
+        "tooltip": "Slam",
+        "description": "Slaming 'n' danking",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A960",
+        "name": "Magic Damage Vulnerability (+100%)",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A04G",
+      "A923",
+      "A960"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 26,
+      "damageMax": 28,
+      "cooldown": 1.3,
+      "range": 120,
+      "rangeType": "melee",
+      "hp": 350,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 3,
+      "bounty": 3,
+      "abilityText": "Maul: 5% Chance to stun target for 0.7 seconds\nSlam: 35% Chance to deal 25 bonus damage in a 110 AoE\nMagic Damage Vulnerability: Takes 100% increased damage from spells"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 3,
+    "bounty": 3
+  },
+  {
+    "rawcode": "h14S",
+    "baseRawcode": "hfoo",
+    "name": "Warrior",
+    "basicTooltip": "(R) Summon Warrior",
+    "extendedTooltip": "Muscular, green-skinned fighter.\n\n+5 income / +5 bounty\n\nDamage: 37-41\nSpeed: 1.3\nRange: 120 (Melee)\nHit Points: 330\nAttack Type: Normal\nDefense Type: Heavy\nAbility:\nMaul: 5% Chance to stun target for 0.7 seconds\nSlam: 35% Chance to deal 25 bonus damage in a 110 AoE\nMagic Damage Vulnerability: Takes 100% increased damage from spells",
+    "hotkey": "R",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGrunt.blp",
+    "model": "units\\orc\\Grunt\\Grunt.mdl",
+    "soundSet": "Grunt",
+    "cost": {
+      "gold": 0,
+      "lumber": 100,
+      "totalGoldValue": 5
+    },
+    "stats": {
+      "hp": 330,
+      "armor": 0,
+      "defenseType": "heavy",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 36,
+          "dice": null,
+          "sidesPerDie": 5,
+          "damageMin": 37,
+          "damageMax": 41,
+          "cooldown": 1.3,
+          "range": 120,
+          "engineRange": 120,
+          "attackType": "normal",
+          "weaponType": null,
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A04G",
+        "name": "Swipe",
+        "tooltip": "Swipe",
+        "description": "Each attack has a 5% chance to stun for 1 second",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A923",
+        "name": "Slam",
+        "tooltip": "Slam",
+        "description": "Slaming 'n' danking",
+        "icon": null,
+        "isSystemAbility": false
+      },
+      {
+        "rawcode": "A960",
+        "name": "Magic Damage Vulnerability (+100%)",
+        "tooltip": "",
+        "description": "",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A04G",
+      "A923",
+      "A960"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 37,
+      "damageMax": 41,
+      "cooldown": 1.3,
+      "range": 120,
+      "rangeType": "melee",
+      "hp": 330,
+      "attackType": "normal",
+      "defenseType": "heavy",
+      "income": 5,
+      "bounty": 5,
+      "abilityText": "Maul: 5% Chance to stun target for 0.7 seconds\nSlam: 35% Chance to deal 25 bonus damage in a 110 AoE\nMagic Damage Vulnerability: Takes 100% increased damage from spells"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 5,
+    "bounty": 5
+  },
+  {
+    "rawcode": "h04Q",
+    "baseRawcode": "hfoo",
+    "name": "Whelp",
+    "basicTooltip": "(A) Summon Whelp",
+    "extendedTooltip": "Flying dragon, filled with youthful energy.\n\n+5 income / +5 bounty\n\nDamage: 38-40\nSpeed: 1\nRange: 200 (Ranged)\nHit Points: 250\nAttack Type: Chaos\nDefense Type: Medium\nAbility: None",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGreenDragon.blp",
+    "model": "units\\creeps\\GreenDragonWelp\\GreenDragonWelp.mdl",
+    "soundSet": "AzureDragon",
+    "cost": {
+      "gold": 0,
+      "lumber": 100,
+      "totalGoldValue": 5
+    },
+    "stats": {
+      "hp": 250,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 37,
+          "dice": null,
+          "sidesPerDie": 3,
+          "damageMin": 38,
+          "damageMax": 40,
+          "cooldown": 1.0,
+          "range": 200,
+          "engineRange": 200,
+          "attackType": "chaos",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 38,
+      "damageMax": 40,
+      "cooldown": 1.0,
+      "range": 200,
+      "rangeType": "ranged",
+      "hp": 250,
+      "attackType": "chaos",
+      "defenseType": "medium",
+      "income": 5,
+      "bounty": 5,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 5,
+    "bounty": 5
+  },
+  {
+    "rawcode": "h14Q",
+    "baseRawcode": "hfoo",
+    "name": "Whelp",
+    "basicTooltip": "(A) Summon Whelp",
+    "extendedTooltip": "Flying dragon, filled with youthful energy.\n\n+7 income / +8 bounty\n\nDamage: 42-46\nSpeed: 1\nRange: 200 (Ranged)\nHit Points: 290\nAttack Type: Chaos\nDefense Type: Medium\nAbility: None",
+    "hotkey": "A",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGreenDragon.blp",
+    "model": "units\\creeps\\GreenDragonWelp\\GreenDragonWelp.mdl",
+    "soundSet": "AzureDragon",
+    "cost": {
+      "gold": 0,
+      "lumber": 150,
+      "totalGoldValue": 7
+    },
+    "stats": {
+      "hp": 290,
+      "armor": 0,
+      "defenseType": "medium",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 41,
+          "dice": null,
+          "sidesPerDie": 5,
+          "damageMin": 42,
+          "damageMax": 46,
+          "cooldown": 1.0,
+          "range": 200,
+          "engineRange": 200,
+          "attackType": "chaos",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [],
+    "abilityRawcodes": [],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 42,
+      "damageMax": 46,
+      "cooldown": 1.0,
+      "range": 200,
+      "rangeType": "ranged",
+      "hp": 290,
+      "attackType": "chaos",
+      "defenseType": "medium",
+      "income": 7,
+      "bounty": 8,
+      "abilityText": "None"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 7,
+    "bounty": 8
+  },
+  {
+    "rawcode": "h04X",
+    "baseRawcode": "hfoo",
+    "name": "Wyvern",
+    "basicTooltip": "(X) Summon Wyvern",
+    "extendedTooltip": "Flying unit that throws heavy bolts.\n\n+9 income / +9 bounty\n\nDamage: 45-51\nSpeed: 1.0\nRange: 300 (Ranged)\nHit Points: 390\nAttack Type: Piercing\nDefense Type: Light\nAbility:\nViolate: Reduces armor of target by 1 for 4 seconds (2 seconds on king)",
+    "hotkey": null,
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNWyvernRider.blp",
+    "model": "units\\orc\\WyvernRider\\WyvernRider.mdl",
+    "soundSet": "WarEagle",
+    "cost": {
+      "gold": 0,
+      "lumber": 180,
+      "totalGoldValue": 9
+    },
+    "stats": {
+      "hp": 390,
+      "armor": 0,
+      "defenseType": "light",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 44,
+          "dice": null,
+          "sidesPerDie": 7,
+          "damageMin": 45,
+          "damageMax": 51,
+          "cooldown": 1.0,
+          "range": 300,
+          "engineRange": 300,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A900",
+        "name": "Violate",
+        "tooltip": "Violate",
+        "description": "Attacks reduce the armor of enemy units by 1 for 4 seconds (2 sec on King).",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReplenishHealth.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A900"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 45,
+      "damageMax": 51,
+      "cooldown": 1.0,
+      "range": 300,
+      "rangeType": "ranged",
+      "hp": 390,
+      "attackType": "piercing",
+      "defenseType": "light",
+      "income": 9,
+      "bounty": 9,
+      "abilityText": "Violate: Reduces armor of target by 1 for 4 seconds (2 seconds on king)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 9,
+    "bounty": 9
+  },
+  {
+    "rawcode": "h14X",
+    "baseRawcode": "hfoo",
+    "name": "Wyvern",
+    "basicTooltip": "(X) Summon Wyvern",
+    "extendedTooltip": "Flying unit that throws heavy bolts.\n\n+15 income / +15 bounty\n\nDamage: 48-53\nSpeed: 1.1\nRange: 300 (Ranged)\nHit Points: 425\nAttack Type: Piercing\nDefense Type: Light\nAbility:\nViolate: Reduces armor of target by 1 for 4 seconds (2 seconds on king)",
+    "hotkey": "X",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNWyvernRider.blp",
+    "model": "units\\orc\\WyvernRider\\WyvernRider.mdl",
+    "soundSet": "WarEagle",
+    "cost": {
+      "gold": 0,
+      "lumber": 300,
+      "totalGoldValue": 15
+    },
+    "stats": {
+      "hp": 425,
+      "armor": 0,
+      "defenseType": "light",
+      "acquisitionRange": 480.0,
+      "attacks": [
+        {
+          "number": 1,
+          "damageBase": 47,
+          "dice": null,
+          "sidesPerDie": 6,
+          "damageMin": 48,
+          "damageMax": 53,
+          "cooldown": 1.1,
+          "range": 300,
+          "engineRange": 300,
+          "attackType": "piercing",
+          "weaponType": "missile",
+          "targets": [
+            "enemies",
+            "vulnerable"
+          ],
+          "enabledTargets": []
+        }
+      ]
+    },
+    "abilities": [
+      {
+        "rawcode": "A900",
+        "name": "Violate",
+        "tooltip": "Violate",
+        "description": "Attacks reduce the armor of enemy units by 1 for 4 seconds (2 sec on King).",
+        "icon": "ReplaceableTextures\\CommandButtons\\BTNReplenishHealth.blp",
+        "isSystemAbility": false
+      }
+    ],
+    "abilityRawcodes": [
+      "A900"
+    ],
+    "upgradeRawcodes": [],
+    "requirements": [
+      "u00D"
+    ],
+    "unitTypes": [
+      "sapper",
+      "summoned"
+    ],
+    "tooltipStats": {
+      "damageMin": 48,
+      "damageMax": 53,
+      "cooldown": 1.1,
+      "range": 300,
+      "rangeType": "ranged",
+      "hp": 425,
+      "attackType": "piercing",
+      "defenseType": "light",
+      "income": 15,
+      "bounty": 15,
+      "abilityText": "Violate: Reduces armor of target by 1 for 4 seconds (2 seconds on king)"
+    },
+    "source": {
+      "gameplayFile": "File00000003.xxx",
+      "skinFile": "File00000735.xxx",
+      "mapVersion": "11.4b-beta1"
+    },
+    "category": "mercenary",
+    "income": 15,
+    "bounty": 15
+  }
+]

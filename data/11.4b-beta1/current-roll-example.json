@@ -1,0 +1,275 @@
+[
+  {
+    "base": {
+      "rawcode": "h0BE",
+      "name": "Frost Wolf",
+      "goldCost": 45,
+      "totalGoldValue": 45,
+      "stats": {
+        "hp": 500,
+        "armor": 3,
+        "defenseType": "medium",
+        "acquisitionRange": 480.0,
+        "attacks": [
+          {
+            "number": 1,
+            "damageBase": 20,
+            "dice": null,
+            "sidesPerDie": 11,
+            "damageMin": 21,
+            "damageMax": 31,
+            "cooldown": 1.1,
+            "range": 100,
+            "engineRange": 160,
+            "attackType": "normal",
+            "weaponType": "normal",
+            "targets": [
+              "enemies"
+            ],
+            "enabledTargets": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "rawcode": "A09A",
+          "name": "Bleeding",
+          "description": "Activates when HP falls below 50%. Bleeding deals 10 damage per second and reduces the attack speed of the target by 35%."
+        }
+      ]
+    },
+    "directUpgrades": [
+      {
+        "rawcode": "h0BG",
+        "name": "Pandaren",
+        "upgradeGoldCost": 115,
+        "totalGoldValue": 160
+      }
+    ]
+  },
+  {
+    "base": {
+      "rawcode": "h06M",
+      "name": "Tribesman",
+      "goldCost": 60,
+      "totalGoldValue": 60,
+      "stats": {
+        "hp": 385,
+        "armor": 3,
+        "defenseType": "medium",
+        "acquisitionRange": 480.0,
+        "attacks": [
+          {
+            "number": 1,
+            "damageBase": 32,
+            "dice": null,
+            "sidesPerDie": 10,
+            "damageMin": 33,
+            "damageMax": 42,
+            "cooldown": 0.8,
+            "range": 325,
+            "engineRange": 325,
+            "attackType": "piercing",
+            "weaponType": null,
+            "targets": [
+              "enemies"
+            ],
+            "enabledTargets": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "rawcode": "A056",
+          "name": "Throw Net",
+          "description": "Traps an enemy, binding it to the ground so that it cannot move. If cast on an air unit, it will pull the unit into melee range.\nLasts 7 seconds."
+        }
+      ]
+    },
+    "directUpgrades": [
+      {
+        "rawcode": "h06N",
+        "name": "Alpha Male",
+        "upgradeGoldCost": 110,
+        "totalGoldValue": 170
+      }
+    ]
+  },
+  {
+    "base": {
+      "rawcode": "h0C5",
+      "name": "Wyvern",
+      "goldCost": 150,
+      "totalGoldValue": 150,
+      "stats": {
+        "hp": 900,
+        "armor": 3,
+        "defenseType": "medium",
+        "acquisitionRange": 690.0,
+        "attacks": [
+          {
+            "number": 1,
+            "damageBase": 81,
+            "dice": null,
+            "sidesPerDie": 17,
+            "damageMin": 82,
+            "damageMax": 98,
+            "cooldown": 0.8,
+            "range": 500,
+            "engineRange": 500,
+            "attackType": "piercing",
+            "weaponType": null,
+            "targets": [
+              "enemies"
+            ],
+            "enabledTargets": []
+          }
+        ]
+      },
+      "abilities": []
+    },
+    "directUpgrades": [
+      {
+        "rawcode": "h0C8",
+        "name": "Wind Rider",
+        "upgradeGoldCost": 190,
+        "totalGoldValue": 340
+      }
+    ]
+  },
+  {
+    "base": {
+      "rawcode": "h00N",
+      "name": "Tempest",
+      "goldCost": 130,
+      "totalGoldValue": 130,
+      "stats": {
+        "hp": 600,
+        "armor": 3,
+        "defenseType": "heavy",
+        "acquisitionRange": 480.0,
+        "attacks": [
+          {
+            "number": 1,
+            "damageBase": 39,
+            "dice": null,
+            "sidesPerDie": 16,
+            "damageMin": 40,
+            "damageMax": 55,
+            "cooldown": 0.44,
+            "range": 300,
+            "engineRange": 300,
+            "attackType": "siege",
+            "weaponType": null,
+            "targets": [
+              "enemies"
+            ],
+            "enabledTargets": []
+          }
+        ]
+      },
+      "abilities": []
+    },
+    "directUpgrades": [
+      {
+        "rawcode": "h00U",
+        "name": "Leviathan",
+        "upgradeGoldCost": 200,
+        "totalGoldValue": 330
+      }
+    ]
+  },
+  {
+    "base": {
+      "rawcode": "h06J",
+      "name": "Goblin Scientist",
+      "goldCost": 30,
+      "totalGoldValue": 30,
+      "stats": {
+        "hp": 95,
+        "armor": 3,
+        "defenseType": "light",
+        "acquisitionRange": 520.0,
+        "attacks": [
+          {
+            "number": 1,
+            "damageBase": 9,
+            "dice": null,
+            "sidesPerDie": 2,
+            "damageMin": 10,
+            "damageMax": 11,
+            "cooldown": 1.0,
+            "range": 400,
+            "engineRange": 400,
+            "attackType": "siege",
+            "weaponType": null,
+            "targets": [
+              "enemies"
+            ],
+            "enabledTargets": []
+          }
+        ]
+      },
+      "abilities": []
+    },
+    "directUpgrades": [
+      {
+        "rawcode": "h078",
+        "name": "Dwarven Engineer",
+        "upgradeGoldCost": 130,
+        "totalGoldValue": 160
+      }
+    ]
+  },
+  {
+    "base": {
+      "rawcode": "h01A",
+      "name": "Spawn of Dragon",
+      "goldCost": 265,
+      "totalGoldValue": 265,
+      "stats": {
+        "hp": 1360,
+        "armor": 3,
+        "defenseType": "heavy",
+        "acquisitionRange": 480.0,
+        "attacks": [
+          {
+            "number": 1,
+            "damageBase": 118,
+            "dice": 2,
+            "sidesPerDie": 10,
+            "damageMin": 120,
+            "damageMax": 138,
+            "cooldown": 1.3,
+            "range": 180,
+            "engineRange": 180,
+            "attackType": "normal",
+            "weaponType": "msplash",
+            "targets": [
+              "enemies"
+            ],
+            "enabledTargets": [
+              "enemies",
+              "ground"
+            ]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "rawcode": "A00I",
+          "name": "Circle Slash",
+          "description": "Attacks deal very small splash damage to ground units."
+        }
+      ]
+    },
+    "directUpgrades": [
+      {
+        "rawcode": "h01B",
+        "name": "Dragon Aspect",
+        "upgradeGoldCost": 350,
+        "totalGoldValue": 615
+      }
+    ]
+  }
+]

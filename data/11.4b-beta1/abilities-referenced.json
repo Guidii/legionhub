@@ -1,0 +1,2738 @@
+[
+  {
+    "rawcode": "A005",
+    "name": "Poisoned Spikes",
+    "tooltip": "Poisoned Spike",
+    "description": "Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNEnvenomedSpear.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A006",
+    "name": "Moonglaive",
+    "tooltip": "Moonglaive",
+    "description": "The huntress gains the ability to hit three additional targets with a single throw of Moonglaive, dealing 66% and 33% respectively.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A007",
+    "name": "Doppelganger SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A008",
+    "name": "Sell",
+    "tooltip": "Sell",
+    "description": "Sell a fighter for 50% of its total cost including upgrades.\n\nIf a fighter is newly built, it will sell for 100%.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChestOfGold.blp",
+    "isSystemAbility": true
+  },
+  {
+    "rawcode": "A009",
+    "name": "Leadership",
+    "tooltip": "Leadership",
+    "description": "Increases nearby allied units damage by 9%.\nRange: 750\nDoes not stack with Superiority",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHelmutPurple.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00A",
+    "name": "Superiority",
+    "tooltip": "Superiority",
+    "description": "Increases nearby allied units damage by 18%.\nRange: 750\nDoes not stack with Leadership",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNReincarnation.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00C",
+    "name": "Vital Strike",
+    "tooltip": "Vital Strike",
+    "description": "Each attack has a 27% chance to do x4 damage (works on bosses).",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNArcaniteRanged.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00D",
+    "name": "Club Smash",
+    "tooltip": "Club Smash",
+    "description": "Each attack has a 35% chance to deal 20 bonus damage and stun for 1.5 seconds. Duration is reduced to 0.15 sec on bosses.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00E",
+    "name": "Knock Out",
+    "tooltip": "Knock Out",
+    "description": "Each attack has a 35% chance to deal 145 bonus damage and stun for 3 seconds. Stun on bosses 0.45 sec.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGrabTree.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00F",
+    "name": "Envenom",
+    "tooltip": "Envenom",
+    "description": "Deal 3 damage per second, and slow movement by 25% and attack by 15% for 5 seconds.\nDoes not stack with Enchanted Poison",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNPoisonSting.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00G",
+    "name": "Enchanted Poison",
+    "tooltip": "Enchanted Poison",
+    "description": "Poisonous barbs deal 11 damage per second, and slow movement by 35% and attack by 25% for 5 seconds.\nDoes not stack with Envenom",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNMagicImmunity.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00H",
+    "name": "Battle Cry",
+    "tooltip": "Battle Cry",
+    "description": "Bear gets pumped up. Adds 12% bonus damage and 3 armor to himself and nearby units for 20 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00I",
+    "name": "Circle Slash",
+    "tooltip": "Circle Slash",
+    "description": "Attacks deal very small splash damage to ground units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCleavingAttack.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00J",
+    "name": "Whitefire",
+    "tooltip": "Whitefire",
+    "description": "Attacks deal small splash damage to both ground and air units.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBreathOfFire.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00K",
+    "name": "Vulture Eye",
+    "tooltip": "Vulture Eye",
+    "description": "This unit has a 33% chance to do 160% damage. Affects air enemies only.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSentinel.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00L",
+    "name": "Precision",
+    "tooltip": "Precision",
+    "description": "This unit has a 33% chance to do 160% damage. Affects all enemies.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMarksmanship.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00M",
+    "name": "Faerie Luck",
+    "tooltip": "Faerie Luck",
+    "description": "Gives a 15% chance to dodge an attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNStaffOfPreservation.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00Q",
+    "name": "Helping Hand",
+    "tooltip": "Helping Hand",
+    "description": "Increases nearby allies' movement by 30%.\nRange: 525",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReplenishManaOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00R",
+    "name": "Natural Armor",
+    "tooltip": "Natural Armor",
+    "description": "30% chance to reduce damage taken by 50 every time this unit is attacked. If the attack deals less than 50 damage, it will deal 5 damage.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNResistantSkin.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A00W",
+    "name": "Flaming Arrows",
+    "tooltip": "Flaming Arrows",
+    "description": "Adds 40 bonus damage to an attack.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A010",
+    "name": "Blood Thirst",
+    "tooltip": "Blood Thirst",
+    "description": "Nearby friendly melee units gain 12% life steal.\nRange: 750\nDoes not stack with Sound of Madness",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNUndeadShrine.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A011",
+    "name": "Sound of Madness",
+    "tooltip": "Sound of Madness",
+    "description": "Nearby friendly melee units gain 24% life steal.\nRange: 750\nDoes not stack with Blood Thirst",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHornOfDoom.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A012",
+    "name": "Shadow Walker",
+    "tooltip": "Shadow Walker",
+    "description": "Gives 10% evasion and 10% chance to deal double damage.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNEvasion.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A013",
+    "name": "Fatality",
+    "tooltip": "Fatality",
+    "description": "Gives 25% evasion and a 20% chance to deal triple damage.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNExhumeCorpses.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A019",
+    "name": "Mutilation",
+    "tooltip": "Mutilation",
+    "description": "Reduces damage of target by 10%. Lasts 5 seconds (2 seconds on bosses)",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01A",
+    "name": "Tree of Life SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01D",
+    "name": "Water Splash",
+    "tooltip": "Water Splash",
+    "description": "Attacks bounce to strike one additional nearby enemy for 75% damage.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNColdArrows.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01E",
+    "name": "Deluge",
+    "tooltip": "Deluge",
+    "description": "Attacks bounce to strike two additional nearby enemies for 65% and 42% respectively. Improved range over Water Splash.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01G",
+    "name": "Amplify Magic",
+    "tooltip": "Amplify Magic",
+    "description": "Increases nearby friendly units' mana regeneration by 1.5/second.\nRange: 600",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAbsorbMagic.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01H",
+    "name": "Energy Shield",
+    "tooltip": "Energy Shield",
+    "description": "Uses mana to nullify enemy attacks. Every 1 points of mana negates 15 damage.\n\nAffects 80% of incoming damage.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01I",
+    "name": "Focus Energy",
+    "tooltip": "Focus Energy",
+    "description": "Adds 1 bonus damage to every attack for every point of current mana. This skill does not consume mana itself.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01J",
+    "name": "Blue Wind 1",
+    "tooltip": "Blue Wind",
+    "description": "Sends currents of wind at nearby enemies, dealing 38 damage each gust (4 gusts per second).",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01K",
+    "name": "Battle Drums",
+    "tooltip": "Battle Drums",
+    "description": "Increases the damage of nearby friendly units by 8%.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01M",
+    "name": "Cold Attack",
+    "tooltip": "Cold Attack",
+    "description": "Adds a cold effect to this unit's attacks that slows enemy units' movement and attack speed for 4 seconds. Duration vs King 1.4 sec",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01T",
+    "name": "King's Permanent Immolation",
+    "tooltip": "King's Permanent Immolation",
+    "description": "Burns nearby enemy units for 30 points of damage per second.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A01W",
+    "name": "",
+    "tooltip": "",
+    "description": "Adds 120 bonus damage to an attack.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A026",
+    "name": "Gnoll Poison",
+    "tooltip": "Gnoll Poison",
+    "description": "A poison attack that slows the target enemy's movement by 50% and attack by 25% for 4 seconds.\nDoes not stack with Deadly Poison",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNSlowPoison.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A027",
+    "name": "Deadly Poison",
+    "tooltip": "Deadly Poison",
+    "description": "A poison attack that deals 6 damage per second, and slows the target enemy's movement by 70% and attack by 25% for 5 seconds.\nDoes not stack with Gnoll Poison",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNEnvenomedSpear.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02A",
+    "name": "Sacred Blessing",
+    "tooltip": "Sacred Blessing",
+    "description": "Heals up to 5 nearby allies for 100 hp every 5 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNScepterOfMastery.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02B",
+    "name": "Water of Life",
+    "tooltip": "Water of Life",
+    "description": "Heals up to 5 nearby allies within 400 range for 200 hit points every 5 seconds",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNWellSpring.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02D",
+    "name": "Faerie Fire",
+    "tooltip": "Faerie Fire",
+    "description": "Reduce enemy's armor by 5 (lasts 5 seconds)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFaerieFireOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02E",
+    "name": "Forbidden Fruit",
+    "tooltip": "Forbidden Fruit",
+    "description": "Returns 50% of melee damage received back to attackers. Deals 270 damage to nearby enemies when it dies (max. 35 targets)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNNatureTouchGrow.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02K",
+    "name": "Frenzy (shadow)",
+    "tooltip": "Frenzy",
+    "description": "Skeletons move faster and regenerate hit points.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNUnholyFrenzy.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02L",
+    "name": "Mana Burst",
+    "tooltip": "Mana Burst",
+    "description": "Uses mana to add 60 bonus damage to an attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReplenishManaOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02M",
+    "name": "Conjure Fiend",
+    "tooltip": "Conjure Fiend",
+    "description": "Conjures a fiend to attack its master's enemies. Lasts 60 seconds. (40 second cooldown)\n\n(14-17 Damage, 1 Speed, 145HP, Chaos/Unarmored)\n\nIt has a skill: Minor Concussion (20% chance, 125 dmg, 1,5(0.5)sec stun duration)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFelHound.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02N",
+    "name": "Conjure Fanatic",
+    "tooltip": "Conjure Fanatic",
+    "description": "Conjures a fanatic to attack its master's enemies.\n\nDamage: 40-47\nSpeed: 1.0\nRange: 100 (Melee)\nHit Points: 800\nAttack Type: Chaos\nDefense Type: Unarmored\nAbility:  35% chance to deal 250 bonus damage and stun for 3 seconds (0.35s boss)  \n\nLasts 60 seconds. (40 second cooldown)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNPurpleFelhound.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02O",
+    "name": "Raise Imp",
+    "tooltip": "Raise Imp",
+    "description": "Invokes 3 diabolic Imps with Immolation.\nLasts 75 seconds.\n(60-65 Damage, 1 AS, 800 HP)\n12 DPS Immolation, 450 Range (doesn't stack)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNRaiseDeadOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02P",
+    "name": "Invoke Inferno",
+    "tooltip": "Invoke Inferno",
+    "description": "Invokes an infernal with Immolation.\nLasts 60 seconds.\n(55-66 Damage, 1.35 Speed, 700HP)\n12 DPS Immolation, 450 Range (doesn't stack)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A02X",
+    "name": "Environmentalism",
+    "tooltip": "Environmentalism",
+    "description": "On death, grant up to 8 nearby units 300 health.  Branches from this dying tree also surround and protect these units, granting them 8 armor, while the sap in their branches stick to enemy melee targets, slowing their attack speed",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAdvancedReinforcedHides.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A033",
+    "name": "Mindwarp",
+    "tooltip": "Mindwarp",
+    "description": "Increases the attack rate of an ally by 40%. Lasts 30 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNEtherealFormOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A034",
+    "name": "Swipe",
+    "tooltip": "Swipe",
+    "description": "Each attack has a 25% chance to deal 25 bonus damage and stun for 1 second.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A035",
+    "name": "Healing Aura",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A037",
+    "name": "Regicide",
+    "tooltip": "Regicide",
+    "description": "Deals 3x damage to King.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A038",
+    "name": "Immune to magic",
+    "tooltip": "Immune to magic",
+    "description": "This warrior becomes immune to magic.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A039",
+    "name": "Frost Aura",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03A",
+    "name": "Corruption",
+    "tooltip": "Corruption",
+    "description": "Reduce enemy's armor by 4. ( Last 4 seconds on creep, 2 seconds on hero)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03B",
+    "name": "Blood Rush",
+    "tooltip": "Blood Rush",
+    "description": "The combat speed of the indicated warrior is increased by40%, and the speed of its movement- on the25%. Time of action- 40 sec.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBloodLust.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03C",
+    "name": "Fresh Meat",
+    "tooltip": "Fresh Meat",
+    "description": "Nearby friendly melee units gain 20% life steal.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03D",
+    "name": "Swipe",
+    "tooltip": "Swipe",
+    "description": "Each attack has a 17% chance to deal 180 bonus damage and stun for 1 (0.5) seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03E",
+    "name": "Kraken Poison",
+    "tooltip": "Kraken Poison",
+    "description": "20% slow mspd/aspd and 20 dps for 6 sec.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTentacle.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03F",
+    "name": "Healing Aura Icon",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03H",
+    "name": "Cold Attack",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNFrost.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03J",
+    "name": "Frost Aura",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03K",
+    "name": "Healing Aura",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03M",
+    "name": "Kraken Poison",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNForgottenOne.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03N",
+    "name": "Corruption",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfCorruption.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03O",
+    "name": "Hotblood",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolgPanda.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03P",
+    "name": "Regicide",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlaiveThrower.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03R",
+    "name": "Blood Rush",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNShaman.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03U",
+    "name": "Aftershock",
+    "tooltip": "Aftershock",
+    "description": "Shocks a nearby enemy for 40 damage with each attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNPurge.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A03W",
+    "name": "Shrapnel",
+    "tooltip": "Shrapnel",
+    "description": "Every time this unit attacks, it has a 40% chance of releasing bomb shrapnel which will deal 45 damage to 4 nearby enemies.\n\nChance to release bomb shrapnel is 20% on air levels.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHumanArtilleryUpOne.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A043",
+    "name": "Swiftness Aura",
+    "tooltip": "Swiftness Aura",
+    "description": "Increases nearby ally movement by 15%.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A044",
+    "name": "Phase Out",
+    "tooltip": "Phase Out",
+    "description": "Has a 15% chance to dodge an attack.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNShadeTrueSight.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A045",
+    "name": "Disturb",
+    "tooltip": "Disturb",
+    "description": "Slows an enemy's attack rate by 27% and movement by 27% for 9 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSpellBreakerMagicDefend.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A046",
+    "name": "Traumatize",
+    "tooltip": "Traumatize",
+    "description": "Slows an enemy's attack rate by 40% and movement by 50% for 11 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNCripple.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A047",
+    "name": "Violate",
+    "tooltip": "Violate",
+    "description": "Attacks reduce the armor of enemy units by 4 for 15 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReplenishHealth.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A048",
+    "name": "Silent Scream",
+    "tooltip": "Silent Scream",
+    "description": "Deals 50 damage to up to 3 units around the Phantom.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHowlOfTerror.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A049",
+    "name": "Change Stance",
+    "tooltip": "Change Stance",
+    "description": "Change to attacking stance to deal more damage.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04A",
+    "name": "Cacophony",
+    "tooltip": "Cacophony",
+    "description": "Deals 100 damage to up to 3 units around the Hellghost.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfCorruption.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04C",
+    "name": "Insanity",
+    "tooltip": "Insanity",
+    "description": "Has a 100% chance to gain the Insanity buff for 10 seconds with each attack. Insanity increases damage by 35% and armor by 20.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNCorpseExplode.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04G",
+    "name": "Swipe",
+    "tooltip": "Swipe",
+    "description": "Each attack has a 5% chance to stun for 1 second",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04J",
+    "name": "Haunting",
+    "tooltip": "Haunting",
+    "description": "Haunts an enemy, dealing 45 damage per second and slowing attack speed by 25% for 8 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNUnholyStrength.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04K",
+    "name": "Catastrophe",
+    "tooltip": "Catastrophe",
+    "description": "Haunts an enemy, dealing 115 damage per second and slowing attack speed by 65% for 10 seconds",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDoom.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04L",
+    "name": "Violate",
+    "tooltip": "Violate",
+    "description": "Attacks reduce the armor of enemy units by 4 for 15 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReplenishHealth.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04P",
+    "name": "Dark Priest SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04Q",
+    "name": "Forsaken One SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04R",
+    "name": "Thunder attack",
+    "tooltip": "Thunder deals damage to a small radius around the unit that is hit",
+    "description": "Thunder deals damage to a small radius",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMonsoon.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04W",
+    "name": "Despair Aura",
+    "tooltip": "Despair Aura",
+    "description": "Decreases the damage of nearby enemies by 14% + 1 (with a minimum decrease of -1).\nRange: 750\nDoes not stack with Sickness Aura",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDisenchant.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A04Z",
+    "name": "Sticky Webs",
+    "tooltip": "Sticky Webs",
+    "description": "Attacks slow the movementspeed of enemies by 40% and attackspeed by 30% for 6 seconds. Air units only.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNWeb.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A053",
+    "name": "Inject Steroids",
+    "tooltip": "Inject Steroids",
+    "description": "Buy steroids to add 200 range, 20% damage, and cause attacks to bounce to 4 targets instead of 2. Lasts for the next level only\n\nThis ability must be manually cast before the round starts.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChemicalRage.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A054",
+    "name": "Steroids",
+    "tooltip": "Steroids injected",
+    "description": "Range increased by 200. Damage increased by 20%.  Attacks now bounce to 4 targets instead of 2.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChemicalRage.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A055",
+    "name": "Slave Trade",
+    "tooltip": "Slave Trade",
+    "description": "When the round ends, you will receive 3 gold for each surviving servant and 6 gold for each surviving slavemaster.\n\nHowever, if all slavemasters are dead, no gold is received.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBansheeMaster.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A056",
+    "name": "Throw Net",
+    "tooltip": "Throw Net",
+    "description": "Traps an enemy, binding it to the ground so that it cannot move. If cast on an air unit, it will pull the unit into melee range.\nLasts 7 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A057",
+    "name": "Fury",
+    "tooltip": "Fury",
+    "description": "Has a 20% chance to increase attack speed by 70% for 8 seconds with each attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBerserkForTrolls.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A059",
+    "name": "Mend",
+    "tooltip": "Mend",
+    "description": "Calls forth a wave of healing energy that bounces up to 7 times, healing 200 hit points on the primary target. Each jump heals 5% less hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05A",
+    "name": "Ashes to Ashes",
+    "tooltip": "Ashes to Ashes",
+    "description": "Ashes to Ashes: Shadow poison degrades attack speed by 10%.  This stacks with other slows.  \n\nEach attack has a 50% chance to apply either Ashes to Ashes, or Dust to Dust.",
+    "icon": "war3mapImported\\BTNArcaneDust.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05B",
+    "name": "Guardian Spirit",
+    "tooltip": "Guardian Spirit",
+    "description": "At the beginning of the level, creates guardian spirits above adjacent units, causing them to take only 77% of all incoming damage.\n\nLasts the entire level.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNScout.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05C",
+    "name": "Seduce",
+    "tooltip": "Seduce",
+    "description": "Seduces enemy units in a small area, causing them to miss on 15% of their attacks. Lasts 15 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDeathAndDecay.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05D",
+    "name": "Tremor",
+    "tooltip": "Tremor",
+    "description": "Slams the ground, dealing 20 damage and slowing the movement and attack speed of nearby enemy units by 10% for 4 seconds.\n\nAffects ground enemies only.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05E",
+    "name": "Fissure",
+    "tooltip": "Fissure",
+    "description": "Rips open the ground, dealing 95 damage and stunning enemy ground units for 1 second.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNEarthquake.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05F",
+    "name": "Dust to Dust",
+    "tooltip": "Dust to Dust",
+    "description": "Dust to Dust: Binds enemies to the shadow realm, causing their attacks to deal 10% less damage \n\nEach attack has a 50% chance to apply either Ashes to Ashes, or Dust to Dust.",
+    "icon": "war3mapImported\\DISATCArcaneDust.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05G",
+    "name": "Shadow Weave",
+    "tooltip": "Shadow Weave",
+    "description": "Weaves in and out of the shadows, becoming a lower priority for attacking units.  This has the unfortunate side effect of causing the unit to take 50% increased magic damage.",
+    "icon": "war3mapImported\\BTNShadowMeld.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05J",
+    "name": "Reassurance",
+    "tooltip": "Reassurance",
+    "description": "Gives 4 additional armor to friendly units close to him.\nRange: 400",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNInnerFire.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05R",
+    "name": "Power Surge",
+    "tooltip": "Power Surge",
+    "description": "Unleashes a bolt of deadly energy dealing 120 damage.\n\nEach time Zeus attacks, he gains 1 mana.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChainLightning.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A05W",
+    "name": "Mark Target",
+    "tooltip": "Mark Target",
+    "description": "Each attack marks an enemy target, causing it to take 25% more damage from piercing attacks.\nDoes not stack",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSpy.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A064",
+    "name": "Chrono Trigger",
+    "tooltip": "Chrono Trigger",
+    "description": "Slows movement of nearby enemies by 50%.\nRange: 550\nDoes not stack with Frost Aura",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBloodKey.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A066",
+    "name": "Tree of Time",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A069",
+    "name": "Mortar",
+    "tooltip": "Mortar",
+    "description": "Attacks deal small splash damage to ground units.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpThree.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06C",
+    "name": "Entangle",
+    "tooltip": "Entangle",
+    "description": "Entangles a nearby enemy unit, immobilizing it and dealing 25 damage per second. Lasts 8 seconds. Duration is reduced to 4 seconds for boss units",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNEntanglingRoots.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06G",
+    "name": "Morph Tier 5 SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06H",
+    "name": "Morph Tier 6 SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06I",
+    "name": "Morph Tier 2 SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06J",
+    "name": "Morph Tier 4 SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06K",
+    "name": "Morph Tier 1 SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06L",
+    "name": "Morph Tier 3 SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06M",
+    "name": "Multishot",
+    "tooltip": "Multishot",
+    "description": "Fires up to 2 additional arrows",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06N",
+    "name": "Neurotoxin",
+    "tooltip": "Neurotoxin",
+    "description": "The Defiler exudes a neurotoxin cloud: enemies within 180 range move and attack 12% slower.\n\nFangtooths gain 2 mana per attack against poisoned prey - feasting twice as fast.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNPoisonSting.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06O",
+    "name": "Feast",
+    "tooltip": "Feast",
+    "description": "Regains 50 hit points every 6 attacks - every 4th against prey poisoned by a Defiler's Neurotoxin.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNCannibalize.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06P",
+    "name": "Withdraw",
+    "tooltip": "Withdraw",
+    "description": "Causes this unit to attack 90% slower, but become impervious to damage for 3 seconds. Automatically cast when 15% or less hit points.\n\nMay not activate if this unit is killed too quickly.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNImprovedReinforcedHides.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06Q",
+    "name": "Brawl",
+    "tooltip": "Brawl",
+    "description": "Has a powerful attack against Air units.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTameHippogriff.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06R",
+    "name": "Delicacy",
+    "tooltip": "Delicacy",
+    "description": "Surprisingly tasty when cooked. This unit sells for 90% of its original cost.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMonsterLure.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06S",
+    "name": "Sphere",
+    "tooltip": "Sphere",
+    "description": "Envelops a friendly unit in a shield of water for 10 seconds, giving it +5 armor and slowing units who attack it.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlacier.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06U",
+    "name": "Gorge",
+    "tooltip": "Gorge",
+    "description": "Regains 150 hit points every 6 attacks.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNCannibalize.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06W",
+    "name": "Storm Geyser",
+    "tooltip": "Storm Geyser",
+    "description": "Summons a storm geyser from beneath the ground, healing nearby friendly units 10 hp/sec, and shocking up to 3 nearby enemies for 40 damage every 7 seconds. Lasts 15 seconds.\nHealing aura does not stack",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMonsoon.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A06Y",
+    "name": "Submerge",
+    "tooltip": "Submerge",
+    "description": "Submerges itself into water, temporarily avoiding damage for 2 seconds. Upon resurfacing, his giant splash interrupts nearby units' current attack (250 aoe). \n\nTrident can submerge himself once every 7 seconds.\nDoes not hit air units",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNNagaBurrow.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A070",
+    "name": "Concussion",
+    "tooltip": "Concussion",
+    "description": "Each attack has a 25% chance to deal 250 damage and stun for 3 seconds. Stun is reduced greatly on bosses (1 sec).",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNThickFur.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A072",
+    "name": "Mitosis",
+    "tooltip": "Mitosis",
+    "description": "When slain, splits into three Mini Hydras \n\nDamage: 158-172\nSpeed: 1.0 \nHit Points: 600\nAttack Type: Magic\nDefense Type: Heavy",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritLink.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A074",
+    "name": "Triple Attack",
+    "tooltip": "Triple Attack",
+    "description": "Every 4th attack it does a triple attack that deals 100% of normal damage.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNParasite.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07B",
+    "name": "Scroll Of Protection",
+    "tooltip": "Scroll Of Protection",
+    "description": "At the beginning of the level, the Doomsday Machine reads from an ancient scroll, whose magic grants titanium plating to all adjacent units.\n\nLasts the entire level.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNScrollOfProtection.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07E",
+    "name": "Resilience Aura",
+    "tooltip": "Resilience Aura",
+    "description": "Gives 3 additional armor to nearby friendly units.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07H",
+    "name": "",
+    "tooltip": "Fan of Knives",
+    "description": "Hurls a flurry of knives, damaging nearby enemies. Each knife does 100 damage (Max. 12 targets)",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07I",
+    "name": "Magic Missile",
+    "tooltip": "Magic Missile",
+    "description": "Deals 20 spell damage with each attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFrostBolt.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07K",
+    "name": "Crush",
+    "tooltip": "Crush",
+    "description": "Gives a 35% chance that an attack will crush nearby units dealing 40 damage",
+    "icon": "war3mapImported\\BTNHammerCrush.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07L",
+    "name": "Coup De Grace",
+    "tooltip": "Coup De Grace",
+    "description": "The Warden has 55% chance to backstab her enemies for 4 times the damage with every hit, and has a 30% chance to evade an attack",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNCriticalStrike.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07M",
+    "name": "Multishot",
+    "tooltip": "Multishot",
+    "description": "Fires up to 3 additional arrows",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07N",
+    "name": "",
+    "tooltip": "Defend",
+    "description": "While Defend is active, this unit only takes 40% of the damage from piercing attacks but movement speed is reduced.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07O",
+    "name": "Greater Heal",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 350 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07P",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 130 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07Q",
+    "name": "Harden Armor",
+    "tooltip": "Harden Armor",
+    "description": "60% chance to reduce damage taken by 60 every time this unit is attacked.Min Damage 2.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNLeatherUpgradeTwo.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07S",
+    "name": "Defend",
+    "tooltip": "Defend",
+    "description": "While Defend is active, this unit only takes 40% of the damage from piercing attacks but movement speed is reduced.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDefend.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07X",
+    "name": "Wrath of Nature",
+    "tooltip": "Wrath of Nature",
+    "description": "Calls forth a bolt of lightning that bounces up to 5 times, dealing 150 damage on the primary target and losing 15% of its power with each bounce.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNChainLightning.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A07Y",
+    "name": "Sphere",
+    "tooltip": "Sphere",
+    "description": "Envelops a friendly unit in a shield of water for 10 seconds, giving it +5 armor and slowing units who attack it.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlacier.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A088",
+    "name": "Goblin Driver",
+    "tooltip": "Goblin Driver",
+    "description": "Goblin Driver will jump out of the tank before destruction.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGoblinSapper.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A089",
+    "name": "Brawler Rage",
+    "tooltip": "Brawler Rage",
+    "description": "The Brawler goes into rage, increasing attack rate by 100%",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGreedisGood2.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08B",
+    "name": "Burst Shot",
+    "tooltip": "Burst Shot",
+    "description": "Bullets hit 2 additional targets, for 50% and 25% respectively.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNFragmentationBombs.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08C",
+    "name": "Overclocking",
+    "tooltip": "Overclocking",
+    "description": "The machine will run at higher clock rates. Increases unit's attack rate by 60% and movement speed by 40% for 9 seconds. (15) seconds cooldown. While this skill is on cooldown Goblin Blaster can become immobile, gaining 44 armor and 200 hp regen, but will only enter this state if his health is below 25%",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNEngineeringUpgrade.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08F",
+    "name": "Cluster Rockets(goblin)",
+    "tooltip": "Rocket Strike",
+    "description": "Bombards an area with rockets, dealing up to 10 damage to nearby enemy units and stunning them for 1 second.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08G",
+    "name": "Kaboom!",
+    "tooltip": "Kaboom(7sec delay)",
+    "description": "Deals 40-80 damage up to 525range(7sec delay)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNVolcano.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08H",
+    "name": "Kaboom!",
+    "tooltip": "Kaboom(4sec delay)",
+    "description": "Deals 20-40 damage up to 350range(4sec delay)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNVolcano.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08I",
+    "name": "Kaboom!",
+    "tooltip": "Kaboom(10sec delay)",
+    "description": "Deals 80-160 (30% of damage vs air) damage up to 700range(10sec delay)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNVolcano.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08J",
+    "name": "Telescope",
+    "tooltip": "Telescope",
+    "description": "An aura that gives nearby friendly units a 12% bonus damage to their ranged attacks.\nRange: 750\nDoes not stack with Advanced Telescope",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTelescope.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08K",
+    "name": "Advanced Telescope",
+    "tooltip": "Advanced Telescope",
+    "description": "An aura that gives nearby friendly units a 24% bonus damage to their ranged attacks.\nRange: 750\nDoes not stack with Telescope",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTelescope.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08M",
+    "name": "Mirage",
+    "tooltip": "Mirage",
+    "description": "Confuses the enemy by creating an illusion, illusion deal 50% and take 200% damage. Lasts 60 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNMirrorImage.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08V",
+    "name": "Ice Spear",
+    "tooltip": "Ice Spear",
+    "description": "Adds 25 cold damage to each attack, slowing a target enemy unit's movement by 50%",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFrostBolt.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08W",
+    "name": "Cold Attack",
+    "tooltip": "Cold Attack",
+    "description": "Slows a target enemy unit's attack rate by 15% and movement speed by 50%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNFrost.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08X",
+    "name": "Serpentine Agility",
+    "tooltip": "Evasion",
+    "description": "Gives a 55% chance to avoid an attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNIceShard.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A08Z",
+    "name": "Serpentine Agility",
+    "tooltip": "Evasion",
+    "description": "Gives a 25% chance to avoid an attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNIceShard.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A090",
+    "name": "+12 damage",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A091",
+    "name": "Frost Aura",
+    "tooltip": "Frost Aura",
+    "description": "This aura will slow the movement speed of nearby enemies by 60%.\nRange: 625\nDoes not stack with Chrono Trigger",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A095",
+    "name": "Azure's Breath",
+    "tooltip": "Azure's Breath",
+    "description": "Attacks deal small splash damage to both ground and air units.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBreathOfFrost.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A096",
+    "name": "Ice breath",
+    "tooltip": "Breath of Frost",
+    "description": "Breathes a cone of frost at enemy units that deals 15 initial damage, and 15 damage per second over 6 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A099",
+    "name": "Frost Nova",
+    "tooltip": "Frost Nova",
+    "description": "Blasts enemy units with a wave of frost that deals 120 damage to the target, and 20 nova damage.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlacier.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A09A",
+    "name": "Bleeding",
+    "tooltip": "Bleeding",
+    "description": "Activates when HP falls below 50%. Bleeding deals 10 damage per second and reduces the attack speed of the target by 35%.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHowlOfTerror.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A09B",
+    "name": "Azure's Armor",
+    "tooltip": "Azure's Armor",
+    "description": "Surrounds the dragon in a layer of icy cold, granting +20 armor for 45 seconds",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A09D",
+    "name": "Frost Aura",
+    "tooltip": "Frost Aura",
+    "description": "Slows movement of nearby enemies by 40%.\nRange: 625\nDoes not stack with Chrono Trigger",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A09K",
+    "name": "Frost Aura",
+    "tooltip": "Frost Aura",
+    "description": "Slows movement of nearby enemies by 60%.\nRange: 625\nDoes not stack with Chrono Trigger",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A09X",
+    "name": "Frost Shield",
+    "tooltip": "Frost Shield",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 8% of an enemy unit's melee attack damage back to it.\nRange: 750\nDoes not stack with Ice Shield",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFrost.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A09Y",
+    "name": "Storm Bolt",
+    "tooltip": "Storm Bolt",
+    "description": "Throws a magical hammer at a target enemy unit, dealing 300 damage and stunning them for 3 seconds. (1 second on boss)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNStormBolt.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A09Z",
+    "name": "Poisoned weapon",
+    "tooltip": "Poisoned weapon",
+    "description": "Poison-tipped arrows deal 35 damage per second for 6 seconds, slowing attack speed by 10% and movement speed by 15%.. \n\n(Doesnt stack with itself or with envenom)",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0A2",
+    "name": "Summon Wolf",
+    "tooltip": "Summon Wolf",
+    "description": "Summon a wolf to attack its master's enemies. Lasts 60 seconds. (60 second cooldown)\n\n(14-17 Damage, 1 Speed, 145HP, Chaos/Heavy)\n\nIt has a skill: Crit Out (x10 dmg, 12% chance)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTimberWolf.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0A3",
+    "name": "Summon Blood Wolf",
+    "tooltip": "Summon Blood Wolf",
+    "description": "Summon a Blood Wolf to attack its master's enemies. \n\nDamage: 40-47\nSpeed: 1.0\nRange: 100 (Melee)\nHit Points: 750\nAttack Type: Chaos\nDefense Type: Heavy\nAbility:  35% Crit Chance",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSpiritWolf.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0A7",
+    "name": "Finishing Blow",
+    "tooltip": "Finishing Blow",
+    "description": "This unit has a 3% chance to do 15 times normal damage on an attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNClawsOfAttack.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0A8",
+    "name": "Berserk",
+    "tooltip": "Berserk",
+    "description": "Increases attack speed by 40%, 60%, 80% respectively when health is below 80%, 60%, 40%. When HP drops below 20% it becomes immune to all damage for 1.5 seconds",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBerserkForTrolls.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0AD",
+    "name": "Corruption",
+    "tooltip": "Corruption",
+    "description": "Reduces armor of target by 4. Lasts 4 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfCorruption.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0AF",
+    "name": "Greater Healing Aura",
+    "tooltip": "Greater Healing Aura",
+    "description": "Increases the life regeneration rate of nearby friendly units by 12.\nRange: 650\nDoes not stack with Healing Aura",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHealingWard.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0AG",
+    "name": "Healing Aura",
+    "tooltip": "Healing Aura",
+    "description": "Increases the life regeneration rate of nearby friendly units by 6.\nRange: 650\nDoes not stack with Greater Healing Aura",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNHealingWard.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0AP",
+    "name": "Frenzy (orc)",
+    "tooltip": "Frenzy",
+    "description": "Increases attack speed by 50%, but drains 20 hit points per second",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0AQ",
+    "name": "Ice Shield",
+    "tooltip": "Ice Shield",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 16% of an enemy unit's melee attack damage back to it.\nRange: 800\nDoes not stack with Frost Shield",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNLightningShield.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0AR",
+    "name": "Sickness Aura",
+    "tooltip": "Sickness Aura",
+    "description": "Decreases the damage of nearby enemies by 7% + 1 (with a minimum decrease of -1).\nRange: 750\nDoes not stack with Despair Aura",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDisenchant.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0B1",
+    "name": "Faerie Fire",
+    "tooltip": "Faerie Fire",
+    "description": "Reduce enemy's armor by 5 (lasts 5 seconds)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFaerieFireOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0B2",
+    "name": "Cleaving Attack",
+    "tooltip": "Cleaving Attack",
+    "description": "The Guardian of Death strikes with such force that a small percentage of his damage strikes through to enemies near the primary attacked unit.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCleavingAttack.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0B4",
+    "name": "Death's Breath",
+    "tooltip": "Death's Breath",
+    "description": "Attacks deal small splash damage to both ground and air units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNFreezingBreath.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0B6",
+    "name": "Small Splash",
+    "tooltip": "Small Splash",
+    "description": "Attacks deal small splash damage to ground units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNExhumeCorpses.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0B7",
+    "name": "Small Splash",
+    "tooltip": "Small Splash",
+    "description": "Attacks deal small splash damage to ground units.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFireForTheCannon.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0B9",
+    "name": "Life Steal",
+    "tooltip": "Life Steal",
+    "description": "15% Life Steal",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BA",
+    "name": "Raise Dead",
+    "tooltip": "Raise Dead",
+    "description": "Raises 1 Fire Archer to fight. Lasts 60 seconds.\n\n(50-50 Damage, 0.45 Speed, 250HP, Piercing/Light)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNRaiseDeadOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BD",
+    "name": "Raise Dead",
+    "tooltip": "Raise Dead",
+    "description": "Raises 2 Fire Archers to fight. Lasts 60 seconds.\n\n(58-61 Damage, 0.45 Speed, 200HP, Piercing/Light)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNRaiseDeadOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BE",
+    "name": "Heartstopper Aura",
+    "tooltip": "Heartstopper Aura",
+    "description": "Every unit affected by Heartstopper aura (750 range) loses 1.5% of MaxHP +4 HP per second.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNRegenerationAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BI",
+    "name": "Infectious diseases",
+    "tooltip": "Infectious diseases",
+    "description": "Decreases the damage of nearby enemies by 5%. (120 range, stackable)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfCorruption.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BJ",
+    "name": "Plague",
+    "tooltip": "Plague",
+    "description": "Decreases the damage of nearby enemies by 15%. (200 range)",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNPlagueCloud.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BL",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BM",
+    "name": "Thunder attack",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BR",
+    "name": "Life Steal",
+    "tooltip": "Life Steal",
+    "description": "10% Life Steal",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAbomination.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BV",
+    "name": "Thunder Hammer",
+    "tooltip": "Thunder Hammer",
+    "description": "Release chain lightning to damage 3 additional units, for 55%, 30% and 16,64% respectively.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0BZ",
+    "name": "Altar of Heros SFX",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0C1",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 1]",
+    "description": "Increases nearby friendly units' movement speed by 5% and life regeneration rate by 4hp/s.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0C3",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 2]",
+    "description": "Increases nearby friendly units' movement speed by 10% and life regeneration rate by 8hp/s.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CC",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 3]",
+    "description": "Increases nearby friendly units' movement speed by 15% and life regeneration rate by 18hp/s.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CD",
+    "name": "Rush",
+    "tooltip": "Rush",
+    "description": "Increases nearby friendly units' movement speed by 12% and life regeneration rate by 4hp/s.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CE",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 5]",
+    "description": "Increases nearby friendly units' movement speed by 15% and life regeneration rate by 5hp/s.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CF",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 6]",
+    "description": "Increases nearby friendly units' movement speed by 18% and life regeneration rate by 6hp/s.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CG",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 7]",
+    "description": "Increases nearby friendly units' movement speed by 21% and life regeneration rate by 7hp/s.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CH",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 8]",
+    "description": "Increases nearby friendly units' movement speed by 24% and life regeneration rate by 8hp/s.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CI",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 9]",
+    "description": "Increases nearby friendly units' movement speed by 27% and life regeneration rate by 9hp/s.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CJ",
+    "name": "Unholy Aura",
+    "tooltip": "Unholy Aura - [Level 10]",
+    "description": "Increases nearby friendly units' movement speed by 30% and life regeneration rate by 10hp/s.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNUnholyAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0CK",
+    "name": "Darkness Aura",
+    "tooltip": "Darkness Aura",
+    "description": "Decreases the damage of nearby enemies by 5%.\nRange: 700",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDispelMagic.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0D1",
+    "name": "Darkness Aura",
+    "tooltip": "Darkness Aura",
+    "description": "Decreases the damage of nearby enemies by 15%.\nRange: 1000",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDispelMagic.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0D2",
+    "name": "Darkness Aura",
+    "tooltip": "Darkness Aura",
+    "description": "Decreases the damage of nearby enemies by 10%.\nRange: 700",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDispelMagic.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0D6",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 1]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 20% of an enemy unit's melee attack damage back to it.\nRange: 600",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0D8",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 10]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 45% of an enemy unit's melee attack damage back to it.\nRange: 600",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0D9",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 9]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 18% of an enemy unit's melee attack damage back to it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DE",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 6]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 12% of an enemy unit's melee attack damage back to it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DF",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 3]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 20% of an enemy unit's melee attack damage back to it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DG",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 2]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 35% of an enemy unit's melee attack damage back to it.\nRange: 600",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DK",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 4]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 8% of an enemy unit's melee attack damage back to it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DL",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 5]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 5% of an enemy unit's melee attack damage back to it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DN",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 7]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 14%damage back to it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DO",
+    "name": "",
+    "tooltip": "Thorns Aura - [Level 8]",
+    "description": "An aura that gives friendly nearby units a damage shield, which deals 16% of an enemy unit's melee attack damage back to it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DR",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 7]",
+    "description": "An aura that gives friendly nearby units a 9% bonus damage to their ranged attacks.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DS",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 6]",
+    "description": "An aura that gives friendly nearby units a 7% bonus damage to their ranged attacks.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DU",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 8]",
+    "description": "An aura that gives friendly nearby units a 11% bonus damage to their ranged attacks.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DV",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 1]",
+    "description": "An aura that gives friendly nearby units a 6% bonus damage to their ranged attacks.\nRange: 600\n\nDefender Of The Realm Bonus:  If this unit is built on the blight, the 2 units to her left and right will gain an additional 15% attack damage",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DW",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 5]",
+    "description": "An aura that gives friendly nearby units a 5% bonus damage to their ranged attacks.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0DY",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 3]",
+    "description": "An aura that gives friendly nearby units a 12% bonus damage to their ranged attacks.\nRange: 600\n\nDefender Of The Realm Bonus:  If this unit is built on the blight, the 2 units to her left and right will gain an additional 15% attack damage",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0E1",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 10]",
+    "description": "An aura that gives friendly nearby units a 15% bonus damage to their ranged attacks.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0E2",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 2]",
+    "description": "An aura that gives friendly nearby units a 9% bonus damage to their ranged attacks.\nRange: 600\n\nDefender Of The Realm Bonus:  If this unit is built on the blight, the 2 units to her left and right will gain an additional 15% attack damage",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0E4",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 4]",
+    "description": "An aura that gives friendly nearby units a 4% bonus damage to their ranged attacks.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0E9",
+    "name": "Trueshot Aura",
+    "tooltip": "Trueshot Aura - [Level 9]",
+    "description": "An aura that gives friendly nearby units a 13% bonus damage to their ranged attacks.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNTrueShot.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0EA",
+    "name": "Brilliance Aura",
+    "tooltip": "Brilliance Aura - [Level 1]",
+    "description": "Gives additional mana regeneration to nearby friendly units of 0.8 mana per second.\n\nRange: 900",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNBrilliance.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0EJ",
+    "name": "Brilliance Aura",
+    "tooltip": "Brilliance Aura - [Level 2]",
+    "description": "Gives additional mana regeneration to nearby friendly units of 1.0 mana per second.\n\nRange: 900",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNBrilliance.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0EN",
+    "name": "Brilliance Aura",
+    "tooltip": "Brilliance Aura - [Level 3]",
+    "description": "Gives additional mana regeneration to nearby friendly units of 1.5 mana per second.\n\nRange: 900",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNBrilliance.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0EW",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 6]",
+    "description": "Nearby friendly melee units gain 12% of their attack damage when they hit enemy units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0EX",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 9]",
+    "description": "Nearby friendly melee units gain 18% of their attack damage when they hit enemy units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0F2",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 1]",
+    "description": "Nearby friendly melee units gain 7% of their attack damage when they hit enemy units.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0F4",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 2]",
+    "description": "Nearby friendly melee units gain 11% of their attack damage when they hit enemy units.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0F5",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 10]",
+    "description": "Nearby friendly melee units gain 22% of their attack damage when they hit enemy units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0F7",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 3]",
+    "description": "Nearby friendly melee units gain 16% of their attack damage when they hit enemy units.|N\nRange: 900",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0F8",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 4]",
+    "description": "Nearby friendly melee units gain 8% of their attack damage when they hit enemy units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0F9",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 5]",
+    "description": "Nearby friendly melee units gain 10% of their attack damage when they hit enemy units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0FB",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 7]",
+    "description": "Nearby friendly melee units gain 14% of their attack damage when they hit enemy units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0FC",
+    "name": "Vampiric Aura",
+    "tooltip": "Vampiric Aura - [Level 8]",
+    "description": "Nearby friendly melee units gain 16% of their attack damage when they hit enemy units.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNVampiricAura.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0FF",
+    "name": "Slow Aura",
+    "tooltip": "Slow Aura",
+    "description": "Slows nearby enemie's movement speed by 45%.\nRange: 750",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0FG",
+    "name": "Slow Aura",
+    "tooltip": "Slow Aura",
+    "description": "Slows nearby enemie's movement speed by 30%.\nRange: 750",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0FI",
+    "name": "Killing Spree",
+    "tooltip": "Killing Spree",
+    "description": "This unit recieves a 100% damage increase for 7 seconds after a killing blow.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGuldanSkull.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0FO",
+    "name": "Slow Aura",
+    "tooltip": "Slow Aura",
+    "description": "Slows nearby enemie's movement speed by 15%.\nRange: 750",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTornado.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0FZ",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0G0",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0G1",
+    "name": "",
+    "tooltip": "",
+    "description": "Increases nearby friendly units' attack damage by 7%.\nRange: 600",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0G4",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0G6",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0G9",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GA",
+    "name": "",
+    "tooltip": "",
+    "description": "Increases nearby friendly units' attack damage by 9%.\nRange: 600",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GB",
+    "name": "King of the Mountain",
+    "tooltip": "King of the Mountain",
+    "description": "Increases your nearby units' attack damage by 12%.\nRange: 600",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GC",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GG",
+    "name": "",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GI",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 7]",
+    "description": "Increases nearby friendly units' attack rate by 7%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GL",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 10]",
+    "description": "Increases nearby friendly units' attack rate by 10%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GN",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 5]",
+    "description": "Increases nearby friendly units' attack rate by 5%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GQ",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 1]",
+    "description": "Increases nearby friendly units' attack rate by 6%.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GR",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 4]",
+    "description": "Increases nearby friendly units' attack rate by 4%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GS",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 6]",
+    "description": "Increases nearby friendly units' attack rate by 6%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GU",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 2]",
+    "description": "Increases nearby friendly units' attack rate by 8%.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0GV",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 3]",
+    "description": "Increases nearby friendly units' attack rate by 10%.\nRange: 600",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0H0",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 8]",
+    "description": "Increases nearby friendly units' attack rate by 8%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0H1",
+    "name": "Endurance Aura",
+    "tooltip": "Endurance Aura - [Level 9]",
+    "description": "Increases nearby friendly units' attack rate by 9%.",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCommand.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0H5",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 200 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0H6",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 250 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0H7",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 300 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0H8",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 350 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0H9",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 400 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HA",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 450 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HB",
+    "name": "",
+    "tooltip": "Heal",
+    "description": "Heals a target friendly unit for 450 hit points.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HC",
+    "name": "Devotion Aura",
+    "tooltip": "Devotion Aura - [Level 3]",
+    "description": "Gives 4 additional armor to nearby friendly units.\nRange: 600\n\nDefender Of The Realm Bonus:  If this unit is built on the blight, the 2 units to his left and right will gain an additional +3 armor",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNDevotion.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HF",
+    "name": "Devotion Aura",
+    "tooltip": "Devotion Aura - [Level 2]",
+    "description": "Gives 3 additional armor to nearby friendly units.\nRange: 600\n\nDefender Of The Realm Bonus:  If this unit is built on the blight, the 2 units to his left and right will gain an additional +3 armor",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNDevotion.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HG",
+    "name": "Devotion Aura",
+    "tooltip": "Devotion Aura - [Level1]",
+    "description": "Gives 2 additional armor to nearby friendly units.\nRange: 600\n\nDefender Of The Realm Bonus:  If this unit is built on the blight, the 2 units to his left and right will gain an additional +3 armor",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNDevotion.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HI",
+    "name": "Deadly Poison",
+    "tooltip": "Deadly Poison",
+    "description": "A poison attack that deals 100 damage per second, and slows the target enemy's movement by 25% and attack by 25% for 5 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNEnvenomedSpear.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HJ",
+    "name": "",
+    "tooltip": "Healing Wave",
+    "description": "Calls forth a wave of healing energy that bounces up to 4 times, healing 500 hit points on the primary target. Each jump heals 50% less hit points (8 second Cooldown).",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HK",
+    "name": "Frost Arrows",
+    "tooltip": "Frost Arrows",
+    "description": "Slows a target enemy unit's attack rate by 50% and movement speed by 50%.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNColdArrowsOn.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HN",
+    "name": "Spiritual Flicker",
+    "tooltip": "Spiritual Flicker",
+    "description": "Increases a target friendly unit's damage by 20% and armor by 3. \nLasts 15 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HO",
+    "name": "Black Arrow",
+    "tooltip": "Black Arrow",
+    "description": "Reduces a target enemy unit's armor by 8, Lasts 5 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTheBlackArrowOnOff.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HP",
+    "name": "Water Shield",
+    "tooltip": "Water Shield",
+    "description": "Envelops a friendly unit in a shield of water for 15 (15) seconds, giving it +8 armor and slowing units who attack it.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNGlacier.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HQ",
+    "name": "Swipe",
+    "tooltip": "Swipe",
+    "description": "Each attack has a 30% chance to to 300 bonus damage and stun target for 4 seconds (2 seconds on boss).",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HR",
+    "name": "Death Blow",
+    "tooltip": "Death Blow",
+    "description": "Gives a 25% chance to do 8x damage on an attack.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HS",
+    "name": "Serpentine Agility",
+    "tooltip": "",
+    "description": "Gives a 65% chance to avoid an attack.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HT",
+    "name": "Resilience Aura",
+    "tooltip": "Resilience Aura",
+    "description": "Gives 5 additional armor to nearby friendly units.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNFurbolg.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HU",
+    "name": "Undead's Armor",
+    "tooltip": "Undead's Armor",
+    "description": "Gives +9 armor and slows units who attack it.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HX",
+    "name": "Spiritual Flame",
+    "tooltip": "Spiritual Flame",
+    "description": "Increases a target friendly unit's damage by 20% and armor by 3. \nLasts 15 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HY",
+    "name": "Black Arrows",
+    "tooltip": "Black Arrows",
+    "description": "Fires up to 2 black arrows at nearby units, decreasing their armor by 5. \n\nArmor reduction lasts 10 seconds",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNTheBlackArrowOnOff.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0HZ",
+    "name": "Serpentine Agility",
+    "tooltip": "",
+    "description": "Gives a 65% chance to avoid an attack.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A0JH",
+    "name": "Lesser Healing Wave",
+    "tooltip": "Lesser Healing Wave",
+    "description": "Calls forth a wave of healing energy that bounces up to 4 times, healing 500 hit points on the primary target. Each jump heals 50% less hit points (8 second Cooldown).",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A105",
+    "name": "Hyper Shot",
+    "tooltip": "Hyper Shot",
+    "description": "Due to keen eyesight, allows a far more powerful series of attacks to be levied against units in the air",
+    "icon": "war3mapImported\\BTNMultiMagicArrow.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A10W",
+    "name": "Bombs Away",
+    "tooltip": "Bombs Away",
+    "description": "Attacks have a 20% chance of releasing bomb shrapnel which will deal 50 damage to 4 nearby enemies.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNVolcano.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A151",
+    "name": "Guilty Conscience",
+    "tooltip": "Guilty Conscience",
+    "description": "Overcome by the weight of his life choices, the Slavemaster takes 50% extra damage from magic sources",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNIsolationSickness.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A18R",
+    "name": "Field Kit",
+    "tooltip": "Field Kit",
+    "description": "The Highguard bandages himself, restoring 800 health over 10 seconds.  \n\nHighguard cannot bandage himself while Defend is active.",
+    "icon": "war3mapImported\\BTNINV_Misc_Bandage.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A203",
+    "name": "Crystal Shield",
+    "tooltip": "Crystal Shield",
+    "description": "Blocks 1 damage from all attacks",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSpellShieldAmulet.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A269",
+    "name": "Scourge of Elwynn",
+    "tooltip": "Scourge of Elwynn",
+    "description": "Hogger scourge of Elwynn!  Hogger teach enemies lesson! You no take candle!\n\n\nNearby enemy units are enveloped in a poisonous cloud that deals 20 damage per second - but cannot kill. Any of these units that attack Hogger become infected and slowed by 25% (ms/as)   \n\nDoes not stack with other slow poisons",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A273",
+    "name": "Triple Fire Ball",
+    "tooltip": "Triple Fire Ball",
+    "description": "Every time this unit attacks, it hits 2 additional enemies.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfFire.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A293",
+    "name": "Alpha Charlie",
+    "tooltip": "Alpha Charlie",
+    "description": "Wake up a single militia from his nap time and get him into the fight, soldier!",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSpy.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A2BP",
+    "name": "Spiked Carapace",
+    "tooltip": "Spiked Carapace",
+    "description": "Returns 30% of melee damage received back to attackers.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNBarkskin.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A2CU",
+    "name": "",
+    "tooltip": "",
+    "description": "Curses a target enemy unit, causing it to have a 10% chance to miss on an attack.\n \nLasts 10 seconds, (2 seconds on bosses).",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A3BP",
+    "name": "Harvest Soul",
+    "tooltip": "Harvest Soul",
+    "description": "Harvests the soul of the first unit he kills each round, converting it into 8 lumber.  At the end of each round, receive another 8 lumber for each remaining Shadow Council unit.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReturnGoods.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A3CU",
+    "name": "Greater Curse",
+    "tooltip": "",
+    "description": "Curses a target enemy unit, causing it to have a 20% chance to miss on an attack.\n \nLasts 20 seconds, (3 seconds on bosses).",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A77K",
+    "name": "Sweeping swing",
+    "tooltip": "Sweeping swing",
+    "description": "Gives a 25% chance that an attack will deal 15 damage to nearby units. (Ground Only)",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNCriticalStrike.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A839",
+    "name": "Bounce",
+    "tooltip": "Bounce",
+    "description": "Attacks bounce to one additional target, dealing 50% damage",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNClusterRockets.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A870",
+    "name": "Titanium Plating",
+    "tooltip": "Titanium Plating",
+    "description": "Pure titanium coats the Doomsday Machine, granting it an additional 3 armor",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNArcaniteArmor.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A872",
+    "name": "Subterfuge",
+    "tooltip": "Subterfuge",
+    "description": "The Dread Lord grants the gift of evading enemy attacks to certain nearby lesser mortal allies within 600 range. \n\nNearby allies who do not already have an evasion ability gain 15% evasion",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNExhumeCorpses.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A900",
+    "name": "Violate",
+    "tooltip": "Violate",
+    "description": "Attacks reduce the armor of enemy units by 1 for 4 seconds (2 sec on King).",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReplenishHealth.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A906",
+    "name": "Fire Archer Bonus",
+    "tooltip": "Fire Archer Bonus",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A907",
+    "name": "Flame Archer Bonus",
+    "tooltip": "Flame Archer Bonus",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A909",
+    "name": "Company Assemble",
+    "tooltip": "Company Assemble! - [Level1]",
+    "description": "Commands the infantry, soldier! \n\nProvides 1 additional armor to nearby friendly units for each 10 militia in the company.  \n\nSir Yes Sir!",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNInvulnerable.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A90G",
+    "name": "",
+    "tooltip": "",
+    "description": "Calls down waves of falling stars that damage nearby enemy units every 5 seconds. Each wave deals 150 damage. \nLasts for 20 seconds",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A912",
+    "name": "Enfeeble",
+    "tooltip": "Enfeeble",
+    "description": "Units close to the Death Dragon become sick, losing 2 armor.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNPurge.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A923",
+    "name": "Slam",
+    "tooltip": "Slam",
+    "description": "Slaming 'n' danking",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A939",
+    "name": "Siege Mastery",
+    "tooltip": "Siege Mastery",
+    "description": "This unit has deals double damage to units with fortified armor type.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A949",
+    "name": "Insignificant Other",
+    "tooltip": "Insignificant Other",
+    "description": "This unit is often ignored in the battle field as often deemed a non-threat. Frail creature as it is, it takes 65% increased damage from magic",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNPeon.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A959",
+    "name": "Magic Damage Reduction",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A960",
+    "name": "Magic Damage Vulnerability (+100%)",
+    "tooltip": "",
+    "description": "",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNReinforcedBurrows.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A962",
+    "name": "Summon Phoenix Egg",
+    "tooltip": "Summon Phoenix Egg",
+    "description": "Every 5 seconds, the Archmage will summon a Phoenix Egg that cannot attack, but will cast a 2 small blizzard waves that deal 100 damage each to all nearby units and slow their movement speed by 25%.  \n\nPhoenix Eggs last for ten seconds\nSlow stacks with other slows",
+    "icon": "war3mapImported\\BTNPhoenixEgg.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A963",
+    "name": "Fortified Unit",
+    "tooltip": "",
+    "description": "",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A987",
+    "name": "Planed",
+    "tooltip": "Planed",
+    "description": "Gives a 33% chance to dodge an attack.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A988",
+    "name": "Death Bass",
+    "tooltip": "Death Bass",
+    "description": "Deals 130 damage to up to 4 units around the Hellraiser.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNOrbOfCorruption.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A98T",
+    "name": "",
+    "tooltip": "",
+    "description": "Causes rains of healing energy to pour down in a large area (1500 radius), healing friendly allied units for 125 hit points per second. \n\nLasts 9 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A990",
+    "name": "Dangerous Mine",
+    "tooltip": "Dangerous Mine",
+    "description": "Returns 7 damage to melee attackers and has a chance to return damage to range attackers.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNThornShield.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A998",
+    "name": "Withdraw",
+    "tooltip": "Withdraw",
+    "description": "Causes this unit to attack 90% slower, but become impervious to damage for 1.5 seconds. Automatically cast when 15% or less hit points.\n\nMay not activate if this unit is killed too quickly.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNImprovedReinforcedHides.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A999",
+    "name": "Faerie Luck",
+    "tooltip": "Faerie Luck",
+    "description": "Gives a 15% chance to dodge an attack.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNStaffOfPreservation.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A99C",
+    "name": "",
+    "tooltip": "",
+    "description": "Slams the ground, dealing 125 damage to nearby enemy land units and slowing their movement by 30% and attack rate by 30% for 5 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A99L",
+    "name": "",
+    "tooltip": "",
+    "description": "Over 10 seconds gradually release 50 locusts that deal 13.5 dps. After 20 seconds, or after dealing 50 damage, they return to the dreadlord and heal him for 75% of the damage dealt.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A99M",
+    "name": "Multishot",
+    "tooltip": "Multishot",
+    "description": "Fire Arrows at three additional enemies",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A99P",
+    "name": "Hero of the People",
+    "tooltip": "Hero Of The People",
+    "description": "The Tauren Chieftain gains massive amounts of health, and regenerates health each second",
+    "icon": "ReplaceableTextures\\PassiveButtons\\PASBTNDrum.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A99R",
+    "name": "",
+    "tooltip": "",
+    "description": "When killed, the Tauren Chieftain will come back to life after 1 second.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "A99S",
+    "name": "",
+    "tooltip": "",
+    "description": "Units in a 300 AOE around Dark Ranger's attack miss 75% of attacks for 3 seconds. \n(1 second on boss units)",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "AB02",
+    "name": "Karma",
+    "tooltip": "Karma",
+    "description": "Krogoth has a 20% chance on being hit to go into a rage and increase his attack speed by 50% for 6 seconds",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNAvatar.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "AB15",
+    "name": "Mirror of Truth",
+    "tooltip": "Mirror of Truth",
+    "description": "Allows the Death Knight to peer into the unknown and reveal what is hidden. \n\nThis takes an incredible amount of effort on his part, and may only be done once.",
+    "icon": "war3mapImported\\BTNMirrorBroken.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "AB25",
+    "name": "Unafraid",
+    "tooltip": "Unafraid",
+    "description": "Crusaders do not fear champions and will not lose armor when facing them!",
+    "icon": "war3mapImported\\BTNHolyWordSalvation.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "AB99",
+    "name": "Hand of God",
+    "tooltip": "Hand of God",
+    "description": "The Paladin is graced by heaven's touch. He, and one other chosen unit close to him become nearly impervious to all damage for 8 seconds.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDivineIntervention.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "AH42",
+    "name": "Awaken The Dead",
+    "tooltip": "Awaken The Dead",
+    "description": "Raises up 6 undead ghoul fanatics to attack the enemies of their master! Lasts 60 seconds. (60 second cooldown)\n\n(52-67 Damage, 0.7 AS, 750HP, Hero Armor)",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNPurpleFelhound.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "AP73",
+    "name": "Split Shot!",
+    "tooltip": "Split Shot!",
+    "description": "As long as the Gryphon Rider's mana pool holds out, each of her attacks will tie a small albatross onto two additional magical arrows and fire at two additional enemy targets. \n\nEach albatross-infused arrow costs 3 mana.\n\nIf the Gryphon Rider runs out of mana, this ability is disabled until the next round.",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNCoralBed.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "Aihn",
+    "name": "Porter",
+    "tooltip": "Porter",
+    "description": "This warrior can carry a variety of items with him., but can't use them.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "Aldd",
+    "name": "Death and Decay",
+    "tooltip": "Death and Decay",
+    "description": "Damages all enemy units within 700 range for 1.2% of their max health every second",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNDeathAndDecay.blp",
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "Aldr",
+    "name": "Dark Ritual",
+    "tooltip": "Dark Ritual",
+    "description": "Creates a shield of dark frost around a target friendly unit. The shield adds 15 armor and slows melee units that attack it for 5 seconds. \n\nLasts 45 seconds / Cooldown 8 seconds",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "Alfn",
+    "name": "",
+    "tooltip": "",
+    "description": "Blasts enemy units with a wave of frost that deals 50 damage to the target, and 100 damage to nearby units. Applies slowing effect to movement and attack rate for 3 seconds.",
+    "icon": null,
+    "isSystemAbility": false
+  },
+  {
+    "rawcode": "S000",
+    "name": "Adrenaline Rush",
+    "tooltip": "Adrenaline Rush",
+    "description": "Boosts movement speed and attack speed of friendly units by 12.5%.\nRange: 750",
+    "icon": "ReplaceableTextures\\CommandButtons\\BTNSpellSteal.blp",
+    "isSystemAbility": false
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "mapVersion": "11.4b-beta1",
+  "parsedUnitObjects": 838,
+  "parsedAbilityObjects": 971,
+  "builders": 16,
+  "deployObjects": 93,
+  "normalFighters": 85,
+  "upgradeObjects": 200,
+  "mercenaryVariants": 76,
+  "uniqueMercenaryNames": 25,
+  "referencedAbilities": 342,
+  "notes": [
+    "Os objetos Deploy/Promote são os objetos exibidos ao jogador e carregam custo, tooltip e relações de upgrade.",
+    "Há variantes duplicadas de mercenários; a relação exata com cada modo ainda precisa ser confirmada.",
+    "Os dados foram extraídos da build 11.4b-beta1, não de uma 11.4b final genérica."
+  ]
+}

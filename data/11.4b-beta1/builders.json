@@ -1,0 +1,1220 @@
+[
+  {
+    "rawcode": "u00K",
+    "name": "Arctic",
+    "tooltip": "Choose Arctic Builder",
+    "buildRawcodes": [
+      "h0BC",
+      "h0BE",
+      "h0BH",
+      "h0BJ",
+      "h0BM",
+      "h0BO"
+    ],
+    "units": [
+      {
+        "rawcode": "h0BC",
+        "name": "Tuskarr",
+        "slot": 1
+      },
+      {
+        "rawcode": "h0BE",
+        "name": "Frost Wolf",
+        "slot": 2
+      },
+      {
+        "rawcode": "h0BH",
+        "name": "Ice Troll",
+        "slot": 3
+      },
+      {
+        "rawcode": "h0BJ",
+        "name": "Polar Bear",
+        "slot": 4
+      },
+      {
+        "rawcode": "h0BM",
+        "name": "Wandigoo",
+        "slot": 5
+      },
+      {
+        "rawcode": "h0BO",
+        "name": "Young Frost Dragon",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u001",
+    "name": "Beast",
+    "tooltip": "Choose Beast Builder",
+    "buildRawcodes": [
+      "h010",
+      "h012",
+      "h014",
+      "h016",
+      "h018",
+      "h01A"
+    ],
+    "units": [
+      {
+        "rawcode": "h010",
+        "name": "Gnoll Warrior",
+        "slot": 1
+      },
+      {
+        "rawcode": "h012",
+        "name": "Ogre Basher",
+        "slot": 2
+      },
+      {
+        "rawcode": "h014",
+        "name": "Harpy",
+        "slot": 3
+      },
+      {
+        "rawcode": "h016",
+        "name": "Troll Fighter",
+        "slot": 4
+      },
+      {
+        "rawcode": "h018",
+        "name": "Grizzly",
+        "slot": 5
+      },
+      {
+        "rawcode": "h01A",
+        "name": "Spawn of Dragon",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00H",
+    "name": "Demi-Human",
+    "tooltip": "Choose Demi-Human Builder",
+    "buildRawcodes": [
+      "h06J",
+      "h06K",
+      "h06M",
+      "h06O",
+      "h06Q",
+      "h06S"
+    ],
+    "units": [
+      {
+        "rawcode": "h06J",
+        "name": "Goblin Scientist",
+        "slot": 1
+      },
+      {
+        "rawcode": "h06K",
+        "name": "Servant",
+        "slot": 2
+      },
+      {
+        "rawcode": "h06M",
+        "name": "Tribesman",
+        "slot": 3
+      },
+      {
+        "rawcode": "h06O",
+        "name": "Medicine Man",
+        "slot": 4
+      },
+      {
+        "rawcode": "h06Q",
+        "name": "Harlot",
+        "slot": 5
+      },
+      {
+        "rawcode": "h06S",
+        "name": "Minotaur",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00C",
+    "name": "Element",
+    "tooltip": "Choose Element Builder",
+    "buildRawcodes": [
+      "h040",
+      "h042",
+      "h044",
+      "h046",
+      "h048",
+      "h04A"
+    ],
+    "units": [
+      {
+        "rawcode": "h040",
+        "name": "Proton",
+        "slot": 1
+      },
+      {
+        "rawcode": "h042",
+        "name": "Aqua Spirit",
+        "slot": 2
+      },
+      {
+        "rawcode": "h044",
+        "name": "Watcher",
+        "slot": 3
+      },
+      {
+        "rawcode": "h046",
+        "name": "Mudman",
+        "slot": 4
+      },
+      {
+        "rawcode": "h048",
+        "name": "Disciple",
+        "slot": 5
+      },
+      {
+        "rawcode": "h04A",
+        "name": "Seer of Darkness",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00L",
+    "name": "Elf",
+    "tooltip": "Choose Elf Builder",
+    "buildRawcodes": [
+      "h08F",
+      "h08H",
+      "h08N",
+      "h08Q",
+      "h08V",
+      "h090"
+    ],
+    "units": [
+      {
+        "rawcode": "h08F",
+        "name": "Colt",
+        "slot": 1
+      },
+      {
+        "rawcode": "h08H",
+        "name": "Novice",
+        "slot": 2
+      },
+      {
+        "rawcode": "h08N",
+        "name": "Sentry",
+        "slot": 3
+      },
+      {
+        "rawcode": "h08Q",
+        "name": "Prisoner",
+        "slot": 4
+      },
+      {
+        "rawcode": "h08V",
+        "name": "Druid",
+        "slot": 5
+      },
+      {
+        "rawcode": "h090",
+        "name": "Moon Guard",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00G",
+    "name": "Ghost",
+    "tooltip": "Choose Ghost Builder",
+    "buildRawcodes": [
+      "h05N",
+      "h05S",
+      "h05R",
+      "h05V",
+      "h05X",
+      "h05Z"
+    ],
+    "units": [
+      {
+        "rawcode": "h05N",
+        "name": "Specter",
+        "slot": 1
+      },
+      {
+        "rawcode": "h05S",
+        "name": "Wanderer",
+        "slot": 2
+      },
+      {
+        "rawcode": "h05R",
+        "name": "Phantom",
+        "slot": 3
+      },
+      {
+        "rawcode": "h05V",
+        "name": "Outcast",
+        "slot": 4
+      },
+      {
+        "rawcode": "h05X",
+        "name": "Apparition",
+        "slot": 5
+      },
+      {
+        "rawcode": "h05Z",
+        "name": "Dark Priest",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00M",
+    "name": "Goblin",
+    "tooltip": "Choose Goblin Builder",
+    "buildRawcodes": [
+      "h0A8",
+      "h0AB",
+      "h0AE",
+      "h0AH",
+      "h0AL",
+      "h0AR"
+    ],
+    "units": [
+      {
+        "rawcode": "h0A8",
+        "name": "Small Land Mine",
+        "slot": 1
+      },
+      {
+        "rawcode": "h0AB",
+        "name": "Machine Turret",
+        "slot": 2
+      },
+      {
+        "rawcode": "h0AE",
+        "name": "Geomancer",
+        "slot": 3
+      },
+      {
+        "rawcode": "h0AH",
+        "name": "Flying Machine",
+        "slot": 4
+      },
+      {
+        "rawcode": "h0AL",
+        "name": "Goblin Brawler",
+        "slot": 5
+      },
+      {
+        "rawcode": "h0AR",
+        "name": "Steamroller",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00I",
+    "name": "Hybrid",
+    "tooltip": "Choose Hybrid Builder",
+    "buildRawcodes": [
+      "h07D",
+      "h07E",
+      "h07G",
+      "h07F",
+      "h07H",
+      "h07I"
+    ],
+    "units": [
+      {
+        "rawcode": "h07D",
+        "name": "Morph [Tier 1]",
+        "slot": 1
+      },
+      {
+        "rawcode": "h07E",
+        "name": "Morph [Tier 2]",
+        "slot": 2
+      },
+      {
+        "rawcode": "h07G",
+        "name": "Morph [Tier 3]",
+        "slot": 3
+      },
+      {
+        "rawcode": "h07F",
+        "name": "Morph [Tier 4]",
+        "slot": 4
+      },
+      {
+        "rawcode": "h07H",
+        "name": "Morph [Tier 5]",
+        "slot": 5
+      },
+      {
+        "rawcode": "h07I",
+        "name": "Morph [Tier 6]",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00J",
+    "name": "Marine",
+    "tooltip": "Chooseeeeee Marine Builder",
+    "buildRawcodes": [
+      "h07J",
+      "h07O",
+      "h07Q",
+      "h07S",
+      "h07U",
+      "h07W"
+    ],
+    "units": [
+      {
+        "rawcode": "h07J",
+        "name": "Hatchling",
+        "slot": 1
+      },
+      {
+        "rawcode": "h07O",
+        "name": "Egg Sack",
+        "slot": 2
+      },
+      {
+        "rawcode": "h07Q",
+        "name": "Bottom Feeder",
+        "slot": 3
+      },
+      {
+        "rawcode": "h07S",
+        "name": "Mermaid",
+        "slot": 4
+      },
+      {
+        "rawcode": "h07U",
+        "name": "Komodo",
+        "slot": 5
+      },
+      {
+        "rawcode": "h07W",
+        "name": "Sea Giant",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u000",
+    "name": "Mech",
+    "tooltip": "Choose Mech Builder",
+    "buildRawcodes": [
+      "h00M",
+      "h00O",
+      "h00P",
+      "h00N",
+      "h00Q",
+      "h00S"
+    ],
+    "units": [
+      {
+        "rawcode": "h00M",
+        "name": "Peewee",
+        "slot": 1
+      },
+      {
+        "rawcode": "h00O",
+        "name": "Infantry",
+        "slot": 2
+      },
+      {
+        "rawcode": "h00P",
+        "name": "Captain",
+        "slot": 3
+      },
+      {
+        "rawcode": "h00N",
+        "name": "Tempest",
+        "slot": 4
+      },
+      {
+        "rawcode": "h00Q",
+        "name": "Cyborg",
+        "slot": 5
+      },
+      {
+        "rawcode": "h00S",
+        "name": "Neotank",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u003",
+    "name": "Nature",
+    "tooltip": "Choose Nature Builder",
+    "buildRawcodes": [
+      "h01C",
+      "h01E",
+      "h01H",
+      "h01I",
+      "h01K",
+      "h01M"
+    ],
+    "units": [
+      {
+        "rawcode": "h01C",
+        "name": "Ent",
+        "slot": 1
+      },
+      {
+        "rawcode": "h01E",
+        "name": "Ranger",
+        "slot": 2
+      },
+      {
+        "rawcode": "h01H",
+        "name": "Sprite",
+        "slot": 3
+      },
+      {
+        "rawcode": "h01I",
+        "name": "Tree of Travel",
+        "slot": 4
+      },
+      {
+        "rawcode": "h01K",
+        "name": "Halfbreed",
+        "slot": 5
+      },
+      {
+        "rawcode": "h01M",
+        "name": "Yggdrasil",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00U",
+    "name": "Orc",
+    "tooltip": "Choose Orc Builder",
+    "buildRawcodes": [
+      "h0BF",
+      "h0BV",
+      "h0BX",
+      "h0C4",
+      "h0C5",
+      "h0C9"
+    ],
+    "units": [
+      {
+        "rawcode": "h0BF",
+        "name": "Orc Warrior",
+        "slot": 1
+      },
+      {
+        "rawcode": "h0BV",
+        "name": "Orc Warlock",
+        "slot": 2
+      },
+      {
+        "rawcode": "h0BX",
+        "name": "Raider",
+        "slot": 3
+      },
+      {
+        "rawcode": "h0C4",
+        "name": "Young Witch Doctor",
+        "slot": 4
+      },
+      {
+        "rawcode": "h0C5",
+        "name": "Wyvern",
+        "slot": 5
+      },
+      {
+        "rawcode": "h0C9",
+        "name": "Orc Warchief",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00O",
+    "name": "Paladin",
+    "tooltip": "Choose Paladin Builder",
+    "buildRawcodes": [
+      "h09L",
+      "h09W",
+      "h09N",
+      "h09R",
+      "h09T",
+      "h0A3"
+    ],
+    "units": [
+      {
+        "rawcode": "h09L",
+        "name": "Peasant",
+        "slot": 1
+      },
+      {
+        "rawcode": "h09W",
+        "name": "Archer Apprentice",
+        "slot": 2
+      },
+      {
+        "rawcode": "h09N",
+        "name": "Footman",
+        "slot": 3
+      },
+      {
+        "rawcode": "h09R",
+        "name": "Priest",
+        "slot": 4
+      },
+      {
+        "rawcode": "h09T",
+        "name": "Knight",
+        "slot": 5
+      },
+      {
+        "rawcode": "h0A3",
+        "name": "Dragon Hawk",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00T",
+    "name": "Prophet",
+    "tooltip": "Choose Prophet Builder",
+    "buildRawcodes": [
+      "h0CF",
+      "h0CI",
+      "h0CO",
+      "h0CQ",
+      "h0CW",
+      "h0D0",
+      "h0BF",
+      "h0BV",
+      "h0BX",
+      "h0C4",
+      "h0C5",
+      "h0C9",
+      "h0BO",
+      "h0BM",
+      "h0BJ",
+      "h0BH",
+      "h0BE",
+      "h0BC",
+      "h090",
+      "h00M",
+      "h00O",
+      "h00P",
+      "h00N",
+      "h09W",
+      "h08F",
+      "h0A3",
+      "h0AE",
+      "h08Q",
+      "h08V",
+      "h0AH",
+      "h09N",
+      "h0AL",
+      "h09T",
+      "h0AB",
+      "h00Q",
+      "h09R",
+      "h01E",
+      "h08N",
+      "h0AR",
+      "h08H",
+      "h09L",
+      "h00S",
+      "h010",
+      "h012",
+      "h014",
+      "h016",
+      "h018",
+      "h01A",
+      "h01C",
+      "h01H",
+      "h01I",
+      "h01K",
+      "h01M",
+      "h01P",
+      "h01T",
+      "h01V",
+      "h01X",
+      "h01Z",
+      "h021",
+      "h040",
+      "h042",
+      "h044",
+      "h046",
+      "h048",
+      "h04A",
+      "h05N",
+      "h05S",
+      "h05R",
+      "h05V",
+      "h05X",
+      "h05Z",
+      "h06J",
+      "h06K",
+      "h06M",
+      "h06O",
+      "h06Q",
+      "h06S",
+      "h07J",
+      "h07O",
+      "h07Q",
+      "h07S",
+      "h07U",
+      "h07W",
+      "h07D",
+      "h07E",
+      "h07F",
+      "h07G",
+      "h07H",
+      "h07I"
+    ],
+    "units": [
+      {
+        "rawcode": "h0CF",
+        "name": "Acolyte",
+        "slot": 1
+      },
+      {
+        "rawcode": "h0CI",
+        "name": "Ghoul",
+        "slot": 2
+      },
+      {
+        "rawcode": "h0CO",
+        "name": "Meat Wagon",
+        "slot": 3
+      },
+      {
+        "rawcode": "h0CQ",
+        "name": "Necromancer",
+        "slot": 4
+      },
+      {
+        "rawcode": "h0CW",
+        "name": "Zombie",
+        "slot": 5
+      },
+      {
+        "rawcode": "h0D0",
+        "name": "Guardian of Death",
+        "slot": 6
+      },
+      {
+        "rawcode": "h0BF",
+        "name": "Orc Warrior",
+        "slot": 7
+      },
+      {
+        "rawcode": "h0BV",
+        "name": "Orc Warlock",
+        "slot": 8
+      },
+      {
+        "rawcode": "h0BX",
+        "name": "Raider",
+        "slot": 9
+      },
+      {
+        "rawcode": "h0C4",
+        "name": "Young Witch Doctor",
+        "slot": 10
+      },
+      {
+        "rawcode": "h0C5",
+        "name": "Wyvern",
+        "slot": 11
+      },
+      {
+        "rawcode": "h0C9",
+        "name": "Orc Warchief",
+        "slot": 12
+      },
+      {
+        "rawcode": "h0BO",
+        "name": "Young Frost Dragon",
+        "slot": 13
+      },
+      {
+        "rawcode": "h0BM",
+        "name": "Wandigoo",
+        "slot": 14
+      },
+      {
+        "rawcode": "h0BJ",
+        "name": "Polar Bear",
+        "slot": 15
+      },
+      {
+        "rawcode": "h0BH",
+        "name": "Ice Troll",
+        "slot": 16
+      },
+      {
+        "rawcode": "h0BE",
+        "name": "Frost Wolf",
+        "slot": 17
+      },
+      {
+        "rawcode": "h0BC",
+        "name": "Tuskarr",
+        "slot": 18
+      },
+      {
+        "rawcode": "h090",
+        "name": "Moon Guard",
+        "slot": 19
+      },
+      {
+        "rawcode": "h00M",
+        "name": "Peewee",
+        "slot": 20
+      },
+      {
+        "rawcode": "h00O",
+        "name": "Infantry",
+        "slot": 21
+      },
+      {
+        "rawcode": "h00P",
+        "name": "Captain",
+        "slot": 22
+      },
+      {
+        "rawcode": "h00N",
+        "name": "Tempest",
+        "slot": 23
+      },
+      {
+        "rawcode": "h09W",
+        "name": "Archer Apprentice",
+        "slot": 24
+      },
+      {
+        "rawcode": "h08F",
+        "name": "Colt",
+        "slot": 25
+      },
+      {
+        "rawcode": "h0A3",
+        "name": "Dragon Hawk",
+        "slot": 26
+      },
+      {
+        "rawcode": "h0AE",
+        "name": "Geomancer",
+        "slot": 27
+      },
+      {
+        "rawcode": "h08Q",
+        "name": "Prisoner",
+        "slot": 28
+      },
+      {
+        "rawcode": "h08V",
+        "name": "Druid",
+        "slot": 29
+      },
+      {
+        "rawcode": "h0AH",
+        "name": "Flying Machine",
+        "slot": 30
+      },
+      {
+        "rawcode": "h09N",
+        "name": "Footman",
+        "slot": 31
+      },
+      {
+        "rawcode": "h0AL",
+        "name": "Goblin Brawler",
+        "slot": 32
+      },
+      {
+        "rawcode": "h09T",
+        "name": "Knight",
+        "slot": 33
+      },
+      {
+        "rawcode": "h0AB",
+        "name": "Machine Turret",
+        "slot": 34
+      },
+      {
+        "rawcode": "h00Q",
+        "name": "Cyborg",
+        "slot": 35
+      },
+      {
+        "rawcode": "h09R",
+        "name": "Priest",
+        "slot": 36
+      },
+      {
+        "rawcode": "h01E",
+        "name": "Ranger",
+        "slot": 37
+      },
+      {
+        "rawcode": "h08N",
+        "name": "Sentry",
+        "slot": 38
+      },
+      {
+        "rawcode": "h0AR",
+        "name": "Steamroller",
+        "slot": 39
+      },
+      {
+        "rawcode": "h08H",
+        "name": "Novice",
+        "slot": 40
+      },
+      {
+        "rawcode": "h09L",
+        "name": "Peasant",
+        "slot": 41
+      },
+      {
+        "rawcode": "h00S",
+        "name": "Neotank",
+        "slot": 42
+      },
+      {
+        "rawcode": "h010",
+        "name": "Gnoll Warrior",
+        "slot": 43
+      },
+      {
+        "rawcode": "h012",
+        "name": "Ogre Basher",
+        "slot": 44
+      },
+      {
+        "rawcode": "h014",
+        "name": "Harpy",
+        "slot": 45
+      },
+      {
+        "rawcode": "h016",
+        "name": "Troll Fighter",
+        "slot": 46
+      },
+      {
+        "rawcode": "h018",
+        "name": "Grizzly",
+        "slot": 47
+      },
+      {
+        "rawcode": "h01A",
+        "name": "Spawn of Dragon",
+        "slot": 48
+      },
+      {
+        "rawcode": "h01C",
+        "name": "Ent",
+        "slot": 49
+      },
+      {
+        "rawcode": "h01H",
+        "name": "Sprite",
+        "slot": 50
+      },
+      {
+        "rawcode": "h01I",
+        "name": "Tree of Travel",
+        "slot": 51
+      },
+      {
+        "rawcode": "h01K",
+        "name": "Halfbreed",
+        "slot": 52
+      },
+      {
+        "rawcode": "h01M",
+        "name": "Yggdrasil",
+        "slot": 53
+      },
+      {
+        "rawcode": "h01P",
+        "name": "Bone Warrior",
+        "slot": 54
+      },
+      {
+        "rawcode": "h01T",
+        "name": "Carrion Spitter",
+        "slot": 55
+      },
+      {
+        "rawcode": "h01V",
+        "name": "Gateguard",
+        "slot": 56
+      },
+      {
+        "rawcode": "h01X",
+        "name": "Overseer",
+        "slot": 57
+      },
+      {
+        "rawcode": "h01Z",
+        "name": "Nightmare",
+        "slot": 58
+      },
+      {
+        "rawcode": "h021",
+        "name": "Lord of Death",
+        "slot": 59
+      },
+      {
+        "rawcode": "h040",
+        "name": "Proton",
+        "slot": 60
+      },
+      {
+        "rawcode": "h042",
+        "name": "Aqua Spirit",
+        "slot": 61
+      },
+      {
+        "rawcode": "h044",
+        "name": "Watcher",
+        "slot": 62
+      },
+      {
+        "rawcode": "h046",
+        "name": "Mudman",
+        "slot": 63
+      },
+      {
+        "rawcode": "h048",
+        "name": "Disciple",
+        "slot": 64
+      },
+      {
+        "rawcode": "h04A",
+        "name": "Seer of Darkness",
+        "slot": 65
+      },
+      {
+        "rawcode": "h05N",
+        "name": "Specter",
+        "slot": 66
+      },
+      {
+        "rawcode": "h05S",
+        "name": "Wanderer",
+        "slot": 67
+      },
+      {
+        "rawcode": "h05R",
+        "name": "Phantom",
+        "slot": 68
+      },
+      {
+        "rawcode": "h05V",
+        "name": "Outcast",
+        "slot": 69
+      },
+      {
+        "rawcode": "h05X",
+        "name": "Apparition",
+        "slot": 70
+      },
+      {
+        "rawcode": "h05Z",
+        "name": "Dark Priest",
+        "slot": 71
+      },
+      {
+        "rawcode": "h06J",
+        "name": "Goblin Scientist",
+        "slot": 72
+      },
+      {
+        "rawcode": "h06K",
+        "name": "Servant",
+        "slot": 73
+      },
+      {
+        "rawcode": "h06M",
+        "name": "Tribesman",
+        "slot": 74
+      },
+      {
+        "rawcode": "h06O",
+        "name": "Medicine Man",
+        "slot": 75
+      },
+      {
+        "rawcode": "h06Q",
+        "name": "Harlot",
+        "slot": 76
+      },
+      {
+        "rawcode": "h06S",
+        "name": "Minotaur",
+        "slot": 77
+      },
+      {
+        "rawcode": "h07J",
+        "name": "Hatchling",
+        "slot": 78
+      },
+      {
+        "rawcode": "h07O",
+        "name": "Egg Sack",
+        "slot": 79
+      },
+      {
+        "rawcode": "h07Q",
+        "name": "Bottom Feeder",
+        "slot": 80
+      },
+      {
+        "rawcode": "h07S",
+        "name": "Mermaid",
+        "slot": 81
+      },
+      {
+        "rawcode": "h07U",
+        "name": "Komodo",
+        "slot": 82
+      },
+      {
+        "rawcode": "h07W",
+        "name": "Sea Giant",
+        "slot": 83
+      },
+      {
+        "rawcode": "h07D",
+        "name": "Morph [Tier 1]",
+        "slot": 84
+      },
+      {
+        "rawcode": "h07E",
+        "name": "Morph [Tier 2]",
+        "slot": 85
+      },
+      {
+        "rawcode": "h07F",
+        "name": "Morph [Tier 4]",
+        "slot": 86
+      },
+      {
+        "rawcode": "h07G",
+        "name": "Morph [Tier 3]",
+        "slot": 87
+      },
+      {
+        "rawcode": "h07H",
+        "name": "Morph [Tier 5]",
+        "slot": 88
+      },
+      {
+        "rawcode": "h07I",
+        "name": "Morph [Tier 6]",
+        "slot": 89
+      }
+    ]
+  },
+  {
+    "rawcode": "u002",
+    "name": "Shadow",
+    "tooltip": "Choose Shadow Builder",
+    "buildRawcodes": [
+      "h01P",
+      "h01T",
+      "h01V",
+      "h01X",
+      "h01Z",
+      "h021"
+    ],
+    "units": [
+      {
+        "rawcode": "h01P",
+        "name": "Bone Warrior",
+        "slot": 1
+      },
+      {
+        "rawcode": "h01T",
+        "name": "Carrion Spitter",
+        "slot": 2
+      },
+      {
+        "rawcode": "h01V",
+        "name": "Gateguard",
+        "slot": 3
+      },
+      {
+        "rawcode": "h01X",
+        "name": "Overseer",
+        "slot": 4
+      },
+      {
+        "rawcode": "h01Z",
+        "name": "Nightmare",
+        "slot": 5
+      },
+      {
+        "rawcode": "h021",
+        "name": "Lord of Death",
+        "slot": 6
+      }
+    ]
+  },
+  {
+    "rawcode": "u00Z",
+    "name": "Undead",
+    "tooltip": "Choose Undead Builder",
+    "buildRawcodes": [
+      "h0CF",
+      "h0CI",
+      "h0CO",
+      "h0CQ",
+      "h0CW",
+      "h0D0"
+    ],
+    "units": [
+      {
+        "rawcode": "h0CF",
+        "name": "Acolyte",
+        "slot": 1
+      },
+      {
+        "rawcode": "h0CI",
+        "name": "Ghoul",
+        "slot": 2
+      },
+      {
+        "rawcode": "h0CO",
+        "name": "Meat Wagon",
+        "slot": 3
+      },
+      {
+        "rawcode": "h0CQ",
+        "name": "Necromancer",
+        "slot": 4
+      },
+      {
+        "rawcode": "h0CW",
+        "name": "Zombie",
+        "slot": 5
+      },
+      {
+        "rawcode": "h0D0",
+        "name": "Guardian of Death",
+        "slot": 6
+      }
+    ]
+  }
+]
