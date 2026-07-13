@@ -30,8 +30,8 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
   const [query, setQuery] = useState("");
   const [builder, setBuilder] = useState("all");
   const [attackType, setAttackType] = useState("all");
-  const [minCost, setMinCost] = useState("");
-  const [maxCost, setMaxCost] = useState("");
+  const [minPointValue, setMinPointValue] = useState("");
+  const [maxPointValue, setMaxPointValue] = useState("");
 
   const builders = useMemo(
     () =>
@@ -55,8 +55,10 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
 
   const filteredUnits = useMemo(() => {
     const normalizedQuery = normalize(query.trim());
-    const minimumCost = minCost === "" ? null : Number(minCost);
-    const maximumCost = maxCost === "" ? null : Number(maxCost);
+    const minimumPointValue =
+      minPointValue === "" ? null : Number(minPointValue);
+    const maximumPointValue =
+      maxPointValue === "" ? null : Number(maxPointValue);
 
     return units.filter((unit) => {
       const matchesQuery =
@@ -74,13 +76,16 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
         builder === "all" || unit.builders.includes(builder);
       const matchesAttack =
         attackType === "all" || unit.attackType === attackType;
-      const matchesCost =
-        (minimumCost === null || unit.totalGoldValue >= minimumCost) &&
-        (maximumCost === null || unit.totalGoldValue <= maximumCost);
+      const pointValue = unit.pointValue ?? unit.gold;
+      const matchesPointValue =
+        (minimumPointValue === null || pointValue >= minimumPointValue) &&
+        (maximumPointValue === null || pointValue <= maximumPointValue);
 
-      return matchesQuery && matchesBuilder && matchesAttack && matchesCost;
+      return (
+        matchesQuery && matchesBuilder && matchesAttack && matchesPointValue
+      );
     });
-  }, [attackType, builder, maxCost, minCost, query, units]);
+  }, [attackType, builder, maxPointValue, minPointValue, query, units]);
 
   return (
     <section>
@@ -135,13 +140,13 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
 
         <label className="block">
           <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">
-            Custo total mínimo
+            Point Value mínimo
           </span>
           <input
             type="number"
             min="0"
-            value={minCost}
-            onChange={(event) => setMinCost(event.target.value)}
+            value={minPointValue}
+            onChange={(event) => setMinPointValue(event.target.value)}
             placeholder="Ex.: 50"
             className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/60"
           />
@@ -149,13 +154,13 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
 
         <label className="block">
           <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">
-            Custo total máximo
+            Point Value máximo
           </span>
           <input
             type="number"
             min="0"
-            value={maxCost}
-            onChange={(event) => setMaxCost(event.target.value)}
+            value={maxPointValue}
+            onChange={(event) => setMaxPointValue(event.target.value)}
             placeholder="Ex.: 200"
             className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/60"
           />
@@ -171,16 +176,16 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
         {(query ||
           builder !== "all" ||
           attackType !== "all" ||
-          minCost ||
-          maxCost) && (
+          minPointValue ||
+          maxPointValue) && (
           <button
             type="button"
             onClick={() => {
               setQuery("");
               setBuilder("all");
               setAttackType("all");
-              setMinCost("");
-              setMaxCost("");
+              setMinPointValue("");
+              setMaxPointValue("");
             }}
             className="text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
           >
@@ -204,12 +209,40 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
                 <h2 className="mt-2 text-xl font-black">{unit.name}</h2>
               </div>
 
-              <div className="rounded-xl bg-amber-400/10 px-3 py-2 text-right">
-                <p className="text-[10px] uppercase tracking-wider text-amber-300/70">
-                  Gold
-                </p>
-                <p className="font-black text-amber-300">{unit.gold}</p>
-              </div>
+              {unit.gold > 0 &&
+              unit.pointValue !== null &&
+              unit.gold !== unit.pointValue ? (
+                <div className="flex shrink-0 gap-2">
+                  <div className="rounded-xl bg-amber-400/10 px-3 py-2 text-right">
+                    <p className="text-[10px] uppercase tracking-wider text-amber-300/70">
+                      Custo
+                    </p>
+                    <p className="font-black text-amber-300">{unit.gold}</p>
+                  </div>
+
+                  <div className="rounded-xl bg-cyan-400/10 px-3 py-2 text-right">
+                    <p className="text-[10px] uppercase tracking-wider text-cyan-300/70">
+                      Point Value
+                    </p>
+                    <p className="font-black text-cyan-200">
+                      {unit.pointValue}
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="shrink-0 rounded-xl bg-amber-400/10 px-3 py-2 text-right">
+                  <p className="text-[10px] uppercase tracking-wider text-amber-300/70">
+                    {unit.pointValue === null
+                      ? "Custo"
+                      : unit.gold === unit.pointValue
+                        ? "Custo / Point Value"
+                        : "Point Value"}
+                  </p>
+                  <p className="font-black text-amber-300">
+                    {unit.pointValue ?? (unit.gold > 0 ? unit.gold : "—")}
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="mt-5 grid grid-cols-3 gap-2">

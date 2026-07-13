@@ -37,19 +37,23 @@ export default async function UnitPage({ params }: UnitPageProps) {
 
   const averageDamage = getAverageDamage(unit.damageMin, unit.damageMax);
   const dps = getBaseDps(averageDamage, unit.cooldown);
-  const hpPerGold = getPerGold(unit.hp, unit.totalGoldValue);
-  const dpsPerGold = getPerGold(dps, unit.totalGoldValue);
+  const hpPerGold = unit.goldEfficiencyValidated
+    ? getPerGold(unit.hp, unit.pointValue)
+    : null;
+  const dpsPerGold = unit.goldEfficiencyValidated
+    ? getPerGold(dps, unit.pointValue)
+    : null;
   const baseAverageDamage = baseUnit
     ? getAverageDamage(baseUnit.damageMin, baseUnit.damageMax)
     : null;
   const baseDps = baseUnit
     ? getBaseDps(baseAverageDamage, baseUnit.cooldown)
     : null;
-  const baseHpPerGold = baseUnit
-    ? getPerGold(baseUnit.hp, baseUnit.totalGoldValue)
+  const baseHpPerGold = baseUnit?.goldEfficiencyValidated
+    ? getPerGold(baseUnit.hp, baseUnit.pointValue)
     : null;
-  const baseDpsPerGold = baseUnit
-    ? getPerGold(baseDps, baseUnit.totalGoldValue)
+  const baseDpsPerGold = baseUnit?.goldEfficiencyValidated
+    ? getPerGold(baseDps, baseUnit.pointValue)
     : null;
   const upgradeGoldCost =
     baseUnit?.upgrades.find(
@@ -92,10 +96,10 @@ export default async function UnitPage({ params }: UnitPageProps) {
 
               <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3">
                 <p className="text-xs font-bold uppercase text-cyan-400">
-                  Valor total
+                  Point Value
                 </p>
                 <p className="text-2xl font-black text-cyan-200">
-                  {unit.totalGoldValue ?? unit.gold ?? "A confirmar"}
+                  {unit.pointValue ?? "A confirmar"}
                 </p>
               </div>
             </div>
@@ -142,7 +146,9 @@ export default async function UnitPage({ params }: UnitPageProps) {
               Eficiência — LegionHub
             </p>
             <p className="mt-2 text-sm text-slate-400">
-              Métricas calculadas sobre o valor total investido na unidade.
+              {unit.goldEfficiencyValidated
+                ? "Métricas calculadas somente para uma cadeia normal em que o Point Value equivale ao gold acumulado."
+                : "Métricas indisponíveis: o Point Value desta unidade não foi validado como gold acumulado."}
             </p>
 
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -163,7 +169,7 @@ export default async function UnitPage({ params }: UnitPageProps) {
               <p className="mt-2 text-sm text-slate-400">
                 Valores extraídos do mapa. O DPS base é teórico e não inclui
                 habilidades ou modificadores. As métricas por gold são
-                calculadas pelo LegionHub.
+                calculadas pelo LegionHub somente para cadeias normais validadas.
               </p>
 
               <div className="mt-4 overflow-x-auto rounded-xl border border-white/10">
@@ -301,9 +307,9 @@ export default async function UnitPage({ params }: UnitPageProps) {
                           : `+${upgrade.upgradeGoldCost} gold`}
                       </p>
 
-                      {upgrade.totalGoldValue !== null && (
+                      {upgrade.pointValue !== null && (
                         <p className="mt-1 text-xs text-slate-400">
-                          Valor total: {upgrade.totalGoldValue} gold
+                          Point Value: {upgrade.pointValue}
                         </p>
                       )}
                     </div>
@@ -372,8 +378,10 @@ function getBaseDps(averageDamage: number | null, cooldown: number | null) {
     : null;
 }
 
-function getPerGold(value: number | null, totalGoldValue: number) {
-  return value !== null && totalGoldValue > 0 ? value / totalGoldValue : null;
+function getPerGold(value: number | null, pointValue: number | null) {
+  return value !== null && pointValue !== null && pointValue > 0
+    ? value / pointValue
+    : null;
 }
 
 function formatNumber(value: number | null, decimals = 0) {

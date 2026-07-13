@@ -6,7 +6,7 @@ export type UnitUpgradeSummary = {
   rawcode: string;
   name: string;
   upgradeGoldCost: number | null;
-  totalGoldValue: number | null;
+  pointValue: number | null;
 };
 
 export type FighterSummary = {
@@ -14,7 +14,8 @@ export type FighterSummary = {
   baseRawcode: string | null;
   name: string;
   gold: number;
-  totalGoldValue: number;
+  pointValue: number | null;
+  goldEfficiencyValidated: boolean;
   hp: number | null;
   armor: number | null;
   damageMin: number | null;
@@ -46,6 +47,7 @@ type RawUnit = {
   rawcode: string;
   baseRawcode?: string | null;
   name?: string | null;
+  category?: string | null;
   cost?: {
     gold?: number | null;
     totalGoldValue?: number | null;
@@ -64,9 +66,61 @@ type RawUnit = {
   }>;
   abilities?: RawAbility[];
   upgradeRawcodes?: string[];
+  parentRawcodes?: string[];
 };
 
 type RawUpgrade = RawUnit;
+
+function hasValidatedGoldEfficiency(
+  unit: RawUnit,
+  unitByRawcode: Map<string, RawUnit>,
+  validationByRawcode: Map<string, boolean>,
+): boolean {
+  const cachedValidation = validationByRawcode.get(unit.rawcode);
+  if (cachedValidation !== undefined) return cachedValidation;
+
+  validationByRawcode.set(unit.rawcode, false);
+
+  const gold = unit.cost?.gold;
+  const pointValue = unit.cost?.totalGoldValue;
+  const isSpecialUnit =
+    unit.category === "hybrid-morph" ||
+    unit.category === "hero-altar" ||
+    unit.stats?.defenseType === "king" ||
+    unit.name?.includes(" - [Level ");
+
+  if (
+    gold == null ||
+    pointValue == null ||
+    pointValue <= 0 ||
+    isSpecialUnit
+  ) {
+    return false;
+  }
+
+  const isValidated =
+    unit.category === "fighter"
+      ? gold === pointValue
+      : unit.category === "fighter-upgrade" &&
+        (unit.parentRawcodes ?? []).some((parentRawcode) => {
+          const parent = unitByRawcode.get(parentRawcode);
+          const parentPointValue = parent?.cost?.totalGoldValue;
+
+          return (
+            parent !== undefined &&
+            parentPointValue != null &&
+            hasValidatedGoldEfficiency(
+              parent,
+              unitByRawcode,
+              validationByRawcode,
+            ) &&
+            parentPointValue + gold === pointValue
+          );
+        });
+
+  validationByRawcode.set(unit.rawcode, isValidated);
+  return isValidated;
+}
 
 async function readJson<T>(relativePath: string): Promise<T> {
   const absolutePath = path.resolve(process.cwd(), "../..", relativePath);
@@ -91,6 +145,10 @@ export async function getFighters(): Promise<FighterSummary[]> {
   const upgradeByRawcode = new Map(
     upgrades.map((upgrade) => [upgrade.rawcode, upgrade]),
   );
+  const unitByRawcode = new Map(
+    [...fighters, ...upgrades].map((unit) => [unit.rawcode, unit]),
+  );
+  const validationByRawcode = new Map<string, boolean>();
 
   return fighters
     .filter((fighter) => fighter.name && fighter.rawcode)
@@ -103,8 +161,12 @@ export async function getFighters(): Promise<FighterSummary[]> {
         baseRawcode: fighter.baseRawcode ?? null,
         name: fighter.name ?? fighter.rawcode,
         gold: fighter.cost?.gold ?? 0,
-        totalGoldValue:
-          fighter.cost?.totalGoldValue ?? fighter.cost?.gold ?? 0,
+        pointValue: fighter.cost?.totalGoldValue ?? null,
+        goldEfficiencyValidated: hasValidatedGoldEfficiency(
+          fighter,
+          unitByRawcode,
+          validationByRawcode,
+        ),
         hp: fighter.stats?.hp ?? null,
         armor: fighter.stats?.armor ?? null,
         damageMin: attack?.damageMin ?? null,
@@ -131,8 +193,7 @@ export async function getFighters(): Promise<FighterSummary[]> {
             rawcode: upgrade.rawcode,
             name: upgrade.name ?? upgrade.rawcode,
             upgradeGoldCost: upgrade.cost?.gold ?? null,
-            totalGoldValue:
-              upgrade.cost?.totalGoldValue ?? upgrade.cost?.gold ?? null,
+            pointValue: upgrade.cost?.totalGoldValue ?? null,
           })),
       };
     })
@@ -148,6 +209,10 @@ export async function getAllFighters(): Promise<FighterSummary[]> {
   const upgradeByRawcode = new Map(
     upgrades.map((upgrade) => [upgrade.rawcode, upgrade]),
   );
+  const unitByRawcode = new Map(
+    [...fighters, ...upgrades].map((unit) => [unit.rawcode, unit]),
+  );
+  const validationByRawcode = new Map<string, boolean>();
 
   return [...fighters, ...upgrades]
     .filter((fighter) => fighter.name && fighter.rawcode)
@@ -161,8 +226,12 @@ export async function getAllFighters(): Promise<FighterSummary[]> {
         baseRawcode: fighter.baseRawcode ?? null,
         name: fighter.name ?? fighter.rawcode,
         gold: fighter.cost?.gold ?? 0,
-        totalGoldValue:
-          fighter.cost?.totalGoldValue ?? fighter.cost?.gold ?? 0,
+        pointValue: fighter.cost?.totalGoldValue ?? null,
+        goldEfficiencyValidated: hasValidatedGoldEfficiency(
+          fighter,
+          unitByRawcode,
+          validationByRawcode,
+        ),
         hp: fighter.stats?.hp ?? null,
         armor: fighter.stats?.armor ?? null,
         damageMin: attack?.damageMin ?? null,
@@ -189,8 +258,7 @@ export async function getAllFighters(): Promise<FighterSummary[]> {
             rawcode: upgrade.rawcode,
             name: upgrade.name ?? upgrade.rawcode,
             upgradeGoldCost: upgrade.cost?.gold ?? null,
-            totalGoldValue:
-              upgrade.cost?.totalGoldValue ?? upgrade.cost?.gold ?? null,
+            pointValue: upgrade.cost?.totalGoldValue ?? null,
           })),
       };
     })
