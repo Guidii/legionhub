@@ -21,6 +21,20 @@ export default async function UnitPage({ params }: UnitPageProps) {
         notFound();
     }
 
+    const currentRawcode = unit.rawcode.toLowerCase();
+
+    const baseUnit = units.find((fighter) => {
+        const matchesBaseRawcode =
+            unit.baseRawcode !== null &&
+            fighter.rawcode.toLowerCase() === unit.baseRawcode.toLowerCase();
+
+        const upgradesToCurrentUnit = fighter.upgrades.some(
+            (upgrade) => upgrade.rawcode.toLowerCase() === currentRawcode,
+        );
+
+        return matchesBaseRawcode || upgradesToCurrentUnit;
+    });
+
     return (
         <main className="min-h-screen bg-[#070b14] text-white">
             <div className="mx-auto max-w-5xl px-6 py-12">
@@ -38,27 +52,37 @@ export default async function UnitPage({ params }: UnitPageProps) {
                                 {unit.rawcode}
                             </p>
 
-                            <h1 className="mt-2 text-4xl font-black">
-                                {unit.name}
-                            </h1>
+                            <h1 className="mt-2 text-4xl font-black">{unit.name}</h1>
 
                             <p className="mt-3 text-slate-400">
                                 Dados extraídos diretamente do mapa Legion TD 11.4b-beta1.
                             </p>
                         </div>
 
-                        <div className="rounded-xl border border-yellow-500/20 bg-yellow-500/10 px-5 py-3">
-                            <p className="text-xs font-bold uppercase text-yellow-500">
-                                Gold
-                            </p>
-                            <p className="text-2xl font-black text-yellow-300">
-                                {unit.gold}
-                            </p>
+                        <div className="flex flex-wrap gap-3">
+                            <div className="rounded-xl border border-yellow-500/20 bg-yellow-500/10 px-5 py-3">
+                                <p className="text-xs font-bold uppercase text-yellow-500">
+                                    Custo
+                                </p>
+                                <p className="text-2xl font-black text-yellow-300">
+                                    {unit.gold ?? "A confirmar"}
+                                </p>
+                            </div>
+
+                            <div className="rounded-xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-3">
+                                <p className="text-xs font-bold uppercase text-cyan-400">
+                                    Valor total
+                                </p>
+                                <p className="text-2xl font-black text-cyan-200">
+                                    {unit.totalGoldValue ?? unit.gold ?? "A confirmar"}
+                                </p>
+                            </div>
                         </div>
                     </div>
 
                     <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                         <Stat label="HP" value={unit.hp} />
+
                         <Stat
                             label="Dano"
                             value={
@@ -67,11 +91,37 @@ export default async function UnitPage({ params }: UnitPageProps) {
                                     : "—"
                             }
                         />
+
                         <Stat label="Alcance" value={unit.range} />
                         <Stat label="Tipo de ataque" value={unit.attackType} />
                         <Stat label="Tipo de defesa" value={unit.defenseType} />
-                        <Stat label="Builders" value={unit.builders.join(", ") || "—"} />
+                        <Stat
+                            label="Builders"
+                            value={unit.builders.join(", ") || "—"}
+                        />
                     </div>
+
+                    {baseUnit && (
+                        <section className="mt-10 border-t border-white/10 pt-8">
+                            <h2 className="text-xl font-black">Evolução de</h2>
+
+                            <Link
+                                href={`/unidades/${createUnitSlug(
+                                    baseUnit.name,
+                                    baseUnit.rawcode,
+                                )}`}
+                                className="mt-4 flex items-center justify-between rounded-xl border border-cyan-400/20 bg-cyan-400/5 px-4 py-3 transition hover:border-cyan-400/40 hover:bg-cyan-400/10"
+                            >
+                                <span className="font-bold text-cyan-100">
+                                    {baseUnit.name}
+                                </span>
+
+                                <span className="text-sm text-cyan-400">
+                                    Ver unidade base →
+                                </span>
+                            </Link>
+                        </section>
+                    )}
 
                     {unit.abilities.length > 0 && (
                         <section className="mt-10 border-t border-white/10 pt-8">
@@ -98,12 +148,16 @@ export default async function UnitPage({ params }: UnitPageProps) {
                                 {unit.upgrades.map((upgrade) => (
                                     <Link
                                         key={upgrade.rawcode}
-                                        href={`/unidades/${createUnitSlug(upgrade.name, upgrade.rawcode)}`}
+                                        href={`/unidades/${createUnitSlug(
+                                            upgrade.name,
+                                            upgrade.rawcode,
+                                        )}`}
                                         className="flex items-center justify-between rounded-xl bg-cyan-400/5 px-3 py-2"
                                     >
                                         <span className="font-semibold text-cyan-100">
                                             {upgrade.name}
                                         </span>
+
                                         <span className="text-sm text-cyan-300">
                                             {upgrade.upgradeGoldCost == null
                                                 ? "Custo a confirmar"
@@ -132,9 +186,8 @@ function Stat({
             <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
                 {label}
             </p>
-            <p className="mt-2 font-bold text-white">
-                {value ?? "—"}
-            </p>
+
+            <p className="mt-2 font-bold text-white">{value ?? "—"}</p>
         </div>
     );
 }

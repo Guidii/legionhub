@@ -11,6 +11,7 @@ export type UnitUpgradeSummary = {
 
 export type FighterSummary = {
   rawcode: string;
+  baseRawcode: string | null;
   name: string;
   gold: number;
   totalGoldValue: number;
@@ -43,6 +44,7 @@ type RawAttack = {
 
 type RawUnit = {
   rawcode: string;
+  baseRawcode?: string | null;
   name?: string | null;
   cost?: {
     gold?: number | null;
@@ -91,13 +93,14 @@ export async function getFighters(): Promise<FighterSummary[]> {
   );
 
   return fighters
-  .filter((fighter) => fighter.name && fighter.rawcode)
-  .filter((fighter) => fighter.name !== "Altar of Heroes")
-  .map((fighter) => {
+    .filter((fighter) => fighter.name && fighter.rawcode)
+    .filter((fighter) => fighter.name !== "Altar of Heroes")
+    .map((fighter) => {
       const attack = fighter.stats?.attacks?.[0];
 
       return {
         rawcode: fighter.rawcode,
+        baseRawcode: fighter.baseRawcode ?? null,
         name: fighter.name ?? fighter.rawcode,
         gold: fighter.cost?.gold ?? 0,
         totalGoldValue:
@@ -147,13 +150,15 @@ export async function getAllFighters(): Promise<FighterSummary[]> {
   );
 
   return [...fighters, ...upgrades]
-  .filter((fighter) => fighter.name && fighter.rawcode)
-  .filter((fighter) => fighter.name !== "Altar of Heroes")
-  .map((fighter) => {
+    .filter((fighter) => fighter.name && fighter.rawcode)
+    .filter((fighter) => fighter.name !== "Altar of Heroes")
+    .map((fighter) => {
       const attack = fighter.stats?.attacks?.[0];
+
 
       return {
         rawcode: fighter.rawcode,
+        baseRawcode: fighter.baseRawcode ?? null,
         name: fighter.name ?? fighter.rawcode,
         gold: fighter.cost?.gold ?? 0,
         totalGoldValue:
@@ -191,8 +196,6 @@ export async function getAllFighters(): Promise<FighterSummary[]> {
     })
     .sort((a, b) => a.name.localeCompare(b.name));
 }
-
-
 
 export async function getUnitBySlug(
   slug: string,
