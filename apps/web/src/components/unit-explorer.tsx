@@ -32,6 +32,7 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
   const [attackType, setAttackType] = useState("all");
   const [minPointValue, setMinPointValue] = useState("");
   const [maxPointValue, setMaxPointValue] = useState("");
+  const [selectedRawcodes, setSelectedRawcodes] = useState<string[]>([]);
 
   const builders = useMemo(
     () =>
@@ -86,6 +87,28 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
       );
     });
   }, [attackType, builder, maxPointValue, minPointValue, query, units]);
+
+  const selectedUnits = selectedRawcodes
+    .map((rawcode) => units.find((unit) => unit.rawcode === rawcode))
+    .filter((unit): unit is FighterSummary => Boolean(unit));
+
+  const comparisonHref =
+    selectedUnits.length === 2
+      ? `/unidades/comparar/${createUnitSlug(
+          selectedUnits[0].name,
+          selectedUnits[0].rawcode,
+        )}/${createUnitSlug(selectedUnits[1].name, selectedUnits[1].rawcode)}`
+      : null;
+
+  function toggleComparison(rawcode: string) {
+    setSelectedRawcodes((current) => {
+      if (current.includes(rawcode)) {
+        return current.filter((selectedRawcode) => selectedRawcode !== rawcode);
+      }
+
+      return current.length < 2 ? [...current, rawcode] : current;
+    });
+  }
 
   return (
     <section>
@@ -194,13 +217,69 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
         )}
       </div>
 
+      {selectedUnits.length > 0 && (
+        <div className="mt-5 flex flex-col gap-4 rounded-2xl border border-cyan-400/20 bg-cyan-400/5 p-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+              Comparação ({selectedUnits.length}/2)
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {selectedUnits.map((unit) => (
+                <span
+                  key={unit.rawcode}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/20 px-3 py-1 text-sm text-slate-200"
+                >
+                  {unit.name}
+                  <button
+                    type="button"
+                    onClick={() => toggleComparison(unit.rawcode)}
+                    className="font-bold text-slate-500 transition hover:text-white"
+                    aria-label={`Remover ${unit.name} da comparação`}
+                  >
+                    ×
+                  </button>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {comparisonHref ? (
+            <Link
+              href={comparisonHref}
+              className="rounded-xl bg-cyan-400 px-4 py-3 text-center text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+            >
+              Comparar unidades
+            </Link>
+          ) : (
+            <button
+              type="button"
+              disabled
+              className="cursor-not-allowed rounded-xl bg-white/5 px-4 py-3 text-sm font-bold text-slate-600"
+            >
+              Comparar unidades
+            </button>
+          )}
+        </div>
+      )}
+
       <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        {filteredUnits.map((unit) => (
-          <Link
-            key={unit.rawcode}
-            href={`/unidades/${createUnitSlug(unit.name, unit.rawcode)}`}
-            className="block rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:-translate-y-1 hover:border-cyan-400/30"
-          >
+        {filteredUnits.map((unit) => {
+          const isSelected = selectedRawcodes.includes(unit.rawcode);
+          const selectionIsFull = selectedRawcodes.length === 2 && !isSelected;
+
+          return (
+            <article
+              key={unit.rawcode}
+              className={`rounded-2xl border p-5 transition hover:-translate-y-1 ${
+                isSelected
+                  ? "border-cyan-400/60 bg-cyan-400/[0.08]"
+                  : "border-white/10 bg-white/[0.03] hover:border-cyan-400/30"
+              }`}
+            >
+              <Link
+                href={`/unidades/${createUnitSlug(unit.name, unit.rawcode)}`}
+                className="block"
+              >
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs font-bold uppercase tracking-wider text-cyan-400">
@@ -324,9 +403,27 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
               ) : (
                 <p className="mt-2 text-sm text-slate-600">Sem upgrade direto</p>
               )}
-            </div>
-          </Link>
-        ))}
+              </div>
+            </Link>
+
+              <button
+                type="button"
+                onClick={() => toggleComparison(unit.rawcode)}
+                disabled={selectionIsFull}
+                aria-pressed={isSelected}
+                className={`mt-4 w-full rounded-xl border px-4 py-2 text-sm font-bold transition ${
+                  isSelected
+                    ? "border-cyan-400/40 bg-cyan-400/15 text-cyan-200"
+                    : selectionIsFull
+                      ? "cursor-not-allowed border-white/5 bg-white/[0.02] text-slate-700"
+                      : "border-white/10 bg-black/20 text-slate-300 hover:border-cyan-400/30 hover:text-cyan-200"
+                }`}
+              >
+                {isSelected ? "Selecionada" : "Comparar"}
+              </button>
+            </article>
+          );
+        })}
       </div>
 
       {filteredUnits.length === 0 && (

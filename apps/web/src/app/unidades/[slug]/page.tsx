@@ -2,6 +2,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllFighters } from "@/lib/legion-data";
 import { createUnitSlug } from "@/lib/unit-slug";
+import {
+  formatDifference,
+  formatGold,
+  formatNumber,
+  formatPercentageDifference,
+  getAverageDamage,
+  getBaseDps,
+  getPerGold,
+} from "@/lib/unit-metrics";
 
 type UnitPageProps = {
   params: Promise<{
@@ -37,23 +46,19 @@ export default async function UnitPage({ params }: UnitPageProps) {
 
   const averageDamage = getAverageDamage(unit.damageMin, unit.damageMax);
   const dps = getBaseDps(averageDamage, unit.cooldown);
-  const hpPerGold = unit.goldEfficiencyValidated
-    ? getPerGold(unit.hp, unit.pointValue)
-    : null;
-  const dpsPerGold = unit.goldEfficiencyValidated
-    ? getPerGold(dps, unit.pointValue)
-    : null;
+  const hpPerGold = getPerGold(unit.hp, unit.validatedInvestmentGold);
+  const dpsPerGold = getPerGold(dps, unit.validatedInvestmentGold);
   const baseAverageDamage = baseUnit
     ? getAverageDamage(baseUnit.damageMin, baseUnit.damageMax)
     : null;
   const baseDps = baseUnit
     ? getBaseDps(baseAverageDamage, baseUnit.cooldown)
     : null;
-  const baseHpPerGold = baseUnit?.goldEfficiencyValidated
-    ? getPerGold(baseUnit.hp, baseUnit.pointValue)
+  const baseHpPerGold = baseUnit
+    ? getPerGold(baseUnit.hp, baseUnit.validatedInvestmentGold)
     : null;
-  const baseDpsPerGold = baseUnit?.goldEfficiencyValidated
-    ? getPerGold(baseDps, baseUnit.pointValue)
+  const baseDpsPerGold = baseUnit
+    ? getPerGold(baseDps, baseUnit.validatedInvestmentGold)
     : null;
   const upgradeGoldCost =
     baseUnit?.upgrades.find(
@@ -102,6 +107,15 @@ export default async function UnitPage({ params }: UnitPageProps) {
                   {unit.pointValue ?? "A confirmar"}
                 </p>
               </div>
+
+              <div className="rounded-xl border border-emerald-400/20 bg-emerald-400/10 px-5 py-3">
+                <p className="text-xs font-bold uppercase text-emerald-400">
+                  Investimento validado
+                </p>
+                <p className="text-2xl font-black text-emerald-200">
+                  {formatGold(unit.validatedInvestmentGold)}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -146,9 +160,9 @@ export default async function UnitPage({ params }: UnitPageProps) {
               Eficiência — LegionHub
             </p>
             <p className="mt-2 text-sm text-slate-400">
-              {unit.goldEfficiencyValidated
-                ? "Métricas calculadas somente para uma cadeia normal em que o Point Value equivale ao gold acumulado."
-                : "Métricas indisponíveis: o Point Value desta unidade não foi validado como gold acumulado."}
+              {unit.validatedInvestmentGold !== null
+                ? "Métricas calculadas exclusivamente sobre o investimento acumulado em gold validado pela cadeia da unidade."
+                : "Métricas indisponíveis: não foi possível validar o investimento acumulado em gold desta unidade."}
             </p>
 
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -361,67 +375,4 @@ function ComparisonRow({
       <td className="px-4 py-3 font-semibold text-cyan-300">{difference}</td>
     </tr>
   );
-}
-
-function getAverageDamage(
-  damageMin: number | null,
-  damageMax: number | null,
-) {
-  return damageMin !== null && damageMax !== null
-    ? (damageMin + damageMax) / 2
-    : null;
-}
-
-function getBaseDps(averageDamage: number | null, cooldown: number | null) {
-  return averageDamage !== null && cooldown !== null && cooldown > 0
-    ? averageDamage / cooldown
-    : null;
-}
-
-function getPerGold(value: number | null, pointValue: number | null) {
-  return value !== null && pointValue !== null && pointValue > 0
-    ? value / pointValue
-    : null;
-}
-
-function formatNumber(value: number | null, decimals = 0) {
-  return value === null ? "—" : value.toFixed(decimals);
-}
-
-function formatDifference(
-  baseValue: number | null,
-  currentValue: number | null,
-  decimals = 0,
-) {
-  if (baseValue === null || currentValue === null) return "—";
-
-  const difference = currentValue - baseValue;
-  const prefix = difference > 0 ? "+" : "";
-  return `${prefix}${difference.toFixed(decimals)}`;
-}
-
-function formatPercentageDifference(
-  baseValue: number | null,
-  currentValue: number | null,
-) {
-  if (baseValue === null || currentValue === null || baseValue === 0) {
-    return "—";
-  }
-
-  const percentage = ((currentValue - baseValue) / baseValue) * 100;
-  const roundedPercentage = Math.round(percentage * 10) / 10;
-
-  if (roundedPercentage === 0) return "0%";
-
-  const prefix = roundedPercentage > 0 ? "+" : "";
-  const formattedPercentage = Number.isInteger(roundedPercentage)
-    ? roundedPercentage.toFixed(0)
-    : roundedPercentage.toFixed(1);
-
-  return `${prefix}${formattedPercentage}%`;
-}
-
-function formatGold(value: number | null, showPositiveSign = false) {
-  if (value === null) return "—";
-  return `${showPositiveSign ? "+" : ""}${value} gold`;
 }
