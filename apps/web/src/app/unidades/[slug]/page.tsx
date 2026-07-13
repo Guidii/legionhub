@@ -45,6 +45,12 @@ export default async function UnitPage({ params }: UnitPageProps) {
   const baseDps = baseUnit
     ? getBaseDps(baseAverageDamage, baseUnit.cooldown)
     : null;
+  const baseHpPerGold = baseUnit
+    ? getPerGold(baseUnit.hp, baseUnit.totalGoldValue)
+    : null;
+  const baseDpsPerGold = baseUnit
+    ? getPerGold(baseDps, baseUnit.totalGoldValue)
+    : null;
   const upgradeGoldCost =
     baseUnit?.upgrades.find(
       (upgrade) => upgrade.rawcode.toLowerCase() === currentRawcode,
@@ -156,7 +162,8 @@ export default async function UnitPage({ params }: UnitPageProps) {
               <h2 className="text-xl font-black">Comparação com a base</h2>
               <p className="mt-2 text-sm text-slate-400">
                 Valores extraídos do mapa. O DPS base é teórico e não inclui
-                habilidades ou modificadores.
+                habilidades ou modificadores. As métricas por gold são
+                calculadas pelo LegionHub.
               </p>
 
               <div className="mt-4 overflow-x-auto rounded-xl border border-white/10">
@@ -203,6 +210,24 @@ export default async function UnitPage({ params }: UnitPageProps) {
                       baseValue={formatNumber(baseDps, 2)}
                       currentValue={formatNumber(dps, 2)}
                       difference={formatDifference(baseDps, dps, 2)}
+                    />
+                    <ComparisonRow
+                      label="HP por gold"
+                      baseValue={formatNumber(baseHpPerGold, 2)}
+                      currentValue={formatNumber(hpPerGold, 2)}
+                      difference={formatPercentageDifference(
+                        baseHpPerGold,
+                        hpPerGold,
+                      )}
+                    />
+                    <ComparisonRow
+                      label="DPS base por gold"
+                      baseValue={formatNumber(baseDpsPerGold, 2)}
+                      currentValue={formatNumber(dpsPerGold, 2)}
+                      difference={formatPercentageDifference(
+                        baseDpsPerGold,
+                        dpsPerGold,
+                      )}
                     />
                     <ComparisonRow
                       label="Armadura"
@@ -365,6 +390,27 @@ function formatDifference(
   const difference = currentValue - baseValue;
   const prefix = difference > 0 ? "+" : "";
   return `${prefix}${difference.toFixed(decimals)}`;
+}
+
+function formatPercentageDifference(
+  baseValue: number | null,
+  currentValue: number | null,
+) {
+  if (baseValue === null || currentValue === null || baseValue === 0) {
+    return "—";
+  }
+
+  const percentage = ((currentValue - baseValue) / baseValue) * 100;
+  const roundedPercentage = Math.round(percentage * 10) / 10;
+
+  if (roundedPercentage === 0) return "0%";
+
+  const prefix = roundedPercentage > 0 ? "+" : "";
+  const formattedPercentage = Number.isInteger(roundedPercentage)
+    ? roundedPercentage.toFixed(0)
+    : roundedPercentage.toFixed(1);
+
+  return `${prefix}${formattedPercentage}%`;
 }
 
 function formatGold(value: number | null, showPositiveSign = false) {
