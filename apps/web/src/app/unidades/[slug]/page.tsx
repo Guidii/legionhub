@@ -247,11 +247,19 @@ export default async function UnitPage({ params }: UnitPageProps) {
                       {upgrade.name}
                     </span>
 
-                    <span className="text-sm text-cyan-300">
-                      {upgrade.upgradeGoldCost == null
-                        ? "Custo a confirmar"
-                        : `+${upgrade.upgradeGoldCost} gold`}
-                    </span>
+                    <div className="text-right">
+                      <p className="text-sm text-cyan-300">
+                        {upgrade.upgradeGoldCost == null
+                          ? "Custo a confirmar"
+                          : `+${upgrade.upgradeGoldCost} gold`}
+                      </p>
+
+                      {upgrade.totalGoldValue !== null && (
+                        <p className="mt-1 text-xs text-slate-400">
+                          Valor total: {upgrade.totalGoldValue} gold
+                        </p>
+                      )}
+                    </div>
                   </Link>
                 ))}
               </div>
