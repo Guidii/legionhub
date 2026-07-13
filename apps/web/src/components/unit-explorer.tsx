@@ -30,6 +30,8 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
   const [query, setQuery] = useState("");
   const [builder, setBuilder] = useState("all");
   const [attackType, setAttackType] = useState("all");
+  const [minCost, setMinCost] = useState("");
+  const [maxCost, setMaxCost] = useState("");
 
   const builders = useMemo(
     () =>
@@ -53,6 +55,8 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
 
   const filteredUnits = useMemo(() => {
     const normalizedQuery = normalize(query.trim());
+    const minimumCost = minCost === "" ? null : Number(minCost);
+    const maximumCost = maxCost === "" ? null : Number(maxCost);
 
     return units.filter((unit) => {
       const matchesQuery =
@@ -70,15 +74,18 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
         builder === "all" || unit.builders.includes(builder);
       const matchesAttack =
         attackType === "all" || unit.attackType === attackType;
+      const matchesCost =
+        (minimumCost === null || unit.totalGoldValue >= minimumCost) &&
+        (maximumCost === null || unit.totalGoldValue <= maximumCost);
 
-      return matchesQuery && matchesBuilder && matchesAttack;
+      return matchesQuery && matchesBuilder && matchesAttack && matchesCost;
     });
-  }, [attackType, builder, query, units]);
+  }, [attackType, builder, maxCost, minCost, query, units]);
 
   return (
     <section>
-      <div className="grid gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:grid-cols-[1fr_220px_220px]">
-        <label className="block">
+      <div className="grid gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_180px_180px_150px_150px]">
+        <label className="block md:col-span-2 xl:col-span-1">
           <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">
             Buscar
           </span>
@@ -125,6 +132,34 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
             ))}
           </select>
         </label>
+
+        <label className="block">
+          <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">
+            Custo total mínimo
+          </span>
+          <input
+            type="number"
+            min="0"
+            value={minCost}
+            onChange={(event) => setMinCost(event.target.value)}
+            placeholder="Ex.: 50"
+            className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/60"
+          />
+        </label>
+
+        <label className="block">
+          <span className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-500">
+            Custo total máximo
+          </span>
+          <input
+            type="number"
+            min="0"
+            value={maxCost}
+            onChange={(event) => setMaxCost(event.target.value)}
+            placeholder="Ex.: 200"
+            className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/60"
+          />
+        </label>
       </div>
 
       <div className="mt-6 flex items-center justify-between gap-4">
@@ -133,13 +168,19 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
           {units.length} unidades
         </p>
 
-        {(query || builder !== "all" || attackType !== "all") && (
+        {(query ||
+          builder !== "all" ||
+          attackType !== "all" ||
+          minCost ||
+          maxCost) && (
           <button
             type="button"
             onClick={() => {
               setQuery("");
               setBuilder("all");
               setAttackType("all");
+              setMinCost("");
+              setMaxCost("");
             }}
             className="text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
           >
