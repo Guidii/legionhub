@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const features = [
   {
     title: "Legion Coach",
@@ -70,12 +72,12 @@ export default function Home() {
               Abrir Legion Coach
             </button>
 
-            <button
-              type="button"
+            <Link
+              href="/unidades"
               className="rounded-xl border border-white/15 px-6 py-3 font-bold text-white transition hover:border-white/30 hover:bg-white/5"
             >
               Explorar unidades
-            </button>
+            </Link>
           </div>
 
           <p className="mt-4 text-xs text-slate-600">

@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { FighterSummary } from "@/lib/legion-data";
+import { createUnitSlug } from "@/lib/unit-slug";
 
 type UnitExplorerProps = {
   units: FighterSummary[];
@@ -148,9 +150,10 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
 
       <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {filteredUnits.map((unit) => (
-          <article
+          <Link
             key={unit.rawcode}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:-translate-y-1 hover:border-cyan-400/35"
+            href={`/unidades/${createUnitSlug(unit.name, unit.rawcode)}`}
+            className="block rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition hover:-translate-y-1 hover:border-cyan-400/30"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -211,9 +214,9 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
                 </p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {[...new Set(unit.abilities)].map((ability) => (
-                  <span
-                    key={`${unit.rawcode}-${ability}`}
-                    className="rounded-full border border-purple-400/20 bg-purple-400/10 px-3 py-1 text-xs font-semibold text-purple-200"
+                    <span
+                      key={`${unit.rawcode}-${ability}`}
+                      className="rounded-full border border-purple-400/20 bg-purple-400/10 px-3 py-1 text-xs font-semibold text-purple-200"
                     >
                       {ability}
                     </span>
@@ -237,7 +240,9 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
                         {upgrade.name}
                       </span>
                       <span className="text-sm text-cyan-300">
-                        +{upgrade.upgradeGoldCost} gold
+                        {upgrade.upgradeGoldCost === null
+                          ? "Custo a confirmar"
+                          : `+${upgrade.upgradeGoldCost} gold`}
                       </span>
                     </div>
                   ))}
@@ -246,7 +251,7 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
                 <p className="mt-2 text-sm text-slate-600">Sem upgrade direto</p>
               )}
             </div>
-          </article>
+          </Link>
         ))}
       </div>
 
