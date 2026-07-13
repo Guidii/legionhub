@@ -37,6 +37,8 @@ export default async function UnitPage({ params }: UnitPageProps) {
 
   const averageDamage = getAverageDamage(unit.damageMin, unit.damageMax);
   const dps = getBaseDps(averageDamage, unit.cooldown);
+  const hpPerGold = getPerGold(unit.hp, unit.totalGoldValue);
+  const dpsPerGold = getPerGold(dps, unit.totalGoldValue);
   const baseAverageDamage = baseUnit
     ? getAverageDamage(baseUnit.damageMin, baseUnit.damageMax)
     : null;
@@ -128,6 +130,26 @@ export default async function UnitPage({ params }: UnitPageProps) {
               value={unit.builders.join(", ") || "—"}
             />
           </div>
+
+          <section className="mt-10 rounded-xl border border-cyan-400/20 bg-cyan-400/5 p-5">
+            <p className="text-xs font-bold uppercase tracking-widest text-cyan-400">
+              Eficiência — LegionHub
+            </p>
+            <p className="mt-2 text-sm text-slate-400">
+              Métricas calculadas sobre o valor total investido na unidade.
+            </p>
+
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <Stat
+                label="HP por gold"
+                value={hpPerGold !== null ? hpPerGold.toFixed(2) : "—"}
+              />
+              <Stat
+                label="DPS base por gold"
+                value={dpsPerGold !== null ? dpsPerGold.toFixed(2) : "—"}
+              />
+            </div>
+          </section>
 
           {baseUnit && (
             <section className="mt-10 border-t border-white/10 pt-8">
@@ -323,6 +345,10 @@ function getBaseDps(averageDamage: number | null, cooldown: number | null) {
   return averageDamage !== null && cooldown !== null && cooldown > 0
     ? averageDamage / cooldown
     : null;
+}
+
+function getPerGold(value: number | null, totalGoldValue: number) {
+  return value !== null && totalGoldValue > 0 ? value / totalGoldValue : null;
 }
 
 function formatNumber(value: number | null, decimals = 0) {
