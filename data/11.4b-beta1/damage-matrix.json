@@ -1,0 +1,82 @@
+{
+  "mapVersion": "11.4b-beta1",
+  "defenseOrder": [
+    "small",
+    "medium",
+    "large",
+    "fortified",
+    "normal",
+    "hero",
+    "divine",
+    "none"
+  ],
+  "attackTypes": {
+    "hero": {
+      "small": 1.0,
+      "medium": 1.0,
+      "large": 1.0,
+      "fortified": 1.0,
+      "normal": 1.0,
+      "hero": 1.0,
+      "divine": 1.0,
+      "none": 1.0
+    },
+    "magic": {
+      "small": 1.1,
+      "medium": 0.8,
+      "large": 1.2,
+      "fortified": 0.7,
+      "normal": 0.7,
+      "hero": 0.9,
+      "divine": 1.25,
+      "none": 1.0
+    },
+    "normal": {
+      "small": 0.9,
+      "medium": 1.2,
+      "large": 0.9,
+      "fortified": 0.8,
+      "normal": 0.8,
+      "hero": 0.9,
+      "divine": 0.9,
+      "none": 1.0
+    },
+    "pierce": {
+      "small": 1.3,
+      "medium": 0.9,
+      "large": 0.8,
+      "fortified": 0.7,
+      "normal": 0.7,
+      "hero": 0.9,
+      "divine": 0.8,
+      "none": 1.0
+    },
+    "siege": {
+      "small": 0.9,
+      "medium": 0.9,
+      "large": 0.9,
+      "fortified": 1.25,
+      "normal": 1.25,
+      "hero": 0.9,
+      "divine": 0.8,
+      "none": 1.0
+    }
+  },
+  "spells": {
+    "small": 1.0,
+    "medium": 1.0,
+    "large": 1.0,
+    "fortified": 1.0,
+    "normal": 1.0,
+    "hero": 1.0,
+    "divine": 1.0,
+    "none": 1.0
+  },
+  "unconfirmedAttackTypes": [
+    "chaos"
+  ],
+  "source": {
+    "file": "File00000002.xxx",
+    "archiveName": "war3mapMisc.txt"
+  }
+}

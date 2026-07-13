@@ -13,6 +13,23 @@ WTS_RE = re.compile(
     r"STRING\s+(\d+)\s*\n(?P<comments>(?:(?://[^\n]*)\n)*)\{\n(?P<body>.*?)\n\}",
     re.S,
 )
+DAMAGE_DEFENSE_ORDER = [
+    "small",
+    "medium",
+    "large",
+    "fortified",
+    "normal",
+    "hero",
+    "divine",
+    "none",
+]
+DAMAGE_ATTACK_KEYS = {
+    "DamageBonusHero": "hero",
+    "DamageBonusMagic": "magic",
+    "DamageBonusNormal": "normal",
+    "DamageBonusPierce": "pierce",
+    "DamageBonusSiege": "siege",
+}
 
 
 def clean_wc3_text(value: str | None) -> str:
@@ -30,6 +47,60 @@ def clean_wc3_text(value: str | None) -> str:
 def load_wts(path: Path) -> dict[int, str]:
     text = path.read_text("utf-8", errors="replace")
     return {int(match.group(1)): match.group("body") for match in WTS_RE.finditer(text)}
+
+
+def load_damage_matrix(path: Path) -> dict[str, Any]:
+    misc_values: dict[str, str] = {}
+    current_section: str | None = None
+
+    for line in path.read_text("utf-8", errors="replace").splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith((";", "#")):
+            continue
+        if stripped.startswith("[") and stripped.endswith("]"):
+            current_section = stripped[1:-1]
+            continue
+        if current_section != "Misc" or "=" not in stripped:
+            continue
+
+        key, value = stripped.split("=", 1)
+        misc_values[key.strip()] = value.strip()
+
+    def parse_multipliers(key: str) -> dict[str, float]:
+        raw_value = misc_values.get(key)
+        if raw_value is None:
+            raise ValueError(f"Campo obrigatório ausente em {path.name}: {key}")
+
+        multipliers = [float(value.strip()) for value in raw_value.split(",")]
+        if len(multipliers) != len(DAMAGE_DEFENSE_ORDER):
+            raise ValueError(
+                f"{key} possui {len(multipliers)} multiplicadores; "
+                f"esperado: {len(DAMAGE_DEFENSE_ORDER)}"
+            )
+
+        return dict(zip(DAMAGE_DEFENSE_ORDER, multipliers, strict=True))
+
+    attack_types = {
+        normalized_name: parse_multipliers(source_key)
+        for source_key, normalized_name in DAMAGE_ATTACK_KEYS.items()
+    }
+
+    if "DamageBonusChaos" in misc_values:
+        attack_types["chaos"] = parse_multipliers("DamageBonusChaos")
+
+    return {
+        "mapVersion": "11.4b-beta1",
+        "defenseOrder": DAMAGE_DEFENSE_ORDER,
+        "attackTypes": attack_types,
+        "spells": parse_multipliers("DamageBonusSpells"),
+        "unconfirmedAttackTypes": (
+            [] if "DamageBonusChaos" in misc_values else ["chaos"]
+        ),
+        "source": {
+            "file": path.name,
+            "archiveName": "war3mapMisc.txt",
+        },
+    }
 
 
 def resolve_wts(value: Any, wts: dict[int, str]) -> Any:
@@ -358,6 +429,7 @@ def main() -> None:
     output_dir: Path = args.output_dir
 
     required_files = [
+        "File00000002.xxx",
         "File00000003.xxx",
         "File00000724.xxx",
         "File00000726.xxx",
@@ -369,6 +441,7 @@ def main() -> None:
         raise FileNotFoundError(f"Arquivos obrigatórios ausentes: {', '.join(missing)}")
 
     wts = load_wts(map_dir / "File00000750.xxx")
+    damage_matrix = load_damage_matrix(map_dir / "File00000002.xxx")
 
     gameplay_units_parsed = parse_object_file(
         map_dir / "File00000003.xxx", levelled=False, wts=wts
@@ -516,6 +589,7 @@ def main() -> None:
         for name, variants in sorted(mercenary_groups.items())
     ]
 
+    write_json(output_dir / "damage-matrix.json", damage_matrix)
     write_json(output_dir / "all-units.json", list(all_units.values()))
     write_json(output_dir / "builders.json", sorted(builders, key=lambda item: item["name"]))
     write_json(output_dir / "fighters.json", sorted(fighters, key=lambda item: (item["category"], item["name"], item["rawcode"])))
