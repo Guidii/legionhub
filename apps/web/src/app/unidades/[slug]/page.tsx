@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { UnitIcon } from "@/components/unit-icon";
 import {
   getDefenseMultipliersForAttack,
   isAttackTypeUnconfirmed,
 } from "@/lib/damage-matrix";
 import { getAllFighters } from "@/lib/legion-data";
+import { getUnitIconPath } from "@/lib/unit-icons";
 import { createUnitSlug } from "@/lib/unit-slug";
 import {
   formatDifference,
@@ -33,6 +35,8 @@ export default async function UnitPage({ params }: UnitPageProps) {
   if (!unit) {
     notFound();
   }
+
+  const iconPath = await getUnitIconPath(unit.rawcode);
 
   const currentRawcode = unit.rawcode.toLowerCase();
 
@@ -85,16 +89,24 @@ export default async function UnitPage({ params }: UnitPageProps) {
 
         <section className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-8">
           <div className="flex flex-wrap items-start justify-between gap-6">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-widest text-cyan-400">
-                {unit.rawcode}
-              </p>
+            <div className="flex min-w-0 items-center gap-5">
+              <UnitIcon
+                rawcode={unit.rawcode}
+                name={unit.name}
+                webPath={iconPath}
+                size={96}
+              />
+              <div className="min-w-0">
+                <p className="text-sm font-bold uppercase tracking-widest text-cyan-400">
+                  {unit.rawcode}
+                </p>
 
-              <h1 className="mt-2 text-4xl font-black">{unit.name}</h1>
+                <h1 className="mt-2 text-4xl font-black">{unit.name}</h1>
 
-              <p className="mt-3 text-slate-400">
-                Dados extraídos diretamente do mapa Legion TD 11.4b-beta1.
-              </p>
+                <p className="mt-3 text-slate-400">
+                  Dados extraídos diretamente do mapa Legion TD 11.4b-beta1.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-wrap gap-3">

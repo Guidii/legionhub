@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { UnitExplorer } from "@/components/unit-explorer";
 import { getFighters } from "@/lib/legion-data";
+import { getUnitIconPaths } from "@/lib/unit-icons";
 
 export const metadata = {
   title: "Unidades | LegionHub",
@@ -10,6 +11,9 @@ export const metadata = {
 
 export default async function UnitsPage() {
   const units = await getFighters();
+  const iconPaths = await getUnitIconPaths(
+    units.map((unit) => unit.rawcode),
+  );
 
   return (
     <main className="min-h-screen bg-[#070b14] text-white">
@@ -63,7 +67,7 @@ export default async function UnitsPage() {
         </p>
 
         <div className="mt-10">
-          <UnitExplorer units={units} />
+          <UnitExplorer units={units} iconPaths={iconPaths} />
         </div>
       </section>
     </main>

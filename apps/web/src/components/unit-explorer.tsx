@@ -2,11 +2,13 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { UnitIcon } from "@/components/unit-icon";
 import type { FighterSummary } from "@/lib/legion-data";
 import { createUnitSlug } from "@/lib/unit-slug";
 
 type UnitExplorerProps = {
   units: FighterSummary[];
+  iconPaths: Record<string, string | null>;
 };
 
 function normalize(value: string) {
@@ -26,7 +28,7 @@ function formatDamage(unit: FighterSummary) {
   return `${unit.damageMin}–${unit.damageMax}`;
 }
 
-export function UnitExplorer({ units }: UnitExplorerProps) {
+export function UnitExplorer({ units, iconPaths }: UnitExplorerProps) {
   const [query, setQuery] = useState("");
   const [builder, setBuilder] = useState("all");
   const [attackType, setAttackType] = useState("all");
@@ -281,11 +283,19 @@ export function UnitExplorer({ units }: UnitExplorerProps) {
                 className="block"
               >
             <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-wider text-cyan-400">
-                  {unit.rawcode}
-                </p>
-                <h2 className="mt-2 text-xl font-black">{unit.name}</h2>
+              <div className="flex min-w-0 items-center gap-3">
+                <UnitIcon
+                  rawcode={unit.rawcode}
+                  name={unit.name}
+                  webPath={iconPaths[unit.rawcode] ?? null}
+                  size={56}
+                />
+                <div className="min-w-0">
+                  <p className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+                    {unit.rawcode}
+                  </p>
+                  <h2 className="mt-1 text-xl font-black">{unit.name}</h2>
+                </div>
               </div>
 
               {unit.gold > 0 &&
