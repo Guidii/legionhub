@@ -16,8 +16,8 @@ const features = [
   {
     title: "Waves",
     description:
-      "Entenda os perigos de cada wave e quais composições costumam se sair melhor.",
-    status: "Em breve",
+      "Consulte as posições candidatas e o nível de confiança de cada associação.",
+    status: "Dataset preliminar",
   },
 ];
 
@@ -77,6 +77,13 @@ export default function Home() {
               className="rounded-xl border border-white/15 px-6 py-3 font-bold text-white transition hover:border-white/30 hover:bg-white/5"
             >
               Explorar unidades
+            </Link>
+
+            <Link
+              href="/waves"
+              className="rounded-xl border border-amber-300/20 px-6 py-3 font-bold text-amber-100 transition hover:border-amber-300/40 hover:bg-amber-300/5"
+            >
+              Explorar waves
             </Link>
           </div>
 

@@ -1,15 +1,15 @@
 import Link from "next/link";
-import { UnitExplorer } from "@/components/unit-explorer";
-import { getFighters } from "@/lib/legion-data";
+import { WaveExplorer } from "@/components/wave-explorer";
+import { getPreliminaryWaves } from "@/lib/wave-data";
 
 export const metadata = {
-  title: "Unidades | LegionHub",
+  title: "Waves | LegionHub",
   description:
-    "Explore unidades, custos, atributos, habilidades e upgrades do Legion TD Team OZE 11.4b-beta1.",
+    "Explore a base preliminar de waves do Legion TD Team OZE 11.4b-beta1.",
 };
 
-export default async function UnitsPage() {
-  const units = await getFighters();
+export default async function WavesPage() {
+  const dataset = await getPreliminaryWaves();
 
   return (
     <main className="min-h-screen bg-[#070b14] text-white">
@@ -29,21 +29,21 @@ export default async function UnitsPage() {
               aria-label="Base de conhecimento"
               className="flex items-center gap-2 text-sm font-semibold"
             >
-              <span aria-current="page" className="text-cyan-300">
+              <Link
+                href="/unidades"
+                className="text-slate-400 transition hover:text-cyan-300"
+              >
                 Unidades
-              </span>
+              </Link>
               <span aria-hidden="true" className="text-slate-700">
                 |
               </span>
-              <Link
-                href="/waves"
-                className="text-slate-400 transition hover:text-cyan-300"
-              >
+              <span aria-current="page" className="text-cyan-300">
                 Waves
-              </Link>
+              </span>
             </nav>
-            <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-300">
-              Dados 11.4b-beta1
+            <span className="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-semibold text-amber-200">
+              Dataset preliminar
             </span>
           </div>
         </div>
@@ -54,16 +54,23 @@ export default async function UnitsPage() {
           Base de conhecimento
         </p>
         <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-5xl">
-          Unidades do Legion TD
+          Waves
         </h1>
         <p className="mt-5 max-w-3xl leading-7 text-slate-400">
-          Dados extraídos diretamente do mapa Team OZE 11.4b-beta1. Use a
-          busca e os filtros para comparar custo, HP, dano, tipo de ataque,
-          builders, habilidades e upgrades.
+          Dados do mapa Legion TD {dataset.mapVersion}. Algumas associações
+          foram confirmadas diretamente; outras ainda são inferidas pela
+          sequência dos objetos. A quantidade de creeps e os modificadores de
+          modo ainda não foram confirmados.
         </p>
 
+        <div className="mt-6 max-w-3xl rounded-2xl border border-amber-300/20 bg-amber-300/5 p-4 text-sm leading-6 text-amber-100/80">
+          <strong className="text-amber-200">Dataset preliminar.</strong>{" "}
+          Associações inferidas estão identificadas individualmente e não devem
+          ser tratadas como fatos confirmados.
+        </div>
+
         <div className="mt-10">
-          <UnitExplorer units={units} />
+          <WaveExplorer waves={dataset.waves} />
         </div>
       </section>
     </main>
