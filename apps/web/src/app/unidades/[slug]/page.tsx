@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import {
+  getDefenseMultipliersForAttack,
+  isAttackTypeUnconfirmed,
+} from "@/lib/damage-matrix";
 import { getAllFighters } from "@/lib/legion-data";
 import { createUnitSlug } from "@/lib/unit-slug";
 import {
@@ -64,6 +68,10 @@ export default async function UnitPage({ params }: UnitPageProps) {
     baseUnit?.upgrades.find(
       (upgrade) => upgrade.rawcode.toLowerCase() === currentRawcode,
     )?.upgradeGoldCost ?? null;
+  const [damageMultipliers, attackTypeUnconfirmed] = await Promise.all([
+    getDefenseMultipliersForAttack(unit.attackType),
+    isAttackTypeUnconfirmed(unit.attackType),
+  ]);
 
   return (
     <main className="min-h-screen bg-[#070b14] text-white">
@@ -154,6 +162,37 @@ export default async function UnitPage({ params }: UnitPageProps) {
               value={unit.builders.join(", ") || "—"}
             />
           </div>
+
+          <section className="mt-10 rounded-xl border border-white/10 bg-white/[0.02] p-5">
+            <h2 className="text-xl font-black">
+              Efetividade por tipo de defesa
+            </h2>
+
+            {damageMultipliers.length > 0 ? (
+              <>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Multiplicadores confirmados diretamente na matriz de dano do
+                  mapa. A classificação visual compara cada valor somente com
+                  o multiplicador neutro de 1.00x.
+                </p>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {damageMultipliers.map((matchup) => (
+                    <DamageMultiplierCard
+                      key={matchup.defenseType}
+                      defenseType={matchup.defenseType}
+                      multiplier={matchup.multiplier}
+                    />
+                  ))}
+                </div>
+              </>
+            ) : (
+              <p className="mt-3 rounded-xl border border-amber-300/20 bg-amber-300/5 p-4 text-sm leading-6 text-amber-100/80">
+                {attackTypeUnconfirmed
+                  ? `A matriz de dano para o tipo ${formatTypeLabel(unit.attackType)} ainda não foi confirmada no dataset atual.`
+                  : "O tipo de ataque desta unidade não possui multiplicadores confirmados na matriz atual."}
+              </p>
+            )}
+          </section>
 
           <section className="mt-10 rounded-xl border border-cyan-400/20 bg-cyan-400/5 p-5">
             <p className="text-xs font-bold uppercase tracking-widest text-cyan-400">
@@ -375,4 +414,36 @@ function ComparisonRow({
       <td className="px-4 py-3 font-semibold text-cyan-300">{difference}</td>
     </tr>
   );
+}
+
+function DamageMultiplierCard({
+  defenseType,
+  multiplier,
+}: {
+  defenseType: string;
+  multiplier: number;
+}) {
+  const classification =
+    multiplier > 1 ? "Vantagem" : multiplier < 1 ? "Desvantagem" : "Neutro";
+  const tone =
+    multiplier > 1
+      ? "border-emerald-400/20 bg-emerald-400/5 text-emerald-200"
+      : multiplier < 1
+        ? "border-amber-300/20 bg-amber-300/5 text-amber-100"
+        : "border-white/10 bg-black/20 text-slate-200";
+
+  return (
+    <div className={`rounded-xl border p-4 ${tone}`}>
+      <p className="text-xs font-bold uppercase tracking-wider opacity-70">
+        {formatTypeLabel(defenseType)}
+      </p>
+      <p className="mt-2 text-xl font-black">{multiplier.toFixed(2)}x</p>
+      <p className="mt-1 text-xs font-semibold opacity-70">{classification}</p>
+    </div>
+  );
+}
+
+function formatTypeLabel(value: string | null) {
+  if (!value) return "desconhecido";
+  return value.charAt(0).toUpperCase() + value.slice(1);
 }

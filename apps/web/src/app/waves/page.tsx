@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { WaveExplorer } from "@/components/wave-explorer";
+import {
+  getAttackMultipliersForDefense,
+  getUnconfirmedAttackTypes,
+} from "@/lib/damage-matrix";
 import { getPreliminaryWaves } from "@/lib/wave-data";
 
 export const metadata = {
@@ -10,6 +14,25 @@ export const metadata = {
 
 export default async function WavesPage() {
   const dataset = await getPreliminaryWaves();
+  const defenseTypes = Array.from(
+    new Set(
+      dataset.waves
+        .map((wave) => wave.stats.defenseTypeRaw)
+        .filter((value): value is string => value !== null),
+    ),
+  );
+  const [damageMultiplierEntries, unconfirmedAttackTypes] = await Promise.all([
+    Promise.all(
+      defenseTypes.map(async (defenseType) => [
+        defenseType,
+        await getAttackMultipliersForDefense(defenseType),
+      ] as const),
+    ),
+    getUnconfirmedAttackTypes(),
+  ]);
+  const damageMultipliersByDefense = Object.fromEntries(
+    damageMultiplierEntries,
+  );
 
   return (
     <main className="min-h-screen bg-[#070b14] text-white">
@@ -70,7 +93,11 @@ export default async function WavesPage() {
         </div>
 
         <div className="mt-10">
-          <WaveExplorer waves={dataset.waves} />
+          <WaveExplorer
+            waves={dataset.waves}
+            damageMultipliersByDefense={damageMultipliersByDefense}
+            unconfirmedAttackTypes={unconfirmedAttackTypes}
+          />
         </div>
       </section>
     </main>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import type { ConfirmedDamageMultiplier } from "@/lib/damage-matrix";
 import type {
   PreliminaryWave,
   WaveConfidence,
@@ -8,6 +9,8 @@ import type {
 
 type WaveExplorerProps = {
   waves: PreliminaryWave[];
+  damageMultipliersByDefense: Record<string, ConfirmedDamageMultiplier[]>;
+  unconfirmedAttackTypes: string[];
 };
 
 const confidenceLabels: Record<WaveConfidence, string> = {
@@ -32,7 +35,11 @@ function formatValue(value: number | null) {
   return value === null ? "—" : value.toLocaleString("pt-BR");
 }
 
-export function WaveExplorer({ waves }: WaveExplorerProps) {
+export function WaveExplorer({
+  waves,
+  damageMultipliersByDefense,
+  unconfirmedAttackTypes,
+}: WaveExplorerProps) {
   const [query, setQuery] = useState("");
   const [confidence, setConfidence] = useState<WaveConfidence | "all">("all");
   const [attackType, setAttackType] = useState("all");
@@ -205,6 +212,10 @@ export function WaveExplorer({ waves }: WaveExplorerProps) {
           );
           const isConfirmed =
             wave.numberConfidence === "confirmed-directly";
+          const confirmedDamageMultipliers =
+            wave.stats.defenseTypeRaw === null
+              ? []
+              : (damageMultipliersByDefense[wave.stats.defenseTypeRaw] ?? []);
 
           return (
             <article
@@ -266,6 +277,40 @@ export function WaveExplorer({ waves }: WaveExplorerProps) {
                 />
                 <Stat label="Alcance" value={formatValue(wave.attack.range)} />
               </dl>
+
+              {wave.stats.defenseTypeRaw !== null && (
+                <section className="mt-5 border-t border-white/10 pt-4">
+                  <p className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                    Multiplicadores confirmados
+                  </p>
+                  <p className="mt-2 text-xs leading-5 text-slate-500">
+                    Matriz confirmada do mapa; independente da confiança da
+                    associação desta wave.
+                  </p>
+                  <div className="mt-3 grid grid-cols-2 gap-2">
+                    {confirmedDamageMultipliers.map((matchup) => (
+                      <DamageMultiplierItem
+                        key={matchup.attackType}
+                        attackType={matchup.attackType}
+                        multiplier={matchup.multiplier}
+                      />
+                    ))}
+                    {unconfirmedAttackTypes.map((unconfirmedAttackType) => (
+                      <div
+                        key={unconfirmedAttackType}
+                        className="rounded-lg border border-amber-300/15 bg-amber-300/5 px-3 py-2"
+                      >
+                        <p className="text-xs font-semibold text-amber-100">
+                          {formatLabel(unconfirmedAttackType)}
+                        </p>
+                        <p className="mt-1 text-[11px] text-amber-200/60">
+                          Não confirmado
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {wave.abilities.length > 0 && (
                 <div className="mt-5">
@@ -370,6 +415,28 @@ function Stat({ label, value }: { label: string; value: string }) {
         {label}
       </dt>
       <dd className="mt-1 font-bold text-slate-100">{value}</dd>
+    </div>
+  );
+}
+
+function DamageMultiplierItem({
+  attackType,
+  multiplier,
+}: {
+  attackType: string;
+  multiplier: number;
+}) {
+  const tone =
+    multiplier > 1
+      ? "border-emerald-400/15 bg-emerald-400/5 text-emerald-200"
+      : multiplier < 1
+        ? "border-amber-300/15 bg-amber-300/5 text-amber-100"
+        : "border-white/10 bg-black/20 text-slate-200";
+
+  return (
+    <div className={`rounded-lg border px-3 py-2 ${tone}`}>
+      <p className="text-xs font-semibold">{formatLabel(attackType)}</p>
+      <p className="mt-1 text-sm font-black">{multiplier.toFixed(2)}x</p>
     </div>
   );
 }
