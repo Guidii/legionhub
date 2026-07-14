@@ -1,0 +1,1828 @@
+{
+  "mapVersion": "11.4b-beta1",
+  "status": "preliminary",
+  "confidenceLevels": [
+    "confirmed-directly",
+    "inferred-from-sequence",
+    "unknown"
+  ],
+  "sourceFiles": {
+    "objectData": "data/11.4b-beta1/all-units.json",
+    "damageMatrix": "data/11.4b-beta1/damage-matrix.json"
+  },
+  "waves": [
+    {
+      "number": 1,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h005",
+        "name": "Scorpion"
+      },
+      "stats": {
+        "hp": 250,
+        "armor": 3,
+        "defenseTypeRaw": "medium",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 13,
+        "dice": null,
+        "sidesPerDie": null,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8999999761581421,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 1; o object data não declara LEVEL 1 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 2,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h000",
+        "name": "Murloc"
+      },
+      "stats": {
+        "hp": 170,
+        "armor": 3,
+        "defenseTypeRaw": "none",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 9,
+        "dice": null,
+        "sidesPerDie": 5,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8999999761581421,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h000 declara explicitamente LEVEL 2."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 3,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h001",
+        "name": "Quilbeast"
+      },
+      "stats": {
+        "hp": 250,
+        "armor": 3,
+        "defenseTypeRaw": "large",
+        "acquisitionRange": 520
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 13,
+        "dice": 1,
+        "sidesPerDie": 3,
+        "damageMin": 14,
+        "damageMax": 16,
+        "cooldown": 0.8999999761581421,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": "missile"
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 3; o object data não declara LEVEL 3 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 4,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h002",
+        "name": "Crab"
+      },
+      "stats": {
+        "hp": 100,
+        "armor": 3,
+        "defenseTypeRaw": "none",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 6,
+        "dice": null,
+        "sidesPerDie": 3,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8999999761581421,
+        "range": null,
+        "attackTypeRaw": "pierce",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 4; o object data não declara LEVEL 4 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 5,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h00I",
+        "name": "Hawk"
+      },
+      "stats": {
+        "hp": 350,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 30,
+        "dice": null,
+        "sidesPerDie": 3,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8999999761581421,
+        "range": null,
+        "attackTypeRaw": "magic",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 5; o object data não declara LEVEL 5 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 6,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h003",
+        "name": "Rock Golem"
+      },
+      "stats": {
+        "hp": 570,
+        "armor": 3,
+        "defenseTypeRaw": "normal",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 46,
+        "dice": null,
+        "sidesPerDie": null,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 1,
+        "range": null,
+        "attackTypeRaw": "siege",
+        "weaponType": null
+      },
+      "abilities": [
+        {
+          "rawcode": "A963",
+          "name": "Fortified Unit"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 6; o object data não declara LEVEL 6 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 7,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h004",
+        "name": "Satyr"
+      },
+      "stats": {
+        "hp": 600,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 48,
+        "dice": null,
+        "sidesPerDie": 3,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 1.100000023841858,
+        "range": 100,
+        "attackTypeRaw": "pierce",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 7; o object data não declara LEVEL 7 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 8,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h007",
+        "name": "Acolyte"
+      },
+      "stats": {
+        "hp": 560,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": 520
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 25,
+        "dice": 1,
+        "sidesPerDie": 5,
+        "damageMin": 26,
+        "damageMax": 30,
+        "cooldown": 0.8500000238418579,
+        "range": null,
+        "attackTypeRaw": "magic",
+        "weaponType": "missile"
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 8; o object data não declara LEVEL 8 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 9,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h008",
+        "name": "Zombie"
+      },
+      "stats": {
+        "hp": 1075,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 56,
+        "dice": null,
+        "sidesPerDie": 3,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8999999761581421,
+        "range": 120,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h008 declara explicitamente LEVEL 9."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 10,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h009",
+        "name": "Draenei Chieftain"
+      },
+      "stats": {
+        "hp": 5157,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 217,
+        "dice": 4,
+        "sidesPerDie": 10,
+        "damageMin": 221,
+        "damageMax": 257,
+        "cooldown": 0.699999988079071,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 10; o object data não declara LEVEL 10 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 11,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h00A",
+        "name": "Clockwerk Goblin"
+      },
+      "stats": {
+        "hp": 1250,
+        "armor": 3,
+        "defenseTypeRaw": "normal",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 75,
+        "dice": null,
+        "sidesPerDie": 3,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.800000011920929,
+        "range": null,
+        "attackTypeRaw": "siege",
+        "weaponType": null
+      },
+      "abilities": [
+        {
+          "rawcode": "A963",
+          "name": "Fortified Unit"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h00A declara explicitamente LEVEL 11."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 12,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h00B",
+        "name": "Siren"
+      },
+      "stats": {
+        "hp": 1050,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": 520
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 43,
+        "dice": 1,
+        "sidesPerDie": 3,
+        "damageMin": 44,
+        "damageMax": 46,
+        "cooldown": 0.7200000286102295,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": "missile"
+      },
+      "abilities": [
+        {
+          "rawcode": "A9BP",
+          "name": "King's Defiance"
+        },
+        {
+          "rawcode": "A03Z",
+          "name": "Regicide"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h00B declara explicitamente LEVEL 12."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 13,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h00C",
+        "name": "Couatl"
+      },
+      "stats": {
+        "hp": 1450,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 95,
+        "dice": null,
+        "sidesPerDie": 4,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.800000011920929,
+        "range": null,
+        "attackTypeRaw": "magic",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 13; o object data não declara LEVEL 13 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 14,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h00D",
+        "name": "Tuskar Warrior"
+      },
+      "stats": {
+        "hp": 2350,
+        "armor": 3,
+        "defenseTypeRaw": "medium",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 123,
+        "dice": null,
+        "sidesPerDie": 3,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8500000238418579,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [
+        {
+          "rawcode": "A9BP",
+          "name": "King's Defiance"
+        },
+        {
+          "rawcode": "A03Z",
+          "name": "Regicide"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 14; o object data não declara LEVEL 14 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 15,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h00E",
+        "name": "Centaur"
+      },
+      "stats": {
+        "hp": 2550,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 149,
+        "dice": null,
+        "sidesPerDie": 6,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8299999833106995,
+        "range": 120,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h00E declara explicitamente LEVEL 15."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 16,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h00F",
+        "name": "Lightning Chicken"
+      },
+      "stats": {
+        "hp": 1300,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 520
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 99,
+        "dice": 1,
+        "sidesPerDie": 13,
+        "damageMin": 100,
+        "damageMax": 112,
+        "cooldown": 0.6000000238418579,
+        "range": null,
+        "attackTypeRaw": "magic",
+        "weaponType": "missile"
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 16; o object data não declara LEVEL 16 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 17,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h00G",
+        "name": "Flesh Golem"
+      },
+      "stats": {
+        "hp": 3000,
+        "armor": 3,
+        "defenseTypeRaw": "normal",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 222,
+        "dice": null,
+        "sidesPerDie": 5,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8100000023841858,
+        "range": 150,
+        "attackTypeRaw": "siege",
+        "weaponType": null
+      },
+      "abilities": [
+        {
+          "rawcode": "A963",
+          "name": "Fortified Unit"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 17; o object data não declara LEVEL 17 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 18,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h00H",
+        "name": "Sludge Flinger"
+      },
+      "stats": {
+        "hp": 3850,
+        "armor": 3,
+        "defenseTypeRaw": "medium",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 199,
+        "dice": null,
+        "sidesPerDie": 6,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.6399999856948853,
+        "range": 150,
+        "attackTypeRaw": "magic",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h00H declara explicitamente LEVEL 18."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 19,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h00J",
+        "name": "Giant Spider"
+      },
+      "stats": {
+        "hp": 3700,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 200,
+        "dice": null,
+        "sidesPerDie": 1,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.699999988079071,
+        "range": 150,
+        "attackTypeRaw": "pierce",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h00J declara explicitamente LEVEL 19."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 20,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h006",
+        "name": "Frost Wyrm"
+      },
+      "stats": {
+        "hp": 23000,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": 580
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 332,
+        "dice": null,
+        "sidesPerDie": 21,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.906000018119812,
+        "range": 400,
+        "attackTypeRaw": "magic",
+        "weaponType": "missile"
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 20; o object data não declara LEVEL 20 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 21,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03O",
+        "name": "Dragon Turtle"
+      },
+      "stats": {
+        "hp": 8500,
+        "armor": 6,
+        "defenseTypeRaw": "large",
+        "acquisitionRange": 520
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 154,
+        "dice": 5,
+        "sidesPerDie": 8,
+        "damageMin": 159,
+        "damageMax": 194,
+        "cooldown": 0.6100000143051147,
+        "range": null,
+        "attackTypeRaw": "siege",
+        "weaponType": "missile"
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 21; o object data não declara LEVEL 21 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 22,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03P",
+        "name": "Hippogryph"
+      },
+      "stats": {
+        "hp": 11900,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 222,
+        "dice": null,
+        "sidesPerDie": 8,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.6000000238418579,
+        "range": 180,
+        "attackTypeRaw": "pierce",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 22; o object data não declara LEVEL 22 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 23,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03Q",
+        "name": "Mammoth"
+      },
+      "stats": {
+        "hp": 18600,
+        "armor": 3,
+        "defenseTypeRaw": "normal",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 245,
+        "dice": null,
+        "sidesPerDie": 13,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.9779999852180481,
+        "range": 120,
+        "attackTypeRaw": "siege",
+        "weaponType": null
+      },
+      "abilities": [
+        {
+          "rawcode": "A963",
+          "name": "Fortified Unit"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 23; o object data não declara LEVEL 23 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 24,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03R",
+        "name": "Wildkin"
+      },
+      "stats": {
+        "hp": 18300,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 339,
+        "dice": null,
+        "sidesPerDie": 15,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.9089999794960022,
+        "range": 180,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 24; o object data não declara LEVEL 24 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 25,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03S",
+        "name": "Myrmidon"
+      },
+      "stats": {
+        "hp": 24000,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 329,
+        "dice": null,
+        "sidesPerDie": 21,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8799999952316284,
+        "range": 170,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 25; o object data não declara LEVEL 25 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 26,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03T",
+        "name": "Revenant"
+      },
+      "stats": {
+        "hp": 12000,
+        "armor": 3,
+        "defenseTypeRaw": null,
+        "acquisitionRange": null
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 241,
+        "dice": 1,
+        "sidesPerDie": 21,
+        "damageMin": 242,
+        "damageMax": 262,
+        "cooldown": 0.8500000238418579,
+        "range": 600,
+        "attackTypeRaw": "magic",
+        "weaponType": "missile"
+      },
+      "abilities": [
+        {
+          "rawcode": "A0B8",
+          "name": "Thunder attack"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 26; o object data não declara LEVEL 26 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 27,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03U",
+        "name": "Succubus"
+      },
+      "stats": {
+        "hp": 25200,
+        "armor": 3,
+        "defenseTypeRaw": "small",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 363,
+        "dice": null,
+        "sidesPerDie": 25,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.6899999976158142,
+        "range": 150,
+        "attackTypeRaw": "pierce",
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 27; o object data não declara LEVEL 27 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 28,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03V",
+        "name": "Doom Guard"
+      },
+      "stats": {
+        "hp": 28000,
+        "armor": 3,
+        "defenseTypeRaw": "medium",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 313,
+        "dice": null,
+        "sidesPerDie": 11,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.5699999928474426,
+        "range": 180,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 28; o object data não declara LEVEL 28 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 29,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03W",
+        "name": "Juggernaut"
+      },
+      "stats": {
+        "hp": 22000,
+        "armor": 3,
+        "defenseTypeRaw": "normal",
+        "acquisitionRange": 520
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 298,
+        "dice": 1,
+        "sidesPerDie": 11,
+        "damageMin": 299,
+        "damageMax": 309,
+        "cooldown": 0.6370000243186951,
+        "range": 450,
+        "attackTypeRaw": "siege",
+        "weaponType": "missile"
+      },
+      "abilities": [
+        {
+          "rawcode": "A963",
+          "name": "Fortified Unit"
+        }
+      ],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 29; o object data não declara LEVEL 29 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 30,
+      "numberConfidence": "inferred-from-sequence",
+      "creep": {
+        "rawcode": "h03Y",
+        "name": "Magnataur"
+      },
+      "stats": {
+        "hp": 19725,
+        "armor": 19,
+        "defenseTypeRaw": "normal",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 835,
+        "dice": 6,
+        "sidesPerDie": 12,
+        "damageMin": 841,
+        "damageMax": 907,
+        "cooldown": 0.44999998807907104,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "inferred-from-sequence",
+          "scope": "wave-association",
+          "source": "investigação técnica anterior",
+          "detail": "O rawcode ocupa a posição candidata 30; o object data não declara LEVEL 30 para esta unidade."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 31,
+      "numberConfidence": "confirmed-directly",
+      "creep": {
+        "rawcode": "h05L",
+        "name": "Pit Lord"
+      },
+      "stats": {
+        "hp": 18000,
+        "armor": 20,
+        "defenseTypeRaw": "none",
+        "acquisitionRange": 680
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 599,
+        "dice": null,
+        "sidesPerDie": 11,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.800000011920929,
+        "range": 225,
+        "attackTypeRaw": "chaos",
+        "weaponType": null
+      },
+      "abilities": [
+        {
+          "rawcode": "A04Y",
+          "name": "Boss Unit"
+        }
+      ],
+      "air": null,
+      "boss": true,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-directly",
+          "scope": "wave-association",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "O extendedTooltip de h05L declara explicitamente LEVEL 31."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "Boss Unit está confirmado no object data, mas a presença desta unidade no fluxo normal permanece desconhecida"
+      ]
+    }
+  ]
+}
+
