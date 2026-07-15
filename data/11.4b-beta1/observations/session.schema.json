@@ -1,0 +1,275 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://legionhub.local/schemas/observation-session-v1.json",
+  "title": "LegionHub raw game observation session",
+  "description": "Contrato documental formal para sessões observacionais imutáveis. O validador Python do projeto implementa apenas as validações estruturais e semânticas necessárias, sem implementar integralmente o JSON Schema Draft 2020-12.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "runId",
+    "map",
+    "mode",
+    "evidence",
+    "snapshots",
+    "events",
+    "waves",
+    "status"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "runId": { "$ref": "#/$defs/id" },
+    "map": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["displayedVersion", "datasetVersion"],
+      "properties": {
+        "displayedVersion": { "type": "string", "minLength": 1 },
+        "datasetVersion": { "type": ["string", "null"] }
+      }
+    },
+    "mode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "displayedCode",
+        "canonicalCode",
+        "dimensions",
+        "sourceType",
+        "confidence",
+        "evidenceRefs"
+      ],
+      "properties": {
+        "displayedCode": { "type": "string", "minLength": 1 },
+        "canonicalCode": { "type": "string", "pattern": "^[A-Z0-9]+$" },
+        "dimensions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["builder", "champions", "multiplier", "modifiers"],
+          "properties": {
+            "builder": { "type": "string" },
+            "champions": { "type": "string" },
+            "multiplier": { "type": "string" },
+            "modifiers": {
+              "type": "array",
+              "items": { "type": "string" },
+              "uniqueItems": true
+            }
+          }
+        },
+        "sourceType": { "$ref": "#/$defs/sourceType" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidence" }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/snapshot" }
+    },
+    "events": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/event" }
+    },
+    "waves": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/waveObservation" }
+    },
+    "status": { "$ref": "#/$defs/confidence" },
+    "notes": { "type": ["string", "null"] }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "minLength": 1
+    },
+    "confidence": {
+      "enum": [
+        "CONFIRMED_DIRECTLY",
+        "USER_OBSERVED",
+        "OBSERVED_REPEATED",
+        "CONFIRMED_BY_GAME_OBSERVATION",
+        "CONFLICTING",
+        "UNDETERMINED"
+      ]
+    },
+    "sourceType": {
+      "enum": [
+        "GAME_UI",
+        "GAME_RESULT",
+        "VIDEO_REVIEW",
+        "SCREENSHOT",
+        "USER_REPORT",
+        "MAP_DATA",
+        "DERIVED"
+      ]
+    },
+    "precision": {
+      "enum": ["exact", "approximate", "display-rounded", "unknown"]
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/id" },
+      "uniqueItems": true
+    },
+    "observedValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "value",
+        "sourceType",
+        "confidence",
+        "precision",
+        "evidenceRefs"
+      ],
+      "properties": {
+        "value": {},
+        "sourceType": { "$ref": "#/$defs/sourceType" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "precision": { "$ref": "#/$defs/precision" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "nullableObservedValue": {
+      "oneOf": [
+        { "$ref": "#/$defs/observedValue" },
+        { "type": "null" }
+      ]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "sourceType", "file", "description"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "sourceType": { "$ref": "#/$defs/sourceType" },
+        "file": { "type": ["string", "null"] },
+        "timestampStart": { "type": ["string", "null"] },
+        "timestampEnd": { "type": ["string", "null"] },
+        "frame": { "type": ["integer", "null"], "minimum": 0 },
+        "description": { "type": ["string", "null"] }
+      }
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "gameTime",
+        "wave",
+        "phase",
+        "gold",
+        "lumber",
+        "income",
+        "economyDisplay",
+        "wisps",
+        "lumberUpgradeLevel",
+        "value",
+        "roll",
+        "army",
+        "evidenceRefs"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "gameTime": { "$ref": "#/$defs/nullableObservedValue" },
+        "wave": { "$ref": "#/$defs/nullableObservedValue" },
+        "phase": {
+          "enum": [
+            "initial",
+            "pre-build",
+            "post-build",
+            "pre-wave",
+            "during-wave",
+            "post-wave",
+            "post-purchase",
+            "post-upgrade",
+            "wave-transition",
+            "other"
+          ]
+        },
+        "gold": { "$ref": "#/$defs/nullableObservedValue" },
+        "lumber": { "$ref": "#/$defs/nullableObservedValue" },
+        "income": { "$ref": "#/$defs/nullableObservedValue" },
+        "economyDisplay": { "$ref": "#/$defs/nullableObservedValue" },
+        "wisps": { "$ref": "#/$defs/nullableObservedValue" },
+        "lumberUpgradeLevel": { "$ref": "#/$defs/nullableObservedValue" },
+        "value": { "$ref": "#/$defs/nullableObservedValue" },
+        "roll": { "$ref": "#/$defs/nullableObservedValue" },
+        "army": { "$ref": "#/$defs/nullableObservedValue" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "gameTime",
+        "wave",
+        "displayed",
+        "observed",
+        "reference",
+        "evidenceRefs"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "type": {
+          "enum": [
+            "session-start",
+            "build-unit",
+            "build-unit-batch",
+            "upgrade-unit",
+            "buy-wisp",
+            "research-lumber",
+            "roll-changed",
+            "wave-start",
+            "wave-ended",
+            "reward-settled",
+            "other"
+          ]
+        },
+        "gameTime": { "$ref": "#/$defs/nullableObservedValue" },
+        "wave": { "$ref": "#/$defs/nullableObservedValue" },
+        "displayed": { "type": ["object", "null"] },
+        "observed": { "type": ["object", "null"] },
+        "reference": { "type": ["object", "null"] },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "waveObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "number",
+        "reference",
+        "displayed",
+        "announced",
+        "observed",
+        "derived",
+        "evidenceRefs",
+        "status"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "number": { "$ref": "#/$defs/observedValue" },
+        "reference": { "type": ["object", "null"] },
+        "displayed": { "type": ["object", "null"] },
+        "announced": { "type": ["object", "null"] },
+        "observed": { "type": ["object", "null"] },
+        "derived": { "type": ["object", "null"] },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
+        "status": { "$ref": "#/$defs/confidence" },
+        "notes": { "type": ["string", "null"] }
+      }
+    }
+  }
+}

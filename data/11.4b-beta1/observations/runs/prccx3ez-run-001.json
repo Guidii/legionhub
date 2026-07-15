@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "runId": "prccx3ez-run-001",
+  "map": {
+    "displayedVersion": "Legion TD 11.4b",
+    "datasetVersion": null
+  },
+  "mode": {
+    "displayedCode": "-prccx3ez",
+    "canonicalCode": "PRCCX3EZ",
+    "dimensions": {
+      "builder": "PR",
+      "champions": "CC",
+      "multiplier": "X3",
+      "modifiers": ["EZ"]
+    },
+    "sourceType": "USER_REPORT",
+    "confidence": "USER_OBSERVED",
+    "evidenceRefs": ["user-report-001"]
+  },
+  "evidence": [
+    {
+      "id": "user-report-001",
+      "sourceType": "USER_REPORT",
+      "file": null,
+      "timestampStart": null,
+      "timestampEnd": null,
+      "frame": null,
+      "description": "Relato do jogador sobre uma gravação iniciada na configuração do modo e encerrada no início da Wave 3. O arquivo de vídeo não foi disponibilizado para revisão nesta etapa."
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "snapshot-initial",
+      "gameTime": null,
+      "wave": {
+        "value": 1,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "phase": "initial",
+      "gold": {
+        "value": 750,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "lumber": {
+        "value": 30,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "income": null,
+      "economyDisplay": {
+        "value": "1/0",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"],
+        "notes": "Texto preservado sem interpretar automaticamente os dois componentes."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": null,
+      "roll": null,
+      "army": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "O relato não forneceu nomes ou rawcodes do roll inicial nem a composição inicial."
+    },
+    {
+      "id": "snapshot-wave-1-pre-wave",
+      "gameTime": null,
+      "wave": {
+        "value": 1,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "phase": "pre-wave",
+      "gold": null,
+      "lumber": null,
+      "income": null,
+      "economyDisplay": {
+        "value": "3/0",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"],
+        "notes": "O estado foi alcançado após compras de Wisps, mas a quantidade comprada e o significado formal da notação não foram isolados."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": {
+        "value": 620,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "roll": null,
+      "army": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "A composição do exército não foi fornecida; somente o value total foi preservado."
+    },
+    {
+      "id": "snapshot-post-lumber-upgrade-1",
+      "gameTime": null,
+      "wave": null,
+      "phase": "post-upgrade",
+      "gold": null,
+      "lumber": null,
+      "income": null,
+      "economyDisplay": {
+        "value": "3/1",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"],
+        "notes": "Texto observado depois da compra de Basic Lumberjack Training 1; não usado para reconstruir saldos ausentes."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": null,
+      "roll": null,
+      "army": null,
+      "evidenceRefs": ["user-report-001"]
+    },
+    {
+      "id": "snapshot-wave-2-pre-wave",
+      "gameTime": null,
+      "wave": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "phase": "pre-wave",
+      "gold": null,
+      "lumber": null,
+      "income": null,
+      "economyDisplay": {
+        "value": "3/1",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": {
+        "value": 820,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "roll": {
+        "value": {
+          "slotCount": 6,
+          "slots": [
+            { "position": 1, "rawcode": null, "displayedName": null },
+            { "position": 2, "rawcode": null, "displayedName": null },
+            { "position": 3, "rawcode": null, "displayedName": null },
+            { "position": 4, "rawcode": null, "displayedName": null },
+            { "position": 5, "rawcode": null, "displayedName": null },
+            { "position": 6, "rawcode": null, "displayedName": null }
+          ]
+        },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "unknown",
+        "evidenceRefs": ["user-report-001"],
+        "notes": "Foi observado um novo conjunto de seis unidades, mas nomes e rawcodes não foram fornecidos."
+      },
+      "army": null,
+      "evidenceRefs": ["user-report-001"]
+    },
+    {
+      "id": "snapshot-wave-2-post-wave",
+      "gameTime": null,
+      "wave": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "phase": "post-wave",
+      "gold": {
+        "value": 815,
+        "sourceType": "USER_REPORT",
+        "confidence": "USER_OBSERVED",
+        "precision": "approximate",
+        "evidenceRefs": ["user-report-001"],
+        "notes": "O jogador informou o valor como aproximadamente 815 gold."
+      },
+      "lumber": {
+        "value": 77,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "income": null,
+      "economyDisplay": {
+        "value": "3/1",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": null,
+      "roll": null,
+      "army": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "O resultado informou 0 gold de income, mas o valor de income exibido no estado econômico não foi fornecido."
+    },
+    {
+      "id": "snapshot-wave-3-start",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "phase": "wave-transition",
+      "gold": null,
+      "lumber": null,
+      "income": null,
+      "economyDisplay": null,
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": null,
+      "roll": {
+        "value": {
+          "slotCount": 6,
+          "slots": [
+            { "position": 1, "rawcode": null, "displayedName": null },
+            { "position": 2, "rawcode": null, "displayedName": null },
+            { "position": 3, "rawcode": null, "displayedName": null },
+            { "position": 4, "rawcode": null, "displayedName": null },
+            { "position": 5, "rawcode": null, "displayedName": null },
+            { "position": 6, "rawcode": null, "displayedName": null }
+          ]
+        },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "unknown",
+        "evidenceRefs": ["user-report-001"],
+        "notes": "Foi observado outro novo roll, mas seus nomes e rawcodes não foram fornecidos."
+      },
+      "army": null,
+      "evidenceRefs": ["user-report-001"]
+    }
+  ],
+  "events": [
+    {
+      "id": "event-buy-wisps-before-wave-1",
+      "type": "buy-wisp",
+      "gameTime": null,
+      "wave": {
+        "value": 1,
+        "sourceType": "USER_REPORT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "displayed": null,
+      "observed": {
+        "quantity": null,
+        "resourceDelta": null
+      },
+      "reference": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "O jogador informou compras de Wisps antes da Wave 1, sem quantidade ou saldos isolados."
+    },
+    {
+      "id": "event-build-wave-1-army",
+      "type": "build-unit-batch",
+      "gameTime": null,
+      "wave": {
+        "value": 1,
+        "sourceType": "USER_REPORT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "displayed": null,
+      "observed": {
+        "reportedValue": 620,
+        "units": [],
+        "compositionComplete": false
+      },
+      "reference": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "Nenhuma unidade foi vinculada a rawcode porque a composição não foi fornecida."
+    },
+    {
+      "id": "event-research-lumber-1",
+      "type": "research-lumber",
+      "gameTime": null,
+      "wave": null,
+      "displayed": {
+        "name": "Basic Lumberjack Training 1",
+        "level": 1,
+        "cost": {
+          "gold": 60,
+          "lumber": 60
+        },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "observed": {
+        "purchaseCompleted": true,
+        "resourceDelta": null,
+        "sourceType": "USER_REPORT",
+        "confidence": "USER_OBSERVED"
+      },
+      "reference": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "O custo veio do tooltip; os saldos imediatamente antes e depois não foram fornecidos."
+    },
+    {
+      "id": "event-pr-roll-wave-2",
+      "type": "roll-changed",
+      "gameTime": null,
+      "wave": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "displayed": {
+        "slotCount": 6,
+        "slots": [
+          { "position": 1, "rawcode": null, "displayedName": null },
+          { "position": 2, "rawcode": null, "displayedName": null },
+          { "position": 3, "rawcode": null, "displayedName": null },
+          { "position": 4, "rawcode": null, "displayedName": null },
+          { "position": 5, "rawcode": null, "displayedName": null },
+          { "position": 6, "rawcode": null, "displayedName": null }
+        ]
+      },
+      "observed": {
+        "automatic": true,
+        "previousRollPreserved": false
+      },
+      "reference": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "Mudança automática atribuída ao PR pelo relato; nomes e rawcodes não foram fornecidos."
+    },
+    {
+      "id": "event-pr-roll-wave-3",
+      "type": "roll-changed",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "displayed": {
+        "slotCount": 6,
+        "slots": [
+          { "position": 1, "rawcode": null, "displayedName": null },
+          { "position": 2, "rawcode": null, "displayedName": null },
+          { "position": 3, "rawcode": null, "displayedName": null },
+          { "position": 4, "rawcode": null, "displayedName": null },
+          { "position": 5, "rawcode": null, "displayedName": null },
+          { "position": 6, "rawcode": null, "displayedName": null }
+        ]
+      },
+      "observed": {
+        "automatic": true,
+        "previousRollPreserved": false
+      },
+      "reference": null,
+      "evidenceRefs": ["user-report-001"],
+      "notes": "A gravação alcançou o novo roll da Wave 3, sem identificação das unidades."
+    }
+  ],
+  "waves": [
+    {
+      "id": "wave-1-observation",
+      "number": {
+        "value": 1,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "reference": {
+        "dataset": "data/11.4b-beta1/waves-preliminary.json",
+        "creepRawcode": "h002",
+        "sourceType": "MAP_DATA",
+        "confidence": "CONFIRMED_DIRECTLY",
+        "notes": "Referência separada; não é tratada como rawcode observado nesta sessão."
+      },
+      "displayed": {
+        "creepName": "Crabs",
+        "quantity": 100,
+        "hpPerCreep": 100,
+        "attackType": "piercing",
+        "armor": 3,
+        "defenseType": "unarmored",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "announced": {
+        "goldPerKill": 5,
+        "killGoldTotal": 500,
+        "levelEndGold": 15,
+        "ccGold": 15,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "observed": {
+        "preWaveValue": 620,
+        "result": {
+          "killGold": 500,
+          "kills": null,
+          "leaks": 0,
+          "score": 0.806,
+          "survivingValue": 620,
+          "levelEndGold": null,
+          "championGold": null,
+          "incomeGold": null
+        },
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "notes": "A decomposição efetivamente recebida de level end, Champion e income não foi fornecida."
+      },
+      "derived": null,
+      "evidenceRefs": ["user-report-001"],
+      "status": "USER_OBSERVED",
+      "notes": "Nenhuma fórmula de score, segurança ou desempenho foi derivada."
+    },
+    {
+      "id": "wave-2-observation",
+      "number": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["user-report-001"]
+      },
+      "reference": {
+        "dataset": "data/11.4b-beta1/waves-preliminary.json",
+        "creepRawcode": "h000",
+        "sourceType": "MAP_DATA",
+        "confidence": "CONFIRMED_DIRECTLY",
+        "notes": "Referência separada; não é tratada como rawcode observado nesta sessão."
+      },
+      "displayed": {
+        "creepName": "Murlocs",
+        "quantity": 100,
+        "hpPerCreep": 170,
+        "attackType": "normal",
+        "armor": 3,
+        "defenseType": "unarmored",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "announced": {
+        "goldPerKill": 5,
+        "killGoldTotal": 500,
+        "levelEndGold": 30,
+        "ccGold": 30,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "observed": {
+        "preWaveValue": 820,
+        "result": {
+          "killGold": 500,
+          "kills": null,
+          "leaks": 0,
+          "score": 0.61,
+          "survivingValue": 400,
+          "levelEndGold": 30,
+          "championGold": 0,
+          "incomeGold": 0
+        },
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "notes": "O valor anunciado para CC foi 30, enquanto o resultado observado informou 0 gold de Champion; ambos foram preservados sem reconciliação."
+      },
+      "derived": null,
+      "evidenceRefs": ["user-report-001"],
+      "status": "USER_OBSERVED",
+      "notes": "Nenhuma fórmula de score, surviving value ou efeito geral de X3/EZ foi derivada."
+    }
+  ],
+  "status": "USER_OBSERVED",
+  "notes": "Sessão bruta imutável. O modo completo PRCCX3EZ deve ser preservado em qualquer processamento futuro."
+}
