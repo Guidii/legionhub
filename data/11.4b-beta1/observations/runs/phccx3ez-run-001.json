@@ -1,0 +1,320 @@
+{
+  "schemaVersion": 1,
+  "runId": "phccx3ez-run-001",
+  "map": {
+    "displayedVersion": "Legion TD 11.4b",
+    "datasetVersion": null
+  },
+  "mode": {
+    "displayedCode": "-phccx3ez",
+    "canonicalCode": "PHCCX3EZ",
+    "dimensions": {
+      "builder": "PH",
+      "champions": "CC",
+      "multiplier": "X3",
+      "modifiers": ["EZ"]
+    },
+    "sourceType": "GAME_UI",
+    "confidence": "USER_OBSERVED",
+    "evidenceRefs": ["video-review-001"]
+  },
+  "player": {
+    "value": "TESTE",
+    "sourceType": "GAME_UI",
+    "confidence": "USER_OBSERVED",
+    "precision": "exact",
+    "evidenceRefs": ["video-review-001"]
+  },
+  "playerReport": [
+    {
+      "value": "O jogador normalmente usa Challenge Champion quando acredita que sua defesa está forte o suficiente.",
+      "sourceType": "USER_REPORT",
+      "confidence": "USER_OBSERVED",
+      "precision": "exact",
+      "evidenceRefs": ["user-report-001"],
+      "notes": "Contexto informado pelo jogador; não é uma regra observada do jogo."
+    },
+    {
+      "value": "Nesta sessão, o jogador ativou Challenge Champion deliberadamente mesmo esperando falhar, para demonstrar a mecânica.",
+      "sourceType": "USER_REPORT",
+      "confidence": "USER_OBSERVED",
+      "precision": "exact",
+      "evidenceRefs": ["user-report-001"],
+      "notes": "Intenção relatada pelo jogador, separada da ativação visível na interface."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "video-review-001",
+      "sourceType": "VIDEO_REVIEW",
+      "file": "2026-07-15 12-30-57.mp4",
+      "timestampStart": null,
+      "timestampEnd": null,
+      "frame": null,
+      "description": "Gravação informada como cobrindo o início da partida até o término da Wave 3. O arquivo não estava disponível localmente para medição de timestamps nesta implementação."
+    },
+    {
+      "id": "user-report-001",
+      "sourceType": "USER_REPORT",
+      "file": null,
+      "timestampStart": null,
+      "timestampEnd": null,
+      "frame": null,
+      "description": "Relato do jogador sobre seu uso habitual de Challenge Champion e sua intenção específica nesta execução."
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "snapshot-wave-1-result",
+      "gameTime": null,
+      "wave": {
+        "value": 1,
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-review-001"]
+      },
+      "phase": "post-wave",
+      "gold": null,
+      "lumber": null,
+      "income": null,
+      "economyDisplay": null,
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": null,
+      "roll": null,
+      "army": null,
+      "evidenceRefs": ["video-review-001"],
+      "notes": "Os resultados verificáveis estão preservados no registro da Wave 1; nenhum estado econômico foi reconstruído."
+    },
+    {
+      "id": "snapshot-wave-2-result",
+      "gameTime": null,
+      "wave": {
+        "value": 2,
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-review-001"]
+      },
+      "phase": "post-wave",
+      "gold": null,
+      "lumber": null,
+      "income": null,
+      "economyDisplay": null,
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": null,
+      "roll": null,
+      "army": null,
+      "evidenceRefs": ["video-review-001"],
+      "notes": "Os resultados verificáveis estão preservados no registro da Wave 2; nenhum estado econômico foi reconstruído."
+    },
+    {
+      "id": "snapshot-wave-3-result",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-review-001"]
+      },
+      "phase": "post-wave",
+      "gold": null,
+      "lumber": null,
+      "income": null,
+      "economyDisplay": null,
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": null,
+      "roll": null,
+      "army": null,
+      "evidenceRefs": ["video-review-001"],
+      "notes": "Os settlements verificáveis estão separados no registro da Wave 3; nenhum total foi derivado."
+    }
+  ],
+  "events": [
+    {
+      "id": "event-challenge-champion-wave-3",
+      "type": "challenge-champion-activated",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-review-001"]
+      },
+      "displayed": {
+        "message": "Bold move! TESTE has challenged a Champion",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "observed": {
+        "activation": "manual",
+        "activatedBy": "TESTE",
+        "sourceType": "VIDEO_REVIEW",
+        "confidence": "USER_OBSERVED"
+      },
+      "reference": null,
+      "evidenceRefs": ["video-review-001"],
+      "notes": "Nenhum efeito, fórmula, buff, quantidade de unidades afetadas ou condição de recompensa foi inferido."
+    }
+  ],
+  "waves": [
+    {
+      "id": "wave-1-observation",
+      "number": {
+        "value": 1,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-review-001"]
+      },
+      "reference": {
+        "dataset": "data/11.4b-beta1/waves-preliminary.json",
+        "creepRawcode": "h002",
+        "sourceType": "MAP_DATA",
+        "confidence": "CONFIRMED_DIRECTLY",
+        "notes": "Referência separada; não é tratada como rawcode observado nesta sessão."
+      },
+      "displayed": {
+        "creepName": "Crabs",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "announced": {
+        "quantity": 100,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "observed": {
+        "result": {
+          "killGold": 500,
+          "kills": null,
+          "leaks": 0,
+          "score": 0.82,
+          "survivingValue": 610,
+          "kingKillGold": null,
+          "levelCompletionGold": null,
+          "challengeChampionReward": null,
+          "incomeGold": null
+        },
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED"
+      },
+      "derived": null,
+      "evidenceRefs": ["video-review-001"],
+      "status": "USER_OBSERVED",
+      "notes": "Somente os valores informados como verificáveis no vídeo foram registrados."
+    },
+    {
+      "id": "wave-2-observation",
+      "number": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-review-001"]
+      },
+      "reference": {
+        "dataset": "data/11.4b-beta1/waves-preliminary.json",
+        "creepRawcode": "h000",
+        "sourceType": "MAP_DATA",
+        "confidence": "CONFIRMED_DIRECTLY",
+        "notes": "Referência separada; não é tratada como rawcode observado nesta sessão."
+      },
+      "displayed": {
+        "creepName": "Murlocs",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "announced": {
+        "quantity": 100,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "observed": {
+        "result": {
+          "killGold": 500,
+          "kills": null,
+          "leaks": 0,
+          "score": 0.543,
+          "survivingValue": 610,
+          "kingKillGold": null,
+          "levelCompletionGold": null,
+          "challengeChampionReward": null,
+          "incomeGold": null
+        },
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "notes": "A leitura 0.543 substitui uma leitura anterior incorreta de 0.943 referente a esta sessão; nenhuma outra sessão foi alterada."
+      },
+      "derived": null,
+      "evidenceRefs": ["video-review-001"],
+      "status": "USER_OBSERVED",
+      "notes": "Somente os valores informados como verificáveis no vídeo foram registrados."
+    },
+    {
+      "id": "wave-3-observation",
+      "number": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-review-001"]
+      },
+      "reference": {
+        "dataset": "data/11.4b-beta1/waves-preliminary.json",
+        "creepRawcode": "h005",
+        "sourceType": "MAP_DATA",
+        "confidence": "CONFIRMED_DIRECTLY",
+        "notes": "Referência separada; não é tratada como rawcode observado nesta sessão."
+      },
+      "displayed": {
+        "creepName": "Scorpions",
+        "hpPerCreep": 250,
+        "attackType": "normal",
+        "damage": {
+          "min": 13.0,
+          "max": 14.0
+        },
+        "defenseType": "medium",
+        "armor": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "announced": {
+        "quantity": 100,
+        "ccGold": 45,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "observed": {
+        "result": {
+          "killGold": 435,
+          "kills": null,
+          "leaks": 13,
+          "score": 0.3,
+          "survivingValue": 0,
+          "settlement": {
+            "kingKillGold": 26,
+            "levelCompletionGold": 45,
+            "challengeChampionReward": 22,
+            "incomeGold": 9
+          }
+        },
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "notes": "A recompensa de 22 gold foi exibida nesta execução apesar de 13 leaks; nenhuma regra causal ou fórmula foi inferida."
+      },
+      "derived": null,
+      "evidenceRefs": ["video-review-001"],
+      "status": "USER_OBSERVED",
+      "notes": "Nenhum total de settlement, efeito de CC, efeito de X3/EZ ou critério de recompensa foi derivado."
+    }
+  ],
+  "status": "USER_OBSERVED",
+  "notes": "Sessão bruta imutável. O modo completo PHCCX3EZ deve ser preservado; nenhum comportamento de PR ou mudança automática de roll foi registrado."
+}

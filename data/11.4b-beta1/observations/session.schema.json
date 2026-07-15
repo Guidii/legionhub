@@ -62,6 +62,11 @@
         "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
       }
     },
+    "player": { "$ref": "#/$defs/nullableObservedValue" },
+    "playerReport": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/observedValue" }
+    },
     "evidence": {
       "type": "array",
       "items": { "$ref": "#/$defs/evidence" }
@@ -228,6 +233,7 @@
             "upgrade-unit",
             "buy-wisp",
             "research-lumber",
+            "challenge-champion-activated",
             "roll-changed",
             "wave-start",
             "wave-ended",

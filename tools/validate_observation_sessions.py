@@ -35,6 +35,20 @@ SOURCE_TYPES = {
     "DERIVED",
 }
 PRECISIONS = {"exact", "approximate", "display-rounded", "unknown"}
+EVENT_TYPES = {
+    "session-start",
+    "build-unit",
+    "build-unit-batch",
+    "upgrade-unit",
+    "buy-wisp",
+    "research-lumber",
+    "challenge-champion-activated",
+    "roll-changed",
+    "wave-start",
+    "wave-ended",
+    "reward-settled",
+    "other",
+}
 ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 REQUIRED_TOP_LEVEL = {
     "schemaVersion",
@@ -183,6 +197,13 @@ def validate_session(data: Any, source: Path) -> list[str]:
                 add_error(errors, f"{path}.id", f"ID de registro duplicado: {item_id!r}")
             elif isinstance(item_id, str):
                 all_record_ids.add(item_id)
+
+            if collection_name == "events" and item.get("type") not in EVENT_TYPES:
+                add_error(
+                    errors,
+                    f"{path}.type",
+                    f"tipo de evento inválido: {item.get('type')!r}",
+                )
 
     snapshots = data.get("snapshots")
     if isinstance(snapshots, list):
