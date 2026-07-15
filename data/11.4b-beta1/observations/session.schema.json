@@ -67,6 +67,7 @@
       "type": "array",
       "items": { "$ref": "#/$defs/observedValue" }
     },
+    "multiplayer": { "$ref": "#/$defs/multiplayer" },
     "evidence": {
       "type": "array",
       "items": { "$ref": "#/$defs/evidence" }
@@ -146,6 +147,90 @@
         { "type": "null" }
       ]
     },
+    "resourceCost": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "gold": { "type": ["number", "null"], "minimum": 0 },
+        "lumber": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+    "playerIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["displayedName", "slot", "team", "color", "status"],
+      "properties": {
+        "displayedName": { "type": ["string", "null"] },
+        "slot": { "type": ["integer", "null"], "minimum": 0 },
+        "team": { "type": ["string", "integer", "null"] },
+        "color": { "type": ["string", "null"] },
+        "status": { "enum": ["active", "left", "defeated", "unknown"] }
+      }
+    },
+    "multiplayer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "initialTeamSize": { "$ref": "#/$defs/nullableObservedValue" },
+        "initialEnemyTeamSize": { "$ref": "#/$defs/nullableObservedValue" },
+        "currentTeamSize": { "$ref": "#/$defs/nullableObservedValue" },
+        "currentEnemyTeamSize": { "$ref": "#/$defs/nullableObservedValue" },
+        "player": { "oneOf": [{ "$ref": "#/$defs/playerIdentity" }, { "type": "null" }] },
+        "allies": { "type": "array", "items": { "$ref": "#/$defs/playerIdentity" } },
+        "enemies": { "type": "array", "items": { "$ref": "#/$defs/playerIdentity" } },
+        "teamSide": { "type": ["string", "null"] },
+        "lobbyType": { "type": ["string", "null"] },
+        "onlineMatch": { "type": ["boolean", "null"] }
+      }
+    },
+    "kingSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "currentHp": { "$ref": "#/$defs/nullableObservedValue" },
+        "maxHp": { "$ref": "#/$defs/nullableObservedValue" },
+        "attackLevel": { "$ref": "#/$defs/nullableObservedValue" },
+        "hpLevel": { "$ref": "#/$defs/nullableObservedValue" },
+        "regenerationLevel": { "$ref": "#/$defs/nullableObservedValue" },
+        "purgeLevel": { "$ref": "#/$defs/nullableObservedValue" },
+        "healsRemaining": { "$ref": "#/$defs/nullableObservedValue" },
+        "teamSide": { "$ref": "#/$defs/nullableObservedValue" }
+      }
+    },
+    "sendObservation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceBuilding": { "enum": ["barracks", "advanced-barracks", "unknown"] },
+        "sendRawcode": { "type": ["string", "null"] },
+        "displayedName": { "type": ["string", "null"] },
+        "quantity": { "type": ["integer", "null"], "minimum": 1 },
+        "lumberCost": { "type": ["number", "null"], "minimum": 0 },
+        "incomeGain": { "type": ["number", "null"] },
+        "bounty": { "type": ["number", "null"] },
+        "wavePurchased": { "type": ["integer", "null"], "minimum": 1 },
+        "intendedTargetWave": { "type": ["integer", "null"], "minimum": 1 },
+        "observedTargetWave": { "type": ["integer", "null"], "minimum": 1 },
+        "sourceType": { "$ref": "#/$defs/sourceType" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      }
+    },
+    "kingUpgrade": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "category": { "enum": ["attack", "hp", "regeneration", "purge", "heals", "other"] },
+        "levelBefore": { "type": ["integer", "null"], "minimum": 0 },
+        "levelAfter": { "type": ["integer", "null"], "minimum": 0 },
+        "announcedCost": { "$ref": "#/$defs/resourceCost" },
+        "observedCost": { "$ref": "#/$defs/resourceCost" },
+        "purchasedBy": { "type": ["string", "null"] },
+        "sourceType": { "$ref": "#/$defs/sourceType" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" }
+      }
+    },
     "evidence": {
       "type": "object",
       "additionalProperties": false,
@@ -157,6 +242,13 @@
         "timestampStart": { "type": ["string", "null"] },
         "timestampEnd": { "type": ["string", "null"] },
         "frame": { "type": ["integer", "null"], "minimum": 0 },
+        "sequence": { "type": ["integer", "null"], "minimum": 1 },
+        "continuesEvidenceId": {
+          "oneOf": [{ "$ref": "#/$defs/id" }, { "type": "null" }]
+        },
+        "sessionTimeOffset": { "type": ["number", "string", "null"] },
+        "localTimestampStart": { "type": ["string", "null"] },
+        "localTimestampEnd": { "type": ["string", "null"] },
         "description": { "type": ["string", "null"] }
       }
     },
@@ -194,6 +286,12 @@
             "post-purchase",
             "post-upgrade",
             "wave-transition",
+            "preparation",
+            "combat",
+            "settlement",
+            "intermission",
+            "king-defense",
+            "unknown",
             "other"
           ]
         },
@@ -206,6 +304,8 @@
         "value": { "$ref": "#/$defs/nullableObservedValue" },
         "roll": { "$ref": "#/$defs/nullableObservedValue" },
         "army": { "$ref": "#/$defs/nullableObservedValue" },
+        "king": { "oneOf": [{ "$ref": "#/$defs/kingSnapshot" }, { "type": "null" }] },
+        "multiplayerCounts": { "$ref": "#/$defs/nullableObservedValue" },
         "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
         "notes": { "type": ["string", "null"] }
       }
@@ -233,6 +333,25 @@
             "upgrade-unit",
             "buy-wisp",
             "research-lumber",
+            "wisp-training-started",
+            "wisp-training-completed",
+            "lumber-upgrade-started",
+            "lumber-upgrade-completed",
+            "barracks-opened",
+            "advanced-barracks-opened",
+            "send-purchased",
+            "send-dispatched",
+            "enemy-send-observed",
+            "enemy-send-reached-king",
+            "allied-leak-observed",
+            "king-upgrade-purchased",
+            "king-damage-observed",
+            "king-heal-observed",
+            "town-opened",
+            "team-send-coordination",
+            "player-left",
+            "player-defeated",
+            "team-player-count-changed",
             "challenge-champion-activated",
             "roll-changed",
             "wave-start",
@@ -246,6 +365,37 @@
         "displayed": { "type": ["object", "null"] },
         "observed": { "type": ["object", "null"] },
         "reference": { "type": ["object", "null"] },
+        "sourceType": { "$ref": "#/$defs/sourceType" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "unitRawcode": { "type": ["string", "null"] },
+        "announcedCost": { "$ref": "#/$defs/resourceCost" },
+        "observedCost": { "$ref": "#/$defs/resourceCost" },
+        "observedResourceDelta": { "type": ["object", "null"] },
+        "expectedCompletion": { "type": ["string", "number", "null"] },
+        "wispsBefore": { "type": ["integer", "null"], "minimum": 0 },
+        "wispsAfter": { "type": ["integer", "null"], "minimum": 0 },
+        "economyDisplayBefore": { "type": ["string", "null"] },
+        "economyDisplayAfter": { "type": ["string", "null"] },
+        "levelBefore": { "type": ["integer", "null"], "minimum": 0 },
+        "levelAfter": { "type": ["integer", "null"], "minimum": 0 },
+        "startedAt": { "type": ["string", "null"] },
+        "completedAt": { "type": ["string", "null"] },
+        "researchRawcode": { "type": ["string", "null"] },
+        "economyVariant": { "type": ["string", "null"] },
+        "sourceBuilding": { "enum": ["barracks", "advanced-barracks", "unknown", null] },
+        "send": { "oneOf": [{ "$ref": "#/$defs/sendObservation" }, { "type": "null" }] },
+        "kingUpgrade": { "oneOf": [{ "$ref": "#/$defs/kingUpgrade" }, { "type": "null" }] },
+        "kingStateBefore": { "oneOf": [{ "$ref": "#/$defs/kingSnapshot" }, { "type": "null" }] },
+        "kingStateAfter": { "oneOf": [{ "$ref": "#/$defs/kingSnapshot" }, { "type": "null" }] },
+        "hpDelta": { "$ref": "#/$defs/nullableObservedValue" },
+        "probableDamageSource": { "$ref": "#/$defs/nullableObservedValue" },
+        "channel": { "type": ["string", "null"] },
+        "displayedMessage": { "type": ["string", "null"] },
+        "speaker": { "type": ["string", "null"] },
+        "interpretedIntent": { "$ref": "#/$defs/nullableObservedValue" },
+        "playerChange": { "oneOf": [{ "$ref": "#/$defs/playerIdentity" }, { "type": "null" }] },
+        "teamSizeBefore": { "type": ["integer", "null"], "minimum": 0 },
+        "teamSizeAfter": { "type": ["integer", "null"], "minimum": 0 },
         "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
         "notes": { "type": ["string", "null"] }
       }
@@ -272,6 +422,17 @@
         "announced": { "type": ["object", "null"] },
         "observed": { "type": ["object", "null"] },
         "derived": { "type": ["object", "null"] },
+        "naturalWave": { "type": ["object", "null"] },
+        "enemySendsObserved": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/sendObservation" }
+        },
+        "alliedLeaksObserved": {
+          "type": "array",
+          "items": { "type": "object" }
+        },
+        "championObserved": { "type": ["object", "null"] },
+        "kingResult": { "type": ["object", "null"] },
         "evidenceRefs": { "$ref": "#/$defs/evidenceRefs" },
         "status": { "$ref": "#/$defs/confidence" },
         "notes": { "type": ["string", "null"] }

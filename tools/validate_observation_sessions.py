@@ -42,6 +42,25 @@ EVENT_TYPES = {
     "upgrade-unit",
     "buy-wisp",
     "research-lumber",
+    "wisp-training-started",
+    "wisp-training-completed",
+    "lumber-upgrade-started",
+    "lumber-upgrade-completed",
+    "barracks-opened",
+    "advanced-barracks-opened",
+    "send-purchased",
+    "send-dispatched",
+    "enemy-send-observed",
+    "enemy-send-reached-king",
+    "allied-leak-observed",
+    "king-upgrade-purchased",
+    "king-damage-observed",
+    "king-heal-observed",
+    "town-opened",
+    "team-send-coordination",
+    "player-left",
+    "player-defeated",
+    "team-player-count-changed",
     "challenge-champion-activated",
     "roll-changed",
     "wave-start",
@@ -49,6 +68,16 @@ EVENT_TYPES = {
     "reward-settled",
     "other",
 }
+SOURCE_BUILDINGS = {"barracks", "advanced-barracks", "unknown"}
+KING_UPGRADE_CATEGORIES = {
+    "attack",
+    "hp",
+    "regeneration",
+    "purge",
+    "heals",
+    "other",
+}
+PLAYER_STATUSES = {"active", "left", "defeated", "unknown"}
 ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 REQUIRED_TOP_LEVEL = {
     "schemaVersion",
@@ -76,10 +105,16 @@ def validate_enums(node: Any, path: str, errors: list[str]) -> None:
     if isinstance(node, dict):
         for key, value in node.items():
             current = f"{path}.{key}"
-            if key in {"confidence", "status"} and value not in CONFIDENCES:
+            if key == "confidence" and value not in CONFIDENCES:
                 add_error(errors, current, f"confiança inválida: {value!r}")
+            elif key == "status" and value not in CONFIDENCES | PLAYER_STATUSES:
+                add_error(errors, current, f"status inválido: {value!r}")
             elif key == "sourceType" and value not in SOURCE_TYPES:
                 add_error(errors, current, f"sourceType inválido: {value!r}")
+            elif key == "sourceBuilding" and value not in SOURCE_BUILDINGS | {None}:
+                add_error(errors, current, f"sourceBuilding inválido: {value!r}")
+            elif key == "category" and value not in KING_UPGRADE_CATEGORIES:
+                add_error(errors, current, f"categoria de King inválida: {value!r}")
             elif key == "precision":
                 if value not in PRECISIONS:
                     add_error(errors, current, f"precision inválida: {value!r}")
@@ -95,6 +130,71 @@ def validate_enums(node: Any, path: str, errors: list[str]) -> None:
     elif isinstance(node, list):
         for index, value in enumerate(node):
             validate_enums(value, f"{path}[{index}]", errors)
+
+
+def is_number(value: Any) -> bool:
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def validate_nonnegative(value: Any, path: str, errors: list[str]) -> None:
+    if value is not None and (not is_number(value) or value < 0):
+        add_error(errors, path, "deve ser numérico e não negativo quando presente.")
+
+
+def validate_semantics(node: Any, path: str, errors: list[str]) -> None:
+    if isinstance(node, dict):
+        for key, value in node.items():
+            current = f"{path}.{key}"
+            if key == "quantity" and value is not None:
+                if not isinstance(value, int) or isinstance(value, bool) or value <= 0:
+                    add_error(errors, current, "quantity deve ser inteiro positivo.")
+            elif key in {
+                "levelBefore",
+                "levelAfter",
+                "wispsBefore",
+                "wispsAfter",
+                "teamSizeBefore",
+                "teamSizeAfter",
+            }:
+                if value is not None and (
+                    not isinstance(value, int) or isinstance(value, bool) or value < 0
+                ):
+                    add_error(errors, current, "deve ser inteiro não negativo.")
+            elif key in {
+                "lumberUpgradeLevel",
+                "attackLevel",
+                "hpLevel",
+                "regenerationLevel",
+                "purgeLevel",
+                "healsRemaining",
+                "initialTeamSize",
+                "initialEnemyTeamSize",
+                "currentTeamSize",
+                "currentEnemyTeamSize",
+            } and isinstance(value, dict):
+                observed = value.get("value")
+                if observed is not None and (
+                    not isinstance(observed, int)
+                    or isinstance(observed, bool)
+                    or observed < 0
+                ):
+                    add_error(
+                        errors,
+                        f"{current}.value",
+                        "deve ser inteiro não negativo.",
+                    )
+            elif key in {"announcedCost", "observedCost"} and value is not None:
+                if not isinstance(value, dict):
+                    add_error(errors, current, "custo deve ser objeto ou null.")
+                else:
+                    validate_nonnegative(value.get("gold"), f"{current}.gold", errors)
+                    validate_nonnegative(value.get("lumber"), f"{current}.lumber", errors)
+            elif key == "lumberCost":
+                validate_nonnegative(value, current, errors)
+            validate_semantics(value, current, errors)
+    elif isinstance(node, list):
+        for index, value in enumerate(node):
+            validate_semantics(value, f"{path}[{index}]", errors)
 
 
 def collect_evidence_refs(node: Any, path: str) -> list[tuple[str, Any]]:
@@ -165,6 +265,7 @@ def validate_session(data: Any, source: Path) -> list[str]:
 
     evidence = data.get("evidence")
     evidence_ids: set[str] = set()
+    evidence_items: list[tuple[str, dict[str, Any]]] = []
     if not isinstance(evidence, list):
         add_error(errors, f"{root}.evidence", "deve ser uma lista.")
     else:
@@ -179,6 +280,29 @@ def validate_session(data: Any, source: Path) -> list[str]:
                 add_error(errors, f"{path}.id", f"ID duplicado: {evidence_id!r}")
             elif isinstance(evidence_id, str):
                 evidence_ids.add(evidence_id)
+            evidence_items.append((path, item))
+
+        for path, item in evidence_items:
+            evidence_id = item.get("id")
+            continues_id = item.get("continuesEvidenceId")
+            if continues_id is not None:
+                if continues_id == evidence_id:
+                    add_error(
+                        errors,
+                        f"{path}.continuesEvidenceId",
+                        "uma evidência não pode continuar a si própria.",
+                    )
+                elif continues_id not in evidence_ids:
+                    add_error(
+                        errors,
+                        f"{path}.continuesEvidenceId",
+                        f"evidência inexistente: {continues_id!r}",
+                    )
+            sequence = item.get("sequence")
+            if sequence is not None and (
+                not isinstance(sequence, int) or isinstance(sequence, bool) or sequence <= 0
+            ):
+                add_error(errors, f"{path}.sequence", "sequence deve ser inteiro positivo.")
 
     all_record_ids: set[str] = set()
     for collection_name in ("snapshots", "events", "waves"):
@@ -248,6 +372,7 @@ def validate_session(data: Any, source: Path) -> list[str]:
                 add_error(errors, refs_path, f"evidência inexistente: {ref!r}")
 
     validate_enums(data, root, errors)
+    validate_semantics(data, root, errors)
     return errors
 
 
