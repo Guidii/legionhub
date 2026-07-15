@@ -1,0 +1,126 @@
+{
+  "mapVersion": "11.4b-beta1",
+  "source": {
+    "type": "in-game-menu-observation",
+    "description": "Options observed directly in the Legion TD 11.4b-beta1 game mode selection menu."
+  },
+  "groups": {
+    "builder": [
+      {
+        "token": "PR",
+        "name": "Random Prophet",
+        "description": "Reroll automático; um novo roll é recebido a cada wave.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "PH",
+        "name": "Manual Prophet",
+        "description": "Reroll manual, sujeito ao limite indicado no menu.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "AP",
+        "name": "All Pick",
+        "description": "Descrição adicional não registrada na evidência fornecida.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "HB",
+        "name": "Hybrid Builder",
+        "description": "Descrição adicional não registrada na evidência fornecida.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      }
+    ],
+    "champions": [
+      {
+        "token": "CC",
+        "name": "Challenge Champions",
+        "description": "Champions são desafiados manualmente.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "AC",
+        "name": "Auto Champions",
+        "description": "Champions aparecem automaticamente a partir da wave 6.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "NC",
+        "name": "No Champions",
+        "description": "Descrição adicional não registrada na evidência fornecida.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      }
+    ],
+    "multiplier": [
+      {
+        "token": "X1",
+        "name": "Normal Mode",
+        "description": "Sends sem multiplicação.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation",
+        "value": 1
+      },
+      {
+        "token": "X2",
+        "name": "Double Trouble",
+        "description": "Sends multiplicados por 2.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation",
+        "value": 2
+      },
+      {
+        "token": "X3",
+        "name": "Triple Threat",
+        "description": "Sends multiplicados por 3.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation",
+        "value": 3
+      },
+      {
+        "token": "X4",
+        "name": "Quadruple Chaos",
+        "description": "Sends multiplicados por 4.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation",
+        "value": 4
+      }
+    ],
+    "modifiers": [
+      {
+        "token": "AH",
+        "name": "Allow Hybrid",
+        "description": "Descrição adicional não registrada na evidência fornecida.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "MI",
+        "name": "Mirror Mode",
+        "description": "Descrição adicional não registrada na evidência fornecida.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "EZ",
+        "name": "Easy Mode",
+        "description": "Waves mais fracas e King mais forte.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      },
+      {
+        "token": "LG",
+        "name": "Long Game",
+        "description": "Não pula as waves 21–29.",
+        "confidence": "confirmed-by-game-observation",
+        "source": "in-game-menu-observation"
+      }
+    ]
+  }
+}
