@@ -1,6 +1,3 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-
 export const GAME_MODE_GROUPS = [
   "builder",
   "champions",
@@ -26,8 +23,11 @@ export type GameModeCatalog = {
     type: string;
     description: string;
   };
-  groups: Record<GameModeGroup, GameModeToken[]>;
+  groups: GameModeGroups;
 };
+
+export type GameModeGroups = Record<GameModeGroup, GameModeToken[]>;
+export type GameModeDefinitionSet = { groups: GameModeGroups };
 
 export type UnknownGameModeToken = {
   value: string;
@@ -65,13 +65,18 @@ export type FormattedGameMode = {
   humanDescription: string;
 };
 
+export type GameModeSelection = {
+  builder: string;
+  champions: string;
+  multiplier: string;
+  modifiers: string[];
+};
+
 type LocatedToken = {
   definition: GameModeToken;
   group: GameModeGroup;
   position: number;
 };
-
-let catalogPromise: Promise<GameModeCatalog> | null = null;
 
 export function validateGameModeCatalog(catalog: GameModeCatalog): string[] {
   const errors: string[] = [];
@@ -120,38 +125,9 @@ export function validateGameModeCatalog(catalog: GameModeCatalog): string[] {
   return errors;
 }
 
-export async function getGameModeCatalog(): Promise<GameModeCatalog> {
-  if (catalogPromise === null) {
-    const absolutePath = path.resolve(
-      process.cwd(),
-      "../..",
-      "data/11.4b-beta1/game-modes.json",
-    );
-
-    catalogPromise = readFile(absolutePath, "utf8").then((contents) => {
-      const catalog = JSON.parse(contents) as GameModeCatalog;
-      const validationErrors = validateGameModeCatalog(catalog);
-
-      if (validationErrors.length > 0) {
-        throw new Error(
-          `game-modes.json inválido:\n${validationErrors.join("\n")}`,
-        );
-      }
-
-      return catalog;
-    });
-  }
-
-  return catalogPromise;
-}
-
-export async function parseGameModeCode(raw: string): Promise<ParsedGameMode> {
-  return parseGameMode(raw, await getGameModeCatalog());
-}
-
 export function parseGameMode(
   input: string,
-  catalog: GameModeCatalog,
+  catalog: GameModeDefinitionSet,
 ): ParsedGameMode {
   const raw = input.toUpperCase();
   const definitions = GAME_MODE_GROUPS.flatMap((group) =>
@@ -273,7 +249,12 @@ export function parseGameMode(
 }
 
 export function formatGameMode(parsed: ParsedGameMode): FormattedGameMode {
-  if (!parsed.valid || parsed.builder === null || parsed.champions === null || parsed.multiplier === null) {
+  if (
+    !parsed.valid ||
+    parsed.builder === null ||
+    parsed.champions === null ||
+    parsed.multiplier === null
+  ) {
     throw new Error("Não é possível formatar um código de modo inválido.");
   }
 
@@ -290,4 +271,29 @@ export function formatGameMode(parsed: ParsedGameMode): FormattedGameMode {
       .map((definition) => definition.name)
       .join(" + "),
   };
+}
+
+export function composeGameModeSelection(
+  selection: GameModeSelection,
+  catalog: GameModeDefinitionSet,
+): ParsedGameMode {
+  const knownModifierTokens = new Set(
+    catalog.groups.modifiers.map((definition) => definition.token),
+  );
+  const selectedModifiers = new Set(selection.modifiers);
+  const canonicalModifiers = catalog.groups.modifiers
+    .filter((definition) => selectedModifiers.has(definition.token))
+    .map((definition) => definition.token);
+  const unknownModifiers = selection.modifiers.filter(
+    (token) => !knownModifierTokens.has(token),
+  );
+  const compactCode = [
+    selection.builder,
+    selection.champions,
+    selection.multiplier,
+    ...canonicalModifiers,
+    ...unknownModifiers,
+  ].join("");
+
+  return parseGameMode(compactCode, catalog);
 }

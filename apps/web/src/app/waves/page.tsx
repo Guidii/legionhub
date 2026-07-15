@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { KnowledgeNav } from "@/components/knowledge-nav";
 import { WaveExplorer } from "@/components/wave-explorer";
 import {
   getAttackMultipliersForDefense,
@@ -58,23 +59,7 @@ export default async function WavesPage() {
           </Link>
 
           <div className="flex flex-col items-end gap-2 sm:flex-row sm:items-center sm:gap-3">
-            <nav
-              aria-label="Base de conhecimento"
-              className="flex items-center gap-2 text-sm font-semibold"
-            >
-              <Link
-                href="/unidades"
-                className="text-slate-400 transition hover:text-cyan-300"
-              >
-                Unidades
-              </Link>
-              <span aria-hidden="true" className="text-slate-700">
-                |
-              </span>
-              <span aria-current="page" className="text-cyan-300">
-                Waves
-              </span>
-            </nav>
+            <KnowledgeNav current="waves" />
             <span className="rounded-full border border-amber-300/30 bg-amber-300/10 px-3 py-1 text-xs font-semibold text-amber-200">
               Dataset preliminar
             </span>
