@@ -16,9 +16,10 @@ type WaveExplorerProps = {
 };
 
 const confidenceLabels: Record<WaveConfidence, string> = {
-  "confirmed-directly": "Confirmada diretamente",
-  "inferred-from-sequence": "Inferida pela sequência",
-  unknown: "Confiança desconhecida",
+  "confirmed-directly": "Confirmada diretamente no mapa",
+  "confirmed-by-game-observation": "Confirmada em jogo",
+  "inferred-from-sequence": "Ordem não confirmada",
+  unknown: "Não identificada",
 };
 
 function normalize(value: string) {
@@ -35,6 +36,23 @@ function formatLabel(value: string | null) {
 
 function formatValue(value: number | null) {
   return value === null ? "—" : value.toLocaleString("pt-BR");
+}
+
+function hasConfirmedWaveNumber(confidence: WaveConfidence) {
+  return (
+    confidence === "confirmed-directly" ||
+    confidence === "confirmed-by-game-observation"
+  );
+}
+
+function getWavePositionLabel(wave: PreliminaryWave) {
+  if (hasConfirmedWaveNumber(wave.numberConfidence)) {
+    return `Wave ${wave.number}`;
+  }
+
+  return wave.numberConfidence === "inferred-from-sequence"
+    ? `Posição candidata ${wave.number}`
+    : "Posição não identificada";
 }
 
 export function WaveExplorer({
@@ -59,6 +77,19 @@ export function WaveExplorer({
       waves.filter(
         (wave) => wave.numberConfidence === "inferred-from-sequence",
       ).length,
+    [waves],
+  );
+  const gameConfirmedCount = useMemo(
+    () =>
+      waves.filter(
+        (wave) =>
+          wave.numberConfidence === "confirmed-by-game-observation",
+      ).length,
+    [waves],
+  );
+  const unknownCount = useMemo(
+    () =>
+      waves.filter((wave) => wave.numberConfidence === "unknown").length,
     [waves],
   );
   const quantitiesConfirmed = useMemo(
@@ -93,10 +124,12 @@ export function WaveExplorer({
     const normalizedQuery = normalize(query.trim());
 
     return waves.filter((wave) => {
+      const searchablePosition = getWavePositionLabel(wave);
       const matchesQuery =
         !normalizedQuery ||
         normalize(wave.creep.name).includes(normalizedQuery) ||
-        normalize(wave.creep.rawcode).includes(normalizedQuery);
+        normalize(wave.creep.rawcode).includes(normalizedQuery) ||
+        normalize(searchablePosition).includes(normalizedQuery);
       const matchesConfidence =
         confidence === "all" || wave.numberConfidence === confidence;
       const matchesAttack =
@@ -128,23 +161,30 @@ export function WaveExplorer({
 
   return (
     <section>
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <SummaryCard value={waves.length} label="posições candidatas" />
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+        <SummaryCard value={waves.length} label="posições no dataset" />
         <SummaryCard
           value={confirmedCount}
           label="confirmadas diretamente"
           tone="confirmed"
         />
         <SummaryCard
-          value={inferredCount}
-          label="inferidas pela sequência"
-          tone="inferred"
+          value={gameConfirmedCount}
+          label="confirmadas em jogo"
+          tone="game"
         />
         <SummaryCard
-          value={quantitiesConfirmed ? "Confirmada" : "Não confirmada"}
-          label="quantidade por wave"
+          value={inferredCount}
+          label="ordem não confirmada"
+          tone="inferred"
         />
+        <SummaryCard value={unknownCount} label="não identificadas" />
       </div>
+
+      <p className="mt-4 text-xs text-slate-500">
+        Quantidade por wave:{" "}
+        {quantitiesConfirmed ? "confirmada" : "não confirmada"}.
+      </p>
 
       <div className="mt-8 grid gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-4 md:grid-cols-2 xl:grid-cols-[minmax(0,1fr)_220px_180px_180px]">
         <label className="block md:col-span-2 xl:col-span-1">
@@ -154,7 +194,7 @@ export function WaveExplorer({
           <input
             value={query}
             onChange={(event) => setQuery(event.target.value)}
-            placeholder="Nome ou rawcode"
+            placeholder="Nome, rawcode, Wave X ou posição candidata X"
             className="w-full rounded-xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-cyan-400/60"
           />
         </label>
@@ -172,9 +212,13 @@ export function WaveExplorer({
           >
             <option value="all">Todas</option>
             <option value="confirmed-directly">Confirmadas diretamente</option>
-            <option value="inferred-from-sequence">
-              Inferidas pela sequência
+            <option value="confirmed-by-game-observation">
+              Confirmadas em jogo
             </option>
+            <option value="inferred-from-sequence">
+              Ordem não confirmada
+            </option>
+            <option value="unknown">Não identificadas</option>
           </select>
         </label>
 
@@ -195,7 +239,7 @@ export function WaveExplorer({
       <div className="mt-6 flex items-center justify-between gap-4">
         <p className="text-sm text-slate-400">
           <strong className="text-white">{filteredWaves.length}</strong> de{" "}
-          {waves.length} waves
+          {waves.length} posições no dataset
         </p>
 
         <button
@@ -213,8 +257,9 @@ export function WaveExplorer({
           const normalFlowLimitation = wave.limitations.find((limitation) =>
             limitation.includes("fluxo normal"),
           );
-          const isConfirmed =
-            wave.numberConfidence === "confirmed-directly";
+          const isConfirmed = hasConfirmedWaveNumber(wave.numberConfidence);
+          const isGameConfirmed =
+            wave.numberConfidence === "confirmed-by-game-observation";
           const confirmedDamageMultipliers =
             wave.stats.defenseTypeRaw === null
               ? []
@@ -239,7 +284,7 @@ export function WaveExplorer({
                   />
                   <div className="min-w-0">
                     <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
-                      Wave {wave.number}
+                      {getWavePositionLabel(wave)}
                     </p>
                     <h2 className="mt-1 text-xl font-black">
                       {wave.creep.name}
@@ -259,13 +304,21 @@ export function WaveExplorer({
 
               <span
                 className={`mt-4 inline-flex rounded-full border px-3 py-1 text-xs font-bold ${
-                  isConfirmed
+                  isGameConfirmed
+                    ? "border-sky-400/30 bg-sky-400/10 text-sky-200"
+                    : isConfirmed
                     ? "border-emerald-400/30 bg-emerald-400/10 text-emerald-200"
                     : "border-amber-300/30 bg-amber-300/10 text-amber-200"
                 }`}
               >
                 {confidenceLabels[wave.numberConfidence]}
               </span>
+
+              {!isConfirmed && (
+                <p className="mt-3 text-xs font-semibold text-amber-200/80">
+                  Número real da wave ainda não confirmado.
+                </p>
+              )}
 
               <dl className="mt-5 grid grid-cols-2 gap-2">
                 <Stat label="HP" value={formatValue(wave.stats.hp)} />
@@ -370,11 +423,13 @@ function SummaryCard({
 }: {
   value: number | string;
   label: string;
-  tone?: "neutral" | "confirmed" | "inferred";
+  tone?: "neutral" | "confirmed" | "game" | "inferred";
 }) {
   const valueColor =
     tone === "confirmed"
       ? "text-emerald-300"
+      : tone === "game"
+        ? "text-sky-300"
       : tone === "inferred"
         ? "text-amber-200"
         : "text-cyan-300";

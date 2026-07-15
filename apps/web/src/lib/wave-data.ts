@@ -3,6 +3,7 @@ import path from "node:path";
 
 export type WaveConfidence =
   | "confirmed-directly"
+  | "confirmed-by-game-observation"
   | "inferred-from-sequence"
   | "unknown";
 

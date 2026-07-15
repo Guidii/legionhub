@@ -3,6 +3,7 @@
   "status": "preliminary",
   "confidenceLevels": [
     "confirmed-directly",
+    "confirmed-by-game-observation",
     "inferred-from-sequence",
     "unknown"
   ],
@@ -13,15 +14,15 @@
   "waves": [
     {
       "number": 1,
-      "numberConfidence": "inferred-from-sequence",
+      "numberConfidence": "confirmed-by-game-observation",
       "creep": {
-        "rawcode": "h005",
-        "name": "Scorpion"
+        "rawcode": "h002",
+        "name": "Crab"
       },
       "stats": {
-        "hp": 250,
+        "hp": 100,
         "armor": 3,
-        "defenseTypeRaw": "medium",
+        "defenseTypeRaw": "none",
         "acquisitionRange": 620
       },
       "movement": {
@@ -29,14 +30,14 @@
         "type": null
       },
       "attack": {
-        "damageBase": 13,
+        "damageBase": 6,
         "dice": null,
-        "sidesPerDie": null,
+        "sidesPerDie": 3,
         "damageMin": null,
         "damageMax": null,
         "cooldown": 0.8999999761581421,
         "range": null,
-        "attackTypeRaw": null,
+        "attackTypeRaw": "pierce",
         "weaponType": null
       },
       "abilities": [],
@@ -49,10 +50,10 @@
       "income": null,
       "evidence": [
         {
-          "confidence": "inferred-from-sequence",
+          "confidence": "confirmed-by-game-observation",
           "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 1; o object data não declara LEVEL 1 para esta unidade."
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 1 identificada como Crab (h002) por observação direta durante uma partida."
         },
         {
           "confidence": "confirmed-directly",
@@ -62,7 +63,6 @@
         }
       ],
       "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
         "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
         "movement e condição air não estão disponíveis no dataset extraído atual",
         "a condição boss desta wave não foi confirmada"
@@ -126,7 +126,63 @@
     },
     {
       "number": 3,
-      "numberConfidence": "inferred-from-sequence",
+      "numberConfidence": "confirmed-by-game-observation",
+      "creep": {
+        "rawcode": "h005",
+        "name": "Scorpion"
+      },
+      "stats": {
+        "hp": 250,
+        "armor": 3,
+        "defenseTypeRaw": "medium",
+        "acquisitionRange": 620
+      },
+      "movement": {
+        "speed": null,
+        "type": null
+      },
+      "attack": {
+        "damageBase": 13,
+        "dice": null,
+        "sidesPerDie": null,
+        "damageMin": null,
+        "damageMax": null,
+        "cooldown": 0.8999999761581421,
+        "range": null,
+        "attackTypeRaw": null,
+        "weaponType": null
+      },
+      "abilities": [],
+      "air": null,
+      "boss": null,
+      "quantity": null,
+      "spawnInterval": null,
+      "modeOverrides": null,
+      "bounty": null,
+      "income": null,
+      "evidence": [
+        {
+          "confidence": "confirmed-by-game-observation",
+          "scope": "wave-association",
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 3 identificada como Scorpion (h005) por observação direta durante uma partida."
+        },
+        {
+          "confidence": "confirmed-directly",
+          "scope": "unit-object-data",
+          "source": "data/11.4b-beta1/all-units.json",
+          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
+        }
+      ],
+      "limitations": [
+        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
+        "movement e condição air não estão disponíveis no dataset extraído atual",
+        "a condição boss desta wave não foi confirmada"
+      ]
+    },
+    {
+      "number": 4,
+      "numberConfidence": "confirmed-by-game-observation",
       "creep": {
         "rawcode": "h001",
         "name": "Quilbeast"
@@ -162,10 +218,10 @@
       "income": null,
       "evidence": [
         {
-          "confidence": "inferred-from-sequence",
+          "confidence": "confirmed-by-game-observation",
           "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 3; o object data não declara LEVEL 3 para esta unidade."
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 4 identificada como Quilbeast (h001) por observação direta durante uma partida."
         },
         {
           "confidence": "confirmed-directly",
@@ -175,64 +231,6 @@
         }
       ],
       "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
-        "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
-        "movement e condição air não estão disponíveis no dataset extraído atual",
-        "a condição boss desta wave não foi confirmada"
-      ]
-    },
-    {
-      "number": 4,
-      "numberConfidence": "inferred-from-sequence",
-      "creep": {
-        "rawcode": "h002",
-        "name": "Crab"
-      },
-      "stats": {
-        "hp": 100,
-        "armor": 3,
-        "defenseTypeRaw": "none",
-        "acquisitionRange": 620
-      },
-      "movement": {
-        "speed": null,
-        "type": null
-      },
-      "attack": {
-        "damageBase": 6,
-        "dice": null,
-        "sidesPerDie": 3,
-        "damageMin": null,
-        "damageMax": null,
-        "cooldown": 0.8999999761581421,
-        "range": null,
-        "attackTypeRaw": "pierce",
-        "weaponType": null
-      },
-      "abilities": [],
-      "air": null,
-      "boss": null,
-      "quantity": null,
-      "spawnInterval": null,
-      "modeOverrides": null,
-      "bounty": null,
-      "income": null,
-      "evidence": [
-        {
-          "confidence": "inferred-from-sequence",
-          "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 4; o object data não declara LEVEL 4 para esta unidade."
-        },
-        {
-          "confidence": "confirmed-directly",
-          "scope": "unit-object-data",
-          "source": "data/11.4b-beta1/all-units.json",
-          "detail": "Nome, stats, ataque e habilidades foram preservados conforme o object data extraído do mapa."
-        }
-      ],
-      "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
         "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
         "movement e condição air não estão disponíveis no dataset extraído atual",
         "a condição boss desta wave não foi confirmada"
@@ -240,7 +238,7 @@
     },
     {
       "number": 5,
-      "numberConfidence": "inferred-from-sequence",
+      "numberConfidence": "confirmed-by-game-observation",
       "creep": {
         "rawcode": "h00I",
         "name": "Hawk"
@@ -276,10 +274,10 @@
       "income": null,
       "evidence": [
         {
-          "confidence": "inferred-from-sequence",
+          "confidence": "confirmed-by-game-observation",
           "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 5; o object data não declara LEVEL 5 para esta unidade."
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 5 identificada como Hawk (h00I) por observação direta durante uma partida."
         },
         {
           "confidence": "confirmed-directly",
@@ -289,7 +287,6 @@
         }
       ],
       "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
         "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
         "movement e condição air não estão disponíveis no dataset extraído atual",
         "a condição boss desta wave não foi confirmada"
@@ -297,7 +294,7 @@
     },
     {
       "number": 6,
-      "numberConfidence": "inferred-from-sequence",
+      "numberConfidence": "confirmed-by-game-observation",
       "creep": {
         "rawcode": "h003",
         "name": "Rock Golem"
@@ -338,10 +335,10 @@
       "income": null,
       "evidence": [
         {
-          "confidence": "inferred-from-sequence",
+          "confidence": "confirmed-by-game-observation",
           "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 6; o object data não declara LEVEL 6 para esta unidade."
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 6 identificada como Rock Golem (h003) por observação direta durante uma partida."
         },
         {
           "confidence": "confirmed-directly",
@@ -351,7 +348,6 @@
         }
       ],
       "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
         "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
         "movement e condição air não estão disponíveis no dataset extraído atual",
         "a condição boss desta wave não foi confirmada"
@@ -359,7 +355,7 @@
     },
     {
       "number": 7,
-      "numberConfidence": "inferred-from-sequence",
+      "numberConfidence": "confirmed-by-game-observation",
       "creep": {
         "rawcode": "h004",
         "name": "Satyr"
@@ -395,10 +391,10 @@
       "income": null,
       "evidence": [
         {
-          "confidence": "inferred-from-sequence",
+          "confidence": "confirmed-by-game-observation",
           "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 7; o object data não declara LEVEL 7 para esta unidade."
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 7 identificada como Satyr (h004) por observação direta durante uma partida."
         },
         {
           "confidence": "confirmed-directly",
@@ -408,7 +404,6 @@
         }
       ],
       "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
         "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
         "movement e condição air não estão disponíveis no dataset extraído atual",
         "a condição boss desta wave não foi confirmada"
@@ -416,7 +411,7 @@
     },
     {
       "number": 8,
-      "numberConfidence": "inferred-from-sequence",
+      "numberConfidence": "confirmed-by-game-observation",
       "creep": {
         "rawcode": "h007",
         "name": "Acolyte"
@@ -452,10 +447,10 @@
       "income": null,
       "evidence": [
         {
-          "confidence": "inferred-from-sequence",
+          "confidence": "confirmed-by-game-observation",
           "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 8; o object data não declara LEVEL 8 para esta unidade."
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 8 identificada como Acolyte (h007) por observação direta durante uma partida."
         },
         {
           "confidence": "confirmed-directly",
@@ -465,7 +460,6 @@
         }
       ],
       "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
         "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
         "movement e condição air não estão disponíveis no dataset extraído atual",
         "a condição boss desta wave não foi confirmada"
@@ -529,7 +523,7 @@
     },
     {
       "number": 10,
-      "numberConfidence": "inferred-from-sequence",
+      "numberConfidence": "confirmed-by-game-observation",
       "creep": {
         "rawcode": "h009",
         "name": "Draenei Chieftain"
@@ -565,10 +559,10 @@
       "income": null,
       "evidence": [
         {
-          "confidence": "inferred-from-sequence",
+          "confidence": "confirmed-by-game-observation",
           "scope": "wave-association",
-          "source": "investigação técnica anterior",
-          "detail": "O rawcode ocupa a posição candidata 10; o object data não declara LEVEL 10 para esta unidade."
+          "source": "observação direta do jogador em partida",
+          "detail": "Wave 10 identificada como Draenei Chieftain (h009) por observação direta durante uma partida."
         },
         {
           "confidence": "confirmed-directly",
@@ -578,7 +572,6 @@
         }
       ],
       "limitations": [
-        "a associação entre este número de wave e o rawcode é apenas inferida pela sequência candidata",
         "quantity, spawnInterval, modeOverrides, bounty e income não foram confirmados",
         "movement e condição air não estão disponíveis no dataset extraído atual",
         "a condição boss desta wave não foi confirmada"
@@ -1825,4 +1818,3 @@
     }
   ]
 }
-

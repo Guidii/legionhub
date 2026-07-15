@@ -15,6 +15,12 @@ export const metadata = {
 
 export default async function WavesPage() {
   const dataset = await getPreliminaryWaves();
+  const directlyConfirmedCount = dataset.waves.filter(
+    (wave) => wave.numberConfidence === "confirmed-directly",
+  ).length;
+  const gameConfirmedCount = dataset.waves.filter(
+    (wave) => wave.numberConfidence === "confirmed-by-game-observation",
+  ).length;
   const defenseTypes = Array.from(
     new Set(
       dataset.waves
@@ -84,16 +90,20 @@ export default async function WavesPage() {
           Waves
         </h1>
         <p className="mt-5 max-w-3xl leading-7 text-slate-400">
-          Dados do mapa Legion TD {dataset.mapVersion}. Algumas associações
-          foram confirmadas diretamente; outras ainda são inferidas pela
-          sequência dos objetos. A quantidade de creeps e os modificadores de
-          modo ainda não foram confirmados.
+          Dados do mapa Legion TD {dataset.mapVersion}. Esta base reúne{" "}
+          {dataset.waves.length} posições: {directlyConfirmedCount} números
+          confirmados diretamente no mapa e {gameConfirmedCount} confirmados por
+          observação durante uma partida. As demais posições ainda são inferidas
+          pela sequência dos objetos. A quantidade de creeps e os modificadores
+          de modo ainda não foram confirmados.
         </p>
 
         <div className="mt-6 max-w-3xl rounded-2xl border border-amber-300/20 bg-amber-300/5 p-4 text-sm leading-6 text-amber-100/80">
           <strong className="text-amber-200">Dataset preliminar.</strong>{" "}
-          Associações inferidas estão identificadas individualmente e não devem
-          ser tratadas como fatos confirmados.
+          Confirmações em jogo vêm da observação do jogador durante uma partida,
+          não da análise estática do mapa. Posições inferidas estão identificadas
+          individualmente e não devem ser interpretadas como números reais de
+          wave.
         </div>
 
         <div className="mt-10">
