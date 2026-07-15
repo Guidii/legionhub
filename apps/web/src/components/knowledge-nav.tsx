@@ -4,6 +4,7 @@ const items = [
   { href: "/unidades", label: "Unidades", id: "units" },
   { href: "/waves", label: "Waves", id: "waves" },
   { href: "/modos", label: "Modos", id: "modes" },
+  { href: "/coach", label: "Coach", id: "coach" },
 ] as const;
 
 type KnowledgeNavProps = {
