@@ -4,6 +4,7 @@ import {
   getAttackMultipliersForDefense,
   getUnconfirmedAttackTypes,
 } from "@/lib/damage-matrix";
+import { getUnitIconPaths } from "@/lib/unit-icons";
 import { getPreliminaryWaves } from "@/lib/wave-data";
 
 export const metadata = {
@@ -32,6 +33,9 @@ export default async function WavesPage() {
   ]);
   const damageMultipliersByDefense = Object.fromEntries(
     damageMultiplierEntries,
+  );
+  const iconPaths = await getUnitIconPaths(
+    dataset.waves.map((wave) => wave.creep.rawcode),
   );
 
   return (
@@ -95,6 +99,7 @@ export default async function WavesPage() {
         <div className="mt-10">
           <WaveExplorer
             waves={dataset.waves}
+            iconPaths={iconPaths}
             damageMultipliersByDefense={damageMultipliersByDefense}
             unconfirmedAttackTypes={unconfirmedAttackTypes}
           />

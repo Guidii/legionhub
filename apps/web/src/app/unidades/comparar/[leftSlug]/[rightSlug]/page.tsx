@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { UnitIcon } from "@/components/unit-icon";
 import type { FighterSummary } from "@/lib/legion-data";
 import { getAllFighters } from "@/lib/legion-data";
+import { getUnitIconPaths } from "@/lib/unit-icons";
 import { createUnitSlug } from "@/lib/unit-slug";
 import {
   formatDifference,
@@ -31,10 +33,14 @@ export default async function UnitComparisonPage({
     (unit) => createUnitSlug(unit.name, unit.rawcode) === rightSlug,
   );
 
-  if (!leftUnit || !rightUnit || leftUnit.rawcode === rightUnit.rawcode) {
+  if (!leftUnit || !rightUnit) {
     notFound();
   }
 
+  const iconPaths = await getUnitIconPaths([
+    leftUnit.rawcode,
+    rightUnit.rawcode,
+  ]);
   const leftMetrics = getComparisonMetrics(leftUnit);
   const rightMetrics = getComparisonMetrics(rightUnit);
 
@@ -67,8 +73,14 @@ export default async function UnitComparisonPage({
                   <th className="px-4 py-4 font-semibold text-slate-400">
                     Atributo
                   </th>
-                  <UnitHeading unit={leftUnit} />
-                  <UnitHeading unit={rightUnit} />
+                  <UnitHeading
+                    unit={leftUnit}
+                    webPath={iconPaths[leftUnit.rawcode] ?? null}
+                  />
+                  <UnitHeading
+                    unit={rightUnit}
+                    webPath={iconPaths[rightUnit.rawcode] ?? null}
+                  />
                   <th className="px-4 py-4 font-semibold text-slate-400">
                     Diferença
                   </th>
@@ -203,18 +215,34 @@ export default async function UnitComparisonPage({
   );
 }
 
-function UnitHeading({ unit }: { unit: FighterSummary }) {
+function UnitHeading({
+  unit,
+  webPath,
+}: {
+  unit: FighterSummary;
+  webPath: string | null;
+}) {
   return (
     <th className="px-4 py-4">
-      <p className="text-xs font-bold uppercase tracking-wider text-cyan-400">
-        {unit.rawcode}
-      </p>
-      <Link
-        href={`/unidades/${createUnitSlug(unit.name, unit.rawcode)}`}
-        className="mt-1 inline-block text-lg font-black text-white hover:text-cyan-200"
-      >
-        {unit.name}
-      </Link>
+      <div className="flex min-w-[180px] items-center gap-3">
+        <UnitIcon
+          rawcode={unit.rawcode}
+          name={unit.name}
+          webPath={webPath}
+          size={56}
+        />
+        <div className="min-w-0">
+          <p className="text-xs font-bold uppercase tracking-wider text-cyan-400">
+            {unit.rawcode}
+          </p>
+          <Link
+            href={`/unidades/${createUnitSlug(unit.name, unit.rawcode)}`}
+            className="mt-1 inline-block text-lg font-black text-white hover:text-cyan-200"
+          >
+            {unit.name}
+          </Link>
+        </div>
+      </div>
     </th>
   );
 }

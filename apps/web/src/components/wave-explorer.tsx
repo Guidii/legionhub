@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { UnitIcon } from "@/components/unit-icon";
 import type { ConfirmedDamageMultiplier } from "@/lib/damage-matrix";
 import type {
   PreliminaryWave,
@@ -9,6 +10,7 @@ import type {
 
 type WaveExplorerProps = {
   waves: PreliminaryWave[];
+  iconPaths: Record<string, string | null>;
   damageMultipliersByDefense: Record<string, ConfirmedDamageMultiplier[]>;
   unconfirmedAttackTypes: string[];
 };
@@ -37,6 +39,7 @@ function formatValue(value: number | null) {
 
 export function WaveExplorer({
   waves,
+  iconPaths,
   damageMultipliersByDefense,
   unconfirmedAttackTypes,
 }: WaveExplorerProps) {
@@ -227,16 +230,24 @@ export function WaveExplorer({
               }`}
             >
               <div className="flex items-start justify-between gap-4">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
-                    Wave {wave.number}
-                  </p>
-                  <h2 className="mt-2 text-xl font-black">
-                    {wave.creep.name}
-                  </h2>
-                  <p className="mt-1 font-mono text-xs text-slate-500">
-                    {wave.creep.rawcode}
-                  </p>
+                <div className="flex min-w-0 items-center gap-3">
+                  <UnitIcon
+                    rawcode={wave.creep.rawcode}
+                    name={wave.creep.name}
+                    webPath={iconPaths[wave.creep.rawcode] ?? null}
+                    size={56}
+                  />
+                  <div className="min-w-0">
+                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-400">
+                      Wave {wave.number}
+                    </p>
+                    <h2 className="mt-1 text-xl font-black">
+                      {wave.creep.name}
+                    </h2>
+                    <p className="mt-1 font-mono text-xs text-slate-500">
+                      {wave.creep.rawcode}
+                    </p>
+                  </div>
                 </div>
 
                 {wave.boss === true && (
