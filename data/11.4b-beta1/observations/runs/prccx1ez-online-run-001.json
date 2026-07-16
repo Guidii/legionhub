@@ -1,0 +1,1013 @@
+{
+  "schemaVersion": 1,
+  "runId": "prccx1ez-online-run-001",
+  "map": {
+    "displayedVersion": "Legion TD 11.4b",
+    "datasetVersion": "11.4b-beta1"
+  },
+  "mode": {
+    "displayedCode": "-prccx1ez",
+    "canonicalCode": "PRCCX1EZ",
+    "dimensions": {
+      "builder": "PR",
+      "champions": "CC",
+      "multiplier": "X1",
+      "modifiers": ["EZ"]
+    },
+    "sourceType": "USER_REPORT",
+    "confidence": "USER_OBSERVED",
+    "evidenceRefs": []
+  },
+  "player": null,
+  "playerReport": [],
+  "multiplayer": {
+    "initialTeamSize": null,
+    "initialEnemyTeamSize": null,
+    "currentTeamSize": null,
+    "currentEnemyTeamSize": null,
+    "player": null,
+    "allies": [],
+    "enemies": [],
+    "teamSide": null,
+    "lobbyType": null,
+    "onlineMatch": true
+  },
+  "evidence": [
+    {
+      "id": "video-part-1",
+      "sourceType": "VIDEO_REVIEW",
+      "file": "teste1(1).mp4",
+      "timestampStart": null,
+      "timestampEnd": null,
+      "frame": null,
+      "sequence": 1,
+      "continuesEvidenceId": null,
+      "sessionTimeOffset": null,
+      "localTimestampStart": null,
+      "localTimestampEnd": null,
+      "description": "Primeira parte da gravação contínua; conteúdo observacional ainda não transcrito."
+    },
+    {
+      "id": "video-part-2",
+      "sourceType": "VIDEO_REVIEW",
+      "file": "teste2(1).mp4",
+      "timestampStart": null,
+      "timestampEnd": null,
+      "frame": null,
+      "sequence": 2,
+      "continuesEvidenceId": "video-part-1",
+      "sessionTimeOffset": null,
+      "localTimestampStart": null,
+      "localTimestampEnd": null,
+      "description": "Segunda parte da gravação contínua; conteúdo observacional ainda não transcrito."
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "wave-1-pre-wave-economy-1-1", "gameTime": null,
+      "wave": { "value": 1, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] }, "phase": "pre-wave",
+      "gold": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "lumber": { "value": 174, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "income": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "economyDisplay": { "value": "1/1", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Texto bruto; não convertido em Wisps ou upgrade." },
+      "wisps": null, "lumberUpgradeLevel": null,
+      "value": { "value": 750, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "roll": null, "army": null, "evidenceRefs": ["video-part-1"],
+      "notes": "Estado econômico visível antes da Wave 1; nenhuma causa inferida."
+    },
+    {
+      "id": "wave-1-post-wave-economy-2-1", "gameTime": null,
+      "wave": { "value": 1, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] }, "phase": "post-wave",
+      "gold": { "value": 350, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "lumber": { "value": 195, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "income": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "economyDisplay": { "value": "2/1", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Mudança visual registrada sem evento causal." },
+      "wisps": null, "lumberUpgradeLevel": null,
+      "value": { "value": 750, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "roll": null, "army": null,
+      "multiplayerCounts": { "value": { "bounty": 5, "cumulativeKills": 100, "cumulativeLeaks": 0, "totalLumber": 45 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "evidenceRefs": ["video-part-1"], "notes": "Estado econômico visível após a Wave 1."
+    },
+    {
+      "id": "wave-2-preparation-ui",
+      "gameTime": null,
+      "wave": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "phase": "preparation",
+      "gold": {
+        "value": 230,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "lumber": {
+        "value": 201,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "income": {
+        "value": 0,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "economyDisplay": {
+        "value": "3/1",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Texto bruto exibido na coluna Lumber; não interpretado como quantidade de Wisps ou nível de upgrade."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": {
+        "value": 885,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "roll": null,
+      "army": null,
+      "king": {
+        "currentHp": {
+          "value": 8000,
+          "sourceType": "GAME_UI",
+          "confidence": "USER_OBSERVED",
+          "precision": "exact",
+          "evidenceRefs": ["video-part-1"]
+        },
+        "maxHp": null,
+        "attackLevel": null,
+        "hpLevel": null,
+        "regenerationLevel": null,
+        "purgeLevel": null,
+        "healsRemaining": null,
+        "teamSide": null
+      },
+      "multiplayerCounts": {
+        "value": {
+          "bounty": 3,
+          "kills": 100,
+          "leaks": 0,
+          "totalLumber": 51
+        },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Contadores brutos visíveis na interface; nenhuma relação econômica foi inferida."
+      },
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Snapshot observado durante a preparação da Wave 2; sem timestamp medido."
+    },
+    {
+      "id": "wave-2-combat-economy-6-1", "gameTime": null,
+      "wave": { "value": 2, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] }, "phase": "combat",
+      "gold": { "value": 390, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "lumber": { "value": 288, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "income": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "economyDisplay": { "value": "6/1", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Texto bruto imediatamente antes da mudança para 6/2." },
+      "wisps": null, "lumberUpgradeLevel": null,
+      "value": { "value": 1065, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "roll": null, "army": null, "evidenceRefs": ["video-part-1"], "notes": "Nenhum clique ou início de pesquisa foi identificado."
+    },
+    {
+      "id": "wave-2-combat-economy-6-2", "gameTime": null,
+      "wave": { "value": 2, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] }, "phase": "combat",
+      "gold": { "value": 390, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "lumber": { "value": 288, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "income": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "economyDisplay": { "value": "6/2", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Mudança visual registrada sem classificar a causa." },
+      "wisps": null, "lumberUpgradeLevel": null,
+      "value": { "value": 1065, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "roll": null, "army": null, "evidenceRefs": ["video-part-1"], "notes": "Nenhum evento causal criado."
+    },
+    {
+      "id": "wave-3-preparation-ui",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "phase": "preparation",
+      "gold": {
+        "value": 0,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "lumber": {
+        "value": 432,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "income": {
+        "value": 0,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "economyDisplay": {
+        "value": "6/2",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Texto bruto exibido na coluna Lumber; não interpretado como Wisps ou upgrade."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": {
+        "value": 1485,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "roll": null,
+      "army": null,
+      "king": {
+        "currentHp": {
+          "value": 8000,
+          "sourceType": "GAME_UI",
+          "confidence": "USER_OBSERVED",
+          "precision": "exact",
+          "evidenceRefs": ["video-part-1"]
+        },
+        "maxHp": null,
+        "attackLevel": null,
+        "hpLevel": null,
+        "regenerationLevel": null,
+        "purgeLevel": null,
+        "healsRemaining": null,
+        "teamSide": null
+      },
+      "multiplayerCounts": {
+        "value": { "bounty": 4 },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Snapshot observado durante a preparação da Wave 3; sem timestamp medido."
+    },
+    {
+      "id": "wave-3-combat-economy-7-2",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "phase": "combat",
+      "gold": {
+        "value": 306,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "lumber": {
+        "value": 652,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "income": {
+        "value": 0,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "economyDisplay": {
+        "value": "7/2",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Mudança visual registrada sem atribuir causa a Wisp ou Lumber upgrade."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": {
+        "value": 1485,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "roll": null,
+      "army": null,
+      "king": {
+        "currentHp": {
+          "value": 8000,
+          "sourceType": "GAME_UI",
+          "confidence": "USER_OBSERVED",
+          "precision": "exact",
+          "evidenceRefs": ["video-part-1"]
+        },
+        "maxHp": null,
+        "attackLevel": null,
+        "hpLevel": null,
+        "regenerationLevel": null,
+        "purgeLevel": null,
+        "healsRemaining": null,
+        "teamSide": null
+      },
+      "multiplayerCounts": {
+        "value": {
+          "bounty": 4,
+          "cumulativeKills": 301,
+          "cumulativeLeaks": 0,
+          "totalLumber": 532,
+          "challenges": 1
+        },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Contadores brutos visíveis; não convertidos em resultado por wave."
+      },
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Snapshot durante o combate; nenhuma causa foi atribuída à mudança de economyDisplay."
+    },
+    {
+      "id": "wave-3-combat-economy-8-2",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "phase": "combat",
+      "gold": {
+        "value": 322,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "lumber": {
+        "value": 708,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "income": {
+        "value": 0,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "economyDisplay": {
+        "value": "8/2",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Mudança visual registrada sem atribuir causa a Wisp ou Lumber upgrade."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": {
+        "value": 1485,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "roll": null,
+      "army": null,
+      "king": {
+        "currentHp": {
+          "value": 8000,
+          "sourceType": "GAME_UI",
+          "confidence": "USER_OBSERVED",
+          "precision": "exact",
+          "evidenceRefs": ["video-part-1"]
+        },
+        "maxHp": null,
+        "attackLevel": null,
+        "hpLevel": null,
+        "regenerationLevel": null,
+        "purgeLevel": null,
+        "healsRemaining": null,
+        "teamSide": null
+      },
+      "multiplayerCounts": {
+        "value": { "bounty": 4 },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Snapshot durante o combate; nenhuma causa foi atribuída à mudança de economyDisplay."
+    },
+    {
+      "id": "wave-3-post-wave-ui",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "phase": "post-wave",
+      "gold": {
+        "value": 439,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "lumber": {
+        "value": 732,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "income": {
+        "value": 0,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "economyDisplay": {
+        "value": "8/2",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Texto bruto; não interpretado como Wisps ou upgrade."
+      },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": {
+        "value": 1485,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "roll": null,
+      "army": null,
+      "king": {
+        "currentHp": {
+          "value": 8000,
+          "sourceType": "GAME_UI",
+          "confidence": "USER_OBSERVED",
+          "precision": "exact",
+          "evidenceRefs": ["video-part-1"]
+        },
+        "maxHp": null,
+        "attackLevel": null,
+        "hpLevel": null,
+        "regenerationLevel": null,
+        "purgeLevel": null,
+        "healsRemaining": null,
+        "teamSide": null
+      },
+      "multiplayerCounts": {
+        "value": {
+          "displayedGoldCounter": 349,
+          "displayedLumberCounter": 720,
+          "creepsAlive": 0,
+          "cumulativeKills": 321,
+          "totalLumber": 600,
+          "cumulativeLeaks": 0,
+          "cumulativeLeaksCaught": 18,
+          "bounty": 4,
+          "challenges": 1
+        },
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Contadores brutos da área de estatísticas, preservados separadamente dos recursos no topo da interface."
+      },
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Snapshot visível após a Wave 3 e durante a mensagem de settlement."
+    },
+    {
+      "id": "wave-4-preparation-economy-9-2",
+      "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "phase": "preparation",
+      "gold": { "value": 19, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "lumber": { "value": 796, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "income": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "economyDisplay": { "value": "9/2", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Texto bruto; não convertido em Wisps ou nível de upgrade." },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": { "value": 1905, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "roll": null,
+      "army": null,
+      "king": { "currentHp": { "value": 8000, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] }, "maxHp": null, "attackLevel": null, "hpLevel": null, "regenerationLevel": null, "purgeLevel": null, "healsRemaining": null, "teamSide": null },
+      "multiplayerCounts": { "value": { "bounty": 4, "cumulativeKills": 321, "cumulativeLeaks": 0, "cumulativeLeaksCaught": 18, "totalLumber": 664 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Contadores acumulados da interface." },
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Snapshot de preparação antes da mudança visual para 10/2."
+    },
+    {
+      "id": "wave-4-preparation-economy-10-2",
+      "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "phase": "preparation",
+      "gold": { "value": 19, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "lumber": { "value": 844, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "income": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "economyDisplay": { "value": "10/2", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Mudança visual registrada sem atribuir evento causal." },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": { "value": 1905, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "roll": null,
+      "army": null,
+      "king": { "currentHp": { "value": 8000, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] }, "maxHp": null, "attackLevel": null, "hpLevel": null, "regenerationLevel": null, "purgeLevel": null, "healsRemaining": null, "teamSide": null },
+      "multiplayerCounts": { "value": { "bounty": 4, "cumulativeKills": 321, "cumulativeLeaks": 0, "cumulativeLeaksCaught": 18, "totalLumber": 716 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"], "notes": "Contadores acumulados da interface." },
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Snapshot de preparação após a mudança visual para 10/2."
+    },
+    {
+      "id": "wave-4-barracks-economy-ui", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "phase": "combat",
+      "gold": { "value": 653, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "lumber": { "value": 168, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "income": { "value": 48, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "economyDisplay": { "value": "10/2", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"], "notes": "Texto bruto." },
+      "wisps": null, "lumberUpgradeLevel": null,
+      "value": { "value": 1905, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "roll": null, "army": null,
+      "king": { "currentHp": { "value": 8000, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "maxHp": null, "attackLevel": null, "hpLevel": null, "regenerationLevel": null, "purgeLevel": null, "healsRemaining": null, "teamSide": null },
+      "multiplayerCounts": { "value": { "bounty": 4, "cumulativeKills": 426, "cumulativeLeaks": 0, "cumulativeLeaksCaught": 18, "totalLumber": 1008, "cumulativeUnitsSent": 6 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"], "notes": "Contadores acumulados; nenhuma compra ou despacho individual inferido." },
+      "evidenceRefs": ["video-part-2"], "notes": "Snapshot compatível com a abertura da Barracks."
+    },
+    {
+      "id": "wave-4-units-sent-counter-7-ui", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "phase": "combat",
+      "gold": { "value": 685, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "lumber": { "value": 76, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "income": { "value": 57, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "economyDisplay": { "value": "10/2", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "wisps": null, "lumberUpgradeLevel": null,
+      "value": { "value": 1905, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "roll": null, "army": null,
+      "king": { "currentHp": { "value": 8000, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "maxHp": null, "attackLevel": null, "hpLevel": null, "regenerationLevel": null, "purgeLevel": null, "healsRemaining": null, "teamSide": null },
+      "multiplayerCounts": { "value": { "bounty": 4, "cumulativeKills": 440, "cumulativeLeaks": 0, "cumulativeLeaksCaught": 32, "totalLumber": 1096, "cumulativeUnitsSent": 7 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"], "notes": "Apenas estado acumulado; sem evento causal." },
+      "evidenceRefs": ["video-part-2"], "notes": "Mudanças de lumber e income preservadas sem inferir send individual."
+    },
+    {
+      "id": "wave-4-king-defense-ui",
+      "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "phase": "king-defense",
+      "gold": { "value": 703, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "lumber": { "value": 184, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "income": { "value": 57, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "economyDisplay": { "value": "10/2", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"], "notes": "Texto bruto." },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": { "value": 1905, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "roll": null,
+      "army": null,
+      "king": { "currentHp": { "value": { "summaryDisplay": 5985, "selectedUnitDisplay": 5890 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"], "notes": "Dois valores simultâneos visíveis, preservados sem escolher um como prevalente." }, "maxHp": { "value": 8000, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "attackLevel": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "hpLevel": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "regenerationLevel": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "purgeLevel": { "value": 0, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "healsRemaining": null, "teamSide": null },
+      "multiplayerCounts": { "value": { "bounty": 4 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "evidenceRefs": ["video-part-2"],
+      "notes": "Snapshot durante defesa do King; nenhuma fonte individual de dano foi atribuída."
+    },
+    {
+      "id": "wave-4-settlement-ui",
+      "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_RESULT", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "phase": "settlement",
+      "gold": { "value": 848, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "lumber": { "value": 148, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "income": { "value": 66, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "economyDisplay": { "value": "10/2", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"], "notes": "Texto bruto." },
+      "wisps": null,
+      "lumberUpgradeLevel": null,
+      "value": { "value": 1905, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "roll": null,
+      "army": null,
+      "king": { "currentHp": { "value": 7509, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "maxHp": { "value": 8000, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "attackLevel": { "value": 3, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] }, "hpLevel": null, "regenerationLevel": null, "purgeLevel": null, "healsRemaining": null, "teamSide": null },
+      "multiplayerCounts": { "value": { "displayedGoldCounter": 703, "displayedLumberCounter": 148, "creepsAlive": 0, "cumulativeKills": 476, "totalLumber": 1408, "cumulativeLeaks": 0, "cumulativeLeaksCaught": 43, "cumulativeUnitsSent": 7, "displayedCounterBounty": 4, "scoreboardBounty": 3, "challenges": 1 }, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"], "notes": "Contadores acumulados; diferenças entre áreas da interface preservadas." },
+      "evidenceRefs": ["video-part-2"],
+      "notes": "Snapshot durante o settlement; nenhum total foi derivado."
+    }
+  ],
+  "events": [
+    {
+      "id": "wave-1-reward-settled",
+      "type": "reward-settled",
+      "gameTime": null,
+      "wave": {
+        "value": 1,
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "displayed": {
+        "levelCompletionGold": 15,
+        "challengeChampionGold": 0,
+        "incomeGold": 0
+      },
+      "observed": null,
+      "reference": null,
+      "sourceType": "GAME_RESULT",
+      "confidence": "USER_OBSERVED",
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Categorias transcritas separadamente da mensagem Level finished; nenhum total foi calculado."
+    },
+    {
+      "id": "wave-2-troll-fighter-completed",
+      "type": "build-unit",
+      "gameTime": null,
+      "wave": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "displayed": {
+        "displayedName": "Troll Fighter",
+        "completionObserved": true
+      },
+      "observed": {
+        "phase": "preparation"
+      },
+      "reference": null,
+      "sourceType": "GAME_UI",
+      "confidence": "USER_OBSERVED",
+      "unitRawcode": null,
+      "announcedCost": null,
+      "observedCost": null,
+      "observedResourceDelta": null,
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Conclusão da unidade observada na interface. Custo e relação causal com o value não foram inferidos."
+    },
+    {
+      "id": "wave-2-town-opened-economy-review",
+      "type": "town-opened",
+      "gameTime": null,
+      "wave": { "value": 2, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "displayed": { "building": "Town" },
+      "observed": { "phase": "combat", "trainingDisplayVisible": true },
+      "reference": null,
+      "sourceType": "GAME_UI",
+      "confidence": "USER_OBSERVED",
+      "kingUpgrade": null,
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Town aberta com treinamento visível; o conteúdo treinado não foi identificado com segurança e nenhum evento causal adicional foi criado."
+    },
+    {
+      "id": "wave-3-challenge-champion-activated",
+      "type": "challenge-champion-activated",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "displayed": {
+        "displayedMessage": "Bold move! GuiDii has challenged a Champion"
+      },
+      "observed": {
+        "activation": "manual",
+        "phase": "preparation"
+      },
+      "reference": null,
+      "sourceType": "GAME_UI",
+      "confidence": "USER_OBSERVED",
+      "displayedMessage": "Bold move! GuiDii has challenged a Champion",
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Ativação manual observada; nenhum efeito, fórmula ou condição de recompensa foi inferido."
+    },
+    {
+      "id": "wave-3-town-opened",
+      "type": "town-opened",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "displayed": { "building": "Town" },
+      "observed": { "phase": "combat" },
+      "reference": null,
+      "sourceType": "GAME_UI",
+      "confidence": "USER_OBSERVED",
+      "kingUpgrade": null,
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Town aberta durante o combate. A interface mostrou treinamento em andamento, mas compra e categoria de upgrade não foram confirmadas."
+    },
+    {
+      "id": "wave-3-reward-settled",
+      "type": "reward-settled",
+      "gameTime": null,
+      "wave": {
+        "value": 3,
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "displayed": {
+        "levelCompletionGold": 45,
+        "challengeChampionGold": 45,
+        "incomeGold": 0,
+        "kingGold": null
+      },
+      "observed": null,
+      "reference": null,
+      "sourceType": "GAME_RESULT",
+      "confidence": "USER_OBSERVED",
+      "evidenceRefs": ["video-part-1"],
+      "notes": "Categorias transcritas separadamente da mensagem Level Finished; nenhum total foi calculado e nenhum King gold foi exibido."
+    },
+    {
+      "id": "wave-4-militia-captain-completed", "type": "build-unit", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "displayed": { "displayedName": "Militia Captain", "completionObserved": true }, "observed": { "phase": "preparation" }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "unitRawcode": null, "announcedCost": null, "observedCost": null, "observedResourceDelta": null,
+      "evidenceRefs": ["video-part-1"], "notes": "Conclusão observada; custo e efeito sobre value não inferidos."
+    },
+    {
+      "id": "wave-4-militia-completed", "type": "build-unit", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1"] },
+      "displayed": { "displayedName": "Militia", "completionObserved": true }, "observed": { "phase": "preparation" }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "unitRawcode": null, "announcedCost": null, "observedCost": null, "observedResourceDelta": null,
+      "evidenceRefs": ["video-part-1"], "notes": "Conclusão observada; custo e efeito sobre value não inferidos."
+    },
+    {
+      "id": "wave-4-barracks-opened", "type": "barracks-opened", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "displayed": { "building": "Barracks" }, "observed": { "phase": "combat" }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "sourceBuilding": "barracks", "evidenceRefs": ["video-part-2"],
+      "notes": "Abertura observada; nenhuma compra ou despacho foi inferido."
+    },
+    {
+      "id": "wave-4-king-damage-observed", "type": "king-damage-observed", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "displayed": { "kingHpEarlier": 8000, "kingHpLaterSummaryDisplay": 254, "kingHpLaterSelectedUnitDisplay": 189 }, "observed": { "phase": "king-defense" }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "kingStateBefore": null, "kingStateAfter": null, "hpDelta": null, "probableDamageSource": null,
+      "evidenceRefs": ["video-part-2"], "notes": "Queda explícita de HP registrada sem calcular delta nem atribuir fonte individual."
+    },
+    {
+      "id": "wave-4-king-attack-level-1", "type": "king-upgrade-purchased", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "displayed": { "displayedMessage": "GuiDii upgraded your King's attack to level 1" }, "observed": { "category": "attack", "levelAfter": 1 }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "kingUpgrade": { "category": "attack", "levelBefore": 0, "levelAfter": 1, "announcedCost": null, "observedCost": null, "purchasedBy": "GuiDii", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "evidenceRefs": ["video-part-2"] },
+      "evidenceRefs": ["video-part-2"], "notes": "Custo não visível."
+    },
+    {
+      "id": "wave-4-king-attack-level-2", "type": "king-upgrade-purchased", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "displayed": { "displayedMessage": "GuiDii upgraded your King's attack to level 2" }, "observed": { "category": "attack", "levelAfter": 2 }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "kingUpgrade": { "category": "attack", "levelBefore": 1, "levelAfter": 2, "announcedCost": null, "observedCost": null, "purchasedBy": "GuiDii", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "evidenceRefs": ["video-part-2"] },
+      "evidenceRefs": ["video-part-2"], "notes": "Custo não visível."
+    },
+    {
+      "id": "wave-4-king-attack-level-3", "type": "king-upgrade-purchased", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "displayed": { "displayedMessage": "GuiDii upgraded your King's attack to level 3" }, "observed": { "category": "attack", "levelAfter": 3 }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "kingUpgrade": { "category": "attack", "levelBefore": 2, "levelAfter": 3, "announcedCost": null, "observedCost": null, "purchasedBy": "GuiDii", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "evidenceRefs": ["video-part-2"] },
+      "evidenceRefs": ["video-part-2"], "notes": "Custo não visível."
+    },
+    {
+      "id": "wave-4-advanced-barracks-opened", "type": "advanced-barracks-opened", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "displayed": { "building": "Advanced Barracks" }, "observed": { "phase": "king-defense" }, "reference": null,
+      "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "sourceBuilding": "advanced-barracks", "evidenceRefs": ["video-part-2"],
+      "notes": "Abertura observada; nenhuma compra ou despacho foi inferido."
+    },
+    {
+      "id": "wave-4-reward-settled", "type": "reward-settled", "gameTime": null,
+      "wave": { "value": 4, "sourceType": "GAME_RESULT", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-2"] },
+      "displayed": { "kingGold": 19, "levelCompletionGold": 60, "challengeChampionGold": 0, "incomeGold": 66 }, "observed": null, "reference": null,
+      "sourceType": "GAME_RESULT", "confidence": "USER_OBSERVED", "evidenceRefs": ["video-part-2"],
+      "notes": "Categorias separadas; nenhum total foi calculado."
+    }
+  ],
+  "waves": [
+    {
+      "id": "wave-1-observation",
+      "number": {
+        "value": 1,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "reference": null,
+      "displayed": {
+        "creature": "Crabs",
+        "quantity": 100,
+        "hpPerCreep": 100,
+        "attackType": "Piercing",
+        "damageMin": 7.0,
+        "damageMax": 9.0,
+        "attackSpeed": 0.90,
+        "defenseType": "Unarmored",
+        "armor": 3
+      },
+      "announced": {
+        "goldPerKill": 5,
+        "killGoldTotal": 500,
+        "levelCompletionGold": 15,
+        "challengeChampionGold": 15
+      },
+      "observed": {
+        "result": {
+          "kills": 100,
+          "leaks": 0
+        },
+        "settlement": {
+          "levelCompletionGold": 15,
+          "challengeChampionGold": 0,
+          "incomeGold": 0
+        }
+      },
+      "derived": null,
+      "naturalWave": {
+        "displayedName": "Crabs",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "enemySendsObserved": [],
+      "alliedLeaksObserved": [],
+      "championObserved": null,
+      "kingResult": null,
+      "evidenceRefs": ["video-part-1"],
+      "status": "USER_OBSERVED",
+      "notes": "Somente dados legíveis da Wave 1 foram transcritos. Kill gold efetivamente recebido, score e surviving value não foram registrados por não estarem inequivocamente visíveis na evidência revisada."
+    },
+    {
+      "id": "wave-2-observation",
+      "number": {
+        "value": 2,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "reference": null,
+      "displayed": {
+        "creature": "Murlocs",
+        "quantity": 100,
+        "hpPerCreep": 170,
+        "attackType": "Normal",
+        "damageMin": 9.0,
+        "damageMax": 13.0,
+        "attackSpeed": 0.90,
+        "defenseType": "Unarmored",
+        "armor": 3
+      },
+      "announced": {
+        "goldPerKill": 5,
+        "killGoldTotal": 500,
+        "levelCompletionGold": 30,
+        "challengeChampionGold": 30
+      },
+      "observed": null,
+      "derived": null,
+      "naturalWave": {
+        "displayedName": "Murlocs",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "enemySendsObserved": [],
+      "alliedLeaksObserved": [],
+      "championObserved": null,
+      "kingResult": null,
+      "evidenceRefs": ["video-part-1"],
+      "status": "USER_OBSERVED",
+      "notes": "Somente o anúncio da Wave 2 foi transcrito. Resultado e settlement permanecem ausentes."
+    },
+    {
+      "id": "wave-3-observation",
+      "number": {
+        "value": 3,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "precision": "exact",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "reference": null,
+      "displayed": {
+        "creature": "Scorpions",
+        "quantity": 100,
+        "hpPerCreep": 250,
+        "attackType": "Normal",
+        "damageMin": 13.0,
+        "damageMax": 14.0,
+        "attackSpeed": 0.90,
+        "defenseType": "Medium",
+        "armor": 3
+      },
+      "announced": {
+        "goldPerKill": 5,
+        "killGoldTotal": 500,
+        "levelCompletionGold": 45,
+        "challengeChampionGold": 45
+      },
+      "observed": {
+        "result": {
+          "creepsAlive": 0,
+          "cumulativeKills": 321,
+          "cumulativeLeaks": 0,
+          "cumulativeLeaksCaught": 18
+        },
+        "settlement": {
+          "levelCompletionGold": 45,
+          "challengeChampionGold": 45,
+          "incomeGold": 0,
+          "kingGold": null
+        }
+      },
+      "derived": null,
+      "naturalWave": {
+        "displayedName": "Scorpions",
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED"
+      },
+      "enemySendsObserved": [],
+      "alliedLeaksObserved": [],
+      "championObserved": {
+        "activation": "manual",
+        "displayedMessage": "Bold move! GuiDii has challenged a Champion",
+        "rewardGold": 45,
+        "sourceType": "GAME_RESULT",
+        "confidence": "USER_OBSERVED",
+        "evidenceRefs": ["video-part-1"],
+        "notes": "Recompensa registrada somente como resultado desta execução."
+      },
+      "kingResult": {
+        "currentHp": 8000,
+        "kingGold": null,
+        "sourceType": "GAME_UI",
+        "confidence": "USER_OBSERVED",
+        "evidenceRefs": ["video-part-1"]
+      },
+      "evidenceRefs": ["video-part-1"],
+      "status": "USER_OBSERVED",
+      "notes": "Kills e leaks foram preservados como contadores acumulados exibidos, sem derivar valores exclusivos da Wave 3. Score, surviving value e efeitos do Champion não foram inferidos."
+    },
+    {
+      "id": "wave-4-observation",
+      "number": { "value": 4, "sourceType": "GAME_UI", "confidence": "USER_OBSERVED", "precision": "exact", "evidenceRefs": ["video-part-1", "video-part-2"] },
+      "reference": null,
+      "displayed": { "creature": "Quilbeasts", "quantity": 100, "hpPerCreep": 250, "attackType": "Piercing", "damageMin": 13.0, "damageMax": 14.0, "attackSpeed": 0.90, "defenseType": "Heavy", "armor": 3 },
+      "announced": { "goldPerKill": 6, "killGoldTotal": 600, "levelCompletionGold": 60, "challengeChampionGold": 60 },
+      "observed": {
+        "result": { "creepsAlive": 0, "cumulativeKills": 476, "cumulativeLeaks": 0, "cumulativeLeaksCaught": 43, "cumulativeUnitsSent": 7 },
+        "settlement": { "kingGold": 19, "levelCompletionGold": 60, "challengeChampionGold": 0, "incomeGold": 66 }
+      },
+      "derived": null,
+      "naturalWave": { "displayedName": "Quilbeasts", "sourceType": "GAME_UI", "confidence": "USER_OBSERVED" },
+      "enemySendsObserved": [],
+      "alliedLeaksObserved": [],
+      "championObserved": null,
+      "kingResult": { "currentHp": 7509, "maxHp": 8000, "attackLevel": 3, "kingGold": 19, "sourceType": "GAME_RESULT", "confidence": "USER_OBSERVED", "evidenceRefs": ["video-part-2"], "notes": "HP e nível são estados visíveis; King gold é settlement desta execução." },
+      "evidenceRefs": ["video-part-1", "video-part-2"],
+      "status": "USER_OBSERVED",
+      "notes": "Contadores preservados como acumulados. Nenhum resultado exclusivo da Wave 4, send, fórmula ou total derivado foi inferido."
+    }
+  ],
+  "status": "USER_OBSERVED",
+  "notes": "Waves 1 a 4 transcritas incrementalmente a partir de video-part-1 e video-part-2. Waves posteriores permanecem ausentes."
+}
