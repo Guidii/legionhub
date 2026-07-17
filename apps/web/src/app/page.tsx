@@ -65,12 +65,12 @@ export default function Home() {
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
-            <button
-              type="button"
+            <Link
+              href="/coach"
               className="rounded-xl bg-cyan-400 px-6 py-3 font-bold text-slate-950 transition hover:bg-cyan-300"
             >
               Abrir Legion Coach
-            </button>
+            </Link>
 
             <Link
               href="/unidades"

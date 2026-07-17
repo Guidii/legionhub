@@ -1,115 +1,99 @@
-import {
-  getDamageMultiplier,
-  isAttackTypeUnconfirmed,
-} from "@/lib/damage-matrix";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { getGameModeCatalog } from "@/lib/game-mode-data";
 import { getFighters } from "@/lib/legion-data";
-import { getAverageDamage, getBaseDps } from "@/lib/unit-metrics";
 import { getUnitIconPaths } from "@/lib/unit-icons";
-import { getPreliminaryWaves, type WaveConfidence } from "@/lib/wave-data";
-
-export type CoachWave = {
-  number: number;
-  name: string;
-  rawcode: string;
-  defenseType: string | null;
-  confidence: Extract<
-    WaveConfidence,
-    "confirmed-directly" | "confirmed-by-game-observation"
-  >;
-  iconPath: string | null;
-};
 
 export type CoachUnit = {
   rawcode: string;
   name: string;
   iconPath: string | null;
   gold: number;
-  pointValue: number | null;
-  hp: number | null;
-  dps: number | null;
-  attackType: string | null;
-  defenseType: string | null;
-  attackTypeUnconfirmed: boolean;
-  multipliersByDefense: Record<string, number | null>;
+  tier: number | null;
+  tierSource: "builder-slot" | "equivalent-fighter" | null;
+  rangeType: string | null;
+  upgradeCount: number;
+};
+
+type RawBuilder = {
+  name: string;
+  units: Array<{
+    rawcode: string;
+    slot: number;
+  }>;
 };
 
 export type CoachData = {
-  mapVersion: string;
   modeGroups: Awaited<ReturnType<typeof getGameModeCatalog>>["groups"];
-  waves: CoachWave[];
   units: CoachUnit[];
 };
 
 export async function getCoachData(): Promise<CoachData> {
-  const [fighters, waveDataset, gameModes] = await Promise.all([
+  const [fighters, gameModes, builders] = await Promise.all([
     getFighters(),
-    getPreliminaryWaves(),
     getGameModeCatalog(),
+    readFile(
+      path.resolve(process.cwd(), "../..", "data/11.4b-beta1/builders.json"),
+      "utf8",
+    ).then((contents) => JSON.parse(contents) as RawBuilder[]),
   ]);
-  const confirmedWaves = waveDataset.waves.filter(
-    (wave): wave is typeof wave & {
-      numberConfidence:
-        | "confirmed-directly"
-        | "confirmed-by-game-observation";
-    } =>
-      wave.numberConfidence === "confirmed-directly" ||
-      wave.numberConfidence === "confirmed-by-game-observation",
+  const iconPaths = await getUnitIconPaths(
+    fighters.map((fighter) => fighter.rawcode),
   );
-  const iconPaths = await getUnitIconPaths([
-    ...fighters.map((fighter) => fighter.rawcode),
-    ...confirmedWaves.map((wave) => wave.creep.rawcode),
-  ]);
-  const defenseTypes = Array.from(
-    new Set(
-      confirmedWaves
-        .map((wave) => wave.stats.defenseTypeRaw)
-        .filter((defenseType): defenseType is string => defenseType !== null),
-    ),
+  const tierByRawcode = new Map(
+    builders
+      .filter((builder) => builder.name !== "Prophet" && builder.units.length === 6)
+      .flatMap((builder) =>
+        builder.units.map((unit) => [unit.rawcode, unit.slot] as const),
+      ),
   );
-  const units = await Promise.all(
-    fighters.map(async (fighter): Promise<CoachUnit> => {
-      const averageDamage = getAverageDamage(
-        fighter.damageMin,
-        fighter.damageMax,
-      );
-      const [attackTypeUnconfirmed, multiplierEntries] = await Promise.all([
-        isAttackTypeUnconfirmed(fighter.attackType),
-        Promise.all(
-          defenseTypes.map(async (defenseType) => [
-            defenseType,
-            await getDamageMultiplier(fighter.attackType, defenseType),
-          ] as const),
-        ),
-      ]);
+  const resolvedTierByRawcode = new Map(tierByRawcode);
 
-      return {
-        rawcode: fighter.rawcode,
-        name: fighter.name,
-        iconPath: iconPaths[fighter.rawcode] ?? null,
-        gold: fighter.gold,
-        pointValue: fighter.pointValue,
-        hp: fighter.hp,
-        dps: getBaseDps(averageDamage, fighter.cooldown),
-        attackType: fighter.attackType,
-        defenseType: fighter.defenseType,
-        attackTypeUnconfirmed,
-        multipliersByDefense: Object.fromEntries(multiplierEntries),
-      };
-    }),
-  );
+  for (const fighter of fighters) {
+    if (resolvedTierByRawcode.has(fighter.rawcode)) continue;
+
+    const fighterUpgradeRawcodes = new Set(
+      fighter.upgrades.map((upgrade) => upgrade.rawcode),
+    );
+    const equivalentTiers = new Set(
+      fighters.flatMap((candidate) => {
+        const candidateTier = tierByRawcode.get(candidate.rawcode);
+        const sharesUpgrade = candidate.upgrades.some((upgrade) =>
+          fighterUpgradeRawcodes.has(upgrade.rawcode),
+        );
+        const isEquivalent =
+          candidateTier !== undefined &&
+          candidate.name === fighter.name &&
+          candidate.baseRawcode === fighter.baseRawcode &&
+          sharesUpgrade;
+
+        return isEquivalent ? [candidateTier] : [];
+      }),
+    );
+
+    if (equivalentTiers.size === 1) {
+      resolvedTierByRawcode.set(
+        fighter.rawcode,
+        equivalentTiers.values().next().value as number,
+      );
+    }
+  }
 
   return {
-    mapVersion: waveDataset.mapVersion,
     modeGroups: gameModes.groups,
-    waves: confirmedWaves.map((wave) => ({
-      number: wave.number,
-      name: wave.creep.name,
-      rawcode: wave.creep.rawcode,
-      defenseType: wave.stats.defenseTypeRaw,
-      confidence: wave.numberConfidence,
-      iconPath: iconPaths[wave.creep.rawcode] ?? null,
+    units: fighters.map((fighter) => ({
+      rawcode: fighter.rawcode,
+      name: fighter.name,
+      iconPath: iconPaths[fighter.rawcode] ?? null,
+      gold: fighter.gold,
+      tier: resolvedTierByRawcode.get(fighter.rawcode) ?? null,
+      tierSource: tierByRawcode.has(fighter.rawcode)
+        ? "builder-slot"
+        : resolvedTierByRawcode.has(fighter.rawcode)
+          ? "equivalent-fighter"
+          : null,
+      rangeType: fighter.rangeType,
+      upgradeCount: fighter.upgrades.length,
     })),
-    units,
   };
 }
