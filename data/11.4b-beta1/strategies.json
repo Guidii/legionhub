@@ -1,0 +1,82 @@
+[
+  {
+    "id": "frost-wolf-strategy-model",
+    "buildId": "frost-wolf-core-example",
+    "title": "Frost Wolf — Strategy modelo",
+    "description": "Primeira Strategy estrutural do LegionHub. O conteúdo estratégico ainda depende de validação especializada.",
+    "compatibleModes": ["PRCCX1", "PRCCX3", "PHCCX1", "PHCCX3"],
+    "requiredUnitRawcodes": ["h0BE"],
+    "optionalUnitRawcodes": ["h06M", "h06J"],
+    "buildOrder": [
+      {
+        "wave": 1,
+        "status": "placeholder",
+        "steps": ["Ação de construção pendente de validação."],
+        "observation": "Nenhuma ordem definitiva foi cadastrada para esta wave."
+      },
+      {
+        "wave": 2,
+        "status": "placeholder",
+        "steps": ["Ação de construção pendente de validação."],
+        "observation": "Este bloco demonstra o formato reutilizável por wave."
+      }
+    ],
+    "positioning": {
+      "format": "grid-v1",
+      "rows": null,
+      "columns": null,
+      "units": [],
+      "notes": "Coordenadas e dimensões do grid pendentes de validação."
+    },
+    "economy": [
+      {
+        "wave": 3,
+        "status": "placeholder",
+        "actions": ["Decisão de economia pendente de validação."]
+      },
+      {
+        "wave": 4,
+        "status": "placeholder",
+        "actions": ["Decisão de economia pendente de validação."]
+      }
+    ],
+    "powerSpikes": [
+      {
+        "wave": null,
+        "status": "placeholder",
+        "description": "Power spikes ainda não validados."
+      }
+    ],
+    "weakWaves": [
+      {
+        "wave": null,
+        "status": "placeholder",
+        "description": "Waves perigosas ainda não validadas."
+      }
+    ],
+    "recommendedSends": [
+      {
+        "fromWave": null,
+        "toWave": null,
+        "status": "placeholder",
+        "sendRawcodes": [],
+        "notes": "Sends recomendados ainda não validados."
+      }
+    ],
+    "notes": "Strategy experimental criada como contrato de dados para futuras estratégias validadas. Não representa uma recomendação de jogo.",
+    "references": [
+      {
+        "observationSessionId": "prccx1ez-online-run-001",
+        "wave": 1,
+        "settlement": {
+          "waveObservationId": "wave-1-observation",
+          "path": "observed.settlement"
+        },
+        "snapshotId": "wave-1-post-wave-economy-2-1",
+        "description": "Na Wave 1, o settlement observado registrou 15 gold de conclusão da wave, 0 gold de Challenge Champion e 0 gold de income.",
+        "status": "observed",
+        "notes": "O snapshot referenciado registra o estado econômico visível após a Wave 1."
+      }
+    ]
+  }
+]

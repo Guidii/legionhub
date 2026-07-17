@@ -1,16 +1,19 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { UnitIcon } from "@/components/unit-icon";
+import type { Build } from "@/lib/build-catalog";
 import type { CoachUnit } from "@/lib/coach-data";
 import type { GameModeGroups } from "@/lib/game-modes";
 
 type RollAnalyzerProps = {
   modeGroups: GameModeGroups;
   units: CoachUnit[];
+  builds: Build[];
 };
 
-export function RollAnalyzer({ modeGroups, units }: RollAnalyzerProps) {
+export function RollAnalyzer({ modeGroups, units, builds }: RollAnalyzerProps) {
   const modes = useMemo(
     () =>
       modeGroups.builder.flatMap((builder) =>
@@ -26,6 +29,7 @@ export function RollAnalyzer({ modeGroups, units }: RollAnalyzerProps) {
   const [mode, setMode] = useState(modes[0] ?? "Não disponível");
   const [selectedRawcodes, setSelectedRawcodes] = useState<string[]>([]);
   const [query, setQuery] = useState("");
+  const [plannerVisible, setPlannerVisible] = useState(false);
 
   const selectedUnits = selectedRawcodes.flatMap((rawcode) => {
     const unit = units.find((candidate) => candidate.rawcode === rawcode);
@@ -61,8 +65,16 @@ export function RollAnalyzer({ modeGroups, units }: RollAnalyzerProps) {
     });
   }, [filteredUnits]);
   const remainingUnits = 6 - selectedUnits.length;
+  const compatibleBuilds = builds.filter(
+    (build) =>
+      build.compatibleModes.includes(mode) &&
+      build.requiredUnitRawcodes.every((rawcode) =>
+        selectedRawcodes.includes(rawcode),
+      ),
+  );
 
   function toggleUnit(rawcode: string) {
+    setPlannerVisible(false);
     setSelectedRawcodes((current) =>
       current.includes(rawcode)
         ? current.filter((selected) => selected !== rawcode)
@@ -81,7 +93,10 @@ export function RollAnalyzer({ modeGroups, units }: RollAnalyzerProps) {
         <select
           id="coach-mode"
           value={mode}
-          onChange={(event) => setMode(event.target.value)}
+          onChange={(event) => {
+            setMode(event.target.value);
+            setPlannerVisible(false);
+          }}
           className="mt-4 w-full rounded-xl border border-white/10 bg-[#0b111d] px-4 py-3 font-mono text-white outline-none focus:border-cyan-400/60 sm:max-w-sm"
         >
           {modes.map((modeCode) => (
@@ -193,36 +208,64 @@ export function RollAnalyzer({ modeGroups, units }: RollAnalyzerProps) {
           )}
         </div>
 
-        {selectedUnits.length === 6 && (
-          <button
-            type="button"
-            className="mt-5 w-full rounded-xl bg-cyan-400 px-6 py-4 text-base font-black text-slate-950 shadow-lg shadow-cyan-950/40 transition hover:bg-cyan-300"
-          >
-            Continuar para o Build Planner
-          </button>
+        <button
+          type="button"
+          disabled={selectedUnits.length !== 6}
+          onClick={() => setPlannerVisible(true)}
+          className="mt-5 w-full rounded-xl bg-cyan-400 px-6 py-4 text-base font-black text-slate-950 shadow-lg shadow-cyan-950/40 transition hover:bg-cyan-300 disabled:cursor-not-allowed disabled:bg-white/5 disabled:text-slate-600 disabled:shadow-none"
+        >
+          Continuar para o Build Planner
+        </button>
+        {remainingUnits > 0 && (
+          <p className="mt-3 text-center text-sm font-semibold text-slate-500">
+            Selecione mais {remainingUnits} {remainingUnits === 1 ? "unidade" : "unidades"} para continuar.
+          </p>
         )}
       </section>
 
-      <section className="rounded-2xl border border-cyan-400/20 bg-cyan-400/[0.05] p-6">
-        <h2 className="text-xl font-black">Resumo do roll</h2>
-        <dl className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          <SummaryItem label="Tanques" value="Não disponível" />
-          <SummaryItem label="Ranged" value={String(rangedCount)} />
-          <SummaryItem label="Suporte" value="Não disponível" />
-          <SummaryItem label="Aura" value="Não disponível" />
-          <SummaryItem
-            label="Upgrades disponíveis"
-            value={String(upgradesAvailable)}
-          />
-        </dl>
-      </section>
+      {plannerVisible && (
+        <>
+          <section className="rounded-2xl border border-cyan-400/30 bg-cyan-400/[0.05] p-6">
+            <p className="text-xs font-bold uppercase tracking-widest text-cyan-400">
+              Build Planner
+            </p>
+            <h2 className="mt-2 text-2xl font-black">Builds encontradas</h2>
 
-      <section className="grid gap-5 lg:grid-cols-2">
-        <Placeholder title="Builds">Nenhuma build disponível ainda.</Placeholder>
-        <Placeholder title="Posicionamento">
-          O posicionamento será implementado futuramente.
-        </Placeholder>
-      </section>
+            {compatibleBuilds.length > 0 ? (
+              <div className="mt-5 grid gap-4 md:grid-cols-2">
+                {compatibleBuilds.map((build) => (
+                  <BuildCard key={build.id} build={build} units={units} />
+                ))}
+              </div>
+            ) : (
+              <p className="mt-5 rounded-xl border border-dashed border-white/10 p-8 text-center text-slate-400">
+                Nenhuma build cadastrada para este roll.
+              </p>
+            )}
+
+          </section>
+
+          <section className="rounded-2xl border border-cyan-400/20 bg-cyan-400/[0.05] p-6">
+            <h2 className="text-xl font-black">Resumo do roll</h2>
+            <dl className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+              <SummaryItem label="Tanques" value="Não disponível" />
+              <SummaryItem label="Ranged" value={String(rangedCount)} />
+              <SummaryItem label="Suporte" value="Não disponível" />
+              <SummaryItem label="Aura" value="Não disponível" />
+              <SummaryItem
+                label="Upgrades disponíveis"
+                value={String(upgradesAvailable)}
+              />
+            </dl>
+          </section>
+
+          <section>
+            <Placeholder title="Posicionamento">
+              O posicionamento será implementado futuramente.
+            </Placeholder>
+          </section>
+        </>
+      )}
     </div>
   );
 }
@@ -243,6 +286,67 @@ function SummaryItem({ label, value }: { label: string; value: string }) {
       <dd className="mt-2 font-bold text-white">{value}</dd>
     </div>
   );
+}
+
+function BuildCard({ build, units }: { build: Build; units: CoachUnit[] }) {
+  const unitNames = new Map(units.map((unit) => [unit.rawcode, unit.name]));
+
+  return (
+    <Link
+      href={`/coach/builds/${build.id}`}
+      className="block rounded-2xl border border-white/10 bg-black/20 p-5 transition hover:-translate-y-0.5 hover:border-cyan-400/40"
+    >
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <h3 className="text-lg font-black">{build.title}</h3>
+        <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1 text-xs font-bold text-amber-200">
+          {build.status === "experimental" ? "Experimental" : build.status}
+        </span>
+      </div>
+      <p className="mt-3 text-sm leading-6 text-slate-400">
+        {build.shortDescription}
+      </p>
+      <dl className="mt-4 space-y-3 text-sm">
+        <BuildDetail
+          label="Obrigatórias"
+          value={formatUnitNames(build.requiredUnitRawcodes, unitNames)}
+        />
+        <BuildDetail
+          label="Opcionais"
+          value={formatUnitNames(build.optionalUnitRawcodes, unitNames)}
+        />
+        <BuildDetail
+          label="Dificuldade"
+          value={
+            build.difficulty === "not-rated"
+              ? "Não avaliada"
+              : build.difficulty
+          }
+        />
+        <BuildDetail
+          label="Rating"
+          value={build.rating === null ? "Não avaliado" : build.rating.toFixed(1)}
+        />
+      </dl>
+      <p className="mt-5 text-sm font-bold text-cyan-300">
+        Ver detalhes da build →
+      </p>
+    </Link>
+  );
+}
+
+function BuildDetail({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex items-start justify-between gap-4 border-t border-white/5 pt-3">
+      <dt className="text-slate-500">{label}</dt>
+      <dd className="max-w-[65%] text-right font-semibold text-slate-200">
+        {value}
+      </dd>
+    </div>
+  );
+}
+
+function formatUnitNames(rawcodes: string[], names: Map<string, string>) {
+  return rawcodes.map((rawcode) => names.get(rawcode) ?? rawcode).join(", ");
 }
 
 function Placeholder({

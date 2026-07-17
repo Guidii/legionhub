@@ -40,7 +40,11 @@ export default async function CoachPage() {
         </p>
 
         <div className="mt-10">
-          <RollAnalyzer modeGroups={data.modeGroups} units={data.units} />
+          <RollAnalyzer
+            modeGroups={data.modeGroups}
+            units={data.units}
+            builds={data.builds}
+          />
         </div>
       </section>
     </main>

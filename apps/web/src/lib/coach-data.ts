@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { getBuildCatalog, type Build } from "@/lib/build-catalog";
 import { getGameModeCatalog } from "@/lib/game-mode-data";
 import { getFighters } from "@/lib/legion-data";
 import { getUnitIconPaths } from "@/lib/unit-icons";
@@ -26,16 +27,18 @@ type RawBuilder = {
 export type CoachData = {
   modeGroups: Awaited<ReturnType<typeof getGameModeCatalog>>["groups"];
   units: CoachUnit[];
+  builds: Build[];
 };
 
 export async function getCoachData(): Promise<CoachData> {
-  const [fighters, gameModes, builders] = await Promise.all([
+  const [fighters, gameModes, builders, builds] = await Promise.all([
     getFighters(),
     getGameModeCatalog(),
     readFile(
       path.resolve(process.cwd(), "../..", "data/11.4b-beta1/builders.json"),
       "utf8",
     ).then((contents) => JSON.parse(contents) as RawBuilder[]),
+    getBuildCatalog(),
   ]);
   const iconPaths = await getUnitIconPaths(
     fighters.map((fighter) => fighter.rawcode),
@@ -81,6 +84,7 @@ export async function getCoachData(): Promise<CoachData> {
 
   return {
     modeGroups: gameModes.groups,
+    builds,
     units: fighters.map((fighter) => ({
       rawcode: fighter.rawcode,
       name: fighter.name,

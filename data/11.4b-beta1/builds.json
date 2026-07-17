@@ -1,0 +1,38 @@
+[
+  {
+    "id": "frost-wolf-core-example",
+    "title": "Frost Wolf — exemplo de catálogo",
+    "shortDescription": "Build experimental para validar o catálogo e o filtro por roll.",
+    "compatibleModes": ["PRCCX1", "PRCCX3", "PHCCX1", "PHCCX3"],
+    "requiredUnitRawcodes": ["h0BE"],
+    "optionalUnitRawcodes": ["h06M", "h06J"],
+    "difficulty": "easy",
+    "rating": null,
+    "status": "experimental",
+    "positioning": null,
+    "constructionOrder": null,
+    "economy": null,
+    "upgrades": null,
+    "notes": [
+      "Registro experimental criado para validar a navegação e a apresentação do catálogo."
+    ]
+  },
+  {
+    "id": "wyvern-tempest-example",
+    "title": "Wyvern e Tempest — exemplo de catálogo",
+    "shortDescription": "Segundo registro experimental para validar múltiplas unidades obrigatórias.",
+    "compatibleModes": ["PRCCX1", "PHCCX1"],
+    "requiredUnitRawcodes": ["h0C5", "h00N"],
+    "optionalUnitRawcodes": ["h01A"],
+    "difficulty": "medium",
+    "rating": null,
+    "status": "testing",
+    "positioning": null,
+    "constructionOrder": null,
+    "economy": null,
+    "upgrades": null,
+    "notes": [
+      "Conteúdo de exemplo; ordem de construção, economia e posicionamento ainda não foram cadastrados."
+    ]
+  }
+]
